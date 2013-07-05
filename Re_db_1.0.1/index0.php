@@ -1,5 +1,7 @@
 <?php
 
+//This file is the original file that changed for git ^^--___
+
 //=========== System constant definition ==============
 
 define("HOST", "localhost");
