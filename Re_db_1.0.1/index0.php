@@ -1,6 +1,6 @@
 <?php
 
-//This file is the original file that changed for git ^^--___
+//For testing
 
 //=========== System constant definition ==============
 
