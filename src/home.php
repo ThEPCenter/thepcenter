@@ -94,7 +94,7 @@ require_once "ui_re_db/system/system.php";
                                     $date = mysql_result($result_net, 0, 'date');
                                     $content_short = mysql_result($result_net,0, 'content_short');
                                     $new = mysql_result($result_net, 0, 'new');
-                                    if($p['new']=='y'){
+                                    if($new=='y'){
                                         $new_gif = ' <img src="image/new1.gif">';
                                     }else{
                                         $new_gif = '';

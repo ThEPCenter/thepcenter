@@ -52,8 +52,6 @@ $result = mysql_query($sql);
                             echo '                            
                             <a href="#">' . $l . '. ' . htmlspecialchars_decode($p['title']) . '</a>
                             <div>
-                                <a class="fg-color-yellow" href="edit_news.php?news_id=' . $p['id'] . '"><i class="icon-wrench"></i>แก้ไขข่าวนี้</a>
-                                <hr />
                                 <div class="text-center"><img src="' . htmlspecialchars_decode($p['picture']) . '"></div>
                                 <h3>' . htmlspecialchars_decode($p['title']) . $new_gif .  '</h3>
                                 <p class="fg-color-green"><small><em>' . thai_date($p['date']) . '</small></em></p>
