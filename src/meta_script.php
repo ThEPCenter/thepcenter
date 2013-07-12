@@ -24,7 +24,7 @@
         <script src="../Metro-UI-CSS-master/javascript/buttonset.js"></script>
         <script src="../Metro-UI-CSS-master/javascript/calendar.js"></script>
         <script src="../Metro-UI-CSS-master/javascript/carousel.js"></script>
-        <script src="../Metro-UI-CSS-master/javascript/contextmenu.js"></script>
+        <?php /* <script src="../Metro-UI-CSS-master/javascript/contextmenu.js"></script> */ ?>
         <script src="../Metro-UI-CSS-master/javascript/dialog.js"></script>
         <script src="../Metro-UI-CSS-master/javascript/dropdown.js"></script>
         <script src="../Metro-UI-CSS-master/javascript/input-control.js"></script>

@@ -98,4 +98,21 @@ function article_table_head($htb) {
 }
 
 //END function article_table_head
+
+function thai_date($str_date, $show_day="n"){
+    $time_stamp = strtotime($str_date);
+    $days = array("อาทิตย์", "จันทร์", "อังคาร", "พุธ", "พฤหัสบดี", "ศุกร์", "เสาร์");
+    $months = array("มกราคม", "กุมภาพันธ์", "มีนาคม", "เมษายน", "พฤษภาคม", "มิถุนายน", "กรกฎาคม","สิงหาคม","กันยายน", "ตุลาคม","พฤศจิกายน", "ธันวาคม");    
+    $d = date('w', $time_stamp);
+    $day = $days[$d];    
+    $date = date('j', $time_stamp);    
+    $m = date('m', $time_stamp) - 1;
+    $month = $months[$m];    
+    $year = date('Y', $time_stamp) + 543;    
+    if($show_day == 'y'){
+        return "วัน$day ที่ $date $month พ.ศ.$year";
+    }else{
+        return "$date $month $year";
+    }
+}
 ?>

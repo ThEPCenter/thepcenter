@@ -1,3 +1,7 @@
+<?php
+require_once "ui_re_db/system/system.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>        
@@ -77,21 +81,46 @@
                                         <li><a href="#page2">ข่าวกิจกรรม</a></li>
                                         <li><a href="#page3">ข่าววิชาการทั่วไป</a></li>
                                     </ul>
+                                    
+                                    <?php
+                                    $sql_net = "
+                                            SELECT * FROM tb_news
+                                            WHERE type = 'network_academic'
+                                            ORDER BY date DESC;
+                                            ";
+                                    $result_net = mysql_query($sql_net);
+                                    $news_id = mysql_result($result_net, 0, 'id');
+                                    $tiltle = mysql_result($result_net, 0, 'title');
+                                    $date = mysql_result($result_net, 0, 'date');
+                                    $content_short = mysql_result($result_net,0, 'content_short');
+                                    $new = mysql_result($result_net, 0, 'new');
+                                    if($p['new']=='y'){
+                                        $new_gif = ' <img src="image/new1.gif">';
+                                    }else{
+                                        $new_gif = '';
+                                    }
+                                    ?>
 
                                     <div class="frames">
                                         <div class="frame active" id="page1">
                                             <h2>ข่าววิชาการในเครือข่าย</h2>
+                                            
+                                            <?php
+                                            $num_news = mysql_num_rows($result_net);
 
-                                            <h3>การเสื่อมสภาพของยางล้อรถยนต์ <img src="image/new1.gif"></h3>
-                                            <p class="fg-color-green"><small><em>5 มิถุนายน 2556</em></small></p>
-                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ยางล้อจัดเป็นชิ้นส่วนที่สำคัญของรถยนต์อย่างหนึ่ง ยางล้อเป็นชิ้นส่วนเดียวของระบบขับเคลื่อนรถยนต์ที่สัมผัสกับพื้นถนน คุณภาพของยางล้อจึงส่งผลโดยตรงต่อประสิทธิภาพการขับเคลื่อนและการบังคับควบคุมรถยนต์และที่สำคัญยิ่งคือความปลอดภัยต่อผู้ใช้รถยนต์ในปัจจุบันเทคโนโลยีการออกแบบและผลิตยางล้อได้ถูกพัฒนาขึ้นเป็นอย่างมาก โดยมีการปรับแต่งสมรรถนะให้เหมาะสมและสอดคล้องกับความต้องการของผู้ใช้ เช่นยางล้อสำหรับรถยนต์นั่ง ยางล้อสำหรับรถกระบะ ยางล้อสำหรับรถตู้ ยางล้อสำหรับรถขับเคลื่อน 4 ล้อ และยางล้อสำหรับรถบรรทุกและรถโดยสาร</p>
-                                            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การผลิตยางล้ออาศัยวัสดุหลากหลายเพื่อที่จะให้ได้ยางล้อมีคุณสมบัติที่ต้องการ เช่น ยางธรรมชาติ ยางสังเคราะห์เพื่อใช้ป้องกันยางล้ออ่อนตัวเมื่ออุณหภูมิยางขณะใช้งานสูงขึ้น ผงคาร์บอนหรือผงเขม่าเพื่อช่วยให้โมเลกุลของยางจับตัวกันแน่นทำให้ยางล้อทนต่อการสึกและทนต่อการเกิดรอยขีดข่วน สารเคมีต่างๆ เช่น ออกไซด์ของสังกะสีเพื่อช่วยชะลอการย่อยสลายด้วงรังสีอัลตราไวโอเล็ตหรือยูวีจากดวงอาทิตย์ กัมมะถันสำหรับการทำให้ยางมีความยืดหยุ่นคงรูป ตลอดจนโลหะหนักและสารประกอบไฮโดร์คาร์บอนบางอย่าง นอกเหนือจากนั้นยังมีการเสริมความแข็งแรงในโครงสร้างของล้อยางโดยการเสริมด้วยชั้นของผ้าใบที่ทำมาจากเส้นด้ายไนลอน หรือโพลีเอสเตอร์ และเส้นลวดเหล็ก</p>
-                                            <div class="text-center"><img src="../upload/news/network_news/Tyre_01.jpg" style="width: 455px; height: auto;">
-                                                <br />รูปที่ 1 แผนภาพภาคตัดขวางแสดงองค์ประกอบต่าง ๆ ของยางล้อรถยนต์ (ภาพจาก internet)
-                                            </div>
-                                            <p><a href="#">... อ่านต่อ <i class="icon-arrow-right-2 fg-color-red"></i></a></p>
-                                            <h3>.....</h3>
-                                            <p>****************************************</p>
+                                            if ($num_news > 0) {
+                                            ?>
+                                            
+                                            <h3><?php echo htmlspecialchars_decode($tiltle); echo $new_gif; ?></h3>
+                                            <p class="fg-color-green"><small><em><?php echo thai_date($date); ?></em></small></p>
+                                            <?php
+                                                echo htmlspecialchars_decode($content_short);
+                                                
+                                                echo '<p><a href="show_news.php?news_id=' . $news_id . '" class="fg-color-green">..... อ่านต่อ <i class="icon-arrow-right-2 fg-color-red"></i></a></p>';
+                                            } else {
+                                                echo '<h3 class="text-center">ขออภัย ไม่พบข้อมูล</h3>';
+                                            }
+                                            ?>
 
                                         </div>
 
