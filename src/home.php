@@ -89,11 +89,12 @@ require_once "ui_re_db/system/system.php";
                                             ORDER BY date DESC;
                                             ";
                                     $result_net = mysql_query($sql_net);
-                                    $news_id = mysql_result($result_net, 0, 'id');
-                                    $tiltle = mysql_result($result_net, 0, 'title');
-                                    $date = mysql_result($result_net, 0, 'date');
-                                    $content_short = mysql_result($result_net,0, 'content_short');
-                                    $new = mysql_result($result_net, 0, 'new');
+                                    $net = mysql_fetch_array($result_net);
+                                    $news_id = $net['id'];
+                                    $tiltle = $net['title'];
+                                    $date = $net['date'];
+                                    $content_short = $net['content_short'];
+                                    $new = $net['new'];
                                     if($new=='y'){
                                         $new_gif = ' <img src="image/new1.gif">';
                                     }else{
