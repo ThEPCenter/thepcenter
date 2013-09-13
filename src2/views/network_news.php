@@ -3,19 +3,19 @@ require_once '../system/system.php';
 
 $sql = "
         SELECT * FROM tb_news
-        WHERE type = 'pr'
+        WHERE type = 'network_academic'
         ORDER BY date DESC;
         ";
 $result = mysql_query($sql);
 
-doc_head('ข่าวประชาสัมพันธ์');
+doc_head('ข่าววิขาการจากเครือข่าย');
 ?>       
 </head>
 
 <body>
     <div class="container">
 
-        <?php get_includes('header'); ?>            
+        <?php get_includes('header'); ?>
         <div class="bs-example">
             <?php
             $num_news = mysql_num_rows($result);
@@ -30,12 +30,12 @@ doc_head('ข่าวประชาสัมพันธ์');
                     }
                     echo '                            
                             <div id="news-' . $p['id'] . '">
-                                <div class="text-center"><img src="' . htmlspecialchars_decode($p['picture']) . '"></div>
                                 <h3>' . $l . '. ' . htmlspecialchars_decode($p['title']) . $new_gif . '</h3>
                                 <p class="fg-color-green"><small><em>' . thai_date($p['date']) . '</small></em></p>
                                 ' . htmlspecialchars_decode($p['content_long']) . '
                             </div>';
                     echo '
+                        <p>&nbsp;</p>
                         <hr>
                             ';
                 } // END while

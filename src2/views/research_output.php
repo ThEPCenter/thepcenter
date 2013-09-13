@@ -1,96 +1,83 @@
 <?php
-require_once 'ui_re_db/system/system.php';
+require_once '../system/system.php';
+doc_head('ศูนย์ความเป็นเลิศด้านฟิสิกส์');
+?>       
+</head>
 
-$pathf = new config();
-?>
-<!DOCTYPE html>
-<html lang="en">
-    <head>        
-        <?php require_once 'meta_script.php'; ?>        
-        <title>ผลงานวิจัยตีพิมพ์ระดับนานาชาติ</title>
-    </head>
+<body>
+    <div class="container">
 
-    <body class="metrouicss">
+        <?php get_includes('header'); ?>            
 
-        <?php require_once 'header.php'; ?>
+        <?php
+        if (isset($_GET['year'])) {
+            $year = $_GET['year'];
 
-        <div class="page bg-color-blueLight" id="page-index">
+            $sql = "SELECT * FROM tb_re_center";
 
-            <h2 class="text-center">ผลงานวิจัยตีพิมพ์ระดับนานาชาติ</h2>
+            $result = mysql_query($sql);
 
-            <div class="page-region">
-                <div class="page-region-content">                    
+            echo '<div><h3 align="center">ประจำปี พ.ศ. ' . ($year + 543) . ' (ค.ศ. ' . $year . ')</h3></div>';
 
-                    <?php
-                    if (isset($_GET['year'])) {
-                        $year = $_GET['year'];
 
-                        $sql = "SELECT * FROM tb_re_center";
 
-                        $result = mysql_query($sql);
-
-                        echo '<div><h3 align="center">ประจำปี พ.ศ. ' . ($year + 543) . ' (ค.ศ. ' . $year . ')</h3></div>';
-                        
-                       
-                        
-                        while ($p = mysql_fetch_array($result)) {
-                            echo '<table style="width: 350px; margin: 10px auto;">
+            while ($p = mysql_fetch_array($result)) {
+                echo '<table style="width: 350px; margin: 10px auto;">
                             	<tr>
                         		<td class="text-center" style="background-color: #cccccc; height: 40px; width: 350px;"><a href="show_art.php?year=' . $year . '&center=' . $p['re_center_code'] . '&center_name=' . $p['re_center_th'] . '">' . $p['re_center_th'] . ' (' . $p['re_center_code'] . ')</a></td>
                       		</tr>
                             </table>
                             
                             ';
-                        } //END while                        
-                        
+            } //END while                        
 
-                        echo '<div>&nbsp;</div>
+
+            echo '<div>&nbsp;</div>
 		<div align="center"><a href="research_output.php"><i class="icon-arrow-left-3"></i> ย้อนกลับ</a></div>';
-                    } else {
-                        ?>
+        } else {
+            ?>
 
-                        <div class="text-center">
-                        <?php
-                        $thisYear = date('Y');
-                        for ($m = $thisYear; $m >= 2009; $m--) {
-                            echo '<table style="width: 250px; margin: 10px auto;">
+            <div class="text-center">
+                <?php
+                $thisYear = date('Y');
+                for ($m = $thisYear; $m >= 2009; $m--) {
+                    echo '<table style="width: 250px; margin: 10px auto;">
                             	<tr>
                         		<td class="text-center" style="background-color: #cccccc; height: 40px;"><a href="?year=' . $m . '">ประจำปี พ.ศ. ' . ($m + 543) . ' (ค.ศ. ' . $m . ')</a></td>
                       		</tr>
                             </table>
                         	';
-                        }
-                        ?>
-                        </div>
-                    </div>
+                }
+                ?>
+            </div>
 
-                            <?php
-                            $sql = "SELECT *  
+
+            <?php
+            $sql = "SELECT *  
 	FROM tb_article 
 	ORDER BY year DESC, impact DESC
 	LIMIT 5
 ;";
-                            $result = mysql_query($sql);
-                            ?>
-                    <div>
-                        <h3>Update ผลงานวิจัยล่าสุด</h3>
-                        <table class="bordered">
-                            <tr>
+            $result = mysql_query($sql);
+            ?>
+            <div>
+                <h3>Update ผลงานวิจัยล่าสุด</h3>
+                <table class="table-bordered">
+                    <tr>
 
-                                <td class="text-center"><strong>Title</strong></td>
-                                <td class="text-center"><strong>Corresponding author</strong></td>
-                                <td class="text-center"><strong>Journal</strong></td>
-                                <td class="text-center"><strong>Year</strong></td>
-                                <td class="text-center"><strong>Impact facto</strong>r</td>            
-                            </tr>
-    <?php
-    while ($p = mysql_fetch_array($result)) {
-        $dir = $pathf->inc_dir('paper_upload');
-        $str1 = '<a href="' . $dir . '/' . $p['id'] . '/' . $p['file_name'] . '" target="_blank">' . htmlspecialchars_decode($p['name']) . '</a>';
-        $str2 = htmlspecialchars_decode($p['name']);
-        echo'
-	<tr>
-			
+                        <td class="text-center"><strong>Title</strong></td>
+                        <td class="text-center"><strong>Corresponding author</strong></td>
+                        <td class="text-center"><strong>Journal</strong></td>
+                        <td class="text-center"><strong>Year</strong></td>
+                        <td class="text-center"><strong>Impact facto</strong>r</td>            
+                    </tr>
+                    <?php
+                    while ($p = mysql_fetch_array($result)) {
+                        $dir = '../../paper_upload';
+                        $str1 = '<a href="' . $dir . '/' . $p['id'] . '/' . $p['file_name'] . '" target="_blank">' . htmlspecialchars_decode($p['name']) . '</a>';
+                        $str2 = htmlspecialchars_decode($p['name']);
+                        echo'
+	<tr>			
             <td width="500">' . fileExist($p['id'], $p['file_name'], $dir, $str1, $str2) . '</td>
             <td width="170">' . $p['c_author'] . '</td>
             <td>' . $p['journal'] . '</td>
@@ -98,18 +85,16 @@ $pathf = new config();
             <td align="center">' . $p['impact'] . '</td>
 	</tr>
     ';
-    }//END WHILE
-    ?>
-                        </table>
-                        <div align="right"><a href="<?php echo $pathf->inc_dir('Re_db'); ?>" title="Setting" target="_blank"><img src="<?php echo $pathf->inc_dir('image'); ?>/settings.png" height="25" border="0" /></a></div>
-                        <?php } ?>
+                    }//END WHILE
+                }
+                ?>
+            </table>           
+            <p>&nbsp;</p>
 
+            <?php get_includes('footer'); ?>
 
-                </div>
-            </div>
-        </div> <!-- END #page-index -->
-
-<?php require_once 'footer.php'; ?>
-
-    </body>
+        </div>
+    </div>
+    <!-- /.container -->
+</body>
 </html>

@@ -1,7 +1,7 @@
-<header id="header">
+<header>
 
     <div>
-        <h1 id="site-logo"><a href="home.php">ศูนย์ความเป็นเลิศด้านฟิสิกส์</a></h1>
+        <h1><a href="home.php">ศูนย์ความเป็นเลิศด้านฟิสิกส์</a></h1>
     </div>
 
     <nav class="navbar navbar-default" role="navigation">
@@ -24,7 +24,8 @@
                 <li><a href="research_output.php">งานวิจัย</a></li>
                 <li><a href="industrial.php">ฟิสิกส์เพื่อผู้ประกอบการ</a></li>
             </ul>
-        </div><!-- /.navbar-collapse -->
+        </div>
+        <!-- /.navbar-collapse -->
     </nav>
 
 </header>
