@@ -2,7 +2,14 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
-        <file>file:/C:/AppServ/www/thepcenter/src/ui_re_db/system/system.php</file>
-        <file>file:/C:/AppServ/www/thepcenter/src/industrial.php</file>
+        <file>file:/C:/AppServ/www/thepcenter/Re_db_1.0.1/Re_db/controllers/controllers.php</file>
+        <file>file:/C:/AppServ/www/thepcenter/src2/system/config.php</file>
+        <file>file:/C:/AppServ/www/thepcenter/src2/includes/doc-head.php</file>
+        <file>file:/C:/AppServ/www/thepcenter/src2/includes/header.php</file>
+        <file>file:/C:/AppServ/www/thepcenter/src2/system/functions.php</file>
+        <file>file:/C:/AppServ/www/thepcenter/src2/views/home.php</file>
+        <file>file:/C:/AppServ/www/thepcenter/src2/includes/footer.php</file>
+        <file>file:/C:/AppServ/www/thepcenter/src2/views/about.php</file>
+        <file>file:/C:/AppServ/www/thepcenter/src2/views/_blank.php</file>
     </open-files>
 </project-private>

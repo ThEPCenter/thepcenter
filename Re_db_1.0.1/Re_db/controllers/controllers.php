@@ -11,27 +11,8 @@ class controllers extends config {
     function get_file_type($file_name) {
         $name = strtolower($file_name);
         $nameArr = explode(".", $name);
-        $num = count($nameArr);
-
-        switch ($nameArr[$num - 1]) {
-            case "pdf" :
-                return 'pdf';
-                break;
-            case "doc" :
-                return 'doc';
-                break;
-            case "docx" :
-                return 'docx';
-                break;
-            case "jpg" :
-                return 'jpg';
-                break;
-            case "png" :
-                return 'png';
-                break;
-            default :
-                return 'pdf';
-        }
+        $num = count($nameArr);        
+        return $nameArr[$num - 1];      
     }
 
 // END function
