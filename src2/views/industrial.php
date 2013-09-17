@@ -10,31 +10,21 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
         <div class="row">
 
-            <div class="col-xs-6 col-md-4">                
-                <div class="bs-example bs-example-tabs">
+            <div class="col-md-4">                
+                <div class="bs-example">
                     <p style="font-size: 20px; text-align: center;">สารสนเทศสำหรับ<br />ผู้ประกอบการ</p>
 
                     <ul>
-                        <li class="sticker sticker-color-orange"><a href="../../upload/industrial/Board.pdf" target="_blank">คณะกรรมการที่ปรึกษา<br />ภาคการผลิตและบริการ</a></li>
-                        <li class="sticker sticker-color-orangeDark"><a href="../../upload/industrial/Message.pdf" target="_blank">สารจากผู้อำนวยการศูนย์ฯ</a></li>
-                        <li class="sticker sticker-color-green"><a href="../../upload/industrial/Members.pdf" target="_blank">"ทำเนียบ" ห้องปฏิบัติการ<br />ทางฟิสิกส์</a></li>
-                        <li class="sticker sticker-color-pink"><a href="../../upload/industrial/thep.pdf" target="_blank">ตัวอย่างงานวิจัย</a></li>
-                        <li class="sticker sticker-color-red dropdown" data-role="dropdown">
-                            <a>การร่วมบริจาคทุนเพื่อศูนย์วิจัย</a>
-                            <ul class="sub-menu light sidebar-dropdown-menu" style="display: none;">
-                                <li><a href="../upload/industrial/STI-Policy.pdf" target="_blank">STI</a></li>
-                                <!--
-                                <li><a href="">To Do List1</a></li>
-                                <li><a href="">To Do List2</a></li>
-                                <li><a href="">To Do List3</a></li>
-                                -->
-                            </ul>
-                        </li>
+                        <li><a href="../../upload/industrial/Board.pdf" target="_blank">คณะกรรมการที่ปรึกษา<br />ภาคการผลิตและบริการ</a></li>
+                        <li><a href="../../upload/industrial/Message.pdf" target="_blank">สารจากผู้อำนวยการศูนย์ฯ</a></li>
+                        <li><a href="../../upload/industrial/Members.pdf" target="_blank">"ทำเนียบ" ห้องปฏิบัติการ<br />ทางฟิสิกส์</a></li>
+                        <li><a href="../../upload/industrial/thep.pdf" target="_blank">ตัวอย่างงานวิจัย</a></li>
+                        <li><a href="../../upload/industrial/STI-Policy.pdf" target="_blank">การร่วมบริจาคทุนเพื่อศูนย์วิจัย</a></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="col-xs-12 col-md-8">
+            <div class="col-md-8">
                 <div class="bs-example">
                     <?php
                     $sql = "SELECT * FROM tb_industrial ORDER BY date DESC;";
@@ -47,18 +37,17 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                                 <p class="fg-color-green"><small><em>' . thai_date($p['date']) . '</small></em></p>
                                 ' . htmlspecialchars_decode($p['content']) . '
                             </div>
-                            <p>&nbsp;</p>
                             <hr>
                     ';
                         }
                     } else {
                         echo "ขออภัย ไม่พบข้อมูล";
                     }
-                    get_includes('footer');
                     ?>
                 </div>
             </div>
         </div>
+        <?php get_includes('footer'); ?>
     </div>
     <!-- /.container -->
 </body>
