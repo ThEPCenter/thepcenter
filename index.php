@@ -1,4 +1,4 @@
 <?php 
-header("Location: src/home.php");
+header("Location: src");
 exit;
 ?>
