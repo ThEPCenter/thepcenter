@@ -12,7 +12,7 @@ define("USER", "root");
 define("PASS", "1234");
 define("DB_NAME", "db_thep");
 
-define("DOMAIN", "http://localhost/ThEP_Admin_Panel"); /* setting for real web=>  http://www.thep-center.org  */
+define("DOMAIN", "http://localhost/thepcenter"); /* setting for real web=>  http://www.thep-center.org  */
 define("DOMAIN_NAME", "thep-center.org");
 
 define("MAIN", "index.php");
@@ -160,7 +160,7 @@ class config {
                 return '../includes';
                 break;
             case "plugins" :
-                return '../../plugins';
+                return '../plugins';
                 break;
             case "script" :
                 return '../script';
@@ -258,55 +258,5 @@ class config {
     } // END function inc_file
     
 } // END class config
-
-
-class template extends config {
-    
-    function getDoct($version){ 
-        if($version == 4.01){
-            return '
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';
-        }else if($version == 5){
-            return '
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">';
-        }
-    } // END getDoct
-        
-    
-    function getTitle($html_ver, $title){        
-        $title_tag = '<title>'. $title .'</title>';        
-        if($html_ver == 4.01){
-            return $this->getDoct($html_ver) . $title_tag;
-        }else if($html_ver == 5){
-            return $this->getDoct($html_ver) . $title_tag;
-        }       
-    } // END getTitle
-    
-    function getstyle_script($style_tag, $script_tag, $script_name){
-        $style_link = '
-        <link rel="stylesheet" type="text/css" href="' . $this->inc_file('article') . '" />';        
-        $jquery_link = '
-        <script type="text/javascript" src="' . $this->inc_file('jquery') . '"></script>';        
-        $script_link = (empty($script_name)) ? 
-            $jquery_link : $jquery_link . '
-        <script type="text/javascript" src="' . $this->inc_file($script_name) . '"></script>';   
-        return $style_link . $style_tag . $script_link . $script_tag;
-    }
-    
-    function getHead($html_ver, $title, $style_tag, $script_tag, $script_name){
-        return  $this->getTitle($html_ver, $title) . 
-                $this->getstyle_script($style_tag, $script_tag, $script_name).'    
-    </head>
-    ';        
-    } // END getHead
-    
-    
-} // END class template
 
 ?>
