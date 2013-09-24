@@ -22,9 +22,7 @@ if ($_POST) {
         <form name = "form1" method = "post" action = "<?php echo $_SERVER['PHP_SELF']; ?>">
             <table class="bordered">
                 <tr>
-                    <td>
-                        ชื่อเรื่อง
-                    </td>
+                    <td>ชื่อเรื่อง</td>
                     <td>
                         <div class="input-control text">
                             <input type="text" name="title" />
@@ -32,10 +30,7 @@ if ($_POST) {
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        วันที่
-                    </td>
-
+                    <td>วันที่</td>
                     <td>
                         <input type="text" id="datepicker" name="date" />
                     </td>
@@ -47,9 +42,7 @@ if ($_POST) {
             
                 </script>
                 <tr>
-                    <td>
-                        เนื้อหา
-                    </td>
+                    <td>เนื้อหา</td>
                     <td>
                         <div class="input-control textarea">
                             <textarea name="content">

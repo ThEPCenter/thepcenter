@@ -67,11 +67,10 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                     <div id="myTabContent" class="tab-content">
 
                         <?php
-                        $sql_net = "
-                                            SELECT * FROM tb_news
-                                            WHERE type = 'network_academic'
-                                            ORDER BY date DESC;
-                                            ";
+                        $sql_net = "SELECT * FROM tb_news
+                            WHERE type = 'network_academic'
+                            ORDER BY date DESC;
+                        ";
                         $result_net = mysql_query($sql_net);
                         $net = mysql_fetch_array($result_net);
                         $news_id = $net['id'];
@@ -113,9 +112,9 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
                         <?php
                         $sql_act = "SELECT * FROM tb_news
-                                            WHERE type = 'activity'
-                                            ORDER BY date DESC;
-                                            ";
+                            WHERE type = 'activity'
+                            ORDER BY date DESC;
+                        ";
                         $re_act = mysql_query($sql_act);
                         ?>
                         <div class="tab-pane fade" id="page2">
@@ -127,7 +126,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                                         $sql_pic = "SELECT * FROM tb_picture
                                             WHERE gallery_id = {$a['gallery_id']}
                                             ORDER BY id;    
-                                            ";
+                                        ";
                                         $re_pic = mysql_query($sql_pic);
                                         $pic = mysql_fetch_array($re_pic);
 

@@ -2,7 +2,7 @@
 require_once '../system/system.php';
 doc_head('ข่าวกิจกรรม');
 ?>
-<link href="<?php plugins('lightbox2.6/lightbox/css/lightbox.css'); ?>" rel="stylesheet" />
+<link rel="stylesheet" href="<?php plugins('lightbox2.6/lightbox/css/lightbox.css'); ?>">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Karla:400,700">
 
 <style>
@@ -91,11 +91,10 @@ doc_head('ข่าวกิจกรรม');
             </div>
             <?php
         } else {
-
-            $sql_act = "SELECT * FROM tb_news
-                                            WHERE type = 'activity'
-                                            ORDER BY date DESC;
-                                            ";
+            $sql_act = "SELECT * FROM tb_news 
+                WHERE type = 'activity' 
+                ORDER BY date DESC;
+            ";
             $re_act = mysql_query($sql_act);
             ?>
             <table class="table">
@@ -103,10 +102,10 @@ doc_head('ข่าวกิจกรรม');
                 if (mysql_num_rows($re_act) > 0) {
                     while ($a = mysql_fetch_array($re_act)) {
 
-                        $sql_pic = "SELECT * FROM tb_picture
-                                            WHERE gallery_id = {$a['gallery_id']}
-                                            ORDER BY id;    
-                                            ";
+                        $sql_pic = "SELECT * FROM tb_picture 
+                            WHERE gallery_id = {$a['gallery_id']} 
+                            ORDER BY id;    
+                        ";
                         $re_pic = mysql_query($sql_pic);
                         $pic = mysql_fetch_array($re_pic);
 
@@ -130,7 +129,7 @@ doc_head('ข่าวกิจกรรม');
             </table>
 
             <?php
-        } // END else
+        } // END if GET else
         get_includes('footer');
         ?>
 

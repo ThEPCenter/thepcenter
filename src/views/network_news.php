@@ -1,11 +1,10 @@
 <?php
 require_once '../system/system.php';
 
-$sql = "
-        SELECT * FROM tb_news
-        WHERE type = 'network_academic'
-        ORDER BY date DESC;
-        ";
+$sql = "SELECT * FROM tb_news 
+    WHERE type = 'network_academic' 
+    ORDER BY date DESC;
+";
 $result = mysql_query($sql);
 
 doc_head('ข่าววิขาการจากเครือข่าย');

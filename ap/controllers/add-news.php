@@ -40,9 +40,7 @@ $news = $_GET['add_news'];
             <input name="type" type="hidden" value="<?php echo $news; ?>">
             <table>
                 <tr>
-                    <td>
-                        หัวข้อข่าว
-                    </td>
+                    <td>หัวข้อข่าว</td>
                     <td>
                         <div class="input-control text">
                             <input type="text" name="title" />
@@ -51,10 +49,7 @@ $news = $_GET['add_news'];
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        วันที่
-                    </td>
-
+                    <td>วันที่</td>
                     <td>
                         <input type="text" id="datepicker" name="date" />
                     </td>
@@ -96,9 +91,7 @@ $news = $_GET['add_news'];
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        อื่นๆ
-                    </td>
+                    <td>อื่นๆ</td>
                     <td>
                         <label class="input-control checkbox">
                             <input type="checkbox" name="new" value="y" />
@@ -109,9 +102,7 @@ $news = $_GET['add_news'];
 
                 <?php if ($news == 'activity') { ?>
                     <tr>
-                        <td>
-                            แกลอรี
-                        </td>
+                        <td>แกลอรี</td>
                         <td>
                             <span><a id="ch-gal" style="cursor: pointer;">เลือกแกลอรี</a> หรือ </span><a id="add-gal" href="gallery.php?add_gal=new" target="_blank">เพื่มแกลอรีใหม่</a>
                             <div class="input-control select" id="select-gallery">
@@ -121,9 +112,7 @@ $news = $_GET['add_news'];
                 <?php } elseif ($news == 'pr') {
                     ?>
                     <tr>
-                        <td>
-                            รูปภาพ/โปสเตอร์ (URL)
-                        </td>
+                        <td>รูปภาพ/โปสเตอร์ (URL)</td>
                         <td>
                             <div class="input-control text">
                                 <input type="text" name="picture" />
@@ -133,9 +122,7 @@ $news = $_GET['add_news'];
                     </tr>
                 <?php } ?>
                 <tr>
-                    <td>
-
-                    </td>
+                    <td>&nbsp;</td>
                     <td align="center">
                         <input type="submit" value="Submit" /> <a href="../views/news.php?news=<?php echo $news; ?>" title="Cancel"><strong>Cancel</strong></a>
                     </td>
@@ -146,22 +133,22 @@ $news = $_GET['add_news'];
     </div>
 
     <div class="text-center"><a href="#"><i class="icon-arrow-up-3"></i>Up</a></div>
-<script>
-    $(function() {
+    <script>
+        $(function() {
                 
-        $( "#datepicker" ).datepicker();   // Date Picker
+            $( "#datepicker" ).datepicker();   // Date Picker
                 
-        /* AJAX for Gallery list */
-        $("#ch-gal").click(function(){
-            $('#select-gallery').load("<?php echo path_controll('show-gal-option'); ?>");
-            $('#select-gallery').show();                      
-        });
+            /* AJAX for Gallery list */
+            $("#ch-gal").click(function(){
+                $('#select-gallery').load("<?php echo path_controll('show-gal-option'); ?>");
+                $('#select-gallery').show();                      
+            });
                 
-        $('#add-gal').click(function(){
-            $('#select-gallery').hide();
-        });
+            $('#add-gal').click(function(){
+                $('#select-gallery').hide();
+            });
                                
-    }); /* END jQuery */
+        }); /* END jQuery */
             
-</script>
+    </script>
 </div>

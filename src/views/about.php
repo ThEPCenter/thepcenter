@@ -200,9 +200,9 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                             while ($p = mysql_fetch_array($result)) {
                                 ?>
                                 <tr>
-                                    <td align="center">                                            
+                                    <td align="center">
                                         <img src="<?php echo $p['photo'] ?>" class="img-responsive" style="width: auto; max-height: 143px;">
-                                    </td>                                        
+                                    </td>
                                     <td>                                            
                                         <p><?php echo $p['title_th'] . ' ' . $p['first_th'] . ' ' . $p['last_th']; ?></p>                                            
                                         <p>ตำแหน่ง : <? echo $p['position_th'] ?></p>                                            
