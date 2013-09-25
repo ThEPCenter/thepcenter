@@ -31,7 +31,7 @@ doc_head('ข่าวประชาสัมพันธ์');
             <div id="news-' . $p['id'] . '">
                 <div class="text-center"><img src="' . htmlspecialchars_decode($p['picture']) . '"></div>
                 <h3>' . $l . '. ' . htmlspecialchars_decode($p['title']) . $new_gif . '</h3>
-                <p class="fg-color-green"><small><em>' . thai_date($p['date']) . '</small></em></p>
+                <p><small><em>' . thai_date($p['date']) . '</small></em></p>
                 ' . htmlspecialchars_decode($p['content_long']) . '
             </div>
             <hr>

@@ -34,7 +34,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                             echo '
                     <div>
                         <h3>' . htmlspecialchars_decode($p['title']) . '</h3>
-                        <p class="fg-color-green"><small><em>' . thai_date($p['date']) . '</small></em></p>
+                        <p><small><em>' . thai_date($p['date']) . '</small></em></p>
                         ' . htmlspecialchars_decode($p['content']) . '
                     </div>
                     <hr>

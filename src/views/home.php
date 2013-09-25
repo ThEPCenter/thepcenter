@@ -150,17 +150,55 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                         </div>
 
                         <div class="tab-pane fade" id="page3">
-                            <p>สรุปรายชื่อผู้เข้าร่วมกิจกรรม Names of participant's Advanced Plasma Technology for Green Energy and Biomedical Applications
-                                ... รายละเอียด</p>
+                            <p>สรุปรายชื่อผู้เข้าร่วมกิจกรรม Names of participant's Advanced Plasma Technology for Green Energy and Biomedical Applications ... รายละเอียด</p>
                         </div>
 
                     </div>
                 </div>
 
             </div>
-            <div class="col-md-4">                
-                <div class="bs-example bs-example-tabs">
-                    <p>col-md-4</p>
+            <div class="col-md-4 text-center">                
+                <div class="bs-example">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-default btn-lg btn-block" onclick="window.location='form.php';">แบบฟอร์มต่างๆ</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-success btn-lg btn-block" onclick="window.location='weblink.php';">เว็บลิ้งค์</button>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-primary btn-lg btn-block">Block 21</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-primary btn-lg btn-block">Block 22</button>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-primary btn-lg btn-block">Block 31</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-primary btn-lg btn-block">Block 32</button>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-primary btn-lg btn-block">Block 41</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-primary btn-lg btn-block">Block 42</button>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+                    
                 </div>
             </div>
         </div>
