@@ -59,7 +59,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             <div class="col-md-8">
                 <div class="bs-example bs-example-tabs">
                     <ul id="myTab" class="nav nav-tabs">
-                        <li class="active"><a href="#page1" data-toggle="tab">ข่าววิชาการในเครือข่าย</a></li>
+                        <li class="active"><a href="#page1" data-toggle="tab">ข่าววิชาการจากเครือข่าย</a></li>
                         <li><a href="#page2" data-toggle="tab">ข่าวกิจกรรม</a></li>
                         <li><a href="#page3" data-toggle="tab">ข่าววิชาการทั่วไป</a></li>
                     </ul>
@@ -85,16 +85,15 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                         }
                         ?>
                         <div class="tab-pane fade in active" id="page1">
-                            <h2>ข่าววิชาการในเครือข่าย</h2>
+                            <h2>ข่าววิชาการจากเครือข่าย</h2>
 
                             <?php
                             $num_news = mysql_num_rows($result_net);
 
                             if ($num_news > 0) {
                                 ?>
-
                                 <h3>
-                                    <?php
+                                    <?php                                    
                                     echo htmlspecialchars_decode($tiltle);
                                     echo $new_gif;
                                     ?>
@@ -103,7 +102,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                                 <?php
                                 echo htmlspecialchars_decode($content_short);
 
-                                echo '<p><a href="network_news.php#news-' . $news_id . '">..... อ่านต่อ</a></p>';
+                                echo '<p><a href="network_news.php?news_id=' . $news_id . '">..... อ่านต่อ</a></p>';
                             } else {
                                 echo '<h3 class="text-center">ขออภัย ไม่พบข้อมูล</h3>';
                             }

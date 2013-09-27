@@ -52,9 +52,13 @@ function thai_date($str_date, $show_day = "n") {
 }
 
 // =============== Controllers =================
-function controll($name) {
+function controller($name){
     $conf = new config();
-    echo $conf->controllers($name);
+    return $conf->controllers($name);
+}
+
+function controll($name) {    
+    echo controller($name);
 }
 
 function get_controll($name) {
@@ -118,4 +122,59 @@ function doc_head($title) {
     script('jquery-1.10.2.js');
 }
 
+
+function login($output, $not_login=''){
+    if(isset($_SESSION['login'])){
+        echo $output;
+    }else{
+        echo $not_login;
+    }
+}
+
+function user_property($property){
+    $sql = "SELECT * FROM tb_user WHERE username = '{$_SESSION['login']}';";
+    $result = mysql_query($sql);
+    $u = mysql_fetch_array($result);
+    return $u[$property];
+}
+
+function user($property){
+    echo user_property($property);
+}
+
+function admin($yes, $no=''){
+    if(user_property('level')==1){
+        echo $yes;
+    }else{
+        echo $no;
+    }
+}
+
+function space($n){
+    $sp = '';
+    for($i=0;$i<$n;$i++){
+        $sp .= '&nbsp;';
+    }
+    echo $sp;
+}
+
+function name_news($news_type){
+        switch($news_type){
+            case 'network_academic':
+                echo 'ข่าววิชาการจากเครือข่าย';
+                break;
+            case 'pr':
+                echo 'ข่าวประชาสัมพันธ์';
+                break;
+            case 'activity':
+                echo 'ข่าวกิจกรรม';
+                break;
+            case 'gen_academic':
+                echo 'ข่าววิชาการทั่วไป';
+                break;
+            default:
+                return 'ไม่พบข้อมูล';
+                break;
+        }
+    }
 ?>
