@@ -11,6 +11,9 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
         get_includes('header');
         ?>
         <div class="bs-example">
+            <h2 class="text-center">ผลงานวิจัยตีพิมพ์ระดับนานาชาติ</h2>
+            <br>
+            
             <?php
             if (isset($_GET['year'])) {
                 $year = $_GET['year'];
@@ -76,8 +79,8 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                             $str2 = htmlspecialchars_decode($p['name']);
                             echo'
                     <tr>			
-                        <td width="500">' . fileExist($p['id'], $p['file_name'], $dir, $str1, $str2) . '</td>
-                        <td width="170">' . $p['c_author'] . '</td>
+                        <td>' . fileExist($p['id'], $p['file_name'], $dir, $str1, $str2) . '</td>
+                        <td>' . $p['c_author'] . '</td>
                         <td>' . $p['journal'] . '</td>
                         <td>' . $p['year'] . '</td>
                         <td align="center">' . $p['impact'] . '</td>

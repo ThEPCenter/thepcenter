@@ -10,48 +10,45 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
         text-decoration: none;
     }
 </style>
+<script>
+    $('.carousel').carousel({
+  interval: 2000
+})
+</script>
 </head>
 
 <body>
     <div class="container">
 
-        <?php get_includes('header'); ?>            
+        <?php get_includes('header'); ?>
 
-        <div class="bs-example" style="max-width: 900px; margin: 0 auto;">
-            <div id="carousel-example-captions" class="carousel slide bs-docs-carousel-example">
+        <div class="bs-example">
+            <div id="carousel-example-generic" class="carousel slide bs-docs-carousel-example">
                 <ol class="carousel-indicators">
-                    <li data-target="#carousel-example-captions" data-slide-to="0" class="active"></li>
-                    <li data-target="#carousel-example-captions" data-slide-to="1" class=""></li>
-                    <li data-target="#carousel-example-captions" data-slide-to="2" class=""></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
                 </ol>
                 <div class="carousel-inner">
                     <div class="item active">
-                        <img src="../slides/conf.kek_slide_400.png">
+                        <img src="../slides/conf.kek_slide_400.png" style="margin: 0 auto;">
                     </div>
                     <div class="item">
-                        <img src="../slides/kekworkshop2_copy.jpg">
+                        <img src="../slides/kekworkshop2_copy.jpg"  style="margin: 0 auto;">
                     </div>
                     <div class="item">
-                        <img src="../slides/summer_korea_small.gif">
+                        <img src="../slides/summer_korea_small.gif"  style="margin: 0 auto;">
                     </div>
-                    <!--
-                    <div class="item">
-                        <img src="../slides/summer_korea_small.gif">
-                        <div class="carousel-caption">
-                            <h3>Fourth slide label</h3>
-                            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                        </div>
-                    </div>
-                    -->
                 </div>
-                <a class="left carousel-control" href="#carousel-example-captions" data-slide="prev">
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                     <span class="icon-prev"></span>
                 </a>
-                <a class="right carousel-control" href="#carousel-example-captions" data-slide="next">
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
                     <span class="icon-next"></span>
                 </a>
             </div>
         </div>
+        
         <p>&nbsp;</p>
 
         <!-- Stack the columns on mobile by making one full-width and the other half-width -->
@@ -93,7 +90,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                             if ($num_news > 0) {
                                 ?>
                                 <h3>
-                                    <?php                                    
+                                    <?php
                                     echo htmlspecialchars_decode($tiltle);
                                     echo $new_gif;
                                     ?>
@@ -167,27 +164,27 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                         </div>
                     </div>
                     <p>&nbsp;</p>
-                    
+
                     <div class="row">
                         <div class="col-md-6">
-                            <button type="button" class="btn btn-primary btn-lg btn-block">Block 21</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.open('https://www.google.com/a/thep-center.org/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/a/thep-center.org/&ss=1&ltmpl=default&ltmplcache=2&emr=1')">Email@ThEP</button>
                         </div>
                         <div class="col-md-6">
-                            <button type="button" class="btn btn-primary btn-lg btn-block">Block 22</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.location='document.php';">เอกสารเผยแพร่</button>
                         </div>
                     </div>
                     <p>&nbsp;</p>
-                    
+
                     <div class="row">
                         <div class="col-md-6">
-                            <button type="button" class="btn btn-primary btn-lg btn-block">Block 31</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.open('http://eofficethep.com');">E-Office</button>
                         </div>
                         <div class="col-md-6">
-                            <button type="button" class="btn btn-primary btn-lg btn-block">Block 32</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.location='central-equipment.php';">เครื่องมือกลาง</button>
                         </div>
                     </div>
                     <p>&nbsp;</p>
-                    
+
                     <div class="row">
                         <div class="col-md-6">
                             <button type="button" class="btn btn-primary btn-lg btn-block">Block 41</button>
@@ -197,7 +194,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                         </div>
                     </div>
                     <p>&nbsp;</p>
-                    
+
                 </div>
             </div>
         </div>
@@ -214,5 +211,8 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
     </div>
     <!-- /.container -->
+    <script type="text/javascript" src="../themes/assets/js/application.js"></script>
+    <script type="text/javascript" src="../themes/assets/js/holder.js"></script>
+
 </body>
 </html>

@@ -8,6 +8,9 @@
         <link href="../themes/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 
         <link href="../themes/assets/css/docs.css" rel="stylesheet" media="screen">
+        
+        <link href="../style/main.css" rel="stylesheet" type="text/css" media="screen">
+
 
         <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
         <script src="../plugins/jqueryui/jquery-1.10.2.js"></script>        <!-- Include all compiled plugins (below), or include individual files as needed -->
