@@ -21,16 +21,6 @@ define("BASEPATH", DOMAIN . "/Re_db/");
 define("_ROWS_PER_PAGE", 10);
 
 //=======================================================
-//=================== System Users =====================
-//Users are in the system.
-global $user;
-
-$user = array(
-    'pr001' => 'xxx',
-    're001' => 'yyy'
-);
-
-//=======================================================
 
 class config {
     

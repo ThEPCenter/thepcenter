@@ -1,6 +1,6 @@
 <?php
 require_once '../system/system.php';
-doc_head('ศูนย์ความเป็นเลิศด้านฟิสิกส์');
+doc_head('ฟิสิกส์เพื่อผู้ประกอบการ');
 ?>       
 </head>
 
@@ -10,7 +10,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
         <div class="row">
 
-            <div class="col-md-4">                
+            <div class="col-md-3">                
                 <div class="bs-example">
                     <p style="font-size: 20px; text-align: center;">สารสนเทศสำหรับ<br />ผู้ประกอบการ</p>
 
@@ -24,7 +24,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                 </div>
             </div>
 
-            <div class="col-md-8">
+            <div class="col-md-9">
                 <div class="bs-example">
                     <?php
                     $sql = "SELECT * FROM tb_industrial ORDER BY date DESC;";

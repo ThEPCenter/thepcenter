@@ -9,11 +9,18 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
     .pic-link:hover{
         text-decoration: none;
     }
+    
+    #center-list{
+        display: none;
+    }
 </style>
 <script>
-    $('.carousel').carousel({
-  interval: 2000
-})
+    $(function(){
+        $("#btn-center").click(function(){
+            $("#center-list").toggle();
+        });
+    });
+   
 </script>
 </head>
 
@@ -48,7 +55,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                 </a>
             </div>
         </div>
-        
+
         <p>&nbsp;</p>
 
         <!-- Stack the columns on mobile by making one full-width and the other half-width -->
@@ -156,21 +163,52 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             <div class="col-md-4 text-center">                
                 <div class="bs-example">
                     <div class="row">
-                        <div class="col-md-6">
-                            <button type="button" class="btn btn-default btn-lg btn-block" onclick="window.location='form.php';">แบบฟอร์มต่างๆ</button>
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" id="btn-center">ศูนย์วิจัยในศูนย์ ThEP</button>
                         </div>
-                        <div class="col-md-6">
-                            <button type="button" class="btn btn-success btn-lg btn-block" onclick="window.location='weblink.php';">เว็บลิ้งค์</button>
+                    </div>
+                    <div id="center-list" class="row">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" id="btn-center" onclick="window.location='research-center.php?show_center=TFP';">ศูนย์วิจัยทางฟิสิกส์ของฟิล์มบาง</button>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" id="btn-center" onclick="window.location='research-center.php?show_center=PPP';" style="font-size: 14px;">ศูนย์วิจัยทางฟิสิกส์ของลำอนุภาคและพลาสมา</button>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" id="btn-center" onclick="window.location='research-center.php?show_center=NSP';">ศูนย์วิจัยทางนาโนสเกลฟิสิกส์</button>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" id="btn-center" onclick="window.location='research-center.php?show_center=IGP';">ศูนย์วิจัยทางฟิสิกส์บูรณาการ</button>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" id="btn-center" onclick="window.location='research-center.php?show_center=CTP';" style="font-size: 16px;">ศูนย์วิจัยทางฟิสิกส์คำนวณและทฤษฎี</button>
+                        </div>
+                    </div>
+                    <p>&nbsp;</p>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.location='central-equipment.php';">หน่วยเครื่องมือวิเคราะห์กลาง</button>
                         </div>
                     </div>
                     <p>&nbsp;</p>
 
                     <div class="row">
                         <div class="col-md-6">
-                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.open('https://www.google.com/a/thep-center.org/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/a/thep-center.org/&ss=1&ltmpl=default&ltmplcache=2&emr=1')">Email@ThEP</button>
+                            <button type="button" class="btn btn-success btn-lg btn-block" onclick="window.location='weblink.php';">เว็บลิ้งค์</button>
                         </div>
                         <div class="col-md-6">
+                            <button type="button" class="btn btn-default btn-lg btn-block" onclick="window.location='form.php';">แบบฟอร์ม</button>
+                        </div>                        
+                    </div>
+                    <p>&nbsp;</p>
+
+                    <div class="row">
+                        <div class="col-md-6">
                             <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.location='document.php';">เอกสารเผยแพร่</button>
+                        </div>
+                        <div class="col-md-6">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.open('https://www.google.com/a/thep-center.org/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/a/thep-center.org/&ss=1&ltmpl=default&ltmplcache=2&emr=1')">Email@ThEP</button>
                         </div>
                     </div>
                     <p>&nbsp;</p>
@@ -180,20 +218,10 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                             <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.open('http://eofficethep.com');">E-Office</button>
                         </div>
                         <div class="col-md-6">
-                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.location='central-equipment.php';">เครื่องมือกลาง</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.open('https://www.facebook.com/pages/Thailand-Center-of-Excellence-in-Physics/118201038353964')">facebook</button>
                         </div>
                     </div>
-                    <p>&nbsp;</p>
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <button type="button" class="btn btn-primary btn-lg btn-block">Block 41</button>
-                        </div>
-                        <div class="col-md-6">
-                            <button type="button" class="btn btn-primary btn-lg btn-block">Block 42</button>
-                        </div>
-                    </div>
-                    <p>&nbsp;</p>
+                    <p>&nbsp;</p> 
 
                 </div>
             </div>

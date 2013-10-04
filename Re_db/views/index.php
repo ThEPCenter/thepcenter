@@ -3,21 +3,25 @@ include "../system/system.php";
 
 $pathf = new config();
 
-if($_POST){
-	//Get values of user login and escape username and password for use in SQL
-	$username = mysql_real_escape_string($_POST['username']);
-	$pass = mysql_real_escape_string($_POST['password']);
+if ($_POST) {
+    $username = mysql_real_escape_string($_POST['username']);
+    $password = mysql_real_escape_string($_POST['password']);
 
-		while(list($k, $v)= each($user)){
-			if($username == $k && $pass == $v){
-				$_SESSION['login'] = $username;
-				$_SESSION['pass'] = $pass;
-				break;				
-			}else{
-				unset($_SESSION['login']);
-				unset($_SESSION['pass']);
-			}
-		}// END while
+    $sql = "SELECT * FROM tb_user WHERE username = '$username' AND password = '$password';";
+    $result = mysql_query($sql);
+    if (mysql_num_rows($result) == 1) {
+        $_SESSION['login'] = $username;
+        $_SESSION['pass'] = $password;
+
+        header("Location: index.php");
+        exit();
+    } else {
+        unset($_SESSION['login']);
+        unset($_SESSION['pass']);
+
+        header("Location: ../views");
+        exit();
+    }
 }
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">

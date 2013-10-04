@@ -1,9 +1,10 @@
 <?php
+
 require_once '../system/system.php';
 
 if ($_POST) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = mysql_real_escape_string($_POST['username']);
+    $password = mysql_real_escape_string($_POST['password']);
 
     $sql = "SELECT * FROM tb_user WHERE username = '$username' AND password = '$password';";
     $result = mysql_query($sql);
