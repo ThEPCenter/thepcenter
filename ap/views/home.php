@@ -1,7 +1,7 @@
 <?php
 require_once "../system/system.php";
 if (!isset($_SESSION['login'])) {
-    header("Location: home.php");
+    header("Location: index.php");
 }
 ?>
 <!DOCTYPE html>
