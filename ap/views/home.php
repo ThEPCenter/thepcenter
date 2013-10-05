@@ -47,7 +47,7 @@ if (!isset($_SESSION['login'])) {
                                             </p>
                                         </div>
                                         <div class="brand">
-                                            <span class="badge"><?php number_news('network_news'); ?></span>
+                                            <span class="badge"><?php number_news('network_academic'); ?></span>
                                         </div>
                                     </div>
 
@@ -108,10 +108,11 @@ if (!isset($_SESSION['login'])) {
                                     </div>
                                     <div class="tile icon"  onclick="page('upload');">
                                         <div class="tile-content">
+                                            <h5 class="text-center">Upload file</h5>
                                             <i class="icon-upload-3"></i>
                                         </div>
                                         <div class="brand">
-                                            <span class="name">Upload file</span>
+                                            <span class="name"></span>
                                         </div>
                                     </div>
 
@@ -154,12 +155,13 @@ if (!isset($_SESSION['login'])) {
                                             <h5>Gallery</h5>
                                         </div>
                                     </div>
-                                    <div class="tile icon">
+                                    <div class="tile icon bg-color-red" onclick="window.location='../controllers/logout.php';">
                                         <div class="tile-content">
-                                            <i class="icon-upload-3"></i>
+                                            <h5 class="text-center">Log out</h5>
+                                            <i class="icon-exit"></i>
                                         </div>
                                         <div class="brand">
-                                            <span class="name">Upload file</span>
+                                            <span class="name"></span>
                                         </div>
                                     </div>                                    
 

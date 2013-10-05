@@ -7,9 +7,12 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 <body>
     <div class="container">
 
-        <?php get_includes('header'); ?>            
-
-
+        <?php get_includes('header'); ?>
+        
+        <div class="bs-example">
+            
+        </div>
+        
         <?php get_includes('footer'); ?>
 
     </div>

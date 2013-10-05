@@ -1,7 +1,7 @@
 <div id ="header" class="page bg-color-blueLight">
     <div class="page-header">
         <div class="page-header-content">
-            <h1 style="text-align: center;">ThEP Admin Panel 1.0</h1>
+            <h1 style="text-align: center;">ThEP Admin Panel</h1>
             <div class="nav-bar" style="background-color: #2b5797;">
                 <div class="nav-bar-inner padding10">
                     <span class="pull-menu"></span>

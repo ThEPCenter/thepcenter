@@ -9,8 +9,8 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
     .pic-link:hover{
         text-decoration: none;
     }
-    
-    #center-list{
+
+    #center-list, #eq-list{
         display: none;
     }
 </style>
@@ -18,6 +18,10 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
     $(function(){
         $("#btn-center").click(function(){
             $("#center-list").toggle();
+        });
+        
+        $("#eq").click(function(){
+            $("#eq-list").toggle();
         });
     });
    
@@ -188,11 +192,21 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
                     <div class="row">
                         <div class="col-md-12">
-                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.location='central-equipment.php';">หน่วยเครื่องมือวิเคราะห์กลาง</button>
+                            <button type="button" id="eq" class="btn btn-primary btn-lg btn-block">หน่วยเครื่องมือวิเคราะห์กลาง</button>
+                        </div>
+                    </div>
+                    <div id="eq-list" class="row">
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" id="btn-center" onclick="window.location='central-equipment.php?eq=XPS';">เครื่องวิเคราะห์ผิววัสดุ XPS</button>
+                        </div>
+                        <div class="col-md-12">
+                            <button type="button" class="btn btn-primary btn-lg btn-block" id="btn-center" onclick="window.location='central-equipment.php?eq=FESEM';">เครื่อง FESEM</button>
                         </div>
                     </div>
                     <p>&nbsp;</p>
-
+                </div>
+                
+                <div class="bs-example">
                     <div class="row">
                         <div class="col-md-6">
                             <button type="button" class="btn btn-success btn-lg btn-block" onclick="window.location='weblink.php';">เว็บลิ้งค์</button>
@@ -224,7 +238,26 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                     <p>&nbsp;</p> 
 
                 </div>
+
+                <div class="bs-example">
+                    <div class="row">
+                        <h4 class="text-center">Admin Zone</h4>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.open('../../ap');">ระบบจัดการเว็บ</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.open('../../Re_db')">จัดการงานวิจัย</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
 
         <div>

@@ -138,7 +138,7 @@ class controllers extends config {
                 WHERE type = '$new_type';
                ";
         $result = mysql_query($sql);
-        echo mysql_num_rows($result);
+        return mysql_num_rows($result);
     }
     
     function name_news($news_type){
