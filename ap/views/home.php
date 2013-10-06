@@ -41,10 +41,6 @@ if (!isset($_SESSION['login'])) {
                                     <div class="tile double bg-color-blueDark" onclick="news('network_news')">
                                         <div class="tile-content">
                                             <h2>ข่าววิชาการจากเครือข่าย</h2>
-                                            <h5>Last Title</h5>
-                                            <p>
-                                                Content .........
-                                            </p>
                                         </div>
                                         <div class="brand">
                                             <span class="badge"><?php number_news('network_academic'); ?></span>
@@ -54,10 +50,6 @@ if (!isset($_SESSION['login'])) {
                                     <div class="tile double bg-color-green" onclick="news('pr')">
                                         <div class="tile-content">
                                             <h2>ข่าวประชาสัมพันธ์</h2>
-                                            <h5>Last Title</h5>
-                                            <p>
-                                                Congratulations! I'm really excited to celebrate with you all. Thanks for...
-                                            </p>
                                         </div>
                                         <div class="brand">
                                             <span class="badge"><?php number_news('pr'); ?></span>
@@ -66,11 +58,7 @@ if (!isset($_SESSION['login'])) {
 
                                     <div class="tile double bg-color-green" onclick="news('activity')">
                                         <div class="tile-content">
-                                            <h2>ข่าวกิจกรรม</h2>
-                                            <h5>Last Title</h5>
-                                            <p>
-                                                Congratulations! I'm really excited to celebrate with you all. Thanks for...
-                                            </p>
+                                            <h2>ข่าวกิจกรรม</h2>                                            
                                         </div>
                                         <div class="brand">
                                             <span class="badge"><?php number_news('activity'); ?></span>
@@ -80,10 +68,6 @@ if (!isset($_SESSION['login'])) {
                                     <div class="tile double" onclick="news('gen_academic')">
                                         <div class="tile-content">
                                             <h2>ข่าววิชาการทั่วไป</h2>
-                                            <h5>Last Title</h5>
-                                            <p>
-                                                Congratulations! I'm really excited to celebrate with you all. Thanks for...
-                                            </p>
                                         </div>
                                         <div class="brand">
                                             <span class="badge"><?php echo number_news('gen_academic'); ?></span>
@@ -122,37 +106,37 @@ if (!isset($_SESSION['login'])) {
                             <div class="span5">
                                 <div class="tiles clearfix">
 
-                                    <div class="tile" style="background: #439D9A;" onclick="add_news('network_news')">
+                                    <div class="tile" style="background: #439D9A;" onclick="">
                                         <div class="tile-content">
-                                            <h2>เพิ่ม</h2>
-                                            <h5>ข่าววิชาการจากเครือข่าย</h5>
+                                           <h2>...</h2>
+                                            <h5>********</h5>
                                         </div>
 
                                     </div>
-                                    <div class="tile bg-color-teal" onclick="add_news('pr')">
+                                    <div class="tile bg-color-teal" onclick="">
                                         <div class="tile-content">
-                                            <h2>เพิ่ม</h2>
-                                            <h5>ข่าวประชาสัมพันธ์</h5>
+                                            <h2>...</h2>
+                                            <h5>********</h5>
                                         </div>
 
                                     </div>
-                                    <div class="tile" style="background: #AA4344;" onclick="add_news('activity')">
+                                    <div class="tile" style="background: #AA4344;" onclick="">
                                         <div class="tile-content">
-                                            <h2>เพิ่ม</h2>
-                                            <h5>ข่าวกิจกรรม</h5>
+                                            <h2>...</h2>
+                                            <h5>********</h5>
                                         </div>
                                     </div>
-                                    <div class="tile" onclick="add_news('gen_academic')">
+                                    <div class="tile" onclick="">
                                         <div class="tile-content">
-                                            <h2>เพิ่ม</h2>
-                                            <h5>ข่าววิชาการทั่วไป</h5>
+                                            <h2>...</h2>
+                                            <h5>********</h5>
                                         </div>
                                     </div>
 
                                     <div class="tile" style="background: #AA4344;">
                                         <div class="tile-content">
-                                            <h2>เพิ่ม/จัดการ</h2>
-                                            <h5>Gallery</h5>
+                                            <h2>...</h2>
+                                            <h5>********</h5>
                                         </div>
                                     </div>
                                     <div class="tile icon bg-color-red" onclick="window.location='../controllers/logout.php';">

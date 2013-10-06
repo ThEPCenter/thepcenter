@@ -205,7 +205,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                     </div>
                     <p>&nbsp;</p>
                 </div>
-                
+
                 <div class="bs-example">
                     <div class="row">
                         <div class="col-md-6">
@@ -241,7 +241,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
                 <div class="bs-example">
                     <div class="row">
-                        <h4 class="text-center">Admin Zone</h4>
+                        <h4 class="text-center">เข้าสู่ระบบ</h4>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
@@ -267,9 +267,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                 <div class="col-md-4 text-center"><a href="http://www.moe.go.th" target="_blank" title="กระทรวงศึกษาธิการ"><img style="width: auto; max-height: 64px; margin: 0px auto 10px auto;" src="../images/moe_logo_128.png"></a></div>
             </div>
         </div>
-
         <?php get_includes('footer'); ?>
-
     </div>
     <!-- /.container -->
     <script type="text/javascript" src="../themes/assets/js/application.js"></script>
