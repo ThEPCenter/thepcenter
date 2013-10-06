@@ -29,4 +29,7 @@
             .container{
                 background-color: #92C4F9;
             }
+            .navbar-nav{
+                font-size: 16px;
+            }
         </style>        
