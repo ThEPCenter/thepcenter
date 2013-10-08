@@ -1,5 +1,5 @@
 <header id="page-header">
-    <h1 class="text-center"><a href="home.php"><img  src="../images/130626_banner_940x84.png"></a></h1>
+    <h1 class="text-center"><a href="home.php"><img class="img-responsive" style="margin: 0 auto;" src="../images/130626_banner_940x84.png"></a></h1>
     <nav class="navbar navbar-default" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">

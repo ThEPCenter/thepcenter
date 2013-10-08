@@ -5,7 +5,7 @@
             <div class="page-region">
                 <div class="page-region-content"> 
                     <?php
-                    $sql_g = "SELECT * FROM tb_gallery;";
+                    $sql_g = "SELECT * FROM tb_gallery ORDER BY id DESC;";
                     $result_g = mysql_query($sql_g);
                     while ($g = mysql_fetch_array($result_g)) {
                         ?>    

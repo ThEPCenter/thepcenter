@@ -135,16 +135,17 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                                             ORDER BY id;    
                                         ";
                                         $re_pic = mysql_query($sql_pic);
-                                        $pic = mysql_fetch_array($re_pic);
-
-                                        echo '                            
+                                        if (!empty($re_pic)) {
+                                            $pic = mysql_fetch_array($re_pic);
+                                        }
+                                        echo '
                                 <tr>
                                     <td><a href="activity-news.php?news_id=' . $a['id'] . '" class="pic-link">
                                         <img src="../images/pixel-vfl3z5WfW.gif" style="vertical-align: middle; 
-                            background: no-repeat white url(../../ap/views/img/picture/' . $pic['name'] . ') -40px 0; 
-                            background-size: 160px auto; 
-                            width: 80px;
-                            height: 80px;" ></a></td>
+                                        background: no-repeat white url(../../ap/views/img/picture/' . $pic['name'] . ') -40px 0; 
+                                        background-size: 160px auto; 
+                                        width: 80px; height: 80px;" >
+                                    </a></td>
                                     <td><a href="activity-news.php?news_id=' . $a['id'] . '">' . $a['title'] . '</a></td>
                                 </tr>                            
                                     ';

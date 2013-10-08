@@ -1,3 +1,4 @@
+
 <footer class="text-center">
     <div class="thep-footer" style="background-color: #fff; padding-top: 10px;">
         <!-- <p>&copy; 2012-<?php echo date('Y'); ?> thep-center.org</p> -->

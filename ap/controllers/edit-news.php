@@ -25,14 +25,15 @@ if (isset($_POST['news_id'])) {
             ;";
 
     @mysql_query($sql_edit) or die(mysql_error());
-    header("Refresh: 2; url=../views/news.php?news=pr");
-    echo "Editing News Successed...";
+    header("Location: ../views/news.php?news=$type");
+    //header("Refresh: 2; url=../views/news.php?news=$type");
+    // echo "Editing News Successed...";
     exit;
 }
 
 function opt_check($x, $y){
     if($x==$y){
-    return ' checked';
+    return ' selected';
     }
 }
 

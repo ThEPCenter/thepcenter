@@ -31,8 +31,8 @@ $news = news_type($_GET['news']);
             $(function(){
                 $('#add-news').click(function(){                    
                     $.get("<?php echo path_controll('add-news'); ?>", {add_news: "<?php echo $news; ?>"}, 
-                        function(data){ $('#page-index').html(data); }
-                    );
+                    function(data){ $('#page-index').html(data); }
+                );
                 });
             });
         </script>
@@ -99,12 +99,13 @@ $news = news_type($_GET['news']);
 
                                 $sql_g = "SELECT * FROM tb_picture WHERE gallery_id = {$p['gallery_id']};";
                                 $result_g = mysql_query($sql_g);
-                                $no_pic = mysql_num_rows($result_g);
+                                if (!empty($result_g)) {
+                                    $no_pic = mysql_num_rows($result_g);
 
-                                $i = 0;
-                                while ($g = mysql_fetch_array($result_g)) {
-                                    $i++;
-                                    echo '
+                                    $i = 0;
+                                    while ($g = mysql_fetch_array($result_g)) {
+                                        $i++;
+                                        echo '
                                 <div style="width: 131px; height: 107px; float: left; margin-left: 5px;">
                                     <div>
                                         <a href="img/picture/' . $g['name'] . '" data-lightbox="' . $g['gallery_id'] . '" title="' . $g['caption'] . '">
@@ -113,10 +114,10 @@ $news = news_type($_GET['news']);
                                     </div>
                                 </div>
                                     ';
-                                } // END while $g
-
+                                    } // END while $g
+                                } // END (!empty($result_g))
                                 echo '
-                                <br style="clear: both;" />                           
+                                <br style="clear: both;" />
                             ';
                             } else {
 
@@ -162,7 +163,7 @@ $news = news_type($_GET['news']);
             </div>
 
         </div> <!-- END #page-index -->
-        
+
         <?php get_inc('footer'); ?>
     </body>
 </html>

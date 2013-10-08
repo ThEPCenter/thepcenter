@@ -349,6 +349,7 @@ doc_head($center);
                 ?>
                 <h2 class="text-center"><? echo $center; ?></h2>
                 <h3 class="text-center"></h3>
+                <img class="img-responsive" style="margin:0 auto;" src="../images/under-construction.jpg">
 
 
                 <?php
