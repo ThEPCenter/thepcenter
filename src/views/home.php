@@ -23,6 +23,8 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
         $("#eq").click(function(){
             $("#eq-list").toggle();
         });
+        
+        $('.carousel').carousel();
     });
    
 </script>
@@ -40,6 +42,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                     <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
                     <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
                 </ol>
+                
                 <div class="carousel-inner">
                     <div class="item active">
                         <img src="../slides/conf.kek_slide_400.png" style="margin: 0 auto;">
