@@ -1,6 +1,7 @@
 <header id="page-header">
-    <h1 class="text-center"><a href="home.php"><img class="img-responsive" style="margin: 0 auto;" src="../images/130626_banner_940x84.png"></a></h1>
+    <h1 class="text-center" style="margin-top: 10px;"><a href="home.php"><img class="img-responsive" style="margin: 0 auto;" src="../images/banner_131015_slogan_960_90.png"></a></h1>
     <nav class="navbar navbar-default" role="navigation">
+        
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
@@ -11,14 +12,7 @@
             </button>
             <a class="navbar-brand" href="home.php">หน้าหลัก</a>
         </div>
-        <?php
-        $output = ' 
-<a onclick="window.location=\'' . controller('logout') . '\';" style="cursor:pointer; font-weight: bold;">Logout</a>
-          ';
-        $not_login = ' 
-<a onclick="window.location=\'login.php\';" style="cursor:pointer; font-weight: bold;">Login</a>
-          ';
-        ?>
+        
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
@@ -29,8 +23,7 @@
             </ul>
             <!--
             <ul class="nav navbar-nav navbar-right">
-                <li><a><?php login('สวัสดี '); user('username'); ?></a></li>
-                <li><?php login($output, $not_login); ?></li>
+                
             </ul>
             -->
         </div>

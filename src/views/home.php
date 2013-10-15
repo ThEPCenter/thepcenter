@@ -14,20 +14,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
         display: none;
     }
 </style>
-<script>
-    $(function(){
-        $("#btn-center").click(function(){
-            $("#center-list").toggle();
-        });
-        
-        $("#eq").click(function(){
-            $("#eq-list").toggle();
-        });
-        
-        $('.carousel').carousel();
-    });
-   
-</script>
+
 </head>
 
 <body>
@@ -42,7 +29,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                     <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
                     <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
                 </ol>
-                
+
                 <div class="carousel-inner">
                     <div class="item active">
                         <img src="../slides/conf.kek_slide_400.png" style="margin: 0 auto;">
@@ -274,8 +261,25 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
         <?php get_includes('footer'); ?>
     </div>
     <!-- /.container -->
-    <script type="text/javascript" src="../themes/assets/js/application.js"></script>
-    <script type="text/javascript" src="../themes/assets/js/holder.js"></script>
+
+    <?php get_includes('bootstrap-core'); ?>
+    <script type='text/javascript'>
+
+        $(function(){
+            $("#btn-center").click(function(){
+                $("#center-list").toggle();
+            });
+        
+            $("#eq").click(function(){
+                $("#eq-list").toggle();
+            });
+        
+            $('.carousel').carousel({
+                interval: 4000
+            })
+        });
+
+    </script>
 
 </body>
 </html>

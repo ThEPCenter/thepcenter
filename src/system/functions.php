@@ -116,9 +116,9 @@ function uploads($file_name) {
 
 function doc_head($title) {
     get_includes('doc-head');
-    echo '<title>' . $title . '</title>
+    echo '
+        <title>' . $title . '</title>
     ';
-    script('jquery-1.10.2.js');
 }
 
 function login($output, $not_login = '') {
