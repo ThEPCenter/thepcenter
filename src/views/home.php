@@ -13,6 +13,23 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
     #center-list, #eq-list{
         display: none;
     }
+    #myTab li a{
+        font-size: 16px;
+    }
+
+    /*  style for Special News box */
+    a h3, a img {
+        text-decoration: none;
+    }
+    a h3:hover{
+        text-decoration: underline;  
+    }
+    img {
+        border: none;
+    }
+    a h3{
+        margin-top: 10px;
+    }
 </style>
 
 </head>
@@ -29,18 +46,44 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                     <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
                     <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
                 </ol>
-
                 <div class="carousel-inner">
+                    <?php
+                    $sql1 = "SELECT * FROM tb_slide WHERE number = 1;";
+                    $result1 = mysql_query($sql);
+                    if (!empty($result1)) {
+                        // for item one must active
+                        $no1 = mysql_fetch_array($result1);
+                        echo '
                     <div class="item active">
-                        <img src="../slides/conf.kek_slide_400.png" style="margin: 0 auto;">
+                        <a href="' . $no1['link_url'] . '"><img src="' . $no1['pic_url'] . '" style="margin: 0 auto;"></a>
+                    </div>   
+                            ';
+                    } // END if
+
+                    $sql = "SELECT * FROM tb_slide WHERE number > 1;";
+                    $result = mysql_query($sql);
+                    if (!empty($result)) {
+                        while ($c = mysql_fetch_array($result)) {
+                            echo '
+                    <div class="item">
+                        <a href="' . $c['link_url'] . '"><img src="' . $c['pic_url'] . '" style="margin: 0 auto;"></a>
+                    </div>   
+                            ';
+                        } // END while
+                    } // END if
+                    ?>
+
+                    <div class="item active">
+                        <a href="pr_news.php?news_id=14"><img src="../slides/conf.kek_slide_400.png" style="margin: 0 auto;"></a>
                     </div>
                     <div class="item">
-                        <img src="../slides/kekworkshop2_copy.jpg"  style="margin: 0 auto;">
+                        <a href=""><img src="../slides/kekworkshop2_copy.jpg"  style="margin: 0 auto;"></a>
                     </div>
                     <div class="item">
                         <img src="../slides/summer_korea_small.gif"  style="margin: 0 auto;">
                     </div>
-                </div>
+                </div> <!-- /.carousel-inner -->
+
                 <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
                     <span class="icon-prev"></span>
                 </a>
@@ -63,44 +106,32 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                     </ul>
 
                     <div id="myTabContent" class="tab-content">
-
                         <?php
                         $sql_net = "SELECT * FROM tb_news
                             WHERE type = 'network_academic'
                             ORDER BY date DESC;
                         ";
                         $result_net = mysql_query($sql_net);
-                        $net = mysql_fetch_array($result_net);
-                        $news_id = $net['id'];
-                        $tiltle = $net['title'];
-                        $date = $net['date'];
-                        $content_short = $net['content_short'];
-                        $new = $net['new'];
-                        if ($new == 'y') {
-                            $new_gif = ' <img src="../images/new1.gif">';
-                        } else {
-                            $new_gif = '';
-                        }
-                        ?>
-                        <div class="tab-pane fade in active" id="page1">
-                            <h2>ข่าววิชาการจากเครือข่าย</h2>
+                        if (!empty($result_net)) {
+                            $net = mysql_fetch_array($result_net);
 
-                            <?php
-                            $num_news = mysql_num_rows($result_net);
-
-                            if ($num_news > 0) {
-                                ?>
+                            if ($net['new'] == 'y') {
+                                $new_gif = ' <img src="../images/new1.gif">';
+                            } else {
+                                $new_gif = '';
+                            }
+                            ?>
+                            <div class="tab-pane fade in active" id="page1">
                                 <h3>
                                     <?php
-                                    echo htmlspecialchars_decode($tiltle);
-                                    echo $new_gif;
+                                    echo '<a href="network_news.php?news_id=' . $net['id'] . '">' . htmlspecialchars_decode($net['title']) . '</a>' . $new_gif;
                                     ?>
                                 </h3>
-                                <p><small><em><?php echo thai_date($date); ?></em></small></p>
+                                <p><small><em><?php echo thai_date($net['date']); ?></em></small></p>
                                 <?php
-                                echo htmlspecialchars_decode($content_short);
+                                echo htmlspecialchars_decode($net['content_short']);
 
-                                echo '<p><a href="network_news.php?news_id=' . $news_id . '">..... อ่านต่อ</a></p>';
+                                echo '<p><a href="network_news.php?news_id=' . $net['id'] . '"> ... อ่านต่อ</a></p>';
                             } else {
                                 echo '<h3 class="text-center">ขออภัย ไม่พบข้อมูล</h3>';
                             }
@@ -155,7 +186,24 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                 </div>
 
             </div>
-            <div class="col-md-4 text-center">                
+
+            <!-- Sidebar =================== -->
+            <div class="col-md-4 text-center">
+                <div class="bs-example">
+                    <div>                    
+                        <a style="text-decoration: none; text-align: center;" href="special_news.php" title="รางวัลโนเบลฟิสิกส์ประจำปี 2013">
+                            <h3 style="color:  #000000;">รางวัลโนเบลฟิสิกส์ประจำปี 2013 <img src="http://www.thep-center.org/uploadfile/NewThep/new1.gif"></h3>
+                            <div style="text-align: center; margin: 0 auto;">
+                                <img class="img-responsive" style="margin: 0 auto;" src="../images/131008_SCI_HiggsEnglert.jpg.CROP.promo-mediumlarge.jpg">
+                            </div>                                                                              	
+                        </a>
+                        <div style="text-align: left;">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            Royal Swedish Academy of Sciences ได้ประกาศที่กรุงสตอกโฮล์ม ประเทศสวีเดน เมื่อวันที่ 8 ตุลาคมที่ผ่านมาว่า รางวัลโนเบลฟิสิกส์ประจำปี 2013 ได้ตัดสินมอบให้แก่นักฟิสิกส์ทฤษฎี 2 ท่านคือ ศาสตราจารย์ Francois Englert กับ ศาสตราจารย์ Peter W. Higgs <a href="special_news.php" style="color: #006600;">...อ่านต่อ <img src="http://www.thep-center.org/test2013/images/red_arrow.gif"></a>
+
+                        </div>
+                    </div>
+                </div>
                 <div class="bs-example">
                     <div class="row">
                         <div class="col-md-12">

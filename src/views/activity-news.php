@@ -140,9 +140,11 @@ doc_head('ข่าวกิจกรรม');
         get_includes('footer');
         ?>
 
-    </div>
-    <!-- /.container -->
-    <script src="<?php plugins('lightbox2.6/lightbox/js/jquery-1.10.2.min.js'); ?>"></script>
+    </div>    
+    <!-- /.container -->    
+    <?php get_includes('bootstrap-core'); ?>
+    <!-- Lightbox JavaScript
+================================================== -->
     <script src="<?php plugins('lightbox2.6/lightbox/js/lightbox-2.6.min.js'); ?>"></script>
 </body>
 </html>

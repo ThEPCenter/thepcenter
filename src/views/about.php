@@ -2,6 +2,11 @@
 require_once '../system/system.php';
 doc_head('ศูนย์ความเป็นเลิศด้านฟิสิกส์');
 ?>
+<style>
+    #myTab li a{
+        font-size: 16px;
+    }
+</style>
 </head>
 
 <body>
@@ -253,5 +258,6 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
         <?php get_includes('footer'); ?>
     </div>
+    <?php get_includes('bootstrap-core') ?>
 </body>
 </html>
