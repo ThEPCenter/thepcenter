@@ -15,7 +15,7 @@ doc_head('เอกสารเผยแพร่');
                 <p>
                     <a href="../files/bookofstrategy.pdf" target="_blank"><strong>1. การบริหารจัดการยุทธศาสตร์สู่ความสำเร็จ</strong></a> เรียบเรียงโดย ดร.มารยาท สมุทรสาคร
                 </p>
-                <p><a href="../files/bookofstrategy.pdf" target="_blank"><img src="../images/book_s.jpg"></a></p>
+                <p><a href="../files/bookofstrategy.pdf" target="_blank"><img class="img-responsive" style="margin: 0 auto;" src="../images/book_s.jpg"></a></p>
 
             </div>
         </div>
