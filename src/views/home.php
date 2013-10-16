@@ -93,8 +93,6 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             </div>
         </div>
 
-        <p>&nbsp;</p>
-
         <!-- Stack the columns on mobile by making one full-width and the other half-width -->
         <div class="row">
             <div class="col-md-8">
@@ -258,7 +256,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
                     <div class="row">
                         <div class="col-md-6">
-                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.location='document.php';">เอกสารเผยแพร่</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" style="font-size: 16px;" onclick="window.location='document.php';">เอกสารเผยแพร่</button>
                         </div>
                         <div class="col-md-6">
                             <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.open('https://www.google.com/a/thep-center.org/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/a/thep-center.org/&ss=1&ltmpl=default&ltmplcache=2&emr=1')">Email@ThEP</button>
@@ -271,7 +269,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                             <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.open('http://eofficethep.com');">E-Office</button>
                         </div>
                         <div class="col-md-6">
-                            <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.open('https://www.facebook.com/pages/Thailand-Center-of-Excellence-in-Physics/118201038353964')">facebook</button>
+                            <button type="button" class="btn btn-primary btn-lg btn-block" style="background-color: #4c66a4;  border-color: #4c66a4; font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;" onclick="window.open('https://www.facebook.com/pages/Thailand-Center-of-Excellence-in-Physics/118201038353964')">facebook</button>
                         </div>
                     </div>
                     <p>&nbsp;</p> 
