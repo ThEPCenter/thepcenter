@@ -21,9 +21,6 @@ $conf->db_connect();
 // Set timzone : Bkk +7---------------
 $conf->db_set_time_zone();
 
-// Controllers
-require_once $conf->inc_file('controllers');
-
 // Functions
 require_once 'functions.php';
 ?>

@@ -5,7 +5,7 @@
 
         $file_name = htmlspecialchars($_FILES['upload']['name'], ENT_QUOTES);
 
-        $new_file_name = substr(md5(microtime()), rand(0, 26), 10) . '.' . get_type($file_name);
+        $new_file_name = substr(md5(microtime()), rand(0, 26), 10) . '.' . get_file_type($file_name);
 
         $type = $_FILES['upload']['type'];
 
@@ -13,7 +13,7 @@
 
         $folder = 'upload';
 
-        $dir = get_dir('upload'); // The directory that you want to download the file into in.
+        $dir = '../../upload'; // The directory that you want to download the file into in.
 
         $path = $dir . '/' . $new_file_name;
 
@@ -27,16 +27,17 @@
                                 (0, '$new_file_name', '$type', $size, '$folder', '$modified');                    
                         ";
                 @mysql_query($sql_up) or die(mysql_error());
-                header("Refresh: 2; url=upload.php?new_file=$new_file_name");
-                echo "Uploading file ...";
-                exit;
+                header("Location: upload.php?new_file=$new_file_name");
+                // header("Refresh: 2; url=upload.php?new_file=$new_file_name");
+                // echo "Uploading file ...";
+                exit();
             } else {
                 echo 'ERROR Upload file';
-                exit;
+                exit();
             }
         } else {
             echo 'ERROR No upload folder';
-            exit;
+            exit();
         }
     }
 ?>

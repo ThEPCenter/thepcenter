@@ -7,29 +7,29 @@ if (!isset($_SESSION['login'])) {
 <!DOCTYPE html>
 <html lang="en">
     <head>        
-        <?php get_inc('meta_script'); ?>        
+        <?php get_includes('meta_script'); ?>        
         <title>ฟิสิกส์เพื่อผู้ประกอบการ</title>
         <script>
             $(function(){
                 $('#add').click(function(){                    
-                    $('#page-index').load("<?php echo path_controll('add-industrial-article'); ?>");
+                    $('#page-index').load("<?php controll('add-industrial-article'); ?>");
                 });
             });
         </script>
         <!-- Datepicker -->
-        <link href="<?php plugins(); ?>/jqueryui/jquery-ui-1.10.3/themes/base/jquery-ui.css" rel="stylesheet" />
+        <link href="<?php plugins('jqueryui/jquery-ui-1.10.3/themes/base/jquery-ui.css'); ?>" rel="stylesheet" />
         <style>
             #ui-datepicker-div{
                 width: 316px;
             }
         </style>
-        <script src="<?php plugins(); ?>/jqueryui/jquery-1.10.2.js"></script>
-        <script src="<?php plugins(); ?>/jqueryui/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+        <script src="<?php plugins('jqueryui/jquery-1.10.2.js'); ?>"></script>
+        <script src="<?php plugins('jqueryui/jquery-ui-1.10.3/ui/jquery-ui.js'); ?>"></script>
         <!-- CKEditor -->
-        <script src="<?php plugins(); ?>/ckeditor/ckeditor.js"></script>
+        <script src="<?php plugins('ckeditor/ckeditor.js'); ?>"></script>
     </head>
     <body class="metrouicss">
-        <?php get_inc('header'); ?>
+        <?php get_includes('header'); ?>
 
         <div class="page bg-color-blueLight" id="page-index">
             
@@ -58,7 +58,7 @@ if (!isset($_SESSION['login'])) {
                                 <script>
                                     $(function(){
                                         $('#edit-<?php echo $p['id']; ?>').click(function(){                    
-                                            $.get("<?php echo path_controll('edit-industrial-article'); ?>", {edit_article: "<?php echo $p['id']; ?>"}, 
+                                            $.get("<?php controll('edit-industrial-article'); ?>", {edit_article: "<?php echo $p['id']; ?>"}, 
                                             function(data){ $('#page-index').html(data); }
                                         );
                                         })
@@ -82,6 +82,6 @@ if (!isset($_SESSION['login'])) {
 
 
         </div> <!-- END #page-index -->
-        <?php get_inc('footer'); ?>
+        <?php get_includes('footer'); ?>
     </body>
 </html>

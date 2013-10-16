@@ -6,31 +6,31 @@ if (!isset($_SESSION['login'])) {
 if (!$_GET) {
     header("Location: home.php");
 }
-$news = news_type($_GET['news']);
+$news = $_GET['news'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
     <head>        
         <?php
-        get_inc('meta_script');
-        get_inc('lightbox');
+        get_includes('meta_script');
+        get_includes('lightbox');
         ?>
-        <title><?php th_name_news($news); ?> ThEP Admin Panel</title>
+        <title><?php name_news($news); ?> ThEP Admin Panel</title>
         <!-- Datepicker -->
-        <link href="<?php plugins(); ?>/jqueryui/jquery-ui-1.10.3/themes/base/jquery-ui.css" rel="stylesheet" />
+        <link href="<?php plugins('jqueryui/jquery-ui-1.10.3/themes/base/jquery-ui.css'); ?>" rel="stylesheet" />
         <style>
             #ui-datepicker-div{
                 width: 316px;
             }
         </style>
-        <script src="<?php plugins(); ?>/jqueryui/jquery-1.10.2.js"></script>
-        <script src="<?php plugins(); ?>/jqueryui/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+        <script src="<?php plugins('jqueryui/jquery-1.10.2.js'); ?>"></script>
+        <script src="<?php plugins('jqueryui/jquery-ui-1.10.3/ui/jquery-ui.js'); ?>"></script>
         <!-- CKEditor -->
-        <script src="<?php plugins(); ?>/ckeditor/ckeditor.js"></script>
+        <script src="<?php plugins('ckeditor/ckeditor.js'); ?>"></script>
         <script>
             $(function(){
                 $('#add-news').click(function(){                    
-                    $.get("<?php echo path_controll('add-news'); ?>", {add_news: "<?php echo $news; ?>"}, 
+                    $.get("<?php controll('add-news'); ?>", {add_news: "<?php echo $news; ?>"}, 
                     function(data){ $('#page-index').html(data); }
                 );
                 });
@@ -39,10 +39,10 @@ $news = news_type($_GET['news']);
     </head>
 
     <body class="metrouicss">        
-        <?php get_inc('header'); ?>
+        <?php get_includes('header'); ?>
         <div class="page bg-color-blueLight" id="page-index">
-            <h2 class="text-center"><?php th_name_news($news); ?></h2>
-            <p><a id="add-news" class="fg-color-green" style="cursor: pointer;"><i class="icon-plus-2"> เพิ่ม<?php th_name_news($news); ?></i></a></p>
+            <h2 class="text-center"><?php name_news($news); ?></h2>
+            <p><a id="add-news" class="fg-color-green" style="cursor: pointer;"><i class="icon-plus-2"> เพิ่ม<?php name_news($news); ?></i></a></p>
             <div class="page-region">
                 <div class="page-region-content" id="show-news">
                     <?php
@@ -141,7 +141,7 @@ $news = news_type($_GET['news']);
                                     });
 
                                     $('#edit-<?php echo $p['id']; ?>').click(function(){
-                                        $.get("<?php echo path_controll('edit-news'); ?>", {news_id: "<?php echo $p['id']; ?>"}, 
+                                        $.get("<?php controll('edit-news'); ?>", {news_id: "<?php echo $p['id']; ?>"}, 
                                         function(data){ $('#page-index').html(data); }
                                     );
                                     });
@@ -164,6 +164,6 @@ $news = news_type($_GET['news']);
 
         </div> <!-- END #page-index -->
 
-        <?php get_inc('footer'); ?>
+        <?php get_includes('footer'); ?>
     </body>
 </html>

@@ -7,7 +7,7 @@ if (!isset($_SESSION['login'])) {
 <!DOCTYPE html>
 <html lang="en">
     <head>        
-        <?php get_inc('meta_script'); ?>        
+        <?php get_includes('meta_script'); ?>        
         <title>ThEP Admin Panel</title>
     </head>
 
@@ -38,12 +38,12 @@ if (!isset($_SESSION['login'])) {
                             <div class="span9">
                                 <div class="tiles clearfix">
 
-                                    <div class="tile double bg-color-blueDark" onclick="news('network_news')">
+                                    <div class="tile double bg-color-blueDark" onclick="news('network_academic')">
                                         <div class="tile-content">
                                             <h2>ข่าววิชาการจากเครือข่าย</h2>
                                         </div>
                                         <div class="brand">
-                                            <span class="badge"><?php number_news('network_academic'); ?></span>
+                                            <span class="badge"></span>
                                         </div>
                                     </div>
 
@@ -52,7 +52,7 @@ if (!isset($_SESSION['login'])) {
                                             <h2>ข่าวประชาสัมพันธ์</h2>
                                         </div>
                                         <div class="brand">
-                                            <span class="badge"><?php number_news('pr'); ?></span>
+                                            <span class="badge"></span>
                                         </div>
                                     </div>
 
@@ -61,7 +61,7 @@ if (!isset($_SESSION['login'])) {
                                             <h2>ข่าวกิจกรรม</h2>                                            
                                         </div>
                                         <div class="brand">
-                                            <span class="badge"><?php number_news('activity'); ?></span>
+                                            <span class="badge"></span>
                                         </div>
                                     </div>
 
@@ -70,7 +70,7 @@ if (!isset($_SESSION['login'])) {
                                             <h2>ข่าววิชาการทั่วไป</h2>
                                         </div>
                                         <div class="brand">
-                                            <span class="badge"><?php echo number_news('gen_academic'); ?></span>
+                                            <span class="badge"></span>
                                         </div>
                                     </div>
 

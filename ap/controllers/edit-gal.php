@@ -11,10 +11,10 @@ if($_POST){
                             ($id_g, '$title', '$detail', '$modified');        
                     ";
     @mysql_query($sql_g) or die(mysql_error());
-
-    header("Refresh: 2; url=../views/gallery.php");
-    echo "Editing Gallery Successed...";
-    exit;
+    header("Location: ../views/gallery.php");
+    // header("Refresh: 2; url=../views/gallery.php");
+    // echo "Editing Gallery Successed...";
+    exit();
 }
 
 $gal_id = $_GET['gal_id'];            

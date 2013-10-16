@@ -29,7 +29,7 @@ if (isset($_SESSION['login'])) {
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <?php get_inc('meta_script'); ?>        
+        <?php get_includes('meta_script'); ?>
         <title>ThEP Admin Panel 1.0</title> 
     </head>
 
@@ -66,6 +66,6 @@ if (isset($_SESSION['login'])) {
             </div> <!-- END .page-region -->
         </div> <!-- END #page-index -->
 
-        <?php get_inc('footer'); ?>
+        <?php get_includes('footer'); ?>
     </body>
 </html>

@@ -36,8 +36,6 @@
                     }
                     ?>
 
-                    <script src="<?php echo $pathf->inc_dir('plugins'); ?>/lightbox2.6/lightbox/js/jquery-1.10.2.min.js"></script>
-                    <script src="<?php echo $pathf->inc_dir('plugins'); ?>/lightbox2.6/lightbox/js/lightbox-2.6.min.js"></script>
                 </div>
 
                 <div class="text-center"><a href="#"><i class="icon-arrow-up-3"></i>Up</a></div>

@@ -34,6 +34,13 @@ function fileExist($id, $file_name, $dir, $exist, $notex) {
 
 //END function fileExist
 
+function get_file_type($file_name) {
+        $name = strtolower($file_name);
+        $nameArr = explode(".", $name);
+        $num = count($nameArr);        
+        return $nameArr[$num - 1];      
+    }
+
 function thai_date($str_date, $show_day = "n") {
     $time_stamp = strtotime($str_date);
     $days = array("อาทิตย์", "จันทร์", "อังคาร", "พุธ", "พฤหัสบดี", "ศุกร์", "เสาร์");
@@ -51,73 +58,133 @@ function thai_date($str_date, $show_day = "n") {
     }
 }
 
-function path_controll($action) {
+// =============== Controllers =================
+function controller($name) {
     $conf = new config();
-    return $conf->inc_dir('controllers') . '/' . $action . '.php';
+    return $conf->controllers($name);
 }
 
-function controll($action) {
-    require_once path_controll($action);
+function controll($name) {
+    echo controller($name);
 }
 
-function get_inc($inc) {
+function get_controll($name) {
     $conf = new config();
-    require_once $conf->inc_dir('includes') . '/' . $inc . '.php';
+    require_once $conf->controllers($name);
 }
 
-function get_dir($dir) {
+// ================ Includes ===================
+function includes($name) {
     $conf = new config();
-    return $conf->inc_dir($dir);
+    echo $conf->includes($name);
 }
 
-function plugins() {
-    echo get_dir('plugins');
+function get_includes($name) {
+    $conf = new config();
+    require_once $conf->includes($name);
 }
 
-function get_plugins() {
-    return get_dir('plugins');
+// ================= Plugins ======================
+function plugins($file_name) {
+    $conf = new config();
+    echo $conf->plugins($file_name);
 }
 
-function main_ui($type) {
-    return get_plugins() . '/' . _MAIN_UI_ . '/' . $type;
+function script($file_name) {
+    $conf = new config();
+    echo '<script src="' . $conf->script($file_name) . '"></script>';
 }
 
-function main_ui_css() {
-    echo main_ui('css');
+function style($file_name) {
+    $conf = new config();
+    echo '<link href="' . $conf->style($file_name) . '" rel="stylesheet">';
 }
 
-function main_ui_js() {
-    echo main_ui('javascript');
+// ======================= Theme =======================
+function theme($file_name) {
+    $conf = new config();
+    echo $conf->themes($file_name);
 }
 
-function title($title) {
-    echo "<title>$title</title>";
+function views($name) {
+    $conf = new config();
+    echo $conf->views($name);
 }
 
-// File Upload
-function get_type($file_name){
-    $controll = new controllers();
-    return $controll->get_file_type($file_name);
+function get_views($name) {
+    $conf = new config();
+    require_once $conf->views($name);
 }
 
-// News
-function th_name_news($news_type){
-    $controll = new controllers();
-    return $controll->name_news($news_type);
+function uploads($file_name) {
+    $conf = new config();
+    echo $conf->uploads($file_name);
 }
 
-function news_type($get_type){
-    $controll = new controllers();
-    return $controll->check_type($get_type);
+function doc_head($title) {
+    get_includes('doc-head');
+    echo '
+        <title>' . $title . '</title>
+    ';
 }
 
-function news_check($get_type, $check_type, $what_page){
-    $controll = new controllers();
-    return $controll->check_news($get_type, $check_type, $what_page);
+function login($output, $not_login = '') {
+    if (isset($_SESSION['login'])) {
+        echo $output;
+    } else {
+        echo $not_login;
+    }
 }
 
-function number_news($new_type){
-    $controll = new controllers();
-    echo $controll->num_news($new_type);
+function user_property($property) {
+    $sql = "SELECT * FROM tb_user WHERE username = '{$_SESSION['login']}';";
+    $result = mysql_query($sql);
+    if (!empty($result)) {
+        $u = mysql_fetch_array($result);
+        return $u[$property];
+    } else {
+        return '';
+    }
 }
+
+function user($property) {
+    echo user_property($property);
+}
+
+function admin($yes, $no = '') {
+    if (user_property('level') == 1) {
+        echo $yes;
+    } else {
+        echo $no;
+    }
+}
+
+function space($n) {
+    $sp = '';
+    for ($i = 0; $i < $n; $i++) {
+        $sp .= '&nbsp;';
+    }
+    echo $sp;
+}
+
+function name_news($news_type) {
+    switch ($news_type) {
+        case 'network_academic':
+            echo 'ข่าววิชาการจากเครือข่าย';
+            break;
+        case 'pr':
+            echo 'ข่าวประชาสัมพันธ์';
+            break;
+        case 'activity':
+            echo 'ข่าวกิจกรรม';
+            break;
+        case 'gen_academic':
+            echo 'ข่าววิชาการทั่วไป';
+            break;
+        default:
+            return 'ไม่พบข้อมูล';
+            break;
+    }
+}
+
 ?>

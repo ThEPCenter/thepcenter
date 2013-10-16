@@ -26,227 +26,81 @@ define("_ROWS_PER_PAGE", 10);
 //=======================================================
 
 class config {
-    
-    function db_connect(){
+
+    function db_connect() {
         @mysql_connect(HOST, USER, PASS) or die(mysql_error());
         mysql_select_db(DB_NAME);
         mysql_query("SET NAMES UTF8");
     }
-    
-    function db_set_time_zone(){
+
+    function db_set_time_zone() {
         // Set timzone Bkk +7---------------
-        $timezone = "Asia/Bangkok"; 
-        if(function_exists('date_default_timezone_set')) date_default_timezone_set($timezone); 
+        $timezone = "Asia/Bangkok";
+        if (function_exists('date_default_timezone_set'))
+            date_default_timezone_set($timezone);
 
         mysql_query("SET SESSION time_zone = '+7:00'");
     }
 
-    function config_dir($dir) {
-        switch ($dir) {
-            case "controllers" :
-                return BASEPATH . 'controllers';
-                break;
-            case "image" :
-                return BASEPATH . 'image';
-                break;
-            case "includes" :
-                return BASEPATH . 'includes';
-                break;
-            case "script" :
-                return BASEPATH . 'script';
-                break;
-            case "style" :
-                return BASEPATH . 'style';
-                break;
-            case "system" :
-                return BASEPATH . 'system';
-                break;
-            case "upload" :
-                return "upload";
-                break;
-            case "views" :
-                return BASEPATH . 'views';
-                break;
-        }
+    // ====== Base Directory & Path ======================
+    function base_dir($dir) {
+        return BASEPATH . $dir;
     }
 
-// END function config_dir
-
-    function path_file($file_name) {
-        switch ($file_name) {
-            // controllers
-            case "delete" :
-                return $this->config_dir('controllers') . '/delete_news.php';
-                break;
-            case "logout" :
-                return $this->config_dir('controllers') . '/logout.php';
-                break;
-
-            // includes
-            case "footer" :
-                return $this->config_dir('includes') . '/footer.php';
-                break;            
-            case "header" :
-                return $this->config_dir('includes') . '/header.php';
-                break;
-            case "meta_script" :
-                return $this->config_dir('includes') . '/meta_script.php';
-                break;
-            case "paging" :
-                return $this->config_dir('includes') . '/paging.inc.php';
-                break;
-
-            // script
-            case "jquery" :
-                return $this->config_dir('script') . '/jquery.js';
-                break;
-            case "title" :
-                return $this->config_dir('script') . '/title.js';
-                break;            
-
-            // style
-            case "site" :
-                return $this->config_dir('style') . '/site.css';
-                break;
-
-            // system
-            case "config" :
-                return $this->config_dir('system') . '/config.php';
-                break;
-            case "functions" :
-                return $this->config_dir('system') . '/functions.php';
-                break;
-            case "system" :
-                return $this->config_dir('system') . '/system.php';
-                break;
-            
-            // views
-            case "add_news" :
-                return $this->config_dir('views') . '/add_news.php';
-                break;
-            case "edit_news" :
-                return $this->config_dir('views') . '/edit_news.php';
-                break;
-            case "index" :
-                return $this->config_dir('views') . '/index.php';
-                break;
-            case "show" :
-                return $this->config_dir('views') . '/show_news.php';
-                break;
-        }
+    function controllers_path($name) {
+        return $this->base_dir('controllers') . $name . '.php';
     }
 
-// END function path_file
-
-    function inc_dir($dir) {
-        switch ($dir) {
-            case "controllers" :
-                return '../controllers';
-                break;
-            case "image" :
-                return '../image';
-                break;
-            case "includes" :
-                return '../includes';
-                break;
-            case "plugins" :
-                return '../plugins';
-                break;
-            case "script" :
-                return '../script';
-                break;
-            case "style" :
-                return '../style';
-                break;
-            case "system" :
-                return '../system';
-                break;
-            case "upload" :
-                return '../../upload';
-                break;
-            case "views" :
-                return '../views';
-                break;
-        }
+    function includes_path($name) {
+        return $this->base_dir('includes') . $name . '.php';
     }
 
-// END function inc_dir
+    function script_path($file_name) {
+        return $this->base_dir('script') . $file_name;
+    }
 
-    function inc_file($file_name) {
-        switch ($file_name) {
-            // controllers
-            case "controllers" :
-                return $this->inc_dir('controllers') . '/controllers.php';
-                break;
-            case "delete" :
-                return $this->inc_dir('controllers') . '/delete.php';
-                break;
-            case "logout" :
-                return $this->inc_dir('controllers') . '/logout.php';
-                break;
+    function views_path($name) {
+        return $this->base_dir('views') . $name . '.php';
+    }
 
-            // includes
-            case "footer" :
-                return $this->inc_dir('includes') . '/footer.php';
-                break;
-            case "header" :
-                return $this->inc_dir('includes') . '/header.php';
-                break;            
-            case "meta_script" :
-                return $this->inc_dir('includes') . '/meta_script.php';
-                break;
-            case "paging" :
-                return $this->inc_dir('includes') . '/paging.inc.php';
-                break;
+    // =======================================
+    // ===========File and Directory  ======================
 
-            // script
-            case "jquery" :
-                return $this->inc_dir('script') . '/jquery.js';
-                break;
-            case "title" :
-                return $this->inc_dir('script') . '/title.js';
-                break;
+    function controllers($name) {
+        return '../controllers/' . $name . '.php';
+    }
 
-            // style
-            case "site" :
-                return $this->inc_dir('style') . '/site.css';
-                break;
+    function includes($name) {
+        return '../includes/' . $name . '.php';
+    }
 
-            // system
-            case "config" :
-                return $this->inc_dir('system') . '/config.php';
-                break;
-            case "functions" :
-                return $this->inc_dir('system') . '/functions.php';
-                break;
-            case "system" :
-                return $this->inc_dir('system') . '/system.php';
-                break;
-            // views
-            case "add" :
-                return $this->inc_dir('views') . '/add.php';
-                break;
-            case "edit" :
-                return $this->inc_dir('views') . '/edit.php';
-                break;
-            case "gallery" :
-                return $this->inc_dir('views') . '/gallery.php';
-                break;
-            case "index" :
-                return $this->inc_dir('views') . '/index.php';
-                break;
-            case "lab" :
-                return $this->inc_dir('views') . '/lab.php';
-                break;
-            case "picture" :
-                return $this->inc_dir('views') . '/picture.php';
-                break;
-            case "show" :
-                return $this->inc_dir('views') . '/show.php';
-                break;
-        }
-    } // END function inc_file
+    function plugins($file_name) {
+        return '../plugins/' . $file_name;
+    }
+
+    function script($file_name) {
+        return '../script/' . $file_name;
+    }
+
+    function style($file_name) {
+        return '../style/' . $file_name;
+    }
     
-} // END class config
+    function themes($file_name){
+        return '../themes/' . $file_name;
+    }
+
+    function views($name) {
+        return '../views/' . $name . '.php';
+    }
+
+    function uploads($file_name) {
+        return '../upload/' . $file_name;
+    }
+
+    // ===========================================   
+}
+
+// END class config
 
 ?>

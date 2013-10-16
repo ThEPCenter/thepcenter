@@ -23,9 +23,9 @@ if ($_POST) {
             ";
 
     @mysql_query($sql) or die(mysql_error());
-
-    header("Refresh: 2; url=../views/news.php?news=$type");
-    echo "Adding News Successed...";
+    header("Location: ../views/news.php?news=$type");
+    // header("Refresh: 2; url=../views/news.php?news=$type");
+    // echo "Adding News Successed...";
     exit;
 }
 
@@ -34,7 +34,7 @@ $news = $_GET['add_news'];
 <div class="page-region">
     <div class="page-region-content">
 
-        <h2 class="text-center">เพิ่ม <?php th_name_news($news); ?></h2>                   
+        <h2 class="text-center">เพิ่ม <?php name_news($news); ?></h2>                   
 
         <form name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
             <input name="type" type="hidden" value="<?php echo $news; ?>">
@@ -140,7 +140,7 @@ $news = $_GET['add_news'];
                 
             /* AJAX for Gallery list */
             $("#ch-gal").click(function(){
-                $('#select-gallery').load("<?php echo path_controll('show-gal-option'); ?>");
+                $('#select-gallery').load("<?php controll('show-gal-option'); ?>");
                 $('#select-gallery').show();                      
             });
                 

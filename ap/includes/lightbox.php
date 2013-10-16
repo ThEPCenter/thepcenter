@@ -1,10 +1,10 @@
-		<link href="<?php plugins(); ?>/lightbox2.6/lightbox/css/lightbox.css" rel="stylesheet" />
+		<link href="<?php plugins('lightbox2.6/lightbox/css/lightbox.css'); ?>" rel="stylesheet" />
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Karla:400,700">
 
-        <script src="<?php plugins(); ?>/lightbox2.6/lightbox/js/modernizr.custom.js"></script>
+        <script src="<?php plugins('lightbox2.6/lightbox/js/modernizr.custom.js'); ?>"></script>
         
-        <script src="<?php plugins(); ?>/lightbox2.6/lightbox/js/jquery-1.10.2.min.js"></script>
-        <script src="<?php plugins(); ?>/lightbox2.6/lightbox/js/lightbox-2.6.min.js"></script>
+        <script src="<?php plugins('lightbox2.6/lightbox/js/jquery-1.10.2.min.js'); ?>"></script>
+        <script src="<?php plugins('lightbox2.6/lightbox/js/lightbox-2.6.min.js'); ?>"></script>
 
         <style>
             /* lightbox  */

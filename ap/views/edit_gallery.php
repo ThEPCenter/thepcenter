@@ -10,22 +10,22 @@ $gal_id = $_GET['edit_gal'];
 <html lang="en">
     <head>        
         <?php
-        get_inc('meta_script');
-        get_inc('lightbox');
+        get_includes('meta_script');
+        get_includes('lightbox');
         ?>
         <title>แก้ไขแกลอรี</title>
         <script>
             $(function(){
-                $.get("<?php echo path_controll('edit-gal'); ?>", {gal_id: "<?php echo $gal_id; ?>"}, 
+                $.get("<?php controll('edit-gal'); ?>", {gal_id: "<?php echo $gal_id; ?>"}, 
                     function(data){ $('#edit-gal').html(data); }
                 );                
             });
         </script>
     </head>
     <body class="metrouicss">
-        <?php get_inc('header'); ?>
+        <?php get_includes('header'); ?>
         <div class="page bg-color-blueLight" id="edit-gal">
         </div> <!-- END .page -->
-        <?php get_inc('footer'); ?>
+        <?php get_includes('footer'); ?>
     </body>
 </html>

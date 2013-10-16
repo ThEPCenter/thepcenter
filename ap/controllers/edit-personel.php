@@ -25,9 +25,9 @@ if($_POST){
             ";
 
     @mysql_query($sql) or die(mysql_error());
-    
-    header("Refresh: 2; url=../views/personel.php");
-    echo "Edit Personel data Successed...";
+    header("Location: ../views/personel.php");
+    // header("Refresh: 2; url=../views/personel.php");
+    // echo "Edit Personel data Successed...";
     exit;
 }
 

@@ -7,12 +7,12 @@ if (!isset($_SESSION['login'])) {
 <!DOCTYPE html>
 <html lang="en">
     <head>        
-        <?php get_inc('meta_script'); ?>        
+        <?php get_includes('meta_script'); ?>        
         <title>บุคลากร</title>
         <script>
             $(function(){
                 $('#add').click(function(){
-                    $('#add-personel').load("<?php echo path_controll('add-personel'); ?>");
+                    $('#add-personel').load("<?php controll('add-personel'); ?>");
                     $('#add-personel').toggle();
                     $('#person-table').toggle();
                 });
@@ -21,7 +21,7 @@ if (!isset($_SESSION['login'])) {
         </script>
     </head>
     <body class="metrouicss">
-        <?php get_inc('header'); ?>
+        <?php get_includes('header'); ?>
 
         <div class="page bg-color-blueLight" id="page-index">
 
@@ -60,7 +60,7 @@ if (!isset($_SESSION['login'])) {
                                 <script>
                                     $(function(){
                                         $('#edit-<?php echo $p['id']; ?>').click(function(){
-                                            $.get("<?php echo path_controll('edit-personel'); ?>", {edit_id: "<?php echo $p['id']; ?>"}, 
+                                            $.get("<?php controll('edit-personel'); ?>", {edit_id: "<?php echo $p['id']; ?>"}, 
                                             function(data){ $('#page-index').html(data); }
                                         );
                                         });
@@ -79,7 +79,7 @@ if (!isset($_SESSION['login'])) {
                                                 'buttons'    : {
                                                     'ลบ'        : {
                                                         'action': function() {
-                                                            window.location = "<?php echo path_controll('delete'); ?>?del_person=<?php echo $p['id']; ?>";
+                                                            window.location = "<?php controll('delete'); ?>?del_person=<?php echo $p['id']; ?>";
                                                         }
                                                     },
                                                     'ยกเลิก'    : {
@@ -108,6 +108,6 @@ if (!isset($_SESSION['login'])) {
 
             </div>
         </div> <!-- END #page-index -->
-        <?php get_inc('footer'); ?>        
+        <?php get_includes('footer'); ?>        
     </body>
 </html>

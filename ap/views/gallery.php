@@ -11,21 +11,21 @@ if ($_POST) {
 <html lang="en">
     <head>        
         <?php
-        get_inc('meta_script');
-        get_inc('lightbox');
+        get_includes('meta_script');
+        get_includes('lightbox');
         if ($_GET['add_gal']) { $txt = 'Add Gallery'; } else { $txt = 'Gallery'; }
-        title($txt);
+        echo "<title>$txt</title>";
         ?>
     </head>
 
     <body class="metrouicss">
         <?php
-        get_inc('header');
+        get_includes('header');
         if ($_GET['add_gal'] == 'new') {
-            controll('show-add-gal');
+            get_controll('show-add-gal');
         }
-        controll('show-gal');
-        get_inc('footer');
+        get_controll('show-gal');
+        get_includes('footer');
         ?>
     </body>
 </html>

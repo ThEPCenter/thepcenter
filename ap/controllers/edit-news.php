@@ -1,8 +1,6 @@
 <?php
 require_once "../system/system.php";
 
-$controll = new controllers();
-
 if (isset($_POST['news_id'])) {
     $id = $_POST['news_id'];
     $type = htmlspecialchars($_POST['type'], ENT_QUOTES);
@@ -53,7 +51,7 @@ $news = $p['type'];
             <div class="page-region">
                 <div class="page-region-content">
 
-                    <h2 class="text-center">แก้ไข <?php $controll->name_news($news); ?></h2>                   
+                    <h2 class="text-center">แก้ไข <?php name_news($news); ?></h2>                   
 
                     <form name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                         <input name="news_id" type="hidden" value="<?php echo $p['id']; ?>">
