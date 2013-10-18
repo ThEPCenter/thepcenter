@@ -106,9 +106,9 @@ if (!isset($_SESSION['login'])) {
                             <div class="span5">
                                 <div class="tiles clearfix">
 
-                                    <div class="tile" style="background: #439D9A;" onclick="">
+                                    <div class="tile" style="background: #439D9A;" onclick="page('carousel');">
                                         <div class="tile-content">
-                                           <h2>...</h2>
+                                           <h2>จัดการ Slide</h2>
                                             <h5>********</h5>
                                         </div>
 

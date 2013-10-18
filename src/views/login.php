@@ -1,10 +1,6 @@
 <?php
 require_once '../system/system.php';
-
-if (isset($_SESSION['login'])) {
-    header("Location: index.php");
-    exit();
-}
+login_header('index.php');
 
 doc_head('ศูนย์ความเป็นเลิศด้านฟิสิกส์');
 ?>       
@@ -15,18 +11,14 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
         <?php get_includes('header'); ?>        
         <div class="bs-example">
-            <h2>Login</h2>
-            <form role="form" name="form1" method="post" action="<?php controll('login'); ?>">
-                <div class="form-group">
-                    <label>Username</label>
-                    <input name="username" type="text" class="form-control">
+            <h2 class="text-center">Login</h2>
+            <div class="row">
+                <div class="col-md-4">&nbsp;</div>
+                <div class="col-md-4">
+                    <?php get_controll('login-form'); ?>                    
                 </div>
-                <div class="form-group">
-                    <label for="exampleInputPassword1">Password</label>
-                    <input name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <button type="submit" class="btn btn-default">Log in</button>                
-            </form>
+                <div class="col-md-4">&nbsp;</div>
+            </div>
         </div>
 
         <?php get_includes('footer'); ?>

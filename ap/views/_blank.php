@@ -7,36 +7,25 @@ if (!isset($_SESSION['login'])) {
 <!DOCTYPE html>
 <html lang="en">
     <head>        
-        <?php get_inc('meta_script'); ?>        
-        <title>ThEP Admin Panel</title>
+        <?php get_includes('meta_script'); ?>        
+        <title>_blank</title>
+        
     </head>
+    <body class="metrouicss">
+        <?php get_includes('header'); ?>
 
-    <body class="metrouicss" style="background-color: #4294DE;">
+        <div class="page bg-color-blueLight" id="page-index">
 
-        <div class="page" style="width: 1120px; background-color: #4294DE; margin-left: 0 auto;">
+            <h2 style="text-align: center;">_blank</h2>
 
-            <div class="page-header">
-                <div class="page-header-content">
-                    <div class="grid">
-                        <div class="row">
-                            <div class="span9"><h1>ThEP Admin Panel</h1></div>
-                            <div class="text-right span5 fg-color-white" style="wisth: auto; height: 60px; border-color: black; margin-top: 70px;">
-                                <div style="font-size: 25px;"><?php echo strtoupper($_SESSION['login']); ?> <i class="icon-user"></i><div>
-                                    </div>
-                                </div>
-                            </div>                    
-                        </div>
-                    </div>
+            <div class="page-region">
+                <div class="page-region-content">
+                    
                 </div>
-            </div>
-
-            <div class="page-region" style="margin-top: 60px; margin-left: 20px;">
-                <div class="page-region-content bg-color-greenLight span12">
-
-                </div>
+                <div class="text-center"><a href="#"><i class="icon-arrow-up-3"></i>Up</a></div>
 
             </div>
-        </div> <!-- END .page -->
-
+        </div> <!-- END #page-index -->
+        <?php get_includes('footer'); ?>        
     </body>
 </html>

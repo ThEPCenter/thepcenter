@@ -1,5 +1,4 @@
 <?php
-
 require_once '../system/system.php';
 
 if ($_POST) {

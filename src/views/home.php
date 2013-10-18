@@ -278,19 +278,35 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
                 <div class="bs-example">
                     <div class="row">
-                        <h4 class="text-center">เข้าสู่ระบบ</h4>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-12">
+                        <?php
+                        if (isset($_SESSION['login'])) {
+                            ?>
                             <div class="row">
-                                <div class="col-md-6">
-                                    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.open('../../ap');">ระบบจัดการเว็บ</button>
-                                </div>
-                                <div class="col-md-6">
-                                    <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.open('../../Re_db')">จัดการงานวิจัย</button>
-                                </div>
+                                <h4 class="text-center">จัดการระบบ</h4>
                             </div>
-                        </div>
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.open('../../ap');">ระบบจัดการเว็บ</button>
+                            </div>
+                            <div class="col-md-12">
+                                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.open('../../Re_db')">จัดการงานวิจัย</button>
+                            </div>
+                            <?php
+                        } else {
+                            ?>
+
+                            <div class="row">
+                                <h4 class="text-center">เข้าสู่ระบบ</h4>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-1">&nbsp;</div>
+                                <div class="col-md-10">
+                                    <?php
+                                    get_controll('login-form');
+                                    ?>
+                                </div>
+                                <div class="col-md-1">&nbsp;</div>
+                            </div>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
