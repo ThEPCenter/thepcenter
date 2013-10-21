@@ -10,7 +10,14 @@ if ($_POST) {
     if (mysql_num_rows($result) == 1) {
         $_SESSION['login'] = $username;
         $_SESSION['pass'] = $password;
-
+		
+		$last_login = date("Y-m-d H:i:s");
+		
+		$sql = "UPDATE tb_user 
+					SET last_login = '$last_login'
+					WHERE username = '$username';";
+		mysql_query($sql) ;
+		
         header("Location: index.php");
         exit();
     } else {
