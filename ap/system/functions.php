@@ -187,4 +187,9 @@ function name_news($news_type) {
     }
 }
 
+function change_file_name($file_name, $change, $random){
+	
+	
+}
+
 ?>
