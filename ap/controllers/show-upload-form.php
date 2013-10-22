@@ -52,14 +52,14 @@
                         <input type="file" name="upload">
                     </p>
                     <p>&nbsp;</p>
-                    <p><strong>หมายเหตุ </strong>ชื่อไฟล์ต้องเป็น อักษรโรมัน (A-Z, a-z) หรือ ตัวเลข (0-9) หริอ  ขีดล่าง ( _ ) หรือ ขีดกลาง (-) หรือ จุด (.) หรือ วงเล็บ ( ( หรือ ) ) หรือ ช่องว่าง เท่านั้น</p>
+                    <p><strong>หมายเหตุ </strong>ชื่อไฟล์ต้องเป็น อักษรโรมัน (A-Z, a-z) หรือ ตัวเลข (0-9) หริอ  ขีดล่าง ( _ ) หรือ ขีดกลาง (-) หรือ จุด (.) หรือ วงเล็บ ( ( หรือ ) )  เท่านั้น</p>
                     <p>ต้องการ <a style="cursor: pointer;" id="change">เปลี่ยนชื่อไฟล์</a>
                         <span id="or-txt">หรือ</span>
                         <span id="check-wrap"><input type="checkbox" name="checkbox" id="checkbox"> <label for="checkbox">ใช้ชื่อไฟล์แบบสุ่ม</label></span>
                     </p>
                     <p id="change-form" style="display: none;">
                         <strong>เปลี่ยนชื่อไฟล์เป็น</strong>
-                        <input type="text" name="newname" id="newname"> <a id="check-name" style="cursor: pointer;">ตรวจสอบชื่อ</a> <span>(อย่าลืมใส่สกุลไฟล์ เช่น .jpg, .pdf, .doc เป็นต้น)</span>
+                        <input type="text" name="newname" id="newname" style="width: 300px; text-align: right"> <a id="check-name" style="cursor: pointer;">ตรวจสอบชื่อ</a> <span>(อย่าลืมใส่สกุลไฟล์ เช่น .jpg, .pdf, .doc เป็นต้น)</span>
                     </p>
                     <div id="check-result"></div>
                     <p>&nbsp;</p>
@@ -71,18 +71,24 @@
                         $("#change").click(function(){
                             $("#change-form").toggle();
                             $("#or-txt, #check-wrap").toggle();
+                            $("#check-result").html('');
                         });
 								
                         $("#checkbox").click(function(){
                             $("#change, #or-txt").toggle();
-							$("#newname").val(null);
+                            $("#newname").val(null);
+                        });
+						
+                        $(document).ajaxStart(function(){
+                            $('#check-result').html("<div class=\"span12 text-center\" ><img src='../image/demo_wait.gif' /></div>");
                         });
 						
                         $("#check-name").click(function(){
                             var name_check = $("#newname").val();
                             $.get("<?php controll('check-result'); ?>", {name_check:  name_check}, 
-                            function(data){ $("#check-result").html(data); }
-                       		 ); 
+                            function(data){ $("#check-result").html('ผลการตรวจสอบ : ' + data); }
+                        ); 
+                            $("#check-result").show();
                         });
                      
                     });
