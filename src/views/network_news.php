@@ -11,11 +11,6 @@ doc_head('ข่าววิขาการจากเครือข่าย'
         width: 316px;
     }
 </style>
-<script src="../plugins/jqueryui/jquery-1.10.2.js"></script>
-<script src="../plugins/jqueryui/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
-<!-- CKEditor -->
-<script src="../plugins/ckeditor/ckeditor.js"></script>
-
 </head>
 
 <body>

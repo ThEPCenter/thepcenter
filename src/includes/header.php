@@ -21,11 +21,11 @@
                 <li><a href="research_output.php">งานวิจัย</a></li>
                 <li><a href="industrial.php">ฟิสิกส์เพื่อผู้ประกอบการ</a></li>                
             </ul>
-            <!--
+            
+            <!-- right navbar -->
             <ul class="nav navbar-nav navbar-right">
-                
+                <li><a href="<?php login('../controllers/logout.php', 'login.php'); ?>"><?php login('Logout', 'Login')?></a></li>
             </ul>
-            -->
         </div>
         <!-- /.navbar-collapse -->
     </nav>

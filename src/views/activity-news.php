@@ -5,6 +5,13 @@ doc_head('ข่าวกิจกรรม');
 <link rel="stylesheet" href="<?php plugins('lightbox2.6/lightbox/css/lightbox.css'); ?>">
 <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Karla:400,700">
 
+<!-- Datepicker -->
+<link href="../plugins/jqueryui/jquery-ui-1.10.3/themes/base/jquery-ui.css" rel="stylesheet" />
+<style>
+    #ui-datepicker-div{
+        width: 316px;
+    }
+</style>
 <style>
     .pic-link{
         text-decoration: none;
@@ -53,6 +60,22 @@ doc_head('ข่าวกิจกรรม');
                 } else {
                     $new_gif = '';
                 }
+                admin('<p><a id="edit-news" style="cursor: pointer;">Edit</a></p>');
+                ?>
+                <script>
+                    $(function(){
+                        $('#edit-news').click(function(){
+                            $(document).ajaxStart(function(){
+                                $('.bs-example').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
+                            });
+                            $.get("<?php controll('edit-activity-news'); ?>", {edit_news: "<?php echo $n['id']; ?>"}, 
+                            function(data){ $('.bs-example').html(data); }
+                        );
+                        });
+                                                            
+                    });
+                </script>
+                <?php
                 echo '                            
             <div id="news-' . $n['id'] . '">
                 <h3>' . htmlspecialchars_decode($n['title']) . $new_gif . '</h3>

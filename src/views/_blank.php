@@ -20,12 +20,5 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
     <!-- /.container -->
 
     <?php get_includes('bootstrap-core'); ?>
-    <script type='text/javascript'>
-
-        $(function(){
-            
-        });
-
-    </script>
 </body>
 </html>

@@ -21,15 +21,15 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
     a h3, a img {
         text-decoration: none;
     }
+    a h3{
+        margin-top: 10px;
+    }
     a h3:hover{
         text-decoration: underline;  
     }
     img {
         border: none;
-    }
-    a h3{
-        margin-top: 10px;
-    }
+    }    
 </style>
 
 </head>
@@ -49,7 +49,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                 <div class="carousel-inner">
                     <?php
                     $sql1 = "SELECT * FROM tb_slide WHERE number = 1;";
-                    $result1 = mysql_query($sql);
+                    $result1 = mysql_query($sql1);
                     if (!empty($result1)) {
                         // for item one must active
                         $no1 = mysql_fetch_array($result1);
@@ -282,7 +282,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                         if (isset($_SESSION['login'])) {
                             ?>
                             <div class="col-md-12">
-                                <button type="submit" class="btn btn-default" onclick="window.location='<?php controll('logout'); ?>';">ออกจากระบบ</button>
+                                <button type="submit" class="btn btn-default" onclick="window.location='<?php controll('logout'); ?>';">Logout</button>
                             </div>                           
                             <?php
                         } else {

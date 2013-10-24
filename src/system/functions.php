@@ -168,26 +168,6 @@ function space($n) {
     echo $sp;
 }
 
-function name_news($news_type) {
-    switch ($news_type) {
-        case 'network_academic':
-            echo 'ข่าววิชาการจากเครือข่าย';
-            break;
-        case 'pr':
-            echo 'ข่าวประชาสัมพันธ์';
-            break;
-        case 'activity':
-            echo 'ข่าวกิจกรรม';
-            break;
-        case 'gen_academic':
-            echo 'ข่าววิชาการทั่วไป';
-            break;
-        default:
-            return 'ไม่พบข้อมูล';
-            break;
-    }
-}
-
 function heder_redirect($location) {
     header("Location: $location");
     exit();
@@ -238,5 +218,25 @@ function notlogin_js($location) {
     } 
 }
 
+// ============= News ===================
+function name_news($news_type) {
+    switch ($news_type) {
+        case 'network_academic':
+            echo 'ข่าววิชาการจากเครือข่าย';
+            break;
+        case 'pr':
+            echo 'ข่าวประชาสัมพันธ์';
+            break;
+        case 'activity':
+            echo 'ข่าวกิจกรรม';
+            break;
+        case 'gen_academic':
+            echo 'ข่าววิชาการทั่วไป';
+            break;
+        default:
+            return 'ไม่พบข้อมูล';
+            break;
+    }
+}
 
 ?>

@@ -6,19 +6,20 @@ if (isset($_POST['edit_id'])) {
     $type = htmlspecialchars($_POST['type'], ENT_QUOTES);
     $title = htmlspecialchars($_POST['title'], ENT_QUOTES);
     $date = date("Y-m-d", strtotime($_POST['date']));
-    $content_short = htmlspecialchars($_POST['content_short'], ENT_QUOTES);
     $content_long = htmlspecialchars($_POST['content_long'], ENT_QUOTES);
     if (isset($_POST['new'])) {
         $new = $_POST['new'];
     } else {
         $new = 'n';
     }
+    $picture = htmlspecialchars($_POST['picture'], ENT_QUOTES);
     $update = date("Y-m-d H:i:s");
-    $sql = "UPDATE tb_news
-            SET type = '$type', title = '$title', date = '$date', content_short = '$content_short', content_long = '$content_long', new = '$new', last_update = '$update'
+    
+    $sql = "UPDATE tb_news 
+            SET type = '$type', title = '$title', date = '$date', content_long = '$content_long', new = '$new', picture = '$picture', last_update = '$update'
             WHERE id = $id;";
     @mysql_query($sql) or die(mysql_error());
-    header("Location: ../views/network_news.php?news_id=$id");
+    header("Location: ../views/pr_news.php?news_id=$id");
     exit();
 }
 
@@ -28,7 +29,7 @@ $result = mysql_query($sql);
 $p = mysql_fetch_array($result);
 ?>
 
-<h2 class="text-center">แก้ไข ข่าววิชาการจากเครือข่าย</h2>                   
+<h2 class="text-center">แก้ไข ข่าวประชาสัมพันธ์</h2>                   
 
 <form role="form" name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <input name="edit_id" type="hidden" value="<?php echo $p['id']; ?>">
@@ -49,17 +50,7 @@ $p = mysql_fetch_array($result);
     </script>
 
     <div class="form-group">
-        <label>เนื้อหาฉบับย่อ</label>
-        <textarea name="content_short">
-            <?php echo htmlspecialchars_decode($p['content_short']); ?>
-        </textarea>
-        <script>
-            CKEDITOR.replace('content_short');
-        </script>
-    </div>
-
-    <div class="form-group">
-        <label>เนื้อหาฉบับเต็ม</label>
+        <label>เนื้อหา</label>
         <textarea name="content_long">
             <?php echo htmlspecialchars_decode($p['content_long']); ?>
         </textarea>
@@ -80,5 +71,10 @@ $p = mysql_fetch_array($result);
         </label>
     </div>
     <p>&nbsp;</p>
-    <button type="submit" class="btn btn-default">Submit</button> | <a href="../views/network_news.php?news_id=<?php echo $p['id']; ?>" title="Cancel"><strong>Cancel</strong></a>
+    <div class="form-group">
+        <label>URL รูปภาพ</label>
+        <input type="text" name="picture"  class="form-control" value="<?php echo htmlspecialchars_decode($p['picture']); ?>">
+    </div>
+    <p>&nbsp;</p>
+    <button type="submit" class="btn btn-default">Submit</button> | <a href="../views/pr_news.php?news_id=<?php echo $p['id']; ?>" title="Cancel"><strong>Cancel</strong></a>
 </form>
