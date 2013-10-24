@@ -64,7 +64,7 @@ doc_head('ข่าววิขาการจากเครือข่าย'
                             function(data){ $('.bs-example').html(data); }
                         );
                         });
-                                            
+                                                        
                     });
                 </script>
                 <?php
@@ -100,6 +100,15 @@ doc_head('ข่าววิขาการจากเครือข่าย'
         <?php get_includes('footer'); ?>
     </div>
     <!-- /.container -->
+
+    <?php get_includes('bootstrap-core'); ?>
+    <script src="../plugins/jqueryui/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+    <!-- CKEditor -->    
+    <script src="../plugins/ckeditor/ckeditor.js"></script>
+    <script type='text/javascript'>
+
+        
+    </script>
 
 </body>
 </html>

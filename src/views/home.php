@@ -281,15 +281,9 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                         <?php
                         if (isset($_SESSION['login'])) {
                             ?>
-                            <div class="row">
-                                <h4 class="text-center">จัดการระบบ</h4>
-                            </div>
                             <div class="col-md-12">
-                                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.open('../../ap');">ระบบจัดการเว็บ</button>
-                            </div>
-                            <div class="col-md-12">
-                                <button type="button" class="btn btn-primary btn-lg btn-block" onclick="window.open('../../Re_db')">จัดการงานวิจัย</button>
-                            </div>
+                                <button type="submit" class="btn btn-default" onclick="window.location='<?php controll('logout'); ?>';">ออกจากระบบ</button>
+                            </div>                           
                             <?php
                         } else {
                             ?>

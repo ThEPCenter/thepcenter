@@ -1,6 +1,6 @@
 <?php
 
-//===================== Functions =========================
+// ===================== Functions =========================
 
 function removedir($dr) {
     $d = opendir($dr);
@@ -20,7 +20,7 @@ function removedir($dr) {
     return rmdir($dr);
 }
 
-//END function removedir
+// END function removedir
 
 function fileExist($id, $file_name, $dir, $exist, $notex) {
     $path = $dir . '/' . $id . '/' . $file_name; // Please Check directory first!!!!!!!!!!!!
@@ -32,7 +32,14 @@ function fileExist($id, $file_name, $dir, $exist, $notex) {
     return $fileEx;
 }
 
-//END function fileExist
+// END function fileExist
+
+function get_file_type($file_name) {
+        $name = strtolower($file_name);
+        $nameArr = explode(".", $name);
+        $num = count($nameArr);        
+        return $nameArr[$num - 1];      
+}
 
 function thai_date($str_date, $show_day = "n") {
     $time_stamp = strtotime($str_date);
@@ -121,6 +128,7 @@ function doc_head($title) {
     ';
 }
 
+// ============ SESSION =======================================================
 function login($output, $not_login = '') {
     if (isset($_SESSION['login'])) {
         echo $output;
@@ -197,12 +205,14 @@ window.location = " ' . $location . ' ";
 function login_header($location) {
     if (isset($_SESSION['login'])) {
         heder_redirect($location);
+		exit();
     }
 }
 
 function notlogin_header($location) {
     if (!isset($_SESSION['login'])) {
         heder_redirect($location);
+		exit();
     }
 }
 
@@ -217,12 +227,14 @@ function is_login_header($location_1, $location_2) {
 function login_js($location) {
     if (isset($_SESSION['login'])) {
         js_redirect($location);
+		exit();
     } 
 }
 
 function notlogin_js($location) {
     if (!isset($_SESSION['login'])) {
         js_redirect($location);
+		exit();
     } 
 }
 
