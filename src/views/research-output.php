@@ -29,14 +29,14 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                     echo '
         <table style="width: 350px; margin: 10px auto;">
             <tr>
-                <td class="text-center" style="background-color: #cccccc; height: 40px; width: 350px;"><a href="show_art.php?year=' . $year . '&center=' . $p['re_center_code'] . '&center_name=' . $p['re_center_th'] . '">' . $p['re_center_th'] . ' (' . $p['re_center_code'] . ')</a></td>
+                <td class="text-center" style="background-color: #cccccc; height: 40px; width: 350px;"><a href="show-article.php?year=' . $year . '&center=' . $p['re_center_code'] . '&center_name=' . $p['re_center_th'] . '">' . $p['re_center_th'] . ' (' . $p['re_center_code'] . ')</a></td>
             </tr>
         </table>           
                 ';
                 } //END while
                 echo '
         <div>&nbsp;</div>
-        <div align="center"><a href="research_output.php"><i class="icon-arrow-left-3"></i> ย้อนกลับ</a></div>';
+        <div align="center"><a href="research-output.php"><i class="icon-arrow-left-3"></i> ย้อนกลับ</a></div>';
             } else {
                 ?>
 

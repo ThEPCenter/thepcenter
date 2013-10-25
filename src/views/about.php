@@ -248,8 +248,8 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
                         <h3>แผนที่บน Google Map</h3>
                         <p>พิกัด : (18.802522, 98.955982)</p>
-                        <p><a href="thep_google_map.php?size_map=full&zoom=16" target="_blank"><strong>Click ที่นี่เพื่อดูแบบเต็มจอ</strong></a></p>
-                        <iframe src="thep_google_map.php" width="500" height="500" frameborder="0"></iframe>
+                        <p><a href="thep-google-map.php?size_map=full&zoom=16" target="_blank"><strong>Click ที่นี่เพื่อดูแบบเต็มจอ</strong></a></p>
+                        <iframe src="thep-google-map.php" width="500" height="500" frameborder="0"></iframe>
                     </div>
                 </div>
 

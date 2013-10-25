@@ -17,7 +17,7 @@ $sql = "SELECT *
 ";
 $result = mysql_query($sql);
 
-doc_head('ศูนย์ความเป็นเลิศด้านฟิสิกส์');
+doc_head('ผลงานวิจัยตีพิมพ์ระดับนานาชาติ');
 ?>       
 </head>
 
@@ -80,7 +80,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
         mysql_close()
         ?>
 
-        <div align="center"><a href="research_output.php?year=<?php echo $year; ?>"><i class="icon-arrow-left"></i> ย้อนกลับ</a></div>
+        <div align="center"><a href="research-output.php?year=<?php echo $year; ?>"><i class="icon-arrow-left"></i> ย้อนกลับ</a></div>
 
         <div class="text-center"><a href="#"><i class="icon-arrow-up-3"></i>Up</a></div>
 

@@ -221,7 +221,7 @@ function notlogin_js($location) {
 // ============= News ===================
 function name_news($news_type) {
     switch ($news_type) {
-        case 'network_academic':
+        case 'network-academic':
             echo 'ข่าววิชาการจากเครือข่าย';
             break;
         case 'pr':
@@ -230,7 +230,7 @@ function name_news($news_type) {
         case 'activity':
             echo 'ข่าวกิจกรรม';
             break;
-        case 'gen_academic':
+        case 'gen-academic':
             echo 'ข่าววิชาการทั่วไป';
             break;
         default:

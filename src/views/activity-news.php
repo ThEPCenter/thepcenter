@@ -60,7 +60,7 @@ doc_head('ข่าวกิจกรรม');
                 } else {
                     $new_gif = '';
                 }
-                admin('<p><a id="edit-news" style="cursor: pointer;">Edit</a></p>');
+                admin('<p><a id="edit-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-wrench"></span> Edit</a></p>');
                 ?>
                 <script>
                     $(function(){

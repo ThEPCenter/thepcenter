@@ -71,10 +71,12 @@ $p = mysql_fetch_array($result);
         </label>
     </div>
     <p>&nbsp;</p>
+    
     <div class="form-group">
         <label>URL รูปภาพ</label>
         <input type="text" name="picture"  class="form-control" value="<?php echo htmlspecialchars_decode($p['picture']); ?>">
     </div>
     <p>&nbsp;</p>
+    
     <button type="submit" class="btn btn-default">Submit</button> | <a href="../views/pr_news.php?news_id=<?php echo $p['id']; ?>" title="Cancel"><strong>Cancel</strong></a>
 </form>

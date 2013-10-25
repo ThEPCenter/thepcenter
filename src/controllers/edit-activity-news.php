@@ -115,5 +115,5 @@ $p = mysql_fetch_array($result);
     </script>
 
     <p>&nbsp;</p>
-    <button type="submit" class="btn btn-default">Submit</button> | <a href="../views/pr_news.php?news_id=<?php echo $p['id']; ?>" title="Cancel"><strong>Cancel</strong></a>
+    <button type="submit" class="btn btn-default">Submit</button> | <a href="../views/activity-news.php?news_id=<?php echo $p['id']; ?>" title="Cancel"><strong>Cancel</strong></a>
 </form>

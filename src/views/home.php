@@ -106,11 +106,11 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                     <div id="myTabContent" class="tab-content">
                         <?php
                         $sql_net = "SELECT * FROM tb_news
-                            WHERE type = 'network_academic'
+                            WHERE type = 'network-academic'
                             ORDER BY date DESC;
                         ";
                         $result_net = mysql_query($sql_net);
-                        if (!empty($result_net)) {
+                        if (mysql_num_rows($result_net) > 0) {
                             $net = mysql_fetch_array($result_net);
 
                             if ($net['new'] == 'y') {
@@ -122,14 +122,14 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                             <div class="tab-pane fade in active" id="page1">
                                 <h3>
                                     <?php
-                                    echo '<a href="network_news.php?news_id=' . $net['id'] . '">' . htmlspecialchars_decode($net['title']) . '</a>' . $new_gif;
+                                    echo '<a href="network-academic-news.php?news-id=' . $net['id'] . '">' . htmlspecialchars_decode($net['title']) . '</a>' . $new_gif;
                                     ?>
                                 </h3>
                                 <p><small><em><?php echo thai_date($net['date']); ?></em></small></p>
                                 <?php
                                 echo htmlspecialchars_decode($net['content_short']);
 
-                                echo '<p><a href="network_news.php?news_id=' . $net['id'] . '"> ... อ่านต่อ</a></p>';
+                                echo '<p><a href="network-academic-news.php?news-id=' . $net['id'] . '"> ... อ่านต่อ</a></p>';
                             } else {
                                 echo '<h3 class="text-center">ขออภัย ไม่พบข้อมูล</h3>';
                             }
@@ -176,8 +176,26 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                             </table>
                         </div>
 
+                        <?php
+                        $sql_gen = "SELECT * FROM tb_news
+                            WHERE type = 'gen-academic'
+                            ORDER BY date DESC;
+                        ";
+                        $re_gen = mysql_query($sql_gen);
+                        ?>
                         <div class="tab-pane fade" id="page3">
-                            <p>สรุปรายชื่อผู้เข้าร่วมกิจกรรม Names of participant's Advanced Plasma Technology for Green Energy and Biomedical Applications ... รายละเอียด</p>
+                            <?php
+                            if (mysql_num_rows($re_gen) > 0) {
+                                while ($gen = mysql_fetch_array($re_gen)) {
+                                    echo '
+                            <p><a href="gen-academic-news.php?news-id=' . $gen['id'] . '">' . $gen['title'] . '</a></p>
+                                <hr>
+                                    ';
+                                } // END while
+                            } else {
+                                echo '<p class="text-center">ขออภัยไม่พบข้อมูล</p>';
+                            } 
+                            ?>
                         </div>
 
                     </div>

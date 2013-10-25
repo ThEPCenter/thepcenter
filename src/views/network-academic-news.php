@@ -1,7 +1,8 @@
 <?php
 require_once '../system/system.php';
 
-doc_head('ข่าวประชาสัมพันธ์');
+doc_head('ข่าววิขาการจากเครือข่าย');
+$news_type = 'network-academic';
 ?>
 
 <!-- Datepicker -->
@@ -11,7 +12,6 @@ doc_head('ข่าวประชาสัมพันธ์');
         width: 316px;
     }
 </style>
-
 </head>
 
 <body>
@@ -19,17 +19,40 @@ doc_head('ข่าวประชาสัมพันธ์');
 
         <?php get_includes('header'); ?>
         <div class="bs-example">
-            <h2 class="text-center"><a href="pr_news.php">ข่าวประชาสัมพันธ์</a></h2>
+            <h2 class="text-center"><a href="network-academic-news.php">ข่าววิชาการจากเครือข่าย</a></h2>
+            <?
+            $admin_txt = '  
+                <p>
+                    <a id="add-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-plus"></span> Add</a>
+                </p>
+                <hr>
+                            ';
+            admin($admin_txt);
+            ?>            
+            <script>
+                $(function(){         
+                    $('#add-news').click(function(){
+                        $(document).ajaxStart(function(){
+                            $('.bs-example').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
+                        });
+                        $.get("<?php controll('add-news'); ?>", {add_news: "<?php echo $news_type; ?>"}, 
+                        function(data){ $('.bs-example').html(data); }
+                    );
+                    });
+                                                            
+                });
+            </script>
+            
             <?php
-            if (isset($_GET['news_id'])) {
-                $news_id = $_GET['news_id'];
+            if (isset($_GET['news-id'])) {
+                $news_id = $_GET['news-id'];
                 $sql = "SELECT * FROM tb_news WHERE id = '$news_id';";
                 $result = mysql_query($sql);
                 $p = mysql_fetch_array($result);
-                if ($p['type'] != 'pr') {
+                if ($p['type'] != 'network-academic') {
                     echo '
                     <script>
-                        window.location = \'pr_news.php\';
+                        window.location = \'network-academic-news.php\';
                     </script>     
                     ';
                 }
@@ -41,15 +64,17 @@ doc_head('ข่าวประชาสัมพันธ์');
                 echo '                            
                             <div id="news-' . $p['id'] . '">
                                 ';
-                admin('<p><a id="edit-news" style="cursor: pointer;">Edit</a></p>');
+                $admin_txt = '  <p>
+                                    <a id="edit-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-wrench"></span> Edit</a> 
+                                </p>
+                            ';
+                admin($admin_txt);
                 echo '
-                                <hr>
                                 <h3>' . htmlspecialchars_decode($p['title']) . $new_gif . '</h3>
                                 <p><small><em>' . thai_date($p['date']) . '</small></em></p>
-                                <p class="text-center"><img class="img-responsiv" src="' . $p['picture'] . '"></p>
                                 ' . htmlspecialchars_decode($p['content_long']) . '
                             </div>
-                            ';
+                      ';
                 ?>
                 <script>
                     $(function(){
@@ -57,17 +82,16 @@ doc_head('ข่าวประชาสัมพันธ์');
                             $(document).ajaxStart(function(){
                                 $('.bs-example').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
                             });
-                            $.get("<?php controll('edit-pr-news'); ?>", {edit_news: "<?php echo $p['id']; ?>"}, 
+                            $.get("<?php controll('edit-network-news'); ?>", {edit_news: "<?php echo $p['id']; ?>"}, 
                             function(data){ $('.bs-example').html(data); }
                         );
                         });
-                                                        
+                                                                    
                     });
                 </script>
                 <?php
             } else {
-                echo '<p>&nbsp</p>';
-                $sql = "SELECT * FROM tb_news WHERE type = 'pr' ORDER BY date DESC;";
+                $sql = "SELECT * FROM tb_news WHERE type = 'network-academic' ORDER BY date DESC;";
                 $result = mysql_query($sql);
                 $num_news = mysql_num_rows($result);
                 if ($num_news > 0) {
@@ -81,7 +105,7 @@ doc_head('ข่าวประชาสัมพันธ์');
                         }
                         echo '                            
                             <div id="news-' . $p['id'] . '">
-                                <h4 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . $l . '. ' . htmlspecialchars_decode($p['title']) . $new_gif . '</a></h4>
+                                <h4 style="display: inline;"><a onclick="window.location=\'?news-id=' . $p['id'] . '\';" style="cursor: pointer;">' . $l . '. ' . htmlspecialchars_decode($p['title']) . $new_gif . '</a></h4>
                                 <small><em>' . thai_date($p['date']) . '</small></em>                                
                             </div>
                             <hr>
@@ -100,6 +124,13 @@ doc_head('ข่าวประชาสัมพันธ์');
     <!-- /.container -->
 
     <?php get_includes('bootstrap-core'); ?>
+    <script src="../plugins/jqueryui/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+    <!-- CKEditor -->    
+    <script src="../plugins/ckeditor/ckeditor.js"></script>
+    <script type='text/javascript'>
+
+        
+    </script>
 
 </body>
 </html>

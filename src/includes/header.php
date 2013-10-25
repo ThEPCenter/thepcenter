@@ -17,8 +17,8 @@
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                 <li><a href="about.php">เกี่ยวกับ ThEP</a></li>
-                <li><a href="pr_news.php">ข่าวประชาสัมพันธ์</a></li>
-                <li><a href="research_output.php">งานวิจัย</a></li>
+                <li><a href="pr-news.php">ข่าวประชาสัมพันธ์</a></li>
+                <li><a href="research-output.php">งานวิจัย</a></li>
                 <li><a href="industrial.php">ฟิสิกส์อุตสากรรม</a></li>                
             </ul>
             
