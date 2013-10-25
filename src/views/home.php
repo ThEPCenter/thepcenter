@@ -161,9 +161,9 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                                 <tr>
                                     <td><a href="activity-news.php?news_id=' . $a['id'] . '" class="pic-link">
                                         <img src="../images/pixel-vfl3z5WfW.gif" style="vertical-align: middle; 
-                                        background: no-repeat white url(../../ap/views/img/picture/' . $pic['name'] . ') -40px 0; 
-                                        background-size: 160px auto; 
-                                        width: 80px; height: 80px;" >
+                                        background: no-repeat white url(../img/picture/' . $pic['name'] . ') -40px 0; 
+                                        background-size: 130px auto; 
+                                        width: 65px; height: 65px;" >
                                     </a></td>
                                     <td><a href="activity-news.php?news_id=' . $a['id'] . '">' . $a['title'] . '</a></td>
                                 </tr>                            

@@ -95,13 +95,13 @@ doc_head('ข่าวกิจกรรม');
                                 $i++;
                                 echo '
                         
-                    <a class="pic-link" href="../../ap/views/img/picture/' . $p['name'] . '" data-lightbox="gal-' . $n['gallery_id'] . '" title="' . $p['caption'] . '">                            
+                    <a class="pic-link" href="../img/picture/' . $p['name'] . '" data-lightbox="gal-' . $n['gallery_id'] . '" title="' . $p['caption'] . '">                            
                         <img class="example-image" src="../images/pixel-vfl3z5WfW.gif" alt="image ' . $i . ' 0f ' . $no_p . ' thumb" 
                             style="vertical-align: middle; 
-                            background: no-repeat white url(../../ap/views/img/picture/' . $p['name'] . ') -50px 0; 
-                            background-size: 200px auto; 
-                            width: 100px;
-                            height: 100px;">                            
+                            background: no-repeat white url(../img/picture/' . $p['name'] . ') -50px 0; 
+                            background-size: 130px auto; 
+                            width: 65px;
+                            height: 65px;">                            
                     </a>                        
                         ';
                             } // END while
@@ -140,10 +140,10 @@ doc_head('ข่าวกิจกรรม');
                             echo '               
                                             <img class="example-image" src="../images/pixel-vfl3z5WfW.gif" alt="image ' . $i . ' 0f ' . $no_p . ' thumb" 
                             style="vertical-align: middle; 
-                            background:no-repeat #ccc url(../../ap/views/img/picture/' . $pic['name'] . ') -40px 0; 
-                            background-size: 160px auto; 
-                            width: 80px;
-                            height: 80px;">                            
+                            background:no-repeat #ccc url(../img/picture/' . $pic['name'] . ') -40px 0; 
+                            background-size: 130px auto; 
+                            width: 65px;
+                            height: 65px;">                            
                                     </a>
                                     </td>
                                     <td><a href="activity-news.php?news_id=' . $a['id'] . '">' . $a['title'] . '</a></td>

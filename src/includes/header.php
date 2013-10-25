@@ -19,7 +19,7 @@
                 <li><a href="about.php">เกี่ยวกับ ThEP</a></li>
                 <li><a href="pr_news.php">ข่าวประชาสัมพันธ์</a></li>
                 <li><a href="research_output.php">งานวิจัย</a></li>
-                <li><a href="industrial.php">ฟิสิกส์เพื่อผู้ประกอบการ</a></li>                
+                <li><a href="industrial.php">ฟิสิกส์อุตสากรรม</a></li>                
             </ul>
             
             <!-- right navbar -->

@@ -1,6 +1,6 @@
 <?php
 require_once '../system/system.php';
-doc_head('ฟิสิกส์เพื่อผู้ประกอบการ');
+doc_head('ฟิสิกส์อุตสากรรม');
 ?>       
 </head>
 
@@ -25,13 +25,13 @@ doc_head('ฟิสิกส์เพื่อผู้ประกอบกา�
             </div>
 
             <div class="col-md-9">
-                
-                    <?php
-                    $sql = "SELECT * FROM tb_industrial ORDER BY date DESC;";
-                    $result = mysql_query($sql);
-                    if (mysql_num_rows($result) > 0) {
-                        while ($p = mysql_fetch_array($result)) {
-                            echo '
+
+                <?php
+                $sql = "SELECT * FROM tb_industrial ORDER BY date DESC;";
+                $result = mysql_query($sql);
+                if (mysql_num_rows($result) > 0) {
+                    while ($p = mysql_fetch_array($result)) {
+                        echo '
                 <div class="bs-example">
                     <div>
                         <h3>' . htmlspecialchars_decode($p['title']) . '</h3>
@@ -40,15 +40,15 @@ doc_head('ฟิสิกส์เพื่อผู้ประกอบกา�
                     </div>
                 </div>
                             ';
-                        }
-                    } else {
-                        echo '
+                    }
+                } else {
+                    echo '
                         <div class="bs-example">
                             <p>ขออภัย ไม่พบข้อมูล</p>
                         </div>
                         ';
-                    }
-                    ?>                
+                }
+                ?>                
             </div>
         </div>
         <?php get_includes('footer'); ?>
