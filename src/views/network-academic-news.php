@@ -44,8 +44,8 @@ $news_type = 'network-academic';
             </script>
             
             <?php
-            if (isset($_GET['news-id'])) {
-                $news_id = $_GET['news-id'];
+            if (isset($_GET['news_id'])) {
+                $news_id = $_GET['news_id'];
                 $sql = "SELECT * FROM tb_news WHERE id = '$news_id';";
                 $result = mysql_query($sql);
                 $p = mysql_fetch_array($result);

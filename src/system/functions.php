@@ -168,7 +168,7 @@ function space($n) {
     echo $sp;
 }
 
-function heder_redirect($location) {
+function header_redirect($location) {
     header("Location: $location");
     exit();
 }
@@ -184,14 +184,14 @@ window.location = " ' . $location . ' ";
 
 function login_header($location) {
     if (isset($_SESSION['login'])) {
-        heder_redirect($location);
+        header_redirect($location);
 		exit();
     }
 }
 
 function notlogin_header($location) {
     if (!isset($_SESSION['login'])) {
-        heder_redirect($location);
+        header_redirect($location);
 		exit();
     }
 }
