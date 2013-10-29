@@ -105,7 +105,7 @@ $news_type = 'network-academic';
                         }
                         echo '                            
                             <div id="news-' . $p['id'] . '">
-                                <h4 style="display: inline;"><a onclick="window.location=\'?news-id=' . $p['id'] . '\';" style="cursor: pointer;">' . $l . '. ' . htmlspecialchars_decode($p['title']) . $new_gif . '</a></h4>
+                                <h4 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . $l . '. ' . htmlspecialchars_decode($p['title']) . $new_gif . '</a></h4>
                                 <small><em>' . thai_date($p['date']) . '</small></em>                                
                             </div>
                             <hr>

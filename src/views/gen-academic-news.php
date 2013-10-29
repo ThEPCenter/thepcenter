@@ -21,8 +21,8 @@ doc_head('ข่าววิชาการทั่วไป');
         <div class="bs-example">
             <h2 class="text-center"><a href="gen-academic-news.php">ข่าววิชาการทั่วไป</a></h2>
             <?php
-            if (isset($_GET['news-id'])) {
-                $news_id = $_GET['news-id'];
+            if (isset($_GET['news_id'])) {
+                $news_id = $_GET['news_id'];
                 $sql = "SELECT * FROM tb_news WHERE id = '$news_id';";
                 $result = mysql_query($sql);
                 $p = mysql_fetch_array($result);
@@ -79,7 +79,7 @@ doc_head('ข่าววิชาการทั่วไป');
                         }
                         echo '                            
                             <div id="news-' . $p['id'] . '">
-                                <h4 style="display: inline;"><a onclick="window.location=\'?news-id=' . $p['id'] . '\';" style="cursor: pointer;">' . $l . '. ' . htmlspecialchars_decode($p['title']) . $new_gif . '</a></h4>
+                                <h4 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . $l . '. ' . htmlspecialchars_decode($p['title']) . $new_gif . '</a></h4>
                                 <small><em>' . thai_date($p['date']) . '</small></em>                                
                             </div>
                             <hr>

@@ -15,11 +15,11 @@ doc_head('ฟิสิกส์อุตสากรรม');
                     <p style="font-size: 20px; text-align: center;">สารสนเทศสำหรับ<br />ผู้ประกอบการ</p>
 
                     <ul>
-                        <li><a href="../../upload/industrial/Board.pdf" target="_blank">คณะกรรมการที่ปรึกษา<br />ภาคการผลิตและบริการ</a></li>
-                        <li><a href="../../upload/industrial/Message.pdf" target="_blank">สารจากผู้อำนวยการศูนย์ฯ</a></li>
-                        <li><a href="../../upload/industrial/Members.pdf" target="_blank">"ทำเนียบ" ห้องปฏิบัติการ<br />ทางฟิสิกส์</a></li>
-                        <li><a href="../../upload/industrial/thep.pdf" target="_blank">ตัวอย่างงานวิจัย</a></li>
-                        <li><a href="../../upload/industrial/STI-Policy.pdf" target="_blank">การร่วมบริจาคทุนเพื่อศูนย์วิจัย</a></li>
+                        <li><a href="../../upload02/industrial/Board.pdf" target="_blank">คณะกรรมการที่ปรึกษา<br />ภาคการผลิตและบริการ</a></li>
+                        <li><a href="../../upload02/industrial/Message.pdf" target="_blank">สารจากผู้อำนวยการศูนย์ฯ</a></li>
+                        <li><a href="../../upload02/industrial/Members.pdf" target="_blank">"ทำเนียบ" ห้องปฏิบัติการ<br />ทางฟิสิกส์</a></li>
+                        <li><a href="../../upload02/industrial/thep.pdf" target="_blank">ตัวอย่างงานวิจัย</a></li>
+                        <li><a href="../../upload02/industrial/STI-Policy.pdf" target="_blank">การร่วมบริจาคทุนเพื่อศูนย์วิจัย</a></li>
                     </ul>
                 </div>
             </div>

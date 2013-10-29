@@ -106,28 +106,30 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                     </ul>
 
                     <div id="myTabContent" class="tab-content">
-<?php
-$sql_net = "SELECT * FROM tb_news
+                        <div class="tab-pane fade in active" id="page1">
+                            <?php
+                            $sql_net = "SELECT * FROM tb_news
                             WHERE type = 'network-academic'
                             ORDER BY date DESC;
                         ";
-$result_net = mysql_query($sql_net);
-if (mysql_num_rows($result_net) > 0) {
-    $net = mysql_fetch_array($result_net);
+                            $result_net = mysql_query($sql_net);
+                            if (!empty($result_net)) {
+                                if (mysql_num_rows($result_net) > 0) {
+                                    $net = mysql_fetch_array($result_net);
 
-    if ($net['new'] == 'y') {
-        $new_gif = ' <img src="../images/new1.gif">';
-    } else {
-        $new_gif = '';
-    }
-    ?>
-                            <div class="tab-pane fade in active" id="page1">
-                                <h3>
-                            <?php
-                            echo '<a href="network-academic-news.php?news_id=' . $net['id'] . '">' . htmlspecialchars_decode($net['title']) . '</a>' . $new_gif;
-                            ?>
-                                </h3>
-                                <p><small><em><?php echo thai_date($net['date']); ?></em></small></p>
+                                    if ($net['new'] == 'y') {
+                                        $new_gif = ' <img src="../images/new1.gif">';
+                                    } else {
+                                        $new_gif = '';
+                                    }
+                                    ?>
+
+                                    <h3>
+                                        <?php
+                                        echo '<a href="network-academic-news.php?news_id=' . $net['id'] . '">' . htmlspecialchars_decode($net['title']) . '</a>' . $new_gif;
+                                        ?>
+                                    </h3>
+                                    <p><small><em><?php echo thai_date($net['date']); ?></em></small></p>
                                     <?php
                                     echo htmlspecialchars_decode($net['content_short']);
 
@@ -135,32 +137,34 @@ if (mysql_num_rows($result_net) > 0) {
                                 } else {
                                     echo '<h3 class="text-center">ขออภัย ไม่พบข้อมูล</h3>';
                                 }
-                                ?>
+                            }
+                            ?>
                         </div>
 
-                            <?php
-                            $sql_act = "SELECT * FROM tb_news
+
+                        <?php
+                        $sql_act = "SELECT * FROM tb_news
                             WHERE type = 'activity'
                             ORDER BY date DESC;
                         ";
-                            $re_act = mysql_query($sql_act);
-                            ?>
+                        $re_act = mysql_query($sql_act);
+                        ?>
 
                         <div class="tab-pane fade" id="page2">
                             <table class="table">
-                        <?php
-                        if (mysql_num_rows($re_act) > 0) {
-                            while ($a = mysql_fetch_array($re_act)) {
+                                <?php
+                                if (mysql_num_rows($re_act) > 0) {
+                                    while ($a = mysql_fetch_array($re_act)) {
 
-                                $sql_pic = "SELECT * FROM tb_picture
+                                        $sql_pic = "SELECT * FROM tb_picture
                                             WHERE gallery_id = {$a['gallery_id']}
                                             ORDER BY id;    
                                         ";
-                                $re_pic = mysql_query($sql_pic);
-                                if (!empty($re_pic)) {
-                                    $pic = mysql_fetch_array($re_pic);
-                                }
-                                echo '
+                                        $re_pic = mysql_query($sql_pic);
+                                        if (!empty($re_pic)) {
+                                            $pic = mysql_fetch_array($re_pic);
+                                        }
+                                        echo '
                                 <tr>
                                     <td><a href="activity-news.php?news_id=' . $a['id'] . '" class="pic-link">
                                         <img src="../images/pixel-vfl3z5WfW.gif" style="vertical-align: middle; 
@@ -171,35 +175,35 @@ if (mysql_num_rows($result_net) > 0) {
                                     <td><a href="activity-news.php?news_id=' . $a['id'] . '">' . $a['title'] . '</a></td>
                                 </tr>                            
                                     ';
-                            } // END while
-                        } else {
-                            echo '<tr><td>ขออภัยไม่พบข้อมูล</td></tr>';
-                        }
-                        ?>
+                                    } // END while
+                                } else {
+                                    echo '<tr><td>ขออภัยไม่พบข้อมูล</td></tr>';
+                                }
+                                ?>
                             </table>
                         </div>
 
-                                <?php
-                                $sql_gen = "SELECT * FROM tb_news
+                        <?php
+                        $sql_gen = "SELECT * FROM tb_news
                             WHERE type = 'gen-academic'
                             ORDER BY date DESC;
                         ";
-                                $re_gen = mysql_query($sql_gen);
-                                ?>
+                        $re_gen = mysql_query($sql_gen);
+                        ?>
 
                         <div class="tab-pane fade" id="page3">
-                        <?php
-                        if (mysql_num_rows($re_gen) > 0) {
-                            while ($gen = mysql_fetch_array($re_gen)) {
-                                echo '
+                            <?php
+                            if (mysql_num_rows($re_gen) > 0) {
+                                while ($gen = mysql_fetch_array($re_gen)) {
+                                    echo '
                             <p><a href="gen-academic-news.php?news_id=' . $gen['id'] . '">' . $gen['title'] . '</a></p>
                                 <hr>
                                     ';
-                            } // END while
-                        } else {
-                            echo '<p class="text-center">ขออภัยไม่พบข้อมูล</p>';
-                        }
-                        ?>
+                                } // END while
+                            } else {
+                                echo '<p class="text-center">ขออภัยไม่พบข้อมูล</p>';
+                            }
+                            ?>
                         </div>
 
                     </div>
@@ -298,9 +302,9 @@ if (mysql_num_rows($result_net) > 0) {
 
                 <div class="bs-example">
                     <div class="row">
-<?php
-if (isset($_SESSION['login'])) {
-    ?>
+                        <?php
+                        if (isset($_SESSION['login'])) {
+                            ?>
                             <div class="col-md-12">
                                 <button type="submit" class="btn btn-default" onclick="window.location='<?php controll('logout'); ?>';">Logout</button>
                             </div>                           
@@ -314,13 +318,13 @@ if (isset($_SESSION['login'])) {
                             <div class="row">
                                 <div class="col-md-1">&nbsp;</div>
                                 <div class="col-md-10">
-    <?php
-    get_controll('login-form');
-    ?>
+                                    <?php
+                                    get_controll('login-form');
+                                    ?>
                                 </div>
                                 <div class="col-md-1">&nbsp;</div>
                             </div>
-                                <?php } ?>
+                        <?php } ?>
                     </div>
                 </div>
             </div>
@@ -334,11 +338,11 @@ if (isset($_SESSION['login'])) {
                 <div class="col-md-4 text-center"><a href="http://www.moe.go.th" target="_blank" title="กระทรวงศึกษาธิการ"><img style="width: auto; max-height: 64px; margin: 0px auto 10px auto;" src="../images/moe_logo_128.png"></a></div>
             </div>
         </div>
-<?php get_includes('footer'); ?>
+        <?php get_includes('footer'); ?>
     </div>
     <!-- /.container -->
 
-        <?php get_includes('bootstrap-core'); ?>
+    <?php get_includes('bootstrap-core'); ?>
     <script type='text/javascript'>
 
         $(function(){
