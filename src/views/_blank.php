@@ -10,7 +10,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
         <?php get_includes('header'); ?>
 
-        <div class="bs-example">
+        <div class="bs-example" id="content">
 
         </div>
 

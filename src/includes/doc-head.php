@@ -19,20 +19,7 @@
           <script src="../themes/assets/js/html5shiv.js"></script>
           <script src="../themes/assets/js/respond.min.js"></script>
         <![endif]-->
-        
-        <style>
-            body {
-                background-color: #CFE4FB;
-                padding-top: 0px;
-            }
-            .container{
-                background-color: #92C4F9;
-            }
-            .navbar-nav{
-                font-size: 16px;
-            }
-        </style>
-        
+                
         <script src="../plugins/jqueryui/jquery-1.10.2.js"></script>
         <script src="../plugins/jqueryui/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
         <!-- CKEditor -->

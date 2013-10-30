@@ -26,7 +26,7 @@ doc_head('ข่าวพิเศษ');
 
         <?php get_includes('header'); ?>
 
-        <div class="bs-example">
+        <div class="bs-example" id="content">
             <h2 style="text-align: center;">รางวัลโนเบลฟิสิกส์ประจำปี  2013</h2>
             <p>&nbsp;</p>
 

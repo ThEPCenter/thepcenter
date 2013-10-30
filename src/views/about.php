@@ -2,18 +2,13 @@
 require_once '../system/system.php';
 doc_head('ศูนย์ความเป็นเลิศด้านฟิสิกส์');
 ?>
-<style>
-    #myTab li a{
-        font-size: 16px;
-    }
-</style>
 </head>
 
 <body>
     <div class="container">
         <?php get_includes('header'); ?>
 
-        <div class="bs-example bs-example-tabs">
+        <div class="bs-example bs-example-tabs" id="content">
             <ul id="myTab" class="nav nav-tabs">
                 <li class="active"><a href="#page1" data-toggle="tab">แนวทางของศูนย์ ThEP</a></li>
                 <li><a href="#page2" data-toggle="tab">ประวัติความเป็นมา</a></li>

@@ -18,7 +18,7 @@ $news_type = 'network-academic';
     <div class="container">
 
         <?php get_includes('header'); ?>
-        <div class="bs-example">
+        <div class="bs-example" id="content">
             <h2 class="text-center"><a href="network-academic-news.php">ข่าววิชาการจากเครือข่าย</a></h2>
             <?
             $admin_txt = '  
@@ -105,7 +105,7 @@ $news_type = 'network-academic';
                         }
                         echo '                            
                             <div id="news-' . $p['id'] . '">
-                                <h4 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . $l . '. ' . htmlspecialchars_decode($p['title']) . $new_gif . '</a></h4>
+                                <h3 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . $l . '. ' . htmlspecialchars_decode($p['title']) . $new_gif . '</a></h3>
                                 <small><em>' . thai_date($p['date']) . '</small></em>                                
                             </div>
                             <hr>

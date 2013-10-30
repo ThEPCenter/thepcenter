@@ -1,7 +1,33 @@
 <?php
 require_once '../system/system.php';
-doc_head('ศูนย์ความเป็นเลิศด้านฟิสิกส์');
 ?>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="../../assets/ico/favicon.png">
+
+        <!-- Bootstrap core CSS -->
+        <link href="../themes/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+
+        <!-- Custom styles for this template -->
+        <link href="../themes/assets/css/docs.css" rel="stylesheet" media="screen">
+        <link href="../style/main.css" rel="stylesheet" type="text/css" media="screen">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="../themes/assets/js/html5shiv.js"></script>
+          <script src="../themes/assets/js/respond.min.js"></script>
+        <![endif]-->
+                
+        <script src="../plugins/jqueryui/jquery-1.10.2.js"></script>
+        <script src="../plugins/jqueryui/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+        <!-- CKEditor -->
+        <script src="../plugins/ckeditor/ckeditor.js"></script>
+        
 <style>
     .pic-link{
         text-decoration: none;
@@ -12,9 +38,6 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
     #center-list, #eq-list{
         display: none;
-    }
-    #myTab li a{
-        font-size: 16px;
     }
 
     /*  style for Special News box */
@@ -37,9 +60,9 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 <body>
     <div class="container">
 
-        <?php get_includes('header'); ?>
+        <?php require_once('../includes/header.php'); ?>
 
-        <div class="bs-example">
+        <div id="slide" class="bs-example">
 
             <?php
             $admin_txt = '
@@ -96,8 +119,8 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
         </div>
 
         <!-- Stack the columns on mobile by making one full-width and the other half-width -->
-        <div class="row">
-            <div class="col-md-8">
+        <div class="row" id="content">
+            <div class="col-md-8" id="left-col">
                 <div class="bs-example bs-example-tabs">
                     <ul id="myTab" class="nav nav-tabs">
                         <li class="active"><a href="#page1" data-toggle="tab">ข่าววิชาการจากเครือข่าย</a></li>
@@ -212,7 +235,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             </div>
 
             <!-- Sidebar =================== -->
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 text-center" id="right-col">
                 <div class="bs-example">
                     <div>                    
                         <a style="text-decoration: none; text-align: center;" href="special-news.php" title="รางวัลโนเบลฟิสิกส์ประจำปี 2013">
@@ -223,7 +246,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                         </a>
                         <div style="text-align: left;">
                             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            Royal Swedish Academy of Sciences ได้ประกาศที่กรุงสตอกโฮล์ม ประเทศสวีเดน เมื่อวันที่ 8 ตุลาคมที่ผ่านมาว่า รางวัลโนเบลฟิสิกส์ประจำปี 2013 ได้ตัดสินมอบให้แก่นักฟิสิกส์ทฤษฎี 2 ท่านคือ ศาสตราจารย์ Francois Englert กับ ศาสตราจารย์ Peter W. Higgs <a href="special-news.php" style="color: #006600;">...อ่านต่อ <img src="http://www.thep-center.org/test2013/images/red_arrow.gif"></a>
+                            Royal Swedish Academy of Sciences ได้ประกาศที่กรุงสตอกโฮล์ม ประเทศสวีเดน เมื่อวันที่ 8 ตุลาคมที่ผ่านมาว่า รางวัลโนเบลฟิสิกส์ประจำปี 2013 ได้ตัดสินมอบให้แก่นักฟิสิกส์ทฤษฎี 2 ท่านคือ ศาสตราจารย์ Francois Englert กับ ศาสตราจารย์ Peter W. Higgs <a href="special-news.php">...อ่านต่อ</a>
 
                         </div>
                     </div>
@@ -330,14 +353,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             </div>
 
         </div>
-
-        <div>
-            <div class="row">
-                <div class="col-md-4 text-center"><a href="http://www.perdo.or.th" target="_blank" title="สำนักพัฒนาบัณฑิตศึกษาและวิจัยด้านวิทยาศาสตร์และเทคโนโลยี (สบว)"><img style="width: auto; max-height: 64px; margin: 0px auto 10px auto;" class="img-responsive" src="../images/perdo_128.png"></a></div>
-                <div class="col-md-4 text-center"><a href="http://www.mua.go.th" target="_blank" title="สำนักงานคณะกรรมการการอุดมศึกษา"><img style="width: auto; max-height: 64px; margin: 0px auto 10px auto;" src="../images/mua_logo_128.png"></a></div>
-                <div class="col-md-4 text-center"><a href="http://www.moe.go.th" target="_blank" title="กระทรวงศึกษาธิการ"><img style="width: auto; max-height: 64px; margin: 0px auto 10px auto;" src="../images/moe_logo_128.png"></a></div>
-            </div>
-        </div>
+        
         <?php get_includes('footer'); ?>
     </div>
     <!-- /.container -->
