@@ -9,7 +9,7 @@ doc_head('เว็บลิ้งค์');
 
         <?php get_includes('header'); ?>
 
-        <div class="bs-example">
+        <div class="bs-example row">            
             
             <h2 class="text-center">เว็บลิ้งค์</h2>
             

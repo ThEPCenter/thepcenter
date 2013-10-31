@@ -104,7 +104,7 @@ doc_head('แก้ไขสไลด์');
 
         </div>
 
-        <div id="slide" class="bs-example">
+        <div class="bs-example row">
 
             <?php
             $admin_txt = '
