@@ -60,7 +60,7 @@ doc_head('ข่าววิชาการทั่วไป');
                             function(data){ $('.bs-example').html(data); }
                         );
                         });
-                                                        
+                                                            
                     });
                 </script>
                 <?php
@@ -68,7 +68,7 @@ doc_head('ข่าววิชาการทั่วไป');
                 echo '<p>&nbsp</p>';
                 $sql = "SELECT * FROM tb_news WHERE type = 'gen-academic' ORDER BY date DESC;";
                 $result = mysql_query($sql);
-                if (mysql_num_rows($result)> 0) {
+                if (mysql_num_rows($result) > 0) {
                     $l = 0;
                     while ($p = mysql_fetch_array($result)) {
                         $l++;

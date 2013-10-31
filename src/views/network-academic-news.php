@@ -42,7 +42,7 @@ $news_type = 'network-academic';
                                                             
                 });
             </script>
-            
+
             <?php
             if (isset($_GET['news_id'])) {
                 $news_id = $_GET['news_id'];
@@ -86,7 +86,7 @@ $news_type = 'network-academic';
                             function(data){ $('.bs-example').html(data); }
                         );
                         });
-                                                                    
+                                                                        
                     });
                 </script>
                 <?php

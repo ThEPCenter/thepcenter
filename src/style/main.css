@@ -1,141 +1,142 @@
 /* Customize container */
 @media (min-width: 1200px)  {
-  .container, footer {
-    max-width: 100%;
-  }
-  header, #slide, #content, #organization {
-	  margin: 0 auto;
-	  max-width: 940px;
-  }
+    .container, footer {
+        max-width: 100%;
+    }
+    header, #slide, #content, #organization {
+        margin: 0 auto;
+        max-width: 940px;
+    }
 } /*  END @media (min-width: 1200px) */
 
 
 @font-face
 {
-font-family: 'TH Niramit AS';
-src: url('../themes/font/TH Niramit AS.ttf')
-    ,url('../themes/font/TH Niramit AS.ttf'); /* IE9 */
+    font-family: 'TH Niramit AS';
+    src: url('../themes/font/TH Niramit AS.ttf')
+        ,url('../themes/font/TH Niramit AS.ttf'); /* IE9 */
 }
 
 body { 
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	background-color: #FFF;
-	font-family: 'TH Niramit AS';
-	font-size: 20px;
-	line-height: 24px;
-	color: #222222;	
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: #FFF;
+    font-family: 'TH Niramit AS';
+    font-size: 20px;
+    line-height: 24px;
+    color: #222222;	
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-font-family: 'TH Niramit AS';
-font-weight: 600;
-  }
-  a{
-	text-decoration: none;
-	color: #003399;
-  }
-  a:hover {
-	  text-decoration: underline;
-	  color: #003399;
-  }
-  
-  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,  .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
-  	color: #222222;
-  }
-   h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,  .h1 a:hover, .h2 a:hover, .h3 a:hover, .h4 a:hover, .h5 a:hover, .h6 a:hover {
-  	color: #222222;
-  }
-  
-  .container {
-	  padding: 0px;
-  }
-  .navbar-brand {
-  	font-size: 16pt;
-  }
-  
-  #slide {
-	  margin-top: 10px; 
-  }
-  
+    font-family: 'TH Niramit AS';
+    font-weight: 600;
+}
+a{
+    text-decoration: none;
+    color: #003399;
+}
+a:hover {
+    text-decoration: underline;
+    color: #003399;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,  .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
+    color: #222222;
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,  .h1 a:hover, .h2 a:hover, .h3 a:hover, .h4 a:hover, .h5 a:hover, .h6 a:hover {
+    color: #222222;
+}
+
+.container {
+    padding: 0px;
+}
+
+#page-header {
+	height: 99px;
+}
+
+#slide {
+    margin-top: 10px; 
+}
+
 #content {
-	margin-top: 10px;
-	margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .bs-example {
-	border: 1px solid #aaaaaa; 
-	border-radius: 0;
-	padding: 10px;
+    border: 1px solid #aaaaaa; 
+    border-radius: 0;
+    padding: 10px;
 }
 td {
-	padding-left: 10px;
-	padding-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 .nav-tabs>li>a {
-	border-radius: 0;
+    border-radius: 0;
 }
 
 div#firstpageline {
-position: absolute;
-left: 0;
-top: 86px;
+    position: absolute;
+    left: 0;
+    top: 99px;
 }
 div.pageline {
-height: 1px;
-background-color: #8f8f8f;
-width: 100%;
-overflow: hidden;
+    height: 1px;
+    background-color: #8f8f8f;
+    width: 100%;
+    overflow: hidden;
 }
 
 #left-col {
-	padding-left: 0px;
-	padding-right: 5px;
+    padding-left: 0px;
+    padding-right: 5px;
 }
 #right-col {
-	padding-left: 5px;
-	padding-right: 0px;
+    padding-left: 5px;
+    padding-right: 0px;
 }
 
 footer {
-	margin-top: 36px;
-	height: 585px;
+    margin-top: 36px;
+    height: 585px;
 }
 
 #sitefooternav {
-	margin: auto;
-	width: 940px;
-	font-size: 0.85em;
+    margin: auto;
+    width: 940px;
+    font-size: 0.85em;
 }
 
 ul {
-display: block;
-list-style-type: disc;
--webkit-margin-before: 1em;
--webkit-margin-after: 1em;
--webkit-margin-start: 0px;
--webkit-margin-end: 0px;
--webkit-padding-start: 40px;
-	}
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
 
 #sitefooternav ul
 {
-margin: 0 10px 0 0;
-padding: 0;
-color: #004499;
-text-indent: 0;
-width: 178px;
+    margin: 0 10px 0 0;
+    padding: 0;
+    color: #004499;
+    text-indent: 0;
+    width: 178px;
 }
 
 #sitefooternav li {
-margin: 4px 0 0 0.6em;
-text-indent: -0.6em;
-padding-left: 0;
-list-style-position: outside;
-list-style-image: none;
-list-style-type: none;
+    margin: 4px 0 0 0.6em;
+    text-indent: -0.6em;
+    padding-left: 0;
+    list-style-position: outside;
+    list-style-image: none;
+    list-style-type: none;
 }
 
 #sitefooternav li a {
-	color: #004499;
+    color: #004499;
 }

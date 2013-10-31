@@ -36,7 +36,7 @@ doc_head('แก้ไขสไลด์');
 
         <?php get_includes('header'); ?>
 
-        <div class="bs-example">
+        <div class="bs-example" id="content">
 
             <h2 class="text-center">แก้ไขสไลด์</h2>
             <?php /*
@@ -104,12 +104,87 @@ doc_head('แก้ไขสไลด์');
 
         </div>
 
+        <div id="slide" class="bs-example">
+
+            <?php
+            $admin_txt = '
+            <div>
+                <a id="edit-slide" style="font-weight: bold;" href="slide.php"><span class="glyphicon glyphicon-wrench"></span> Edit Slide</a> 
+            </div>
+            <div>&nbsp;</div>
+            ';
+            admin($admin_txt);
+            ?>
+
+            <div id="carousel-example-generic" class="carousel slide bs-docs-carousel-example">
+                <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+                </ol>
+                <div class="carousel-inner">
+                    <?php
+                    $sql1 = "SELECT * FROM tb_slide WHERE slide_no = 1;";
+                    $result1 = mysql_query($sql1);
+                    if (!empty($result1)) {
+                        // for item one must active
+                        $no1 = mysql_fetch_array($result1);
+                        echo '
+                      <div class="item active">
+                        <a href="' . $no1['link_url'] . '"><img src="' . $no1['img_url'] . '" style="margin: 0 auto;"></a>
+                      </div>
+                      ';
+                    } // END if
+
+                    $sql = "SELECT * FROM tb_slide WHERE slide_no > 1;";
+                    $result = mysql_query($sql);
+                    if (!empty($result)) {
+                        while ($c = mysql_fetch_array($result)) {
+                            echo '
+                      <div class="item">
+                        <a href="' . $c['link_url'] . '"><img src="' . $c['img_url'] . '" style="margin: 0 auto;"></a>
+                      </div>
+                      ';
+                        } // END while
+                    } // END if
+                    ?>
+
+                </div> <!-- /.carousel-inner -->
+
+                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                    <span class="icon-prev"></span>
+                </a>
+                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                    <span class="icon-next"></span>
+                </a>
+            </div>
+        </div>
+
         <?php get_includes('footer'); ?>
 
     </div>
     <!-- /.container -->
 
     <?php get_includes('bootstrap-core'); ?>
+
+    <script type='text/javascript'>
+
+        $(function(){
+            $("#btn-center").click(function(){
+                $("#center-list").toggle();
+            });
+        
+            $("#eq").click(function(){
+                $("#eq-list").toggle();
+            });
+        
+            $('.carousel').carousel({
+                interval: 4000
+            })
+        });
+
+    </script>
+
     <script>
         $(function(){            
 <?php
