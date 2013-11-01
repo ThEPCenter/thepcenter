@@ -10,8 +10,8 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
         <?php get_includes('header'); ?>
 
-        <div class="bs-example" id="content">
-
+        <div class="row">
+            <h2 class="text-center">_blank</h2>
         </div>
 
         <?php get_includes('footer'); ?>

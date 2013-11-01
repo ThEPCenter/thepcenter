@@ -11,12 +11,13 @@ doc_head('หน่วยเครื่องมือวิเคราะห�
 
 <body>
     <div class="container">
-        <?php
-        get_includes('header');
-        if ($_GET['eq'] == 'XPS') {
-        ?>
-            <div class="bs-example">
-                <img src="../files/xps.jpg" class="img-responsive" alt="Responsive image" style="margin: 0 auto;">
+
+        <div class="row">
+            <?php
+            get_includes('header');
+            if ($_GET['eq'] == 'XPS') {
+                ?>
+                <img src="../files/xps.jpg" class="img-responsive" alt="Responsive image" style="margin: 20px auto;">
                 <h2 class="text-center">เครื่องวิเคราะห์ผิววัสดุ XPS</h2>
                 <h3 class="text-center">(X-ray Photoelectron Spectroscopy)</h3>
                 <table class="table-bordered">
@@ -158,11 +159,11 @@ doc_head('หน่วยเครื่องมือวิเคราะห�
                     บัญชีออมทรัพย์
                 </address>
                 <p>หลังจากโอนเงินเรียบร้อยแล้ว ให้ส่งสำเนาสลิปการโอนเงิน ซึ่งสามารถสแกน, ถ่ายภาพ แล้วส่งกลับมาทาง อีเมล Chanvit82@hotmail.com หรือ Chanvit@thep-center.org และสามารถส่งตัวอย่างมารอวิเคราะห์ล่วงหน้าก่อนการโอนเงินได้</p>
-            </div>
-        
-        <?php } elseif ($_GET['eq'] == 'FESEM') { ?>
-            <div class="bs-example">
-                <img src="../files/fesem.jpg" class="img-responsive" alt="Responsive image" style="margin: 0 auto;">
+
+
+            <?php } else if ($_GET['eq'] == 'FESEM') { ?>
+
+                <img src="../files/fesem.jpg" class="img-responsive" alt="Responsive image" style="margin: 20px auto;">
                 <h2 class="text-center">เครื่อง FESEM</h2>
                 <h3 class="text-center">Field Emission Scanning Electron Microscope JSM-7001F</h3>
                 <table class="table-bordered">
@@ -196,13 +197,14 @@ doc_head('หน่วยเครื่องมือวิเคราะห�
                     เครื่อง FESEM<br>
                     Field Emission Scanning Electron Microscope JSM-7001F <br>
                     คลิก <a target="_blank" href="../files/eq/fesem.pdf">Download</a> ที่นี่
-                </p>
-            </div>
-        <?php        
-        }
-        
-        get_includes('footer');
-        ?>
+                </p>            
+                <?php
+            }
+
+            get_includes('footer');
+            ?>
+
+        </div>
     </div>
     <!-- /.container -->
 </body>

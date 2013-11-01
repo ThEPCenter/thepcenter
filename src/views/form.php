@@ -7,7 +7,7 @@ doc_head('แบบฟอร์มต่างๆ');
         cursor: pointer;
         background-color: #cccccc; 
         height: 40px; 
-        
+
     }
     .form-link:hover{
         color: black;
@@ -38,7 +38,7 @@ doc_head('แบบฟอร์มต่างๆ');
     <div class="container">
 
         <?php get_includes('header'); ?>            
-        <div id="show-form">
+        <div class="row" id="show-form">
             <h2 class="text-center">แบบฟอร์มต่างๆ</h2>
             <table style="width: 250px; margin: 10px auto;">
                 <tr>
@@ -67,7 +67,7 @@ doc_head('แบบฟอร์มต่างๆ');
             </table>
         </div>
         <p>&nbsp;</p>
-        
+
         <?php get_includes('footer'); ?>
 
     </div>
