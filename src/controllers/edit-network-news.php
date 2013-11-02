@@ -39,23 +39,39 @@ $p = mysql_fetch_array($result);
     </div>
     <div class="form-group">
         <label>วันที่</label>
-        <input type="text" id="datepicker" name="date" value="<?php echo date("m/d/Y", strtotime($p['date'])); ?>">
+        <input type="text" id="datepicker" name="date" class="form-control" value="<?php echo date("m/d/Y", strtotime($p['date'])); ?>">
     </div>
-
     <script>
         $(function() {                
             $( "#datepicker" ).datepicker();   // Date Picker
         }); /* END jQuery */
     </script>
-
+    
+    <p>&nbsp;</p>
+    <h4>Feature image</h4>
+    <p id="show-img">
+        <img class="img-responsive" style="margin: auto;" src="<?php echo htmlspecialchars_decode($p['featured_img']); ?>">
+    </p>
+    <div class="form-group">
+        <label>Feature image url</label>
+        <input type="text" id="featured_img" name="featured_img"  class="form-control" value="<?php echo htmlspecialchars_decode($p['featured_img']); ?>" />
+    </div>
+    <script>
+        $(function(){            
+            $("#featured_img").blur(function(){            
+                var img_url = $("#featured_img").val();
+                $("#show-img").html("<img src=\"" + img_url + "\" style=\"max-width: 100%; height: auto; margin: auto;\">");           
+            });
+            
+        });
+    </script>
+    <p>&nbsp;</p>
+    
     <div class="form-group">
         <label>เนื้อหาฉบับย่อ</label>
-        <textarea name="content_short">
-            <?php echo htmlspecialchars_decode($p['content_short']); ?>
+        <textarea name="content_short" class="form-control" rows="3">
+            <?php echo $p['content_short']; ?>
         </textarea>
-        <script>
-            CKEDITOR.replace('content_short');
-        </script>
     </div>
 
     <div class="form-group">
@@ -80,5 +96,5 @@ $p = mysql_fetch_array($result);
         </label>
     </div>
     <p>&nbsp;</p>
-    <button type="submit" class="btn btn-default">Submit</button> | <a href="../views/network-academic-news.php?news-id=<?php echo $p['id']; ?>" title="Cancel"><strong>Cancel</strong></a>
+    <button type="submit" class="btn btn-default">Submit</button> | <a href="../views/network-academic-news.php?news_id=<?php echo $p['id']; ?>" title="Cancel"><strong>Cancel</strong></a>
 </form>

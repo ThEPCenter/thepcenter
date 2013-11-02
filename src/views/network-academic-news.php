@@ -18,30 +18,7 @@ $news_type = 'network-academic';
     <div class="container">
 
         <?php get_includes('header'); ?>
-        <div class="row">            
-            <?
-            $admin_txt = '  
-                <p>
-                    <a id="add-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-plus"></span> Add</a>
-                </p>
-                <hr>
-                            ';
-            admin($admin_txt);
-            ?>            
-            <script>
-                $(function(){         
-                    $('#add-news').click(function(){
-                        $(document).ajaxStart(function(){
-                            $('.bs-example').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
-                        });
-                        $.get("<?php controll('add-news'); ?>", {add_news: "<?php echo $news_type; ?>"}, 
-                        function(data){ $('.bs-example').html(data); }
-                    );
-                    });
-                                                            
-                });
-            </script>
-
+        <div id="show-news" class="row">
             <?php
             if (isset($_GET['news_id'])) {
                 $news_id = $_GET['news_id'];
@@ -61,7 +38,7 @@ $news_type = 'network-academic';
                     $new_gif = '';
                 }
                 ?>
-                <div class="col-sm-9 col-md-9">
+                <div id="last-news" class="col-sm-9 col-md-9">
                     <?php
                     echo '                            
                             <div id="news-' . $p['id'] . '">
@@ -82,13 +59,13 @@ $news_type = 'network-academic';
                         $(function(){
                             $('#edit-news').click(function(){
                                 $(document).ajaxStart(function(){
-                                    $('.bs-example').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
+                                    $('#show-news').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
                                 });
                                 $.get("<?php controll('edit-network-news'); ?>", {edit_news: "<?php echo $p['id']; ?>"}, 
-                                function(data){ $('.bs-example').html(data); }
+                                function(data){ $('#show-news').html(data); }
                             );
                             });
-                                                                                                            
+                                                                                                                        
                         });
                     </script>
                 </div>
@@ -104,7 +81,7 @@ $news_type = 'network-academic';
                     $re_etc = mysql_query($sql_etc);
                     while ($etc = mysql_fetch_array($re_etc)) {
                         echo '
-                    <p><a href="network-academic-news.php?news_id=' . $etc['id'] . '">'. htmlspecialchars_decode($etc['title']) . '</a></p>
+                    <p><a href="network-academic-news.php?news_id=' . $etc['id'] . '">' . htmlspecialchars_decode($etc['title']) . '</a></p>
                     <div></div>
                     <hr>
                     ';
@@ -114,8 +91,32 @@ $news_type = 'network-academic';
                 <?php
             } else {
                 ?>
-                <div class="col-sm-9 col-md-9">
+                <div class="col-sm-12 col-md-12">
+                    <h2 class="text-center">ข่าววิขาการจากเครือข่าย</h2>
                     <?php
+                    // ========= Add news ====================================
+                    $admin_txt = '  
+                <p>
+                    <a id="add-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-plus"></span> Add</a>
+                </p>
+                <hr>
+                <script>
+                        $(function(){         
+                            $("#add-news").click(function(){
+                                $(document).ajaxStart(function(){
+                                    $("#show-news").html("<div class=\"span12 text-center\" ><img src="../images/demo_wait.gif"></div>");
+                                });
+                                $.get("' . controller('add-news') . '", {add_news: "' . $news_type . '"}, 
+                                function(data){ $("#show-news").html(data); }
+                            );
+                            });
+                                                                
+                        });
+                    </script>
+                            ';
+                    admin($admin_txt);
+                    // ------------------------------------------------------------
+
                     $sql = "SELECT * FROM tb_news WHERE type = 'network-academic' ORDER BY date DESC;";
                     $result = mysql_query($sql);
                     $num_news = mysql_num_rows($result);
@@ -144,7 +145,7 @@ $news_type = 'network-academic';
             </div>            
 
         </div>
-        
+
         <?php get_includes('footer'); ?>
     </div>
     <!-- /.container -->
@@ -153,10 +154,5 @@ $news_type = 'network-academic';
     <script src="../plugins/jqueryui/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
     <!-- CKEditor -->    
     <script src="../plugins/ckeditor/ckeditor.js"></script>
-    <script type='text/javascript'>
-
-        
-    </script>
-
 </body>
 </html>

@@ -29,7 +29,7 @@ a{
     color: #003399;
 }
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: #003399;
 }
 
@@ -37,6 +37,7 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,  .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
     color: #222222;
 }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,  .h1 a:hover, .h2 a:hover, .h3 a:hover, .h4 a:hover, .h5 a:hover, .h6 a:hover {
+    text-decoration: none;
     color: #222222;
 }
 
@@ -146,6 +147,13 @@ table {
     margin-top: 15px;
 }
 
+.form-control {
+    font-size: 20px;
+}
+
+.btn {
+    font-size: 20px;
+}
 @media (min-width: 1200px)  {
     .container {
         max-width: 100%;
