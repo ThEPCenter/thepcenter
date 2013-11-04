@@ -18,6 +18,7 @@ $news_type = 'network-academic';
     <div class="container">
 
         <?php get_includes('header'); ?>
+
         <div id="show-news" class="row">
             <?php
             if (isset($_GET['news_id'])) {
@@ -38,12 +39,13 @@ $news_type = 'network-academic';
                     $new_gif = '';
                 }
                 ?>
-                <div id="last-news" class="col-sm-9 col-md-9">
+                <div class="col-sm-9 col-md-9">
                     <?php
                     echo '                            
                             <div id="news-' . $p['id'] . '">
                                 ';
-                    $admin_txt = '  <p>
+                    $admin_txt = '  
+                                <p>
                                     <a id="edit-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-wrench"></span> Edit</a> 
                                 </p>
                             ';
@@ -65,13 +67,13 @@ $news_type = 'network-academic';
                                 function(data){ $('#show-news').html(data); }
                             );
                             });
-                                                                                                                        
+                                                                                                                                        
                         });
                     </script>
                 </div>
 
                 <div class="col-sm-3 col-md-3">
-                    <h3>ข่าววิชาการจากเครือข่าย</h3>
+                    <h3 class="text-center">ข่าววิชาการจากเครือข่าย</h3>
                     <?php
                     $sql_etc = "SELECT * FROM tb_news 
                         WHERE (id != $news_id)
@@ -81,8 +83,7 @@ $news_type = 'network-academic';
                     $re_etc = mysql_query($sql_etc);
                     while ($etc = mysql_fetch_array($re_etc)) {
                         echo '
-                    <p><a href="network-academic-news.php?news_id=' . $etc['id'] . '">' . htmlspecialchars_decode($etc['title']) . '</a></p>
-                    <div></div>
+                    <p><a href="network-academic-news.php?news_id=' . $etc['id'] . '">' . htmlspecialchars_decode($etc['title']) . '</a></p>                    
                     <hr>
                     ';
                     } // END while
@@ -140,9 +141,11 @@ $news_type = 'network-academic';
                     } else {
                         echo '<h3 class="text-center">ขออภัย ไม่พบข้อมูล</h3>';
                     }
-                } // END if else
-                ?>
-            </div>            
+                    ?>
+                </div>
+                <?php
+            } // END if else
+            ?>
 
         </div>
 

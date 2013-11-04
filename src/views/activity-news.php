@@ -39,7 +39,7 @@ doc_head('ข่าวกิจกรรม');
         border: 4px #FFFFFF solid;
     }
     .example-image:hover {
-        border: 4px #99b433 solid;
+        border: 2px #003399 solid;
     }
 </style>
 
@@ -48,7 +48,7 @@ doc_head('ข่าวกิจกรรม');
 <body>
     <div class="container">
         <?php get_includes('header'); ?>
-        <div class="bs-example">
+        <div class="row">
             <?php
             if ($_GET['news_id']) {
                 $news_id = $_GET['news_id'];
@@ -66,34 +66,37 @@ doc_head('ข่าวกิจกรรม');
                     $(function(){
                         $('#edit-news').click(function(){
                             $(document).ajaxStart(function(){
-                                $('.bs-example').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
+                                $('#show-news').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
                             });
                             $.get("<?php controll('edit-activity-news'); ?>", {edit_news: "<?php echo $n['id']; ?>"}, 
-                            function(data){ $('.bs-example').html(data); }
+                            function(data){ $('#show-news').html(data); }
                         );
                         });
-                                                            
+                                                                                
                     });
                 </script>
-                <?php
-                echo '                            
+                <div id="show-news" class="col-sm-9 col-md-9">
+                    <?php
+                    echo '                            
             <div id="news-' . $n['id'] . '">
-                <h3>' . htmlspecialchars_decode($n['title']) . $new_gif . '</h3>
+                <h2>' . htmlspecialchars_decode($n['title']) . $new_gif . '</h2>
                 <p class="fg-color-green"><small><em>' . thai_date($n['date']) . '</small></em></p>
                 ' . htmlspecialchars_decode($n['content_long']) . '
             </div>';
-                ?>
-                <div style="margin-left: 15px;">
-                    <div class="image-set">
-                        <?php
-                        $sql_p = "SELECT * FROM tb_picture WHERE gallery_id = {$n['gallery_id']};";
-                        $result_p = mysql_query($sql_p);
-                        if (!empty($result_p)) {
-                            $no_p = mysql_num_rows($result_p);
-                            $i = 0;
-                            while ($p = mysql_fetch_array($result_p)) {
-                                $i++;
-                                echo '
+                    ?>
+                    <p>&nbsp;</p>
+
+                    <div style="margin-left: 15px;">
+                        <div class="image-set">
+                            <?php
+                            $sql_p = "SELECT * FROM tb_picture WHERE gallery_id = {$n['gallery_id']};";
+                            $result_p = mysql_query($sql_p);
+                            if (!empty($result_p)) {
+                                $no_p = mysql_num_rows($result_p);
+                                $i = 0;
+                                while ($p = mysql_fetch_array($result_p)) {
+                                    $i++;
+                                    echo '
                         
                     <a class="pic-link" href="../img/picture/' . $p['name'] . '" data-lightbox="gal-' . $n['gallery_id'] . '" title="' . $p['caption'] . '">                            
                         <img class="example-image" src="../images/pixel-vfl3z5WfW.gif" alt="image ' . $i . ' 0f ' . $no_p . ' thumb" 
@@ -102,17 +105,39 @@ doc_head('ข่าวกิจกรรม');
                             background-size: 130px auto; 
                             width: 65px;
                             height: 65px;">                            
-                    </a>                        
+                    </a>                      
                         ';
-                            } // END while
-                            ?>  
-                        </div>
+                                } // END while
+                                ?>
+
+                            </div>
+
+                            <p>จำนวนทั้งหมด <?php echo $no_p; ?> ภาพ</p>
+                        <?php } // END if (!empty($result_p))  ?>
                         <p>&nbsp;</p>
-                        <p>จำนวนทั้งหมด <?php echo $no_p; ?> ภาพ</p>
-                    <?php } // END if (!empty($result_p))  ?>
-                    <p>&nbsp;</p>
-                    <p><a href="home.php">กลับหน้าหลัก</a> | <a href="activity-news.php">ไปหน้าข่าวกิจกรรม</a></p>
+                        <p><a href="home.php">กลับหน้าหลัก</a> | <a href="activity-news.php">ไปหน้าข่าวกิจกรรม</a></p>
+                    </div>
+
                 </div>
+
+                <div class="col-sm-3 col-md-3">
+                    <h3 class="text-center">ข่าวกิจกรรม</h3>
+                    <?php
+                    $sql_etc = "SELECT * FROM tb_news 
+                        WHERE (id != $news_id)
+                        AND (type = 'activity')
+                        ORDER BY date DESC
+                        LIMIT 4;";
+                    $re_etc = mysql_query($sql_etc);
+                    while ($etc = mysql_fetch_array($re_etc)) {
+                        echo '
+                    <p><a href="' . $etc['type'] . '-news.php?news_id=' . $etc['id'] . '">' . htmlspecialchars_decode($etc['title']) . '</a></p>                    
+                    <hr>
+                    ';
+                    } // END while
+                    ?>
+                </div>
+
                 <?php
             } else {
                 $sql_act = "SELECT * FROM tb_news 
@@ -155,10 +180,11 @@ doc_head('ข่าวกิจกรรม');
                     }
                     ?>
                 </table>
-            </div>            
-            <?php
-        } // END if GET else 
-        ?>
+
+                <?php
+            } // END if GET else 
+            ?>
+        </div>
         <?php
         get_includes('footer');
         ?>

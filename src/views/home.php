@@ -51,7 +51,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             <!-- Special / Pr news -->
             <?php
             $sql = "SELECT * FROM tb_news 
-                WHERE type = ( 'activity' OR 'pr' )
+                WHERE type = ( 'special' OR 'pr' )
                 ORDER BY date DESC;";
             $result = mysql_query($sql);
             $p = mysql_fetch_array($result);
@@ -76,19 +76,13 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
             <div class="col-sm-6 col-md-6">
                 <a href="central-equipment.php?eq=XPS">
-                    <div class="text-center" style="background-color: #8f8f8f;">
-                        <h2>XPS</h2>
-                        <p>&nbsp;</p>
-                    </div>
+                    <img class="img-responsive" style="margin: 0 auto; border: 1px solid #666666;" src="../files/xps_banner.png">
                 </a>
             </div>
 
             <div class="col-sm-6 col-md-6">
                 <a href="central-equipment.php?eq=FESEM">
-                    <div class="text-center" style="background-color: #8f8f8f;">
-                        <h2>FESEM</h2>
-                        <p>&nbsp;</p>
-                    </div> 
+                    <img class="img-responsive" style="margin: 0 auto; border: 1px solid #666666;" src="../files/fesem_banner.png">
                 </a>
             </div>
 

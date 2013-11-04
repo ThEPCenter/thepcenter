@@ -6,7 +6,7 @@
 
     <div class="col-xs-6 col-sm-3 col-md-3" >
         <ul>
-            <li><a href="home.php"><b>ศูนย์ความเป็นเลิศด้านฟิสิกส์</b></a></li>
+            <li><a href="home.php"><b>เกี่ยวกับศูนย์ ThEP</b></a></li>
 
             <li>▪ <a href="about-us.php">แนวทางของศูนย์</a></li>
 
