@@ -6,6 +6,7 @@ if (isset($_POST['edit_id'])) {
     $type = htmlspecialchars($_POST['type'], ENT_QUOTES);
     $title = htmlspecialchars($_POST['title'], ENT_QUOTES);
     $date = date("Y-m-d", strtotime($_POST['date']));
+    $featured_img = htmlspecialchars($_POST['featured_img'], ENT_QUOTES);
     $content_short = htmlspecialchars($_POST['content_short'], ENT_QUOTES);
     $content_long = htmlspecialchars($_POST['content_long'], ENT_QUOTES);
     if (isset($_POST['new'])) {
@@ -13,9 +14,9 @@ if (isset($_POST['edit_id'])) {
     } else {
         $new = 'n';
     }
-    $update = date("Y-m-d H:i:s");
+    $modified = date("Y-m-d H:i:s");
     $sql = "UPDATE tb_news
-            SET type = '$type', title = '$title', date = '$date', content_short = '$content_short', content_long = '$content_long', new = '$new', last_update = '$update'
+            SET type = '$type', title = '$title', date = '$date', featured_img = '$featured_img', content_short = '$content_short', content_long = '$content_long', new = '$new', modified = '$modified'
             WHERE id = $id;";
     @mysql_query($sql) or die(mysql_error());
     header("Location: ../views/$type-news.php?news_id=$id");
@@ -25,12 +26,10 @@ if (isset($_POST['edit_id'])) {
 // ====================================
 notlogin_js('../views/home.php');
 
-
 if (!isset($_GET['edit_news'])) {
     js_redirect('../views/home.php');
 }
-
-//=======================================
+//=====================================
 
 $edit_id = $_GET['edit_news'];
 $sql = "SELECT * FROM tb_news WHERE id = $edit_id;";
@@ -56,8 +55,8 @@ $p = mysql_fetch_array($result);
             $( "#datepicker" ).datepicker();   // Date Picker
         }); /* END jQuery */
     </script>
-
     <p>&nbsp;</p>
+    
     <h4>Feature image</h4>
     <p id="show-img">
         <img class="img-responsive" style="margin: auto;" src="<?php echo htmlspecialchars_decode($p['featured_img']); ?>">
@@ -79,9 +78,7 @@ $p = mysql_fetch_array($result);
 
     <div class="form-group">
         <label>เนื้อหาฉบับย่อ</label>
-        <textarea name="content_short" class="form-control" rows="4">
-            <?php echo $p['content_short']; ?>
-        </textarea>
+        <textarea name="content_short" class="form-control" rows="4"><?php echo $p['content_short']; ?></textarea>
     </div>
 
     <div class="form-group">

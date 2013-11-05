@@ -12,10 +12,10 @@ if (isset($_POST['edit_id'])) {
     } else {
         $new = 'n';
     }
-    $update = date("Y-m-d H:i:s");
+    $modified = date("Y-m-d H:i:s");
     
     $sql = "UPDATE tb_news 
-            SET type = '$type', title = '$title', date = '$date', content_long = '$content_long', new = '$new', last_update = '$update'
+            SET type = '$type', title = '$title', date = '$date', content_long = '$content_long', new = '$new', modified = '$modified'
             WHERE id = $id;";
     @mysql_query($sql) or die(mysql_error());
     header("Location: ../views/gen-academic-news.php?news_id=$id");

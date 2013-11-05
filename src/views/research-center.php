@@ -349,7 +349,6 @@ doc_head($center);
                 <h3 class="text-center"></h3>
                 <img class="img-responsive" style="margin:0 auto;" src="../images/under-construction.jpg">
 
-
                 <?php
             } elseif ($show_center == 'IGP') {
                 ?>

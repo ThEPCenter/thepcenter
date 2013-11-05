@@ -5,6 +5,7 @@ if ($_POST) {
     $type = htmlspecialchars($_POST['type'], ENT_QUOTES);
     $title = htmlspecialchars($_POST['title'], ENT_QUOTES);
     $date = date("Y-m-d", strtotime($_POST['date']));
+    $featured_img = htmlspecialchars($_POST['featured_img'], ENT_QUOTES);
     $content_short = htmlspecialchars($_POST['content_short'], ENT_QUOTES);
     $content_long = htmlspecialchars($_POST['content_long'], ENT_QUOTES);
     if (isset($_POST['new'])) {
@@ -14,18 +15,22 @@ if ($_POST) {
     }
     $picture = htmlspecialchars($_POST['picture'], ENT_QUOTES);
     $gallery_id = $_POST['gallery_id'];
-    $update = date("Y-m-d H:i:s");
+    $modified = date("Y-m-d H:i:s");
 
     $sql = "INSERT INTO 
                 tb_news 
             VALUES 
-                (0, '$type', '$title', '$date', '$content_short', '$content_long', '$new', '$picture', '$gallery_id', '$update');
+                (0, '$type', '$title', '$date', '$featured_img', '$content_short', '$content_long', '$new', '$picture', '$gallery_id', '$modified');
             ";
 
     @mysql_query($sql) or die(mysql_error());
     header("Location: ../views/$type-news.php");
     exit();
 }
+
+// ====================================
+notlogin_js('../views/home.php');
+//=====================================
 
 $news_type = $_GET['add_news'];
 ?>
@@ -48,18 +53,34 @@ $news_type = $_GET['add_news'];
             $( "#datepicker" ).datepicker();   // Date Picker
         }); /* END jQuery */
     </script>
+
+    <h4>Feature image</h4>
+    <p id="show-img">
+    </p>
+    <div class="form-group">
+        <label>Feature image url</label>
+        <input type="text" id="featured_img" name="featured_img"  class="form-control" />
+    </div>
+    <script>
+        $(function(){            
+            $("#featured_img").blur(function(){            
+                var img_url = $("#featured_img").val();
+                $("#show-img").html("<img src=\"" + img_url + "\" style=\"max-width: 100%; height: auto; margin: auto;\">");           
+            });
+            
+        });
+    </script>
+    <p>&nbsp;</p>
+
     <?php
     if ($news_type == 'network-academic') {
         $lable_cont = 'เนื้อหาฉบับเต็ม';
         ?>
         <div class="form-group">
             <label>เนื้อหาฉบับย่อ</label>
-            <textarea name="content_short"></textarea>
-            <script>
-                CKEDITOR.replace('content_short');
-            </script>
+            <textarea name="content_short" class="form-control" rows="4"></textarea>
         </div>
-    <?php
+        <?php
     } else {
         $lable_cont = 'เนื้อหา';
     }
@@ -79,31 +100,31 @@ $news_type = $_GET['add_news'];
         </label>
     </div>
     <p>&nbsp;</p>
-    <?php if($news_type == 'pr'){ ?>
-    <div class="form-group">
-        <label>URL รูปภาพ</label>
-        <input type="text" name="picture"  class="form-control">
-    </div>
-    <p>&nbsp;</p>
-    <?php    
+    <?php if ($news_type == 'pr') { ?>
+        <div class="form-group">
+            <label>URL รูปภาพ</label>
+            <input type="text" name="picture"  class="form-control">
+        </div>
+        <p>&nbsp;</p>
+        <?php
     } // END if
-    
-    if($news_type == 'activity'){
-    ?>
-    <div class="form-group">
-        <label>แกลอรี</label>
-        <span>เลือกแกลอรี หรือ </span><a href="gallery.php?add_gal=new" target="_blank">เพื่มแกลอรีใหม่</a>
-        <select name="gallery_id" class="form-control" id="gallery_id">
-            <option id="gal-0" value="0">...</option>
-            <?php
-            $sql_g = "SELECT * FROM tb_gallery;";
-            $result_g = mysql_query($sql_g);
-            while ($g = mysql_fetch_array($result_g)) {
-                echo '<option id="gal-' . $g['id'] . '" value="' . $g['id'] . '">' . $g['title'] . '</option>';
-            } // END while
-            ?>
-        </select>        
-    </div>
+
+    if ($news_type == 'activity') {
+        ?>
+        <div class="form-group">
+            <label>แกลอรี</label>
+            <span>เลือกแกลอรี หรือ </span><a href="gallery.php?add_gal=new" target="_blank">เพื่มแกลอรีใหม่</a>
+            <select name="gallery_id" class="form-control" id="gallery_id">
+                <option id="gal-0" value="0">...</option>
+                <?php
+                $sql_g = "SELECT * FROM tb_gallery;";
+                $result_g = mysql_query($sql_g);
+                while ($g = mysql_fetch_array($result_g)) {
+                    echo '<option id="gal-' . $g['id'] . '" value="' . $g['id'] . '">' . $g['title'] . '</option>';
+                } // END while
+                ?>
+            </select>        
+        </div>
     <?php } ?>
 
     <button type="submit" class="btn btn-default">Submit</button> | <a href="../views/<?php echo $news_type ?>-news.php" title="Cancel"><strong>Cancel</strong></a>

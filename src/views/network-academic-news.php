@@ -67,13 +67,13 @@ $news_type = 'network-academic';
                                 function(data){ $('#show-news').html(data); }
                             );
                             });
-                                                                                                                                        
+                                                                                                                                            
                         });
                     </script>
                 </div>
 
                 <div class="col-sm-3 col-md-3">
-                    <h3 class="text-center">ข่าววิชาการจากเครือข่าย</h3>
+                    <h3 class="text-center"><a href="network-academic-news.php">ข่าววิชาการจากเครือข่าย</a></h3>
                     <?php
                     $sql_etc = "SELECT * FROM tb_news 
                         WHERE (id != $news_id)
@@ -101,21 +101,25 @@ $news_type = 'network-academic';
                     <a id="add-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-plus"></span> Add</a>
                 </p>
                 <hr>
+                            ';
+                    admin($admin_txt);
+                ?>
+                    
                 <script>
                         $(function(){         
                             $("#add-news").click(function(){
                                 $(document).ajaxStart(function(){
-                                    $("#show-news").html("<div class=\"span12 text-center\" ><img src="../images/demo_wait.gif"></div>");
+                                    $("#show-news").html("<div class=\"span12 text-center\" ><img src=\"../images/demo_wait.gif\"></div>");
                                 });
-                                $.get("' . controller('add-news') . '", {add_news: "' . $news_type . '"}, 
+                                $.get("<?php controll('add-news'); ?>", {add_news: "<?php echo $news_type; ?>"}, 
                                 function(data){ $("#show-news").html(data); }
                             );
                             });
                                                                 
                         });
                     </script>
-                            ';
-                    admin($admin_txt);
+                    
+                    <?php
                     // ------------------------------------------------------------
 
                     $sql = "SELECT * FROM tb_news WHERE type = 'network-academic' ORDER BY date DESC;";

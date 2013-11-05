@@ -42,7 +42,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,  .h1 a:h
 }
 
 #page-header {
-    height: 99px;
 }
 
 #slide {
@@ -66,10 +65,12 @@ td {
     border-radius: 0;
 }
 
-div#firstpageline {
+div#firstpageline {    
     position: absolute;
     left: 0;
+    /*
     top: 99px;
+    */
 }
 
 div#lastpageline {
@@ -99,7 +100,7 @@ div.pageline {
 ul {
     display: block;
     list-style-type: disc;
-    -webkit-margin-before: 1em;
+    -webkit-margin-before: 0em; /* -webkit-margin-before: 1em; */
     -webkit-margin-after: 1em;
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
@@ -154,6 +155,11 @@ table {
 .btn {
     font-size: 20px;
 }
+
+#page-header .col-sm-6, #page-header .col-md-6 {
+    padding-top: 0px;
+}
+
 @media (min-width: 1200px)  {
     .container {
         max-width: 100%;

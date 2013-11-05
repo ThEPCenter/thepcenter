@@ -60,22 +60,26 @@ doc_head('ข่าวกิจกรรม');
                 } else {
                     $new_gif = '';
                 }
-                admin('<p><a id="edit-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-wrench"></span> Edit</a></p>');
                 ?>
-                <script>
-                    $(function(){
-                        $('#edit-news').click(function(){
-                            $(document).ajaxStart(function(){
-                                $('#show-news').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
-                            });
-                            $.get("<?php controll('edit-activity-news'); ?>", {edit_news: "<?php echo $n['id']; ?>"}, 
-                            function(data){ $('#show-news').html(data); }
-                        );
-                        });
-                                                                                
-                    });
-                </script>
+
                 <div id="show-news" class="col-sm-9 col-md-9">
+                    <?php
+                    admin('<p><a id="edit-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-wrench"></span> Edit</a></p>');
+                    ?>
+                    <script>
+                        $(function(){
+                            $('#edit-news').click(function(){
+                                $(document).ajaxStart(function(){
+                                    $('#show-news').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
+                                });
+                                $.get("<?php controll('edit-activity-news'); ?>", {edit_news: "<?php echo $n['id']; ?>"}, 
+                                function(data){ $('#show-news').html(data); }
+                            );
+                            });
+                                                                                        
+                        });
+                    </script>  
+
                     <?php
                     echo '                            
             <div id="news-' . $n['id'] . '">
@@ -121,7 +125,7 @@ doc_head('ข่าวกิจกรรม');
                 </div>
 
                 <div class="col-sm-3 col-md-3">
-                    <h3 class="text-center">ข่าวกิจกรรม</h3>
+                    <h3 class="text-center"><a href="activity-news.php">ข่าวกิจกรรม</a></h3>
                     <?php
                     $sql_etc = "SELECT * FROM tb_news 
                         WHERE (id != $news_id)
@@ -146,6 +150,7 @@ doc_head('ข่าวกิจกรรม');
             ";
                 $re_act = mysql_query($sql_act);
                 ?>
+                <h2 class="text-center">ข่าวกิจกรรม</h2>
                 <table class="table">
                     <?php
                     if (!empty($re_act)) {

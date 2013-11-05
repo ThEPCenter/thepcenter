@@ -49,7 +49,7 @@
 
             <li>▪ <a href="http://www.chula.ac.th" target="_blank">จุฬาลงกรณ์มหาวิทยลัย</a></li>
 
-            <li>▪ <a href="http://www.mahidol.ac.th" target="_blank">มหาวิทยลัยมหิดล</a></li>
+            <li>▪ <a href="http://www.mahidol.ac.th/th" target="_blank">มหาวิทยลัยมหิดล</a></li>
 
             <li>▪ <a href="http://www.swu.ac.th" target="_blank">มหาวิทยาลัยศรีนครินทรวิโรฒ</a></li>
 

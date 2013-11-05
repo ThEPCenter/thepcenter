@@ -6,6 +6,7 @@ if (isset($_POST['edit_id'])) {
     $type = htmlspecialchars($_POST['type'], ENT_QUOTES);
     $title = htmlspecialchars($_POST['title'], ENT_QUOTES);
     $date = date("Y-m-d", strtotime($_POST['date']));
+    $featured_img = htmlspecialchars($_POST['featured_img'], ENT_QUOTES);
     $content_long = htmlspecialchars($_POST['content_long'], ENT_QUOTES);
     if (isset($_POST['new'])) {
         $new = $_POST['new'];
@@ -13,15 +14,23 @@ if (isset($_POST['edit_id'])) {
         $new = 'n';
     }
     $gallery_id = $_POST['gallery_id'];
-    $update = date("Y-m-d H:i:s");
+    $modified = date("Y-m-d H:i:s");
 
     $sql = "UPDATE tb_news 
-            SET type = '$type', title = '$title', date = '$date', content_long = '$content_long', new = '$new', gallery_id = $gallery_id, last_update = '$update'
+            SET type = '$type', title = '$title', date = '$date', featured_img = '$featured_img', content_long = '$content_long', new = '$new', gallery_id = $gallery_id, modified = '$modified'
             WHERE id = $id;";
     @mysql_query($sql) or die(mysql_error());
     header("Location: ../views/pr_news.php?news_id=$id");
     exit();
 }
+
+// ====================================
+notlogin_js('../views/home.php');
+
+if (!isset($_GET['edit_news'])) {
+    js_redirect('../views/home.php');
+}
+//=====================================
 
 function opt_check($x, $y) {
     if ($x == $y) {
@@ -54,6 +63,25 @@ $p = mysql_fetch_array($result);
             $( "#datepicker" ).datepicker();   // Date Picker
         }); /* END jQuery */
     </script>
+    
+    <h4>Feature image</h4>
+    <p id="show-img">
+        <img class="img-responsive" style="margin: auto;" src="<?php echo htmlspecialchars_decode($p['featured_img']); ?>">
+    </p>
+    <div class="form-group">
+        <label>Feature image url</label>
+        <input type="text" id="featured_img" name="featured_img"  class="form-control" value="<?php echo htmlspecialchars_decode($p['featured_img']); ?>" />
+    </div>
+    <script>
+        $(function(){            
+            $("#featured_img").blur(function(){            
+                var img_url = $("#featured_img").val();
+                $("#show-img").html("<img src=\"" + img_url + "\" style=\"max-width: 100%; height: auto; margin: auto;\">");           
+            });
+            
+        });
+    </script>
+    <p>&nbsp;</p>
 
     <div class="form-group">
         <label>เนื้อหา</label>
