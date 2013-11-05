@@ -123,7 +123,7 @@ CREATE TABLE `tb_news` (
   `new` char(1) collate utf8_unicode_ci NOT NULL,
   `picture` varchar(255) collate utf8_unicode_ci NOT NULL,
   `gallery_id` varchar(255) collate utf8_unicode_ci NOT NULL,
-  `last_update` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `modified` varchar(255) collate utf8_unicode_ci NOT NULL,
   PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=18 ;
 
@@ -178,13 +178,13 @@ CREATE TABLE `tb_personel` (
 -- dump ตาราง `tb_personel`
 -- 
 
-INSERT INTO `tb_personel` VALUES (1, 1, 'ถิรพัฒน์', '', 'วิลัยทอง', '', 'ศาสตราจารย์ เกียรติคุณ ดร.', '', 'ผู้อำนวยการศูนย์ความเป็นเลิศด้านฟิสิกส์', '', '053-942650-3 ต่อ 101', '+66 53 942 650-3 ext 101', 'Thirapat@fnrf.science.cmu.ac.th', 'http://www.thep-center.org/upload/pic/personal/1.jpg', '2013-10-16 15:42:06');
-INSERT INTO `tb_personel` VALUES (2, 2, 'สมศร', '', 'สิงขรัตน์', '', 'รศ.ดร.', '', 'รองผู้อำนวยการศูนย์ความเป็นเลิศด้านฟิสิกส์', '', '053-943379', '+66 53 -943 379', 'somsorn.s@gmail.com', 'http://www.thep-center.org/upload/pic/personal/somsorn.jpg', '2013-10-16 15:42:50');
-INSERT INTO `tb_personel` VALUES (3, 3, 'ดวงมณี', '', 'ว่องรัตนะไพศาล', '', 'ผศ.ดร.', '', 'ผู้ช่วยผู้อำนวยการศูนย์ความเป็นเลิศด้านฟิสิกส์', '', '053-943375', '+66 53 943 375', 'dwongrat@thep-center.org', 'http://www.thep-center.org/upload/pic/personal/Aj.Duangmanee.jpg1.jpg', '2013-10-16 15:43:26');
-INSERT INTO `tb_personel` VALUES (4, 4, ' ดุษฎี', '', 'สุวรรณขจร', '', 'ดร.', '', 'ผู้ช่วยผู้อำนวยการศูนย์ความเป็นเลิศด้านฟิสิกส์', '', ' 053-943379', '+66 53 -943 379', 'dusadee.suwann@gmail.com', 'http://www.thep-center.org/upload/pic/personal/20060615201428dusadeesuwannakachorn.jpg', '2013-10-16 15:43:56');
-INSERT INTO `tb_personel` VALUES (5, 5, 'ศศิวิมล', '', 'หมู่ชาวใต้	', '', '', '', 'ผู้จัดการศูนย์ความเป็นเลิศด้านฟิสิกส์	', '', '053-942650-3 ต่อ 103', '+66 53 942 650-3 ext 103', 'sasivimol@thep-center.org', 'http://www.thep-center.org/upload/pic/personal/2.jpg', '08/23/2013 09:36:41 am');
-INSERT INTO `tb_personel` VALUES (6, 6, 'กฤติยา', '', 'โอสถาพันธุ์', '', '', '', ' รักษาการหัวหน้าฝ่ายการเงิน การบัญชีและพัสดุ', '', '053-942650-3 ต่อ 102', '+66 53 942 650-3 ext 102', 'krittiya@thep-center.org', 'http://www.thep-center.org/upload/pic/personal/7.jpg', '08/23/2013 10:45:34 am');
-INSERT INTO `tb_personel` VALUES (9, 7, '	สโรชา', '', 'นพคุณ', '', '', '', 'รักษาการหัวหน้าฝ่ายสนับสนุนงานวิจัยและพัฒนาบุคลากร	', '', '053-942650 ต่อ 109	', '', 'fellowship@thep-center.org', 'http://www.thep-center.org/upload/pic/personal/DSC02496.jpg1111.jpg', '2013-10-16 15:45:54');
+INSERT INTO `tb_personel` VALUES (1, 1, 'ถิรพัฒน์', 'Thiraphat', 'วิลัยทอง', 'Vilaithong', 'ศาสตราจารย์ เกียรติคุณ ดร.', 'Prof. Dr.', 'ผู้อำนวยการศูนย์ความเป็นเลิศด้านฟิสิกส์', 'Executive Director', '053-942650-3 ต่อ 101', '+66 53 942 650-3 ext 101', 'Thirapat@fnrf.science.cmu.ac.th', 'http://www.thep-center.org/upload/pic/personal/1.jpg', '2013-10-16 15:42:06');
+INSERT INTO `tb_personel` VALUES (2, 2, 'สมศร', 'Somsorn', 'สิงขรัตน์', 'Singkarat	', 'รศ.ดร.', 'Assoc. Prof. Dr.', 'รองผู้อำนวยการศูนย์ความเป็นเลิศด้านฟิสิกส์', 'Deputy Director', '053-943379', '+66 53 -943 379', 'somsorn.s@gmail.com', 'http://www.thep-center.org/upload/pic/personal/somsorn.jpg', '2013-10-16 15:42:50');
+INSERT INTO `tb_personel` VALUES (3, 3, 'ดวงมณี', 'Duangmanee', 'ว่องรัตนะไพศาล', 'Wongratanaphisan', 'ผศ.ดร.', 'Assist. Prof. Dr.', 'ผู้ช่วยผู้อำนวยการศูนย์ความเป็นเลิศด้านฟิสิกส์', 'Assistant Director', '053-943375', '+66 53 943 375', 'dwongrat@thep-center.org', 'http://www.thep-center.org/upload/pic/personal/Aj.Duangmanee.jpg1.jpg', '2013-10-16 15:43:26');
+INSERT INTO `tb_personel` VALUES (4, 4, ' ดุษฎี', 'Dusadee', 'สุวรรณขจร', 'Suwannakachorn', 'ดร.', 'Dr.', 'ผู้ช่วยผู้อำนวยการศูนย์ความเป็นเลิศด้านฟิสิกส์', 'Assistant Director', ' 053-943379', '+66 53 943 379', 'dusadee.suwann@gmail.com', 'http://www.thep-center.org/upload/pic/personal/20060615201428dusadeesuwannakachorn.jpg', '2013-10-16 15:43:56');
+INSERT INTO `tb_personel` VALUES (5, 5, 'ศศิวิมล', 'Sasiwimol', 'หมู่ชาวใต้	', 'Muchaotai', '', '', 'ผู้จัดการศูนย์ความเป็นเลิศด้านฟิสิกส์	', 'Manager and Senior Executive Assistant', '053-942650-3 ต่อ 103', '+66 53 942 650-3 ext 103', 'sasivimol@thep-center.org', 'http://www.thep-center.org/upload/pic/personal/2.jpg', '08/23/2013 09:36:41 am');
+INSERT INTO `tb_personel` VALUES (6, 6, 'กฤติยา', 'Krittiya', 'โอสถาพันธุ์', 'Osathaphan	', '', '', ' รักษาการหัวหน้าฝ่ายการเงิน การบัญชีและพัสดุ', 'Finance Officer', '053-942650-3 ต่อ 102', '+66 53 942 650-3 ext 102', 'krittiya@thep-center.org', 'http://www.thep-center.org/upload/pic/personal/7.jpg', '08/23/2013 10:45:34 am');
+INSERT INTO `tb_personel` VALUES (9, 7, 'สโรชา', 'Sarocha', 'นพคุณ', 'Nopakun', '', '', 'รักษาการหัวหน้าฝ่ายสนับสนุนงานวิจัยและพัฒนาบุคลากร	', 'Postgraduate Training and Fellowship Officer', '053-942650 ต่อ 109	', '+66 53 942 650 ext 109', 'fellowship@thep-center.org', 'http://www.thep-center.org/upload/pic/personal/DSC02496.jpg1111.jpg', '2013-10-16 15:45:54');
 
 -- --------------------------------------------------------
 
