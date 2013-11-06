@@ -33,11 +33,6 @@ $news_type = 'network-academic';
                     </script>     
                     ';
                 }
-                if ($p['new'] == 'y') {
-                    $new_gif = ' <img src="../images/new1.gif">';
-                } else {
-                    $new_gif = '';
-                }
                 ?>
                 <div class="col-sm-9 col-md-9">
                     <?php
@@ -51,7 +46,7 @@ $news_type = 'network-academic';
                             ';
                     admin($admin_txt);
                     echo '
-                                <h2>' . htmlspecialchars_decode($p['title']) . $new_gif . '</h2>
+                                <h2>' . htmlspecialchars_decode($p['title']) . '</h2>
                                 <p><small><em>' . thai_date($p['date']) . '</small></em></p>
                                 ' . htmlspecialchars_decode($p['content_long']) . '
                             </div>
@@ -67,27 +62,27 @@ $news_type = 'network-academic';
                                 function(data){ $('#show-news').html(data); }
                             );
                             });
-                                                                                                                                            
+                                                                                                                                                
                         });
                     </script>
                 </div>
 
                 <div class="col-sm-3 col-md-3">
-                    <h3 class="text-center"><a href="network-academic-news.php">ข่าววิชาการจากเครือข่าย</a></h3>
+                    <h3 class="text-center">ข่าววิชาการฯ ย้อนหลัง</h3>
                     <?php
                     $sql_etc = "SELECT * FROM tb_news 
-                        WHERE (id != $news_id)
-                        AND (type = 'network-academic')
+                        WHERE type = 'network-academic'
                         ORDER BY date DESC
                         LIMIT 4;";
                     $re_etc = mysql_query($sql_etc);
                     while ($etc = mysql_fetch_array($re_etc)) {
                         echo '
-                    <p><a href="network-academic-news.php?news_id=' . $etc['id'] . '">' . htmlspecialchars_decode($etc['title']) . '</a></p>                    
+                    <p><a href="' . $etc['type'] . '-news.php?news_id=' . $etc['id'] . '">' . htmlspecialchars_decode($etc['title']) . '</a></p>                    
                     <hr>
                     ';
                     } // END while
                     ?>
+                    <p><a href="network-academic-news.php"><em>หัวข้อข่าวทั้งหมด</em></a></p>
                 </div>
                 <?php
             } else {
@@ -103,9 +98,9 @@ $news_type = 'network-academic';
                 <hr>
                             ';
                     admin($admin_txt);
-                ?>
-                    
-                <script>
+                    ?>
+
+                    <script>
                         $(function(){         
                             $("#add-news").click(function(){
                                 $(document).ajaxStart(function(){
@@ -115,10 +110,10 @@ $news_type = 'network-academic';
                                 function(data){ $("#show-news").html(data); }
                             );
                             });
-                                                                
+                                                                    
                         });
                     </script>
-                    
+
                     <?php
                     // ------------------------------------------------------------
 
@@ -126,18 +121,12 @@ $news_type = 'network-academic';
                     $result = mysql_query($sql);
                     $num_news = mysql_num_rows($result);
                     if ($num_news > 0) {
-                        $l = 0;
                         while ($p = mysql_fetch_array($result)) {
-                            $l++;
-                            if ($p['new'] == 'y') {
-                                $new_gif = ' <img src="../images/new1.gif">';
-                            } else {
-                                $new_gif = '';
-                            }
                             echo '                            
                             <div id="news-' . $p['id'] . '">
-                                <h3 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . $l . '. ' . htmlspecialchars_decode($p['title']) . $new_gif . '</a></h3>
-                                <small><em>' . thai_date($p['date']) . '</em></small>                               
+                                <h3 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . htmlspecialchars_decode($p['title']) . '</a></h3>
+                                <small><em>' . thai_date($p['date']) . '</em></small>
+                                <p>' . $p['content_short'] . ' <a href="' . $p['type'] . '-news.php?news_id=' . $p['id'] . '">... อ่านต่อ</a></p>
                             </div>
                             <hr>
                             ';

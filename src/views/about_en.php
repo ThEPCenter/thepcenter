@@ -8,7 +8,7 @@ doc_head('แนวทางของศูนย์');
 <body>
     <div class="container">
 
-        <?php get_includes('header'); ?>
+        <?php get_includes('header_en'); ?>
 
         <div class="row">
 

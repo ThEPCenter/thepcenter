@@ -8,7 +8,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 <body>
     <div class="container">
 
-        <?php require_once('../includes/header.php'); ?>
+        <?php get_includes('home-header'); ?>
 
         <div class="row">
 
@@ -21,6 +21,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-12 col-md-6">
+                <h2 class="text-center">ข่าววิชาการจากเครือข่าย</h2>
                 <div>
                     <div style="border: 1px solid #666666;">
                         <img class="img-responsive" style="margin: auto;" src="<?php echo $p['featured_img']; ?>">
@@ -39,6 +40,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-6 col-md-3">
+                <h2 class="text-center">ข่าวกิจกรรม</h2>
                 <div>
                     <div style="">
                         <img class="img-responsive" style="margin: auto; border: 1px solid #666666;" src="<?php echo $p['featured_img']; ?>">
@@ -57,6 +59,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-6 col-md-3 ">
+                <h2 class="text-center">ข่าวประชาสัมพันธ์/ข่าวพิเศษ</h2>
                 <div>
                     <div style="">
                         <img class="img-responsive" style="margin: auto; border: 1px solid #666666;" src="<?php echo $p['featured_img']; ?>">
@@ -67,6 +70,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             </div>
 
         </div> <!-- /.row -->
+        <p>&nbsp;</p>
 
         <!-- =========================================================================================== -->
 
@@ -88,9 +92,9 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
         </div>
 
-        <!-- =========================================================================================== -->
-
         <p>&nbsp;</p>
+        
+        <!-- =========================================================================================== -->        
 
         <div class="row">
 

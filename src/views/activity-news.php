@@ -41,6 +41,10 @@ doc_head('ข่าวกิจกรรม');
     .example-image:hover {
         border: 2px #003399 solid;
     }
+    .table tbody>tr>td {
+        border-top : none;
+        border-bottom: solid 1px #ddd;
+    }
 </style>
 
 </head>
@@ -55,11 +59,6 @@ doc_head('ข่าวกิจกรรม');
                 $sql = "SELECT * FROM tb_news WHERE id = $news_id;";
                 $result = mysql_query($sql);
                 $n = mysql_fetch_array($result);
-                if ($n['new'] == 'y') {
-                    $new_gif = ' <img src="../images/new1.gif">';
-                } else {
-                    $new_gif = '';
-                }
                 ?>
 
                 <div id="show-news" class="col-sm-9 col-md-9">
@@ -76,14 +75,14 @@ doc_head('ข่าวกิจกรรม');
                                 function(data){ $('#show-news').html(data); }
                             );
                             });
-                                                                                        
+                                                                                            
                         });
                     </script>  
 
                     <?php
                     echo '                            
             <div id="news-' . $n['id'] . '">
-                <h2>' . htmlspecialchars_decode($n['title']) . $new_gif . '</h2>
+                <h2>' . htmlspecialchars_decode($n['title']) . '</h2>
                 <p class="fg-color-green"><small><em>' . thai_date($n['date']) . '</small></em></p>
                 ' . htmlspecialchars_decode($n['content_long']) . '
             </div>';
@@ -125,11 +124,10 @@ doc_head('ข่าวกิจกรรม');
                 </div>
 
                 <div class="col-sm-3 col-md-3">
-                    <h3 class="text-center"><a href="activity-news.php">ข่าวกิจกรรม</a></h3>
+                    <h3 class="text-center">ข่าวกิจกรรมย้อนหลัง</h3>
                     <?php
                     $sql_etc = "SELECT * FROM tb_news 
-                        WHERE (id != $news_id)
-                        AND (type = 'activity')
+                        WHERE type = 'activity'
                         ORDER BY date DESC
                         LIMIT 4;";
                     $re_etc = mysql_query($sql_etc);
@@ -140,6 +138,7 @@ doc_head('ข่าวกิจกรรม');
                     ';
                     } // END while
                     ?>
+                    <a href="activity-news.php"><em>หัวข้อข่าวทั้งหมด</em></a>
                 </div>
 
                 <?php
@@ -176,7 +175,8 @@ doc_head('ข่าวกิจกรรม');
                             height: 65px;">                            
                                     </a>
                                     </td>
-                                    <td><a href="activity-news.php?news_id=' . $a['id'] . '">' . $a['title'] . '</a></td>
+                                    <td><a href="activity-news.php?news_id=' . $a['id'] . '">' . $a['title'] . '</a><br> 
+                                        <small><em>' . thai_date($a['date']) . '</em></small></td>
                                 </tr>                            
                                     ';
                         } // END while

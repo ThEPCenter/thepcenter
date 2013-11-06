@@ -2,7 +2,7 @@
 <div>&nbsp;</div>
 <div class="pageline" id="lastpageline"></div>
 
-<div class="row" id="sitefooternav">
+<div class="row" id="sitefooternav" style="background-color: #f2f2f2;">
 
     <div class="col-xs-6 col-sm-3 col-md-3" >
         <ul>
@@ -47,7 +47,7 @@
 
             <li>▪ <a href="http://www.cmu.ac.th" target="_blank">มหาวิทยลัยเชียงใหม่</a></li>
 
-            <li>▪ <a href="http://www.chula.ac.th" target="_blank">จุฬาลงกรณ์มหาวิทยลัย</a></li>
+            <li>▪ <a href="http://www.chula.ac.th" target="_blank">จุฬาลงกรณ์มหาวิทยาลัย</a></li>
 
             <li>▪ <a href="http://www.mahidol.ac.th/th" target="_blank">มหาวิทยลัยมหิดล</a></li>
 
@@ -83,12 +83,10 @@
 </div>
 
 <div class="row">
-    <div style="font-size: 90%; text-align: right; padding-top: 20px;">
+    <div style="text-align: right; padding-top: 20px; padding-right: 10px; background-color: #f2f2f2;">
         <b>ศูนย์ความเป็นเลิศด้านฟิสิกส์</b><br>
-        ตู้ ปณ.70 มหาวิทยาลัยเชียงใหม่<br>
-        อ.เมือง จ.เชียงใหม่ 50202<br>
+        ตู้ ปณ.70 มหาวิทยาลัยเชียงใหม่ อ.เมือง จ.เชียงใหม่ 50202<br>
         โทรศัพท์ (053) 942650-3 โทรสาร (053) 222774
     </div>
 </div>
-<div>&nbsp;</div>
 <!-- / footer -->

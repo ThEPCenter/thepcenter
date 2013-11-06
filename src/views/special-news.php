@@ -33,11 +33,6 @@ doc_head('ข่าวพิเศษ');
                     ';
                     exit();
                 }
-                if ($p['new'] == 'y') {
-                    $new_gif = ' <img src="../images/new1.gif">';
-                } else {
-                    $new_gif = '';
-                }
                 ?>
                 <div class="col-sm-9 col-md-9">
                     <?php
@@ -50,8 +45,9 @@ doc_head('ข่าวพิเศษ');
                             ';
                     admin($admin_txt);
                     echo '
-                                <h2>' . htmlspecialchars_decode($p['title']) . $new_gif . '</h2>
+                                <h2>' . htmlspecialchars_decode($p['title']) . '</h2>
                                 <p><small><em>' . thai_date($p['date']) . '</small></em></p>
+                                <p>&nbsp;</p>
                                 ' . htmlspecialchars_decode($p['content_long']) . '
                             </div>
                       ';
@@ -72,22 +68,22 @@ doc_head('ข่าวพิเศษ');
                 </div>
 
                 <div class="col-sm-3 col-md-3">
-                    <h3>ข่าวพิเศษ</h3>
+                    <h3 class="text-center">ข่าวพิเศษย้อนหลัง</h3>
                     <?php
                     $sql_etc = "SELECT * FROM tb_news 
-                        WHERE (id != $news_id)
-                        AND (type = 'special')
+                        WHERE type = 'special'
                         ORDER BY date DESC
                         LIMIT 4;";
                     $re_etc = mysql_query($sql_etc);
                     while ($etc = mysql_fetch_array($re_etc)) {
                         echo '
-                    <p><a href="network-academic-news.php?news_id=' . $etc['id'] . '">' . htmlspecialchars_decode($etc['title']) . '</a></p>
+                    <p><a href="' . $etc['type'] . '-news.php?news_id=' . $etc['id'] . '">' . htmlspecialchars_decode($etc['title']) . '</a></p>
                     <div></div>
                     <hr>
                     ';
                     } // END while
                     ?>
+                    <a href="special-news.php"><em>หัวข้อข่าวทั้งหมด</em></a>
                 </div>
                 <?php
             } else {
@@ -124,15 +120,9 @@ doc_head('ข่าวพิเศษ');
                     if ($num_news > 0) {
                         $l = 0;
                         while ($p = mysql_fetch_array($result)) {
-                            $l++;
-                            if ($p['new'] == 'y') {
-                                $new_gif = ' <img src="../images/new1.gif">';
-                            } else {
-                                $new_gif = '';
-                            }
                             echo '                            
                             <div id="news-' . $p['id'] . '">
-                                <h3 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . $l . '. ' . htmlspecialchars_decode($p['title']) . $new_gif . '</a></h3>
+                                <h3 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . htmlspecialchars_decode($p['title']) . $new_gif . '</a></h3>
                                 <small><em>' . thai_date($p['date']) . '</em></small>                               
                             </div>
                             <hr>
