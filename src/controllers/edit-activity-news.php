@@ -30,6 +30,7 @@ notlogin_js('../views/home.php');
 if (!isset($_GET['edit_news'])) {
     js_redirect('../views/home.php');
 }
+
 //=====================================
 
 function opt_check($x, $y) {
@@ -53,17 +54,18 @@ $p = mysql_fetch_array($result);
         <label>หัวข้อข่าว</label>
         <input type="text" name="title"  class="form-control" value="<?php echo htmlspecialchars_decode($p['title']); ?>" />
     </div>
+
     <div class="form-group">
         <label>วันที่</label>
         <input type="text" id="datepicker" name="date" value="<?php echo date("m/d/Y", strtotime($p['date'])); ?>">
     </div>
-
     <script>
         $(function() {                
             $( "#datepicker" ).datepicker();   // Date Picker
         }); /* END jQuery */
     </script>
-    
+    <p>&nbsp;</p>
+
     <h4>Feature image</h4>
     <p id="show-img">
         <img class="img-responsive" style="margin: auto;" src="<?php echo htmlspecialchars_decode($p['featured_img']); ?>">
@@ -106,39 +108,53 @@ $p = mysql_fetch_array($result);
     </div>
     <p>&nbsp;</p>
 
+    <?php 
+    $sql_g = "SELECT * FROM tb_gallery WHERE id = {$p['gallery_id']};";
+    $re_g = mysql_query($sql_g);
+    $g = mysql_fetch_array($re_g);
+    ?>
     <div class="form-group">
         <label>แกลอรี</label>
-        <span>เลือกแกลอรี หรือ </span><a href="gallery.php?add_gal=new" target="_blank">เพื่มแกลอรีใหม่</a>
-        <select name="gallery_id" class="form-control" id="gallery_id">
-            <?php
-            $sql_g = "SELECT * FROM tb_gallery;";
-            $result_g = mysql_query($sql_g);
-            while ($g = mysql_fetch_array($result_g)) {
-                echo '<option id="gal-' . $g['id'] . '" value="' . $g['id'] . '"' . opt_check($p['gallery_id'], $g['id']) . '>' . $g['title'] . '</option>';
-            }// END while
-            ?>
-        </select>        
+        <input type="text" id="gallery" name="gallery"  class="form-control" value="<?php echo htmlspecialchars_decode($g['title']); ?>" disabled> <br />
+        <input type="hidden" id="gal_id" name="gal_id" value="<?php echo $g['id'] ?>">
+        <!-- Link trigger modal -->
+        <a data-toggle="modal" href="#myModal">
+            เลือกแกลอรีอื่น
+        </a> 
+        หรือ
+        <a href="gallery.php?add_gal=new" target="_blank">เพิ่มแกลอรีใหม่</a>              
     </div>
-    <div class="show-gall"></div>
+    <div id="show-gall"></div>
+
+    
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
     <script>
         $(function(){            
-            var gal_id = $("option[selected]").val();
+            var gal_id = $("#gal_id").val();
             $.get("<?php controll('show-gal'); ?>", {gallery_id: gal_id}, 
-                function(data){ $(".show-gall").html(data); }
-            );
-            /*
+            function(data){ $("#show-gall").html(data); }
+        );           
              
-            $("#gallery_id").click(function(){
-                $(document).ajaxStart(function(){
-                    $(".show-gall").html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
-                });
-                var gal_id = $("option[selected]").val();
-                $.get("<?php controll('show-gal'); ?>", {gallery_id: gal_id}, 
-                function(data){ $(".show-gall").html(data); }
-            );
-            });
-            
-             */
         });
     </script>
 

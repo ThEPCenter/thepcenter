@@ -15,18 +15,19 @@ doc_head('Thailand Center of Excellence in Physics');
             <!-- Network Academic news -->
             <?php
             $sql = "SELECT * FROM tb_news 
-                WHERE type = 'network-academic'
+                WHERE (type = 'network-academic') AND (title_en != '')
                 ORDER BY date DESC;";
             $result = mysql_query($sql);
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-12 col-md-6">
+                <h2 class="text-center">Research News from Members</h2>
                 <div>
                     <div style="border: 1px solid #666666;">
-                        <img class="img-responsive" style="margin: auto;" src="http://www.thep-center.org/uploadfile/img_pr/darasart/1.jpg">
+                        <img class="img-responsive" style="margin: auto;" src="<?php echo $p['featured_img']; ?>">
                     </div>                                                
-                    <h3><a href="<?php echo $p['type'] ?>-news_en.php?news_id=<? echo $p['id']; ?>">Giant Ground Level Enhancement of Relativistic Solar Protons on 2005 January 20: Spaceship Earth Observations</a></h3>
-                    <p>Approximately 15 times per 11-year solar cycle, the Sun emits cosmic rays with sufficient energy and intensity to raise radiation levels on Earth’s surface markedly above background levels due to Galactic cosmic rays. These events, termed “ground level enhancements” (GLEs), provide an exceptionally clear picture of particle acceleration on the Sun, first because GLE particles travel near the speed of light and thus enable a precise linkage between the particles and the solar source event, and second because they have large mean free paths, and their time profiles are comparatively undistorted by transport processes in the interplanetary medium. Information gained from the observation and analysis of GLEs is clearly pertinent to the field of heliophysics and is also interesting for traditional astrophysics for the challenge it poses to acceleration models (e.g., Roussev et al. 2004). <a href="<?php echo $p['type'] ?>-news.php_en?news_id=<?php echo $p['id']; ?>">... Read more</a></p>
+                    <h3><a href="<?php echo $p['type'] ?>-news_en.php?news_id=<? echo $p['id']; ?>"><?php echo $p['title_en']; ?></a></h3>
+                    <?php echo $p['content_short_en']; ?> <a href="<?php echo $p['type'] ?>-news_en.php?news_id=<?php echo $p['id']; ?>">... Read more</a></p>
                 </div>
             </div>
 
@@ -39,6 +40,7 @@ doc_head('Thailand Center of Excellence in Physics');
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-12 col-md-6">
+                <h2 class="text-center">ThEP Center Brochure</h2>
                 <div>
                     <a title="ThEP Center Brochure" href="#">
                         <img class="img-responsive" style="border: 1px solid #666666;" src="http://www.thep-center.org/uploadfile/Form/eng/ThEP_Center_Brochure_Main.png" >

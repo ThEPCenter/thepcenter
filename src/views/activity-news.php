@@ -1,5 +1,7 @@
 <?php
 require_once '../system/system.php';
+
+$news_type = 'activity';
 doc_head('ข่าวกิจกรรม');
 ?>
 <link rel="stylesheet" href="<?php plugins('lightbox2.6/lightbox/css/lightbox.css'); ?>">
@@ -52,7 +54,7 @@ doc_head('ข่าวกิจกรรม');
 <body>
     <div class="container">
         <?php get_includes('header'); ?>
-        <div class="row">
+        <div class="row"  id="show-news">
             <?php
             if ($_GET['news_id']) {
                 $news_id = $_GET['news_id'];
@@ -61,7 +63,7 @@ doc_head('ข่าวกิจกรรม');
                 $n = mysql_fetch_array($result);
                 ?>
 
-                <div id="show-news" class="col-sm-9 col-md-9">
+                <div class="col-sm-9 col-md-9">
                     <?php
                     admin('<p><a id="edit-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-wrench"></span> Edit</a></p>');
                     ?>
@@ -75,7 +77,7 @@ doc_head('ข่าวกิจกรรม');
                                 function(data){ $('#show-news').html(data); }
                             );
                             });
-                                                                                            
+                                                                                                        
                         });
                     </script>  
 
@@ -143,13 +145,39 @@ doc_head('ข่าวกิจกรรม');
 
                 <?php
             } else {
+                ?>
+                <h2 class="text-center">ข่าวกิจกรรม</h2>
+                <?php
+                // ========= Add news ====================================
+                $admin_txt = '  
+                <p>
+                    <a id="add-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-plus"></span> Add</a>
+                </p>
+                <hr>
+                            ';
+                admin($admin_txt);
+                ?>
+                <script>
+                    $(function(){         
+                        $("#add-news").click(function(){
+                            $(document).ajaxStart(function(){
+                                $("#show-news").html("<div class=\"span12 text-center\" ><img src=\"../images/demo_wait.gif\"></div>");
+                            });
+                            $.get("<?php controll('add-news'); ?>", {add_news: "<?php echo $news_type; ?>"}, 
+                            function(data){ $("#show-news").html(data); }
+                        );
+                        });
+                                                                            
+                    });
+                </script>
+                <?php
                 $sql_act = "SELECT * FROM tb_news 
                 WHERE type = 'activity' 
                 ORDER BY date DESC;
             ";
                 $re_act = mysql_query($sql_act);
                 ?>
-                <h2 class="text-center">ข่าวกิจกรรม</h2>
+
                 <table class="table">
                     <?php
                     if (!empty($re_act)) {

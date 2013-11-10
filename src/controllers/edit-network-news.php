@@ -5,10 +5,13 @@ if (isset($_POST['edit_id'])) {
     $id = $_POST['edit_id'];
     $type = htmlspecialchars($_POST['type'], ENT_QUOTES);
     $title = htmlspecialchars($_POST['title'], ENT_QUOTES);
+    $title_en = htmlspecialchars($_POST['title_en'], ENT_QUOTES);
     $date = date("Y-m-d", strtotime($_POST['date']));
     $featured_img = htmlspecialchars($_POST['featured_img'], ENT_QUOTES);
     $content_short = htmlspecialchars($_POST['content_short'], ENT_QUOTES);
+    $content_short_en = htmlspecialchars($_POST['content_short_en'], ENT_QUOTES);
     $content_long = htmlspecialchars($_POST['content_long'], ENT_QUOTES);
+    $content_long_en = htmlspecialchars($_POST['content_long_en'], ENT_QUOTES);
     if (isset($_POST['new'])) {
         $new = $_POST['new'];
     } else {
@@ -16,7 +19,7 @@ if (isset($_POST['edit_id'])) {
     }
     $modified = date("Y-m-d H:i:s");
     $sql = "UPDATE tb_news
-            SET type = '$type', title = '$title', date = '$date', featured_img = '$featured_img', content_short = '$content_short', content_long = '$content_long', new = '$new', modified = '$modified'
+            SET type = '$type', title = '$title', title_en = '$title_en', date = '$date', featured_img = '$featured_img', content_short = '$content_short', content_short_en = '$content_short_en', content_long = '$content_long', content_long_en = '$content_long_en', new = '$new', modified = '$modified'
             WHERE id = $id;";
     @mysql_query($sql) or die(mysql_error());
     header("Location: ../views/$type-news.php?news_id=$id");
@@ -42,10 +45,17 @@ $p = mysql_fetch_array($result);
 <form role="form" name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
     <input name="edit_id" type="hidden" value="<?php echo $p['id']; ?>">
     <input name="type" type="hidden" value="<?php echo $p['type']; ?>">
+    
     <div class="form-group">
         <label>หัวข้อข่าว</label>
         <input type="text" name="title"  class="form-control" value="<?php echo htmlspecialchars_decode($p['title']); ?>" />
     </div>
+    
+    <div class="form-group">
+        <label>หัวข้อข่าวภาษาอังกฤษ</label>
+        <input type="text" name="title_en"  class="form-control" value="<?php echo htmlspecialchars_decode($p['title_en']); ?>" />
+    </div>
+    
     <div class="form-group">
         <label>วันที่</label>
         <input type="text" id="datepicker" name="date" class="form-control" value="<?php echo date("m/d/Y", strtotime($p['date'])); ?>">
@@ -80,6 +90,11 @@ $p = mysql_fetch_array($result);
         <label>เนื้อหาฉบับย่อ</label>
         <textarea name="content_short" class="form-control" rows="4"><?php echo $p['content_short']; ?></textarea>
     </div>
+    
+    <div class="form-group">
+        <label>เนื้อหาฉบับย่อภาษาอังกฤษ</label>
+        <textarea name="content_short_en" class="form-control" rows="4"><?php echo $p['content_short_en']; ?></textarea>
+    </div>
 
     <div class="form-group">
         <label>เนื้อหาฉบับเต็ม</label>
@@ -88,6 +103,16 @@ $p = mysql_fetch_array($result);
         </textarea>
         <script>
             CKEDITOR.replace('content_long');
+        </script>
+    </div>
+    
+    <div class="form-group">
+        <label>เนื้อหาฉบับเต็มภาษาอังกฤษ</label>
+        <textarea name="content_long_en">
+            <?php echo htmlspecialchars_decode($p['content_long_en']); ?>
+        </textarea>
+        <script>
+            CKEDITOR.replace('content_long_en');
         </script>
     </div>
 
