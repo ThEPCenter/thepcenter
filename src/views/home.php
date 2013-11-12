@@ -22,13 +22,9 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             ?>
             <div class="col-sm-12 col-md-6">
                 <h2 class="text-center">ข่าววิชาการจากเครือข่าย</h2>
-                <div>
-                    <div style="border: 1px solid #666666;">
-                        <img class="img-responsive" style="margin: auto;" src="<?php echo $p['featured_img']; ?>">
-                    </div>                                                
-                    <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<? echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
-                    <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
-                </div>
+                <img class="img-responsive" style="margin: auto; border: 1px solid #666666;" alt="Featured image" src="<?php echo $p['featured_img']; ?>">
+                <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<? echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
+                <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
 
             <!-- Activity news -->
@@ -41,13 +37,9 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             ?>
             <div class="col-sm-6 col-md-3">
                 <h2 class="text-center">ข่าวกิจกรรม</h2>
-                <div>
-                    <div style="">
-                        <img class="img-responsive" style="margin: auto; border: 1px solid #666666;" src="<?php echo $p['featured_img']; ?>">
-                    </div>                                                
-                    <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
-                    <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
-                </div>
+                <img class="img-responsive" style="margin: auto; border: 1px solid #666666;" alt="Featured image" src="<?php echo $p['featured_img']; ?>">
+                <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
+                <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
 
             <!-- Special / Pr news -->
@@ -60,13 +52,9 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             ?>
             <div class="col-sm-6 col-md-3 ">
                 <h2 class="text-center">ข่าวประชาสัมพันธ์/ข่าวพิเศษ</h2>
-                <div>
-                    <div style="">
-                        <img class="img-responsive" style="margin: auto; border: 1px solid #666666;" src="<?php echo $p['featured_img']; ?>">
-                    </div>                                                
-                    <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
-                    <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
-                </div>
+                <img class="img-responsive" style="margin: auto; border: 1px solid #666666;" alt="Featured image" src="<?php echo $p['featured_img']; ?>">
+                <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
+                <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
 
         </div> <!-- /.row -->
@@ -80,20 +68,20 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
             <div class="col-sm-6 col-md-6">
                 <a href="central-equipment.php?eq=XPS">
-                    <img class="img-responsive" style="margin: 0 auto; border: 1px solid #666666;" src="../files/xps_banner.png">
+                    <img class="img-responsive" style="margin: 0 auto; border: 1px solid #666666;" title="XPS" alt="XPS" src="../files/xps.jpg">
                 </a>
             </div>
 
             <div class="col-sm-6 col-md-6">
                 <a href="central-equipment.php?eq=FESEM">
-                    <img class="img-responsive" style="margin: 0 auto; border: 1px solid #666666;" src="../files/fesem_banner.png">
+                    <img class="img-responsive" style="margin: 0 auto; border: 1px solid #666666;" title="FESEM" alt="FESEM" src="../files/fesem.jpg">
                 </a>
             </div>
 
         </div>
 
         <p>&nbsp;</p>
-        
+
         <!-- =========================================================================================== -->        
 
         <div class="row">
@@ -153,25 +141,13 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                     </div>
                 </a>
             </div>
-        </div>
+        </div> <!-- /.row -->
 
         <?php get_includes('footer'); ?>
     </div>
     <!-- /.container -->
 
     <?php get_includes('bootstrap-core'); ?>
-    <script type='text/javascript'>
-            
-        $(function(){
-            $("#btn-center").click(function(){
-                $("#center-list").toggle();
-            });
-                
-            $("#eq").click(function(){
-                $("#eq-list").toggle();
-            });
-            
-    </script>
 
 </body>
 </html>

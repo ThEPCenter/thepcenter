@@ -60,8 +60,8 @@ $p = mysql_fetch_array($result);
         <input type="text" id="datepicker" name="date" value="<?php echo date("m/d/Y", strtotime($p['date'])); ?>">
     </div>
     <script>
-        $(function() {                
-            $( "#datepicker" ).datepicker();   // Date Picker
+        $(function() {
+            $("#datepicker").datepicker();   // Date Picker
         }); /* END jQuery */
     </script>
     <p>&nbsp;</p>
@@ -75,12 +75,12 @@ $p = mysql_fetch_array($result);
         <input type="text" id="featured_img" name="featured_img"  class="form-control" value="<?php echo htmlspecialchars_decode($p['featured_img']); ?>" />
     </div>
     <script>
-        $(function(){            
-            $("#featured_img").blur(function(){            
+        $(function() {
+            $("#featured_img").blur(function() {
                 var img_url = $("#featured_img").val();
-                $("#show-img").html("<img src=\"" + img_url + "\" style=\"max-width: 100%; height: auto; margin: auto;\">");           
+                $("#show-img").html("<img src=\"" + img_url + "\" style=\"max-width: 100%; height: auto; margin: auto;\">");
             });
-            
+
         });
     </script>
     <p>&nbsp;</p>
@@ -108,7 +108,7 @@ $p = mysql_fetch_array($result);
     </div>
     <p>&nbsp;</p>
 
-    <?php 
+    <?php
     $sql_g = "SELECT * FROM tb_gallery WHERE id = {$p['gallery_id']};";
     $re_g = mysql_query($sql_g);
     $g = mysql_fetch_array($re_g);
@@ -117,17 +117,29 @@ $p = mysql_fetch_array($result);
         <label>แกลอรี</label>
         <input type="text" id="gallery" name="gallery"  class="form-control" value="<?php echo htmlspecialchars_decode($g['title']); ?>" disabled> <br />
         <input type="hidden" id="gal_id" name="gal_id" value="<?php echo $g['id'] ?>">
+        <div id="show-gall"></div>
+        <p>&nbsp;</p>
+
         <!-- Link trigger modal -->
         <a data-toggle="modal" href="#myModal">
             เลือกแกลอรีอื่น
         </a> 
+
+
+        <select class="form-control" name="gal" id="gal">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+
+        <script>
+
+        </script>
+
         หรือ
-        <a href="gallery.php?add_gal=new" target="_blank">เพิ่มแกลอรีใหม่</a>              
+        <a href="gallery.php?add_gal=new" target="_blank">เพิ่มแกลอรีใหม่</a>
+
     </div>
-    <div id="show-gall"></div>
-
-    
-
 
     <!-- Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -141,7 +153,7 @@ $p = mysql_fetch_array($result);
                     ...
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
                 </div>
             </div><!-- /.modal-content -->
@@ -149,12 +161,28 @@ $p = mysql_fetch_array($result);
     </div><!-- /.modal -->
 
     <script>
-        $(function(){            
+        $(function() {
+            $(document).ajaxStart(function() {
+                $('#show-gall').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
+            });
             var gal_id = $("#gal_id").val();
-            $.get("<?php controll('show-gal'); ?>", {gallery_id: gal_id}, 
-            function(data){ $("#show-gall").html(data); }
-        );           
-             
+            $.get("<?php controll('show-gal'); ?>", {gallery_id: gal_id},
+            function(data) {
+                $("#show-gall").html(data);
+            }
+            );
+
+
+            $('select').change(function() {
+                var statusVal = $(this).val();
+                $.get("<?php controll('show-gal'); ?>", {gallery_id: statusVal},
+                function(data) {
+                    $("#show-gall").html(data);
+                }
+
+                });
+            });
+
         });
     </script>
 

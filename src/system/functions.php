@@ -14,9 +14,7 @@ function removedir($dr) {
             unlink($dr . "/" . $file);
         }
     }
-
     closedir($d);
-
     return rmdir($dr);
 }
 
@@ -35,10 +33,10 @@ function fileExist($id, $file_name, $dir, $exist, $notex) {
 // END function fileExist
 
 function get_file_type($file_name) {
-        $name = strtolower($file_name);
-        $nameArr = explode(".", $name);
-        $num = count($nameArr);        
-        return $nameArr[$num - 1];      
+    $name = strtolower($file_name);
+    $nameArr = explode(".", $name);
+    $num = count($nameArr);
+    return $nameArr[$num - 1];
 }
 
 function thai_date($str_date, $show_day = "n") {
@@ -138,7 +136,7 @@ function login($output, $not_login = '') {
 }
 
 function user_property($property) {
-    $sql = "SELECT * FROM tb_user WHERE username = '{$_SESSION['login']}';";
+    $sql = "SELECT * FROM tb_new_user WHERE username = '{$_SESSION['login']}';";
     $result = mysql_query($sql);
     if (!empty($result)) {
         $u = mysql_fetch_array($result);
@@ -185,14 +183,14 @@ window.location = " ' . $location . ' ";
 function login_header($location) {
     if (isset($_SESSION['login'])) {
         header_redirect($location);
-		exit();
+        exit();
     }
 }
 
 function notlogin_header($location) {
     if (!isset($_SESSION['login'])) {
         header_redirect($location);
-		exit();
+        exit();
     }
 }
 
@@ -207,15 +205,15 @@ function is_login_header($location_1, $location_2) {
 function login_js($location) {
     if (isset($_SESSION['login'])) {
         js_redirect($location);
-		exit();
-    } 
+        exit();
+    }
 }
 
 function notlogin_js($location) {
     if (!isset($_SESSION['login'])) {
         js_redirect($location);
-		exit();
-    } 
+        exit();
+    }
 }
 
 // ============= News ===================
@@ -237,6 +235,28 @@ function name_news($news_type) {
             return 'ไม่พบข้อมูล';
             break;
     }
+}
+
+// ================== Counter ==================
+function visitor_counter() {
+    $sessionid = session_id();
+
+    $counter_id = "SELECT id FROM counter WHERE  sessionid = '$sessionid'  "; // Show All		
+    $result = mysql_query($counter_id) or die(mysql_error());
+    $rs = mysql_fetch_array($result);
+    $counterid = $rs["id"];
+
+    $now = date("Y-m-d H:i:s");
+    if (!$result) {
+        $sql = "INSERT INTO counter (`sessionid` ,`created` ,`updated`) VALUES ( '$sessionid','$now','$now')";
+        mysql_query($sql);
+    }
+
+    $countershow = "SELECT id FROM counter ORDER BY id DESC"; // Show All		
+    $result = mysql_query($countershow) or die(mysql_error());
+    $rs = mysql_fetch_array($result);
+    $counter = $rs["id"];
+    $counter = number_format($counter, 0, '', ',');
 }
 
 ?>

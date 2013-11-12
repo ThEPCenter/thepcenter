@@ -50,9 +50,6 @@ h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visit
     color: #333;
 }
 
-#page-header {
-}
-
 #slide {
     margin-top: 10px; 
 }
@@ -134,6 +131,18 @@ ul {
     color: #609;
 }
 
+footer {
+    margin-top: 1px;
+    width: 100%;
+    background-color: #e0e0e0;
+    position: absolute;
+    left: 0;
+}
+
+footer > .row {
+    margin-left: 5px;
+}
+
 /* ========================================== */
 
 h1, h2, h3 {
@@ -168,14 +177,14 @@ table {
 }
 
 .lb-data .lb-details .lb-caption, .lb-data .lb-details .lb-number {
-	font-size: 20px;
+    font-size: 20px;
 }
 
 @media (min-width: 1200px)  {
     .container {
         max-width: 100%;
     }
-    .container > .row {
+    .container > .row, footer > .row {
         width: 970px;
         margin:  auto;
     }

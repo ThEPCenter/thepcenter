@@ -155,6 +155,27 @@ INSERT INTO `tb_news` VALUES (17, 'special', 'รางวัลโนเบล�
 -- --------------------------------------------------------
 
 -- 
+-- โครงสร้างตาราง `tb_new_user`
+-- 
+
+CREATE TABLE `tb_new_user` (
+  `id` int(11) NOT NULL auto_increment,
+  `username` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `password` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `level` int(11) NOT NULL,
+  `update` varchar(255) collate utf8_unicode_ci NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+
+-- 
+-- dump ตาราง `tb_new_user`
+-- 
+
+INSERT INTO `tb_new_user` VALUES (1, 'thepadmin', '2013', 1, '2013-09-26 10:10');
+
+-- --------------------------------------------------------
+
+-- 
 -- โครงสร้างตาราง `tb_personel`
 -- 
 
@@ -400,27 +421,6 @@ INSERT INTO `tb_upload` VALUES (14, 'eafa813295.doc', 'application/msword', 1095
 INSERT INTO `tb_upload` VALUES (15, 'e42b6154de.doc', 'application/msword', 109568, 'upload', '2013-10-22 14:12:56');
 INSERT INTO `tb_upload` VALUES (16, 'nano-crystal-glass.doc', 'application/msword', 109568, 'upload', '2013-10-22 16:18:42');
 INSERT INTO `tb_upload` VALUES (17, '06fb5bd931.doc', 'application/msword', 109568, 'upload', '2013-10-22 16:19:57');
-
--- --------------------------------------------------------
-
--- 
--- โครงสร้างตาราง `tb_user`
--- 
-
-CREATE TABLE `tb_user` (
-  `id` int(11) NOT NULL auto_increment,
-  `username` varchar(255) collate utf8_unicode_ci NOT NULL,
-  `password` varchar(255) collate utf8_unicode_ci NOT NULL,
-  `level` int(11) NOT NULL,
-  `update` varchar(255) collate utf8_unicode_ci NOT NULL,
-  PRIMARY KEY  (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
-
--- 
--- dump ตาราง `tb_user`
--- 
-
-INSERT INTO `tb_user` VALUES (1, 'admin', '2013', 1, '2013-09-26 10:10');
 
 -- --------------------------------------------------------
 
