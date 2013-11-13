@@ -1,11 +1,50 @@
 <?php
 require_once '../system/system.php';
+
+if ($_POST) {
+    $gallery_id = $_POST['gallery_id'];
+    for ($i = 1; $i <= 6; $i++) {
+        $upl = 'upload' . $i;
+        if ($_FILES[$upl]['error'] == 0) {
+            $caption = htmlspecialchars($_POST['caption' . $i], ENT_QUOTES);
+            $file = $_FILES[$upl]['tmp_name'];
+            $file_name = htmlspecialchars($_FILES[$upl]['name'], ENT_QUOTES);
+            $new_file_name = substr(md5(microtime()), rand(0, 26), 8) . '.' . get_file_type($file_name);
+            $pic_no = 1;
+            $type = $_FILES[$upl]['type'];
+            $size = $_FILES[$upl]['size'];
+            $dir = '../img/picture'; // The directory that you want to download the file into it.
+            $path = $dir . '/' . $new_file_name;
+            $modified = date('m/d/Y h:i:s a');
+            if (file_exists($dir)) {
+                if (move_uploaded_file($file, $path)) { //upload file to path folder
+                    $sql = "INSERT INTO 
+                                    tb_picture
+                                VALUES
+                                    (0, '$new_file_name', '$caption', '$gallery_id', $pic_no, '$type', '$size', '$dir', '$modified');        
+                    ";
+                    @mysql_query($sql) or die(mysql_error());
+                } else {
+                    echo 'ERROR: Can not Upload file!';
+                    exit;
+                }
+            } else {
+                echo 'ERROR: Upload folder not found!';
+                exit;
+            } // END file_exists
+        }
+    } // END for
+    header("Refresh: 2; url=gallery.php");
+    echo "Uploading file ...";
+    exit;
+}
+
 doc_head('ศูนย์ความเป็นเลิศด้านฟิสิกส์');
-$gal_id = $_GET['gal_id'];
+$galley_id = $_GET['gallery_id'];
 
 $sql_g = "SELECT * FROM 
             tb_gallery 
-            WHERE id = $gal_id;
+            WHERE id = $gallery_id;
         ";
 $re_g = mysql_query($sql_g);
 $g = mysql_fetch_array($re_g);
@@ -19,12 +58,13 @@ $g = mysql_fetch_array($re_g);
         <?php get_includes('header'); ?>
 
         <div class="row">
-            
+            <h2 class="text-center">เพิ่มภาพในแกลอรี <?php echo $g['title']; ?></h2>
+
             <div class="col-xs-12 col-sm-12 col-md-12">
 
                 <form role="form" name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
 
-                    <input name="id_g" type="hidden" value="<?php echo $g['id']; ?>">
+                    <input name="gallery_id" type="hidden" value="<?php echo $g['id']; ?>">
 
                     <?php
                     for ($i = 1; $i <= 6; $i++) {
@@ -63,14 +103,14 @@ $g = mysql_fetch_array($re_g);
                         <?php
                         $sql_p = "SELECT * FROM tb_picture WHERE gallery_id = $gal_id;";
                         $result_p = mysql_query($sql_p);
-                        $no_p = mysql_num_rows($result_p);
 
-                        echo '<p>จำนวนทั้งหมด ' . $no_p . ' ภาพ &nbsp;<a href="edit_gallery.php?edit_gal=' . $g['id'] . '"><i class="icon-wrench"></i>แก้ไขแกลอรี</a></p> ';
-
-                        $i = 0;
-                        while ($p = mysql_fetch_array($result_p)) {
-                            $i++;
-                            echo '
+                        echo '<p>&nbsp;<a href="edit_gallery.php?edit_gal=' . $g['id'] . '"><i class="icon-wrench"></i>แก้ไขแกลอรี</a></p> ';
+                        if (!empty($result_p)) {
+                            $no_p = mysql_num_rows($result_p);
+                            $i = 0;
+                            while ($p = mysql_fetch_array($result_p)) {
+                                $i++;
+                                echo '
                                 <div style="width: auto; height: 127px; float: left; margin-left: 15px;">
                                     <div>
                                         <a href="../img/picture/' . $p['name'] . '" data-lightbox="' . $g['title'] . '" title="' . $p['caption'] . '">
@@ -82,21 +122,23 @@ $g = mysql_fetch_array($re_g);
                                     </div>
                                 </div>
                             ';
-                        }
-
-                        echo '<br style="clear: both;" />';
+                            }
+                        } else {
+                            echo 'จำนวนทั้งหมด 0 ภาพ';
+                        } // END if
                         ?>
+                        <br style="clear: both;" />
                     </div>
 
                 </div>
             </div>
         </div>
 
-        <?php get_includes('footer'); ?>
+<?php get_includes('footer'); ?>
 
     </div>
     <!-- /.container -->
 
-    <?php get_includes('bootstrap-core'); ?>
+<?php get_includes('bootstrap-core'); ?>
 </body>
 </html>

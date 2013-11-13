@@ -45,7 +45,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             <!-- Special / Pr news -->
             <?php
             $sql = "SELECT * FROM tb_news 
-                WHERE type = ( 'special' OR 'pr' )
+                WHERE type = 'special' OR type = 'pr'
                 ORDER BY date DESC;";
             $result = mysql_query($sql);
             $p = mysql_fetch_array($result);

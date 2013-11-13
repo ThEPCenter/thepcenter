@@ -7,6 +7,7 @@ if (isset($_POST['edit_id'])) {
     $title = htmlspecialchars($_POST['title'], ENT_QUOTES);
     $date = date("Y-m-d", strtotime($_POST['date']));
     $featured_img = htmlspecialchars($_POST['featured_img'], ENT_QUOTES);
+    $content_short = htmlspecialchars($_POST['content_short'], ENT_QUOTES);
     $content_long = htmlspecialchars($_POST['content_long'], ENT_QUOTES);
     if (isset($_POST['new'])) {
         $new = $_POST['new'];
@@ -17,10 +18,10 @@ if (isset($_POST['edit_id'])) {
     $modified = date("Y-m-d H:i:s");
 
     $sql = "UPDATE tb_news 
-            SET type = '$type', title = '$title', date = '$date', featured_img = '$featured_img', content_long = '$content_long', new = '$new', gallery_id = $gallery_id, modified = '$modified'
+            SET type = '$type', title = '$title', date = '$date', featured_img = '$featured_img', content_short = '$content_short', content_long = '$content_long', new = '$new', gallery_id = $gallery_id, modified = '$modified'
             WHERE id = $id;";
     @mysql_query($sql) or die(mysql_error());
-    header("Location: ../views/pr_news.php?news_id=$id");
+    header("Location: ../views/activity-news.php?news_id=$id");
     exit();
 }
 
@@ -84,9 +85,14 @@ $p = mysql_fetch_array($result);
         });
     </script>
     <p>&nbsp;</p>
+    
+    <div class="form-group">
+        <label>เนื้อหาฉบับย่อ</label>
+        <textarea class="form-control" name="content_short" rows="4"><?php echo $p['content_short']; ?></textarea>
+    </div>
 
     <div class="form-group">
-        <label>เนื้อหา</label>
+        <label>เนื้อหาฉบับเต็ม</label>
         <textarea name="content_long">
             <?php echo htmlspecialchars_decode($p['content_long']); ?>
         </textarea>
@@ -133,41 +139,9 @@ $p = mysql_fetch_array($result);
         <p>&nbsp;</p>
         หรือ
         <!-- Link trigger modal -->
-        <a data-toggle="modal" href="#myModal">เพิ่มแกลอรีใหม่</a>
+        <a href="add-gallery.php">เพิ่มแกลอรีใหม่</a>
 
     </div>
-
-    <!-- Modal -->
-    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                </div>
-                <div class="modal-body">
-                    ...
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-            </div><!-- /.modal-content -->
-        </div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
-
-    <script>
-        $(function() {
-
-            var gal_id = $("#gallery_id[selected]").val();
-            $.get("<?php controll('show-gal'); ?>", {gallery_id: gal_id},
-            function(data) {
-                $("#show-gall").html(data);
-            }
-            );
-
-        });
-    </script>
 
     <p>&nbsp;</p>
     <button type="submit" class="btn btn-default">Submit</button> | <a href="../views/activity-news.php?news_id=<?php echo $p['id']; ?>" title="Cancel"><strong>Cancel</strong></a>
