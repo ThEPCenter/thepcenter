@@ -115,29 +115,25 @@ $p = mysql_fetch_array($result);
     ?>
     <div class="form-group">
         <label>แกลอรี</label>
-        <input type="text" id="gallery" name="gallery"  class="form-control" value="<?php echo htmlspecialchars_decode($g['title']); ?>" disabled> <br />
-        <input type="hidden" id="gal_id" name="gal_id" value="<?php echo $g['id'] ?>">
         <div id="show-gall"></div>
         <p>&nbsp;</p>
 
-        <!-- Link trigger modal -->
-        <a data-toggle="modal" href="#myModal">
-            เลือกแกลอรีอื่น
-        </a> 
+        เลือกแกลอรี<br>
 
-
-        <select class="form-control" name="gal" id="gal">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
+        <select class="form-control" name="gallery_id" id="gallery_id">
+            <?php
+            $sql_g = "SELECT * FROM tb_gallery;";
+            $result_g = mysql_query($sql_g);
+            while ($g = mysql_fetch_array($result_g)) {
+                echo '<option value="' . $g['id'] . '"' . opt_check($p['gallery_id'], $g['id']) . '>' . $g['title'] . '</option>';
+            }
+            ?>
         </select>
 
-        <script>
-
-        </script>
-
+        <p>&nbsp;</p>
         หรือ
-        <a href="gallery.php?add_gal=new" target="_blank">เพิ่มแกลอรีใหม่</a>
+        <!-- Link trigger modal -->
+        <a data-toggle="modal" href="#myModal">เพิ่มแกลอรีใหม่</a>
 
     </div>
 
@@ -162,26 +158,13 @@ $p = mysql_fetch_array($result);
 
     <script>
         $(function() {
-            $(document).ajaxStart(function() {
-                $('#show-gall').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
-            });
-            var gal_id = $("#gal_id").val();
+
+            var gal_id = $("#gallery_id[selected]").val();
             $.get("<?php controll('show-gal'); ?>", {gallery_id: gal_id},
             function(data) {
                 $("#show-gall").html(data);
             }
             );
-
-
-            $('select').change(function() {
-                var statusVal = $(this).val();
-                $.get("<?php controll('show-gal'); ?>", {gallery_id: statusVal},
-                function(data) {
-                    $("#show-gall").html(data);
-                }
-
-                });
-            });
 
         });
     </script>
