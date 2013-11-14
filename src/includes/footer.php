@@ -6,7 +6,9 @@
 
         <div class="col-xs-6 col-sm-3 col-md-3" >
             <ul>
-                <li><a href="home.php"><b>เกี่ยวกับศูนย์ ThEP</b></a></li>
+                <li class="li-head">เกี่ยวกับศูนย์ ThEP</li>
+                
+                <li>▪ <a href="home.php">หน้าหลัก</a></li>
 
                 <li>▪ <a href="about-us.php">แนวทางของศูนย์</a></li>
 
@@ -23,7 +25,7 @@
 
         <div class="col-xs-6 col-sm-3 col-md-3" >
             <ul>
-                <li><a href="#"><b>สำนักงานกลาง</b></a></li>
+                <li class="li-head">สำนักงานกลาง</li>
 
                 <li>▪ <a href="location.php">ที่ตั้งหน่วยงาน</a></li>
 
@@ -43,7 +45,7 @@
         <div class="col-xs-6 col-sm-3 col-md-3" >
             <ul>
 
-                <li><a href="#"><b>หมาวิทยาลัย...</b></a></li>
+                <li class="li-head">หมาวิทยาลัย...</li>
 
                 <li>▪ <a href="http://www.cmu.ac.th" target="_blank">มหาวิทยาลัยเชียงใหม่</a></li>
 
@@ -73,7 +75,7 @@
         <div class="col-xs-6 col-sm-3 col-md-3">
             <ul>
                 
-                <li><a href="#"><b>ฟิสิกส์กับสังคม</b></a></li>
+                <li class="li-head">ฟิสิกส์กับสังคม</li>
 
                 <li>▪ <a href="industrial.php">ฟิสิกส์อุตสาหกรรม</a></li>
 

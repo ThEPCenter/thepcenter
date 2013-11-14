@@ -1,5 +1,6 @@
 <?php
 require_once '../system/system.php';
+notlogin_header('home.php');
 
 if ($_POST) {
     $gallery_id = $_POST['gallery_id'];
@@ -15,7 +16,7 @@ if ($_POST) {
             $size = $_FILES[$upl]['size'];
             $dir = '../img/picture'; // The directory that you want to download the file into it.
             $path = $dir . '/' . $new_file_name;
-            $modified = date('m/d/Y h:i:s a');
+            $modified = date("Y-m-d H:i:s");
             if (file_exists($dir)) {
                 if (move_uploaded_file($file, $path)) { //upload file to path folder
                     $sql = "INSERT INTO 
@@ -92,53 +93,11 @@ $g = mysql_fetch_array($re_g);
 
         </div>
 
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="text-center">_blank</h2>
-                <div style="margin-left: 15px;">
-                    <h3><?php echo htmlspecialchars_decode($g['title']); ?></h3>
-                    <p><?php echo htmlspecialchars_decode($g['detail']); ?></p>
-                    <hr />
-                    <div class="image-set">
-                        <?php
-                        $sql_p = "SELECT * FROM tb_picture WHERE gallery_id = $gal_id;";
-                        $result_p = mysql_query($sql_p);
-
-                        echo '<p>&nbsp;<a href="edit_gallery.php?edit_gal=' . $g['id'] . '"><i class="icon-wrench"></i>แก้ไขแกลอรี</a></p> ';
-                        if (!empty($result_p)) {
-                            $no_p = mysql_num_rows($result_p);
-                            $i = 0;
-                            while ($p = mysql_fetch_array($result_p)) {
-                                $i++;
-                                echo '
-                                <div style="width: auto; height: 127px; float: left; margin-left: 15px;">
-                                    <div>
-                                        <a href="../img/picture/' . $p['name'] . '" data-lightbox="' . $g['title'] . '" title="' . $p['caption'] . '">
-                                            <img class="example-image" src="../img/picture/' . $p['name'] . '" alt="image ' . $i . ' 0f ' . $no_p . ' thumb" height="100"/>
-                                        </a>                          
-                                    </div>
-                                    <div>
-                                        <a href="edit_picture.php?edit_pic=' . $p['id'] . '"><i class="icon-wrench"></i>แก้ไขภาพนี้</a>
-                                    </div>
-                                </div>
-                            ';
-                            }
-                        } else {
-                            echo 'จำนวนทั้งหมด 0 ภาพ';
-                        } // END if
-                        ?>
-                        <br style="clear: both;" />
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-<?php get_includes('footer'); ?>
+        <?php get_includes('footer'); ?>
 
     </div>
     <!-- /.container -->
 
-<?php get_includes('bootstrap-core'); ?>
+    <?php get_includes('bootstrap-core'); ?>
 </body>
 </html>

@@ -1,5 +1,6 @@
 <?php
 require_once '../system/system.php';
+notlogin_header('home.php');
 
 if ($_POST) {
     $title = htmlspecialchars($_POST['title'], ENT_QUOTES);

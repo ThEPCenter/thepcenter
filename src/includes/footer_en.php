@@ -7,7 +7,9 @@
 
         <div class="col-xs-6 col-sm-3 col-md-3" >
             <ul>
-                <li><a href="#"><b>About ThEP</b></a></li>
+                <li class="li-head">About ThEP</li>
+                
+                <li>▪ <a href="home_en.php">Home</a></li>
 
                 <li>▪ <a href="about_en.php">Approach</a></li>
 
@@ -24,7 +26,7 @@
 
         <div class="col-xs-6 col-sm-3 col-md-3" >
             <ul>
-                <li><a href="#"><b>ThEP Office</b></a></li>
+                <li class="li-head">ThEP Office</li>
 
                 <li>▪ <a href="location_en.php">Location & Map</a></li>
 
@@ -43,7 +45,7 @@
 
         <div class="col-xs-6 col-sm-3 col-md-3" >
             <ul>
-                <li><a href="#"><b>Universities</b></a></li>
+                <li class="li-head">Universities</li>
 
                 <li>▪ <a href="http://www.cmu.ac.th/index_eng.php" target="_blank">Chiang Mai University</a></li>
 
@@ -72,7 +74,7 @@
 
         <div class="col-xs-6 col-sm-3 col-md-3">
             <ul>
-                <li><a href="#"><b>Physics and Social</b></a></li>
+                <li class="li-head">Physics and Social</li>
 
                 <li>▪ <a href="industrial_en.php">Industrial Physics.</a></li>
 

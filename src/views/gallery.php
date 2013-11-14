@@ -42,8 +42,9 @@ doc_head('Gallery');
                             height: 195px;">
                             </a>    
                         </div>
-                        <p>' . $p['caption'] . '</p>
-                        <a href="edit-picture.php?edit_id=' . $p['id'] . '"><small>Edit picture</small></a>
+                        <p>' . $p['caption'] . '<br>
+                            <a href="edit-picture.php?edit_id=' . $p['id'] . '">Edit Picture</a>
+                        </p>
                     </div>
                 </div>
                         ';
@@ -55,7 +56,10 @@ doc_head('Gallery');
             <div class="row">
                 <div class="col-md-12">
                     จำนวนทั้งหมด <?php echo $pic_no; ?> ภาพ | 
-                    <a href="gallery.php">กลับหน้าแกลอรี</a></div>
+                    <a href="gallery.php">กลับหน้าแกลอรี</a> | 
+                    <a href="edit-gallery.php?edit_id=<?php echo $gal_id; ?>">Edit</a> | 
+                    <a href="add-picture.php?gallery_id=<?php echo $gal_id; ?>">Add picture</a>
+                </div>
             </div>
 
 
@@ -88,10 +92,10 @@ doc_head('Gallery');
                         </div>
                         <div style="max-width: 195px;">
                             <p>
-                            <a href="gallery.php?gal_id=' . $gal['id'] . '"><small>' . $gal['title'] . '...</small></a><br>
-                            <small>' . $pic_no . ' ภาพ</small> | 
-                            <a href="edit-gallery.php?edit_id=' . $gal['id'] . '">Edit</a> | 
-                            <a href="add-picture.php?gallery_id=' . $gal['id'] . '">Add picture</a>
+                                <a href="gallery.php?gal_id=' . $gal['id'] . '"><small>' . $gal['title'] . '...</small></a><br>
+                                <small>' . $pic_no . ' ภาพ</small> | 
+                                <a href="edit-gallery.php?edit_id=' . $gal['id'] . '">Edit</a> | 
+                                <a href="add-picture.php?gallery_id=' . $gal['id'] . '">Add picture</a>
                             </p>
                         </div>
                     </div>

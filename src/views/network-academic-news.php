@@ -29,7 +29,7 @@ $news_type = 'network-academic';
                 if ($p['type'] != 'network-academic') {
                     echo '
                     <script>
-                        window.location = \'network-academic-news.php\';
+                        window.location = "network-academic-news.php";
                     </script>     
                     ';
                 }
@@ -53,16 +53,18 @@ $news_type = 'network-academic';
                       ';
                     ?>
                     <script>
-                        $(function(){
-                            $('#edit-news').click(function(){
-                                $(document).ajaxStart(function(){
+                        $(function() {
+                            $('#edit-news').click(function() {
+                                $(document).ajaxStart(function() {
                                     $('#show-news').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
                                 });
-                                $.get("<?php controll('edit-network-news'); ?>", {edit_news: "<?php echo $p['id']; ?>"}, 
-                                function(data){ $('#show-news').html(data); }
-                            );
+                                $.get("<?php controll('edit-network-news'); ?>", {edit_news: "<?php echo $p['id']; ?>"},
+                                function(data) {
+                                    $('#show-news').html(data);
+                                }
+                                );
                             });
-                                                                                                                                                
+
                         });
                     </script>
                 </div>
@@ -101,16 +103,18 @@ $news_type = 'network-academic';
                     ?>
 
                     <script>
-                        $(function(){         
-                            $("#add-news").click(function(){
-                                $(document).ajaxStart(function(){
+                        $(function() {
+                            $("#add-news").click(function() {
+                                $(document).ajaxStart(function() {
                                     $("#show-news").html("<div class=\"span12 text-center\" ><img src=\"../images/demo_wait.gif\"></div>");
                                 });
-                                $.get("<?php controll('add-news'); ?>", {add_news: "<?php echo $news_type; ?>"}, 
-                                function(data){ $("#show-news").html(data); }
-                            );
+                                $.get("<?php controll('add-news'); ?>", {add_news: "<?php echo $news_type; ?>"},
+                                function(data) {
+                                    $("#show-news").html(data);
+                                }
+                                );
                             });
-                                                                    
+
                         });
                     </script>
 
@@ -148,7 +152,6 @@ $news_type = 'network-academic';
 
     <?php get_includes('bootstrap-core'); ?>
     <script src="../plugins/jqueryui/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
-    <!-- CKEditor -->    
-    <script src="../plugins/ckeditor/ckeditor.js"></script>
+
 </body>
 </html>

@@ -29,7 +29,7 @@ $news_type = 'network-academic';
                 if ($p['type'] != 'network-academic') {
                     echo '
                     <script>
-                        window.location = \'network-academic-news.php\';
+                        window.location = "network-academic-news.php";
                     </script>     
                     ';
                 }
@@ -47,7 +47,7 @@ $news_type = 'network-academic';
                     admin($admin_txt);
                     echo '
                                 <h2>' . htmlspecialchars_decode($p['title_en']) . '</h2>
-                                <p><small><em>' . thai_date($p['date']) . '</small></em></p>
+                                <p><small><em>' . date("F j, Y.", strtotime($p['date'])) . '</small></em></p>
                                 ' . htmlspecialchars_decode($p['content_long_en']) . '
                             </div>
                       ';

@@ -158,14 +158,6 @@ function admin($yes, $no = '') {
     }
 }
 
-function space($n) {
-    $sp = '';
-    for ($i = 0; $i < $n; $i++) {
-        $sp .= '&nbsp;';
-    }
-    echo $sp;
-}
-
 function header_redirect($location) {
     header("Location: $location");
     exit();
@@ -235,28 +227,6 @@ function name_news($news_type) {
             return 'ไม่พบข้อมูล';
             break;
     }
-}
-
-// ================== Counter ==================
-function visitor_counter() {
-    $sessionid = session_id();
-
-    $counter_id = "SELECT id FROM counter WHERE  sessionid = '$sessionid'  "; // Show All		
-    $result = mysql_query($counter_id) or die(mysql_error());
-    $rs = mysql_fetch_array($result);
-    $counterid = $rs["id"];
-
-    $now = date("Y-m-d H:i:s");
-    if (!$result) {
-        $sql = "INSERT INTO counter (`sessionid` ,`created` ,`updated`) VALUES ( '$sessionid','$now','$now')";
-        mysql_query($sql);
-    }
-
-    $countershow = "SELECT id FROM counter ORDER BY id DESC"; // Show All		
-    $result = mysql_query($countershow) or die(mysql_error());
-    $rs = mysql_fetch_array($result);
-    $counter = $rs["id"];
-    $counter = number_format($counter, 0, '', ',');
 }
 
 ?>

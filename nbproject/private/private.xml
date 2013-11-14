@@ -4,11 +4,17 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/AppServ/www/thepcenter/src/views/gallery.php</file>
-            <file>file:/C:/AppServ/www/thepcenter/src/controllers/edit-activity-news.php</file>
-            <file>file:/C:/AppServ/www/thepcenter/src/views/add-gallery.php</file>
-            <file>file:/C:/AppServ/www/thepcenter/src/views/add-picture.php</file>
-            <file>file:/C:/AppServ/www/thepcenter/src/views/home.php</file>
             <file>file:/C:/AppServ/www/thepcenter/src/views/edit-picture.php</file>
+            <file>file:/C:/AppServ/www/thepcenter/src/system/config.php</file>
+            <file>file:/C:/AppServ/www/thepcenter/src/style/main.css</file>
+            <file>file:/C:/AppServ/www/thepcenter/src/views/add-picture.php</file>
+            <file>file:/C:/AppServ/www/thepcenter/src/views/logout.php</file>
+            <file>file:/C:/AppServ/www/thepcenter/src/includes/header.php</file>
+            <file>file:/C:/AppServ/www/thepcenter/src/system/functions.php</file>
+            <file>file:/C:/AppServ/www/thepcenter/src/includes/home-header.php</file>
+            <file>file:/C:/AppServ/www/thepcenter/src/includes/header_en.php</file>
+            <file>file:/C:/AppServ/www/thepcenter/src/includes/footer_en.php</file>
+            <file>file:/C:/AppServ/www/thepcenter/src/includes/footer.php</file>
         </group>
     </open-files>
 </project-private>

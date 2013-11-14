@@ -6,7 +6,7 @@
 
 <div class="row">
     <div class="col-xs-6 col-sm-6 col-md-6"><p><a href="home.php">หน้าหลัก</a></p></div>
-    <div class="col-xs-6 col-sm-6 col-md-6 text-right" style="padding-right: 20px;"><a title="เว็บฉบับภาษาไทย" href="home.php"><img style="width: 30px;" src="../images/thailand-flag.gif"></a> <a title="English version" href="home_en.php"><img style="width: 30px;" src="../images/en_ver.gif"></a></div>
+    <div class="col-xs-6 col-sm-6 col-md-6 text-right" style="padding-right: 20px;"><?php login('<strong>สวัสดี ' . $_SESSION['login'] . '</strong> | <a href="logout.php">Logout</a>'); ?> <a title="เว็บฉบับภาษาไทย" href="home.php"><img style="width: 30px;" src="../images/thailand-flag.gif"></a> <a title="English version" href="home_en.php"><img style="width: 30px;" src="../images/en_ver.gif"></a></div>
 </div>
 
 <!-- /#header -->
