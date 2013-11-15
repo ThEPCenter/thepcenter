@@ -307,12 +307,12 @@ INSERT INTO `tb_picture` VALUES (75, '681b10e8.jpg', 'ภาพบรรยา�
 INSERT INTO `tb_picture` VALUES (76, '0685bc65.jpg', 'บรรยากาศในห้องประชุม', 12, 1, 'image/jpeg', 46177, 'img/picture', '10/08/2013 10:36:49 am');
 INSERT INTO `tb_picture` VALUES (77, '468f008d.jpg', 'บรรยากาศในห้องประชุม', 12, 1, 'image/jpeg', 59087, 'img/picture', '10/08/2013 02:06:48 pm');
 INSERT INTO `tb_picture` VALUES (78, '15614ab.jpg', 'บรรยากาศในห้องประชุม', 12, 1, 'image/jpeg', 54801, 'img/picture', '10/08/2013 02:08:09 pm');
-INSERT INTO `tb_picture` VALUES (79, '6da1d3f9.jpg', '1', 13, 1, 'image/jpeg', 71231, '../img/picture', '11/13/2013 04:20:26 pm');
-INSERT INTO `tb_picture` VALUES (80, '886b5177.jpg', '2', 13, 1, 'image/jpeg', 59293, '../img/picture', '11/13/2013 04:20:26 pm');
-INSERT INTO `tb_picture` VALUES (81, '84d6c118.jpg', '3', 13, 1, 'image/jpeg', 63582, '../img/picture', '11/13/2013 04:20:26 pm');
-INSERT INTO `tb_picture` VALUES (82, '1e90dfd3.jpg', '4', 13, 1, 'image/jpeg', 52865, '../img/picture', '11/13/2013 04:20:26 pm');
-INSERT INTO `tb_picture` VALUES (83, '500de999.jpg', '5', 13, 1, 'image/jpeg', 46290, '../img/picture', '11/13/2013 04:20:26 pm');
-INSERT INTO `tb_picture` VALUES (84, 'a00e67c5.jpg', '6', 13, 1, 'image/jpeg', 48978, '../img/picture', '11/13/2013 04:20:26 pm');
+INSERT INTO `tb_picture` VALUES (79, '6da1d3f9.jpg', '1', 13, 1, 'image/jpeg', 71231, '../img/picture', '2013-11-14 17:30:54');
+INSERT INTO `tb_picture` VALUES (80, '886b5177.jpg', '2', 13, 1, 'image/jpeg', 59293, '../img/picture', '2013-11-14 17:30:01');
+INSERT INTO `tb_picture` VALUES (81, '84d6c118.jpg', '3', 13, 1, 'image/jpeg', 63582, '../img/picture', '2013-11-14 17:30:21');
+INSERT INTO `tb_picture` VALUES (82, '1e90dfd3.jpg', '4', 13, 1, 'image/jpeg', 52865, '../img/picture', '2013-11-14 17:30:25');
+INSERT INTO `tb_picture` VALUES (83, '500de999.jpg', '5', 13, 1, 'image/jpeg', 46290, '../img/picture', '2013-11-14 17:30:30');
+INSERT INTO `tb_picture` VALUES (84, 'a00e67c5.jpg', '6', 13, 1, 'image/jpeg', 48978, '../img/picture', '2013-11-14 17:30:35');
 
 -- --------------------------------------------------------
 

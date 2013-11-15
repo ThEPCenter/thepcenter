@@ -5,16 +5,7 @@
         <group>
             <file>file:/C:/AppServ/www/thepcenter/src/views/gallery.php</file>
             <file>file:/C:/AppServ/www/thepcenter/src/views/edit-picture.php</file>
-            <file>file:/C:/AppServ/www/thepcenter/src/system/config.php</file>
-            <file>file:/C:/AppServ/www/thepcenter/src/style/main.css</file>
-            <file>file:/C:/AppServ/www/thepcenter/src/views/add-picture.php</file>
-            <file>file:/C:/AppServ/www/thepcenter/src/views/logout.php</file>
-            <file>file:/C:/AppServ/www/thepcenter/src/includes/header.php</file>
-            <file>file:/C:/AppServ/www/thepcenter/src/system/functions.php</file>
-            <file>file:/C:/AppServ/www/thepcenter/src/includes/home-header.php</file>
-            <file>file:/C:/AppServ/www/thepcenter/src/includes/header_en.php</file>
-            <file>file:/C:/AppServ/www/thepcenter/src/includes/footer_en.php</file>
-            <file>file:/C:/AppServ/www/thepcenter/src/includes/footer.php</file>
+            <file>file:/C:/AppServ/www/thepcenter/src/views/edit-gallery.php</file>
         </group>
     </open-files>
 </project-private>
