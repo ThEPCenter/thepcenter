@@ -339,8 +339,23 @@ doc_head($center);
                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;องค์ความรู้ทางฟิสิกส์และเทคโนโลยีของลำอนุภาคและพลาสมาจึงมีคุณค่าทางวิชาการสูง ที่ให้ทั้งผลประโยชน์ทางธุรกิจ และจะเป็นหนทางรอดของโลกอนาคต
                 </p>
                 <p>&nbsp;</p>
-                <h3>องค์ประกอบของศูนย์วิจัย PPP</h3>
-                <img src="../images/cluster2/ppp-map3.jpg">
+
+                <div class="col-md-6" style="text-align: center;">
+                    <h3>องค์ประกอบของศูนย์วิจัย PPP</h3>
+                    <img style="max-width: 100%; height: auto;" src="../images/cluster2/ppp-map3.jpg">
+                </div>
+                <div class="col-md-6">
+                    <h3 style="text-align: center;">ลิงค์ข้อมูลของแต่ละห้องปฏิบัติการวิจัย</h3>
+                    <ol>
+                        <li><a href="ppp-lab.php?lab=ion_beam">ห้องปฏิบัติการวิจัยด้านลำไอออนและการประยุกต์</a></li>
+                        <li><a href="ppp-lab.php?lab=femtosecond">ห้องปฏิบัติการวิจัยลำอิเล็กตรอนและโฟตอนห้วงเฟมโตวินาที</a></li>
+                        <li><a href="ppp-lab.php?lab=plasma_bio">ห้องปฏิบัติการวิจัยพลาสมาไบโอและพลังงานสะอาด</a></li>
+                        <li><a href="">ห้องปฏิบัติการวิจัยพลาสมาและเทคโนโลยีวัสดุขั้นสูง</a></li>
+                        <li><a href="">ห้องปฏิบัติการวิจัยพลาสมาสำหรับวิทยาศาสตร์พื้นผิว</a></li>
+                        <li><a href="">ห้องปฏิบัติการวิจัยเทคโนโลยีพลาสมาเพื่อการประยุกต์ทางกสิกรรม</a></li>
+                        <li><a href="">ห้องปฏิบัติการวิจัยวิทยาศาสตร์และเทคโนโลยีเมมเบรน</a></li>
+                    </ol>
+                </div>
 
                 <?php
             } elseif ($show_center == 'NSP') {
