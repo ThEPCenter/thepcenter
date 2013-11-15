@@ -68,16 +68,18 @@ doc_head('ข่าวกิจกรรม');
                     admin('<p><a id="edit-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-wrench"></span> Edit</a></p>');
                     ?>
                     <script>
-                        $(function(){
-                            $('#edit-news').click(function(){
-                                $(document).ajaxStart(function(){
+                        $(function() {
+                            $('#edit-news').click(function() {
+                                $(document).ajaxStart(function() {
                                     $('#show-news').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
                                 });
-                                $.get("<?php controll('edit-activity-news'); ?>", {edit_news: "<?php echo $n['id']; ?>"}, 
-                                function(data){ $('#show-news').html(data); }
-                            );
+                                $.get("<?php controll('edit-activity-news'); ?>", {edit_news: "<?php echo $n['id']; ?>"},
+                                function(data) {
+                                    $('#show-news').html(data);
+                                }
+                                );
                             });
-                                                                                                        
+
                         });
                     </script>  
 
@@ -91,7 +93,7 @@ doc_head('ข่าวกิจกรรม');
                     ?>
                     <p>&nbsp;</p>
 
-                    <div style="margin-left: 15px;">
+                    <div>
                         <div class="image-set">
                             <?php
                             $sql_p = "SELECT * FROM tb_picture WHERE gallery_id = {$n['gallery_id']};";
@@ -107,9 +109,9 @@ doc_head('ข่าวกิจกรรม');
                         <img class="example-image" src="../images/pixel-vfl3z5WfW.gif" alt="image ' . $i . ' 0f ' . $no_p . ' thumb" 
                             style="vertical-align: middle; 
                             background: no-repeat white url(../img/picture/' . $p['name'] . ') -50px 0; 
-                            background-size: 130px auto; 
-                            width: 65px;
-                            height: 65px;">                            
+                            background-size: 240px auto; 
+                            width: 160px;
+                            height: 160px;">                            
                     </a>                      
                         ';
                                 } // END while
@@ -118,7 +120,7 @@ doc_head('ข่าวกิจกรรม');
                             </div>
 
                             <p>จำนวนทั้งหมด <?php echo $no_p; ?> ภาพ</p>
-                        <?php } // END if (!empty($result_p))  ?>
+    <?php } // END if (!empty($result_p))   ?>
                         <p>&nbsp;</p>
                         <p><a href="home.php">กลับหน้าหลัก</a> | <a href="activity-news.php">ไปหน้าข่าวกิจกรรม</a></p>
                     </div>
@@ -158,16 +160,18 @@ doc_head('ข่าวกิจกรรม');
                 admin($admin_txt);
                 ?>
                 <script>
-                    $(function(){         
-                        $("#add-news").click(function(){
-                            $(document).ajaxStart(function(){
+                    $(function() {
+                        $("#add-news").click(function() {
+                            $(document).ajaxStart(function() {
                                 $("#show-news").html("<div class=\"span12 text-center\" ><img src=\"../images/demo_wait.gif\"></div>");
                             });
-                            $.get("<?php controll('add-news'); ?>", {add_news: "<?php echo $news_type; ?>"}, 
-                            function(data){ $("#show-news").html(data); }
-                        );
+                            $.get("<?php controll('add-news'); ?>", {add_news: "<?php echo $news_type; ?>"},
+                            function(data) {
+                                $("#show-news").html(data);
+                            }
+                            );
                         });
-                                                                            
+
                     });
                 </script>
                 <?php
@@ -214,17 +218,17 @@ doc_head('ข่าวกิจกรรม');
                     ?>
                 </table>
 
-                <?php
-            } // END if GET else 
-            ?>
-        </div>
-        <?php
-        get_includes('footer');
+            <?php
+        } // END if GET else 
         ?>
+        </div>
+<?php
+get_includes('footer');
+?>
 
     </div>    
     <!-- /.container -->    
-    <?php get_includes('bootstrap-core'); ?>
+<?php get_includes('bootstrap-core'); ?>
     <!-- Lightbox JavaScript
 ================================================== -->
     <script src="<?php plugins('lightbox2.6/lightbox/js/lightbox-2.6.min.js'); ?>"></script>

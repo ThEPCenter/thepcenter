@@ -13,7 +13,7 @@
 
                 <li>▪ <a href="about_en.php">Approach</a></li>
 
-                <li>▪ <a href="history_en">History</a></li>
+                <li>▪ <a href="history_en.php">History</a></li>
 
                 <li>▪ <a href="vision_en.php">Vision</a></li>
 

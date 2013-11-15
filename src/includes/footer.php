@@ -12,7 +12,7 @@
 
                 <li>▪ <a href="about-us.php">แนวทางของศูนย์</a></li>
 
-                <li>▪ <a href="history">ประวัติความเป็นมา</a></li>
+                <li>▪ <a href="history.php">ประวัติความเป็นมา</a></li>
 
                 <li>▪ <a href="vision.php">วิสัยทัศน์ พันธกิจ</a></li>
 
