@@ -202,9 +202,9 @@ doc_head('ข่าวกิจกรรม');
                                             <img class="example-image" src="../images/pixel-vfl3z5WfW.gif" alt="image ' . $i . ' 0f ' . $no_p . ' thumb" 
                             style="vertical-align: middle; 
                             background:no-repeat #ccc url(../img/picture/' . $pic['name'] . ') -40px 0; 
-                            background-size: 130px auto; 
-                            width: 65px;
-                            height: 65px;">                            
+                            background-size: 132px auto; 
+                            width: 86px;
+                            height: 86px;">                            
                                     </a>
                                     </td>
                                     <td><a href="activity-news.php?news_id=' . $a['id'] . '">' . $a['title'] . '</a><br> 
