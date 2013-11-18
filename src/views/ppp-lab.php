@@ -176,7 +176,7 @@ $lab = $_GET['lab'];
                 <p>&nbsp;</p>
 
                 <h3>จ) คณะทำงาน</h3>
-                <table>
+                <table style="margin-left: 24px;">
                     <tr style="vertical-align: top;">
                         <td>
                             นักวิจัย :
@@ -325,7 +325,7 @@ $lab = $_GET['lab'];
                 <p>&nbsp;</p>
 
                 <h3>ง) คณะทำงาน</h3>
-                <table>
+                <table style="margin-left: 24px;">
                     <tr style="vertical-align: top;">
                         <td>
                             นักวิจัย :
@@ -528,7 +528,7 @@ $lab = $_GET['lab'];
                 <p>&nbsp;</p>
 
                 <h3>จ) คณะทำงาน</h3>
-                <table>
+                <table style="margin-left: 24px;">
                     <tr style="vertical-align: top;">
                         <td>
                             นักวิจัย :
@@ -608,9 +608,918 @@ $lab = $_GET['lab'];
                 </p>
 
             </div>
+        <?php } elseif ($lab == 'plasma_advanced') {
+            ?>
+
+            <div class="row">
+                <h2 class="text-center">ห้องปฏฺบัติการวิจัยพลาสมาและเทคโนโลยีวัสดุขั้นสูง<br>
+                    (Plasma and Advanced Materials Technology Research Laboratory)
+                </h2>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เทคโนโลยีด้านพลาสมามีบทบาทในวงการอุตสาหกรรมปัจจุบันหลายแขนง มีการประยุกต์ใช้พลาสมา ในอุตสาหกรรมอิเล็กทรอ นิกส์  คอมพิวเตอร์ สารกึ่งตัวนำ อัญมณีและเครื่องประดับ การขจัดของเสียและมลภาวะ อุตสาหกรรมเคมีภัณฑ์และพลาสติก  งานโลหะ และเซรามิก ตลอดจนการใช้งาน ในการแพทย์ และชีวโมเลกุล  และสาขาอื่นอีกมาก 
+                    หน่วยวิจัยพลาสมาและเทคโนโลยีสสารชั้นสูง (Plasma and Advanced Materials Technology Research Unit) คณะวิทยาศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย เริ่มต้นจากการจัดตั้งเป็นห้องปฏิบัติการวิจัยพลาสมา เมื่อเดือนพฤษภาคม 2543 และได้ขยายขึ้นเป็นหน่วยวิจัยพลาสมาและเทคโนโลยีสสารชั้นสูง นับแต่ปี 2550 ในปี 2552 หน่วยวิจัยมีคณาจารย์และนักวิจัย 8 ท่าน ซึ่งได้ทำงานวิจัยโดยมีความก้าวหน้า และประสบความสำเร็จในการประยุกต์ใช้พลาสมาในอุตสาหกรรมต่าง ๆ อย่างต่อเนื่องมาโดยตลอด</p>
+
+                <h3>(ก) ขอบเขต</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;งานวิจัยของหน่วยวิจัยครอบคลุมในประเด็นหลัก ดังนี้คือ พลาสมาฟิสิกส์, พลาสมาเชิงประยุกต์, พลาสมาในปฏิกิริยานิวเคลียร์, การสังเคราะห์วัสดุและฟิล์มบางด้วยกระบวนการไอเชิงเคมีและเชิงฟิสิกส์ด้วยพลาสมา การปรับเปลี่ยนคุณลักษณะสสาร และการตรวจสอบสสารด้วยกระบวนการทางพลาสมา ผลของกระบวนการพลาสมาต่อพอลิเมอร์และเส้นใย ผลของกระบวนการพลาสมาและรังสีที่มีต่อสารอินทรีย์ จุลชีพ และหน่วยชีวภาพ ตลอดจนการประยุกต์ใช้เทคโนโลยีด้านพลาสมาในอุตสาหกรรมต่าง ๆ
+                    ขอบเขตการดำเนินงานหน่วยวิจัยโดยรวมประกอบไปด้วย</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1) การวิจัยเชิงพื้นฐานในพลาสมาฟิสิกส์เชิงลึก โดยเน้นการสร้างฐานความรู้เกี่ยวกับพลาสมา จากการศึกษาทั้งในด้านทฤษฏีและการทดลองเพื่อให้เกิดความเข้าใจเชิงลึก เกี่ยวกับฟิสิกส์ของพลาสมา โดยมีเป้าหมายเพื่อการผลิตบัณฑิตทั้งในระดับ ปริญญาตรี โท และเอก</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2) การวิจัยเชิงประยุกต์ในการสร้างองค์ความรู้และความเข้าใจใหม่ ๆ ในกระบวนการที่ พลาสมามีต่อวัสดุ อาทิ โลหะ พอลิเมอร์ สิ่งทอ และ กระดาษ   รวมถึงการสร้าง ความเข้าใจในผลทั้งด้านเคมี และฟิสิกส์ของพลาสมาที่มีต่อการสังเคราะห์ หรือผลต่อการปรับแปรพื้นผิวของสสารอื่น ๆ ทั้งที่มีแนวโน้มจะเกิดความต้องการในตลาดโลก และที่เป็นของพื้นถิ่น โดยแสวงหา และประสานความร่วมมือกับหน่วยวิจัยในสาขาวิชาแขนงอื่นทั้งในและต่างประเทศ</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3) การวิจัยเชิงพัฒนาเพื่อสร้างองค์ความรู้ จนให้สามารถพัฒนาเทคโนโลยีของตนเองทางระบบพลาสมาสำหรับการผลิตในระดับงานอุตสาหกรรม (mass production) จากการผสมผสานความรู้ที่มีในด้านพลาสมาของระบบทั้งในกระบวนการไอเชิงเคมี (chemical vapor process) และไอเชิงกายภาพ (physical vapor process) ทั้งในแง่การปรับปรุงตัวอย่างและการสร้างผลิตภัณฑ์ใหม่ ตลอดจนการทดสอบ เพื่อหาสภาวะที่เหมาะสมภายในระบบที่จัดสร้างขึ้น ทั้งนี้เพื่อวัตถุประสงค์ในการยกระดับความสามารถในการแข่งขันของอุตสาหกรรมภายในประเทศ</p>
+
+                <h3>(ข) เครื่องมือที่เกี่ยวข้อง</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หน่วยวิจัยมีเครื่องมือ และอุปกรณ์ต่าง ๆ ที่จำเป็นในการทำการวิจัย โดยเฉพาะระบบต้นแบบ 
+                    ปฏิกรณ์พลาสมาที่ออกแบบและสร้างขึ้นเองในหน่วยวิจัยเพื่อการวิจัยที่หลากหลาย อาทิ ระบบ Modified Plasma Focus, ระบบ Radio Frequency Inductively Coupled Plasma Reactor, ระบบ Radio Frequency Transformerly-Coupled Discharge Reactor, ระบบ Compact Magnetron Sputtering System, ระบบ Microwave Resonance Cavity Plasma Reactor, ระบบ Compact Microwave Resonance Cavity Plasma Reactor, ระบบ Microwave Plasma Wave Guide Slot Reactor, ระบบ AC Plasma Reactor, เครื่อง Nuclear Magnetic Resonance Didactic System</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เครื่อง Parameter Analyzer, เครื่อง Plasma Emission Spectrometer, เครื่อง Tunneling Electron Microscope ตลอดจนครุภัณฑ์ด้านอิเล็กทรอนิกส์ต่าง ๆ ช่น Digital Storage Scope, LCR System, Lock-ins Amplifier และ อื่น ๆ</p>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity4/1.png"><br>
+                    <small>ระบบ Radio Frequency Inductively Coupled Plasma Reactor และ Radio Frequency Transformerly-Coupled Discharge Reactor</small>
+                </div>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity4/2.png"><br>
+                    <small>ระบบ Radio Frequency Inductively Coupled Plasma Reactor ระหว่างการตรวจสอบตัวแปรพลาสมาด้วย Plasma Emission Spectrometer</small>
+                </div>
+
+                <br style="clear: both;">
+                <p>&nbsp;</p>
+
+                <p class="text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity4/3.png"><br>
+                    <small>แสดงพลาสมาของแก๊สไนโตรเจนภายในเครื่อง Radio Frequency Inductively Coupled Plasma Reactor (ซ้าย) และของแก๊สอาร์กอนในเครื่อง AC Plasma Reactor (ขวา)</small>
+                </p>
+                <p>&nbsp;</p>
+
+                <p class="text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity4/4.png"><br>
+                    <small>ระบบ Microwave Resonance Cavity Plasma Reactor และ Compact Magnetron Sputtering System</small>
+                </p>
+                <p>&nbsp;</p>
+
+                <p class="text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity4/5.png"><br>
+                    <small>ระบบ Compact Microwave Resonance Cavity Plasma Reactor (ซ้าย) และนิสิตในระหว่างการสร้างเครื่อง Microwave Plasma Wave Guide Slot Reactor (ขวา)</small>
+                </p>
+                <p>&nbsp;</p>
+
+                <h3>(ค) เป้าหมายและแนวทางของงานวิจัยในปัจจุบัน</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หน่วยวิจัยมุ่งเน้นในงานวิจัยซึ่งเกี่ยวกับการสังเคราะห์ การปลูกผลึก การวิเคราะห์สมบัติเฉพาะต่างๆ ของวัสดุชนิดใหม่ๆ โดยเฉพาะที่อาศัยเทคโนโลยีทางด้านพลาสมาในการสังเคราะห์ รวมถึงการนำวัสดุนั้นไปประดิษฐ์เป็นอุปกรณ์และประยุกต์ใช้ในอุตสาหกรรม โดยจะเน้นไปที่วัสดุประเภทฟิล์มบางและชั้นวัสดุ (thin films and layers) ของวัสดุของแข็ง (solid materials) ซึ่งมีแนวโน้มสามารถนำไประยุกต์ใช้งานจริงทั้งในด้านอุตสาหกรรมการแพทย์ และอิเล็กทรอนิกส์ชั้นสูง โดยจะอาศัยสมบัติเฉพาะของวัสดุนั้น ในการเพิ่มประสิทธิภาพหรือปรับเปลี่ยนคุณลักษณะให้ดีขึ้นในการนำไปใช้งานในด้านต่าง ๆ อาทิ ในการเพิ่มอายุการใช้งานและความทนทาน ในการประหยัดพลังงาน ในการเข้ากันทางชีวภาพ (biocompatible) เป็นต้น งานวิจัยของหน่วยวิจัยในปัจจุบันอาจแบ่งออกได้เป็น 4 แนวทาง ตามลักษณะการนำไปประยุกต์ใช้งาน ดังนี้</p>
+                <p>(1)  งานวิจัยด้านเทคโนโลยีพลาสมาและการประยุกต์ใช้ เช่น<br>
+                    - การสังเคราะห์วัสดุ diamond-liked carbon thin film, conducting polymer และ วัสดุชั้นสูงต่าง ๆ โดยกระบวนการ Plasma CVD</p>
+
+                <p class="text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity4/6.png"><br>
+                    <small>ฟิล์มบาง ของ diamond-liked carbon ที่สังเคราะห์ด้วยกระบวนการพลาสมา</small>
+                </p>
+                <p>&nbsp;</p>
+
+                <p>- การปรับปรุงสมบัติของผ้าและเส้นใยโดยใช้พลาสมา ให้มีลักษณะชอบน้ำ  (hydrophilic) ไม่ชอบน้ำ (hydrophobic) หรือทนไฟ (fire retard)</p>
+
+                <p class="text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity4/7.png"><br>
+                    <small>ผิวหน้าของเส้นใยฝ้ายที่ผ่านการปรับปรุงด้วยพลาสมาเพื่อให้มีลักษณะไม่ชอบน้ำ หรือกันน้ำ</small>
+                </p>
+                <p>&nbsp;</p>
+
+                <p>-  การปรับปรุงสมบัติเชิงกลของผิวโลหะ โดยวิธีการ Plasma Nitridation, Plasma   Carborization และ Plasma-surface Treatment แบบอื่น ๆ</p>
+
+                <p class="text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity4/8.png"><br>
+                    <small>ภาพถ่ายผิวหน้าของสารอลูมิเนียมไนไตรด์( AlN) ที่ใช้เวลาผ่านกระบวนการ Plasma Nitridation ต่างกัน</small>
+                </p>
+                <p>&nbsp;</p>
+
+                <p>(2) งานวิจัยด้านฟิสิกส์วัสดุเชิงอุตสาหกรรม เช่น<br>
+                    - การเคลือบฟิล์มบางโครเมียมอัลลอยไนไตรด์บนอุปกรณ์ตัดคว้านสำหรับอุตสาหกรรม</p>
+
+                <p class="text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity4/9.png">
+                </p>
+                <p>&nbsp;</p>
+
+                <p>- การเคลือบแข็งผิวชิ้นส่วนเครื่องจักรและแม่พิมพ์อุตสาหกรรม<br>
+                    - การวิจัยฟิล์มบางเคลือบผิวความลื่นสูงสำหรับชิ้นส่วนเครื่องจักรและยานยนต์<br>
+                    - การปรับปรุงและดัดแปลงสมบัติของวัสดุโดยการอาบรังสี และลำอนุภาค รวมถึง การศึกษาการใช้วัสดุในงานกำบังรังสีต่าง ๆ</p>
+
+                <p class="text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity4/10.png"><br>
+                    <small>การจำลอง การกระเจิงของนิวตรอนจากวัสดุซึ่งใช้ในงานกำบังรังสี</small>
+                </p>
+                <p>&nbsp;</p>
+
+                <p>(3) งานวิจัยด้านฟิสิกส์วัสดุอิเล็กทรอนิกส์และพลังงาน เช่น<br> 
+                    -  การเคลือบฟิล์มบางโครเมียมอัลลอยไนไตรด์บนอุปกรณ์ตัดคว้านสำหรับอุตสาหกรรม
+                </p>
+
+                <p class="text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity4/11.png"><br>
+                    <small>กราฟ (RSM) HRXRD ของ สารประกอบ GaAsN/GaAs</small>
+                </p>
+                <p>&nbsp;</p>
+
+                <p>-  การวิเคราะห์คุณสมบัติเชิงแสง และเชิงโครงสร้างของอัลลอยสารกึ่งตัวนำในกลุ่มสาม- ไนไตรด์ (III-Nitride semiconductors) เช่น GaN, InN, AlN และอัลลอยที่เกี่ยวข้อง เช่น InGaN</p>
+
+                <p class="text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity4/12.png"><br>
+                    <small>ภาพตัดขวางและ Diffraction pattern จาก TEM ของสาร GaN</small>
+                </p>
+                <p>&nbsp;</p>
+
+                <p>- การศึกษาสมบัติไดอิเล็กทริกของฟิล์มบาง BaTiO3, SrTiO3, และ CaCu3Ti4O12 สำหรับประยุกต์ใช้เป็นตัวเก็บประจุขนาดจิ๋ว</p>
+
+                <p class="text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity4/13.png"><br>
+                    <small>ภาพตัดขวางที่ได้จาก SEM ของสาร BaTio3/SrTio3 ในการสร้างตัวเก็บประจุขนาดจิ๋ว</small>
+                </p>
+                <p>&nbsp;</p>
+
+                <p>- การประดิษฐ์อุปกรณ์ตรวจจับแก๊ส สำหรับใช้ในสภาวะอุณหภูมิสูงและเครื่องปฏิกรณ์<br>
+                    - การสังเคราะห์สารเทอร์โมอิเล็กทริกไอออนไดซิลิไซด์ด้วยวิธีอัลลอยเชิงกล
+                </p>
+                <p>&nbsp;</p>
+
+                <p>(4) งานวิจัยด้านฟิสิกส์วัสดุเพื่อการแพทย์ ประกอบด้วย<br>
+                    - การพัฒนาฟิล์มบางโครงสร้างระดับนาโนความแข็งสูงสำหรับอุปกรณ์ทางการแพทย์<br>
+                    - การเตรียมและการหาลักษณะเฉพาะในโครงสร้างของฟิล์มบางไฮดรอกซีอะพาไทท์ และการประยุกต์ใช้เป็นวัสดุเชื่อมต่อเสริมกระดูก
+                </p>
+
+                <p class="text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity4/14.png"><br>
+                    <small>กราฟแสดง XRD ของฟิล์มบาง Hydroxyapatite ปลูกบน Si-substrate ซึ่งเผาที่อุณหภูมิต่างๆ</small>
+                </p>
+                <p>&nbsp;</p>
+
+                <h3>(ง) ตัวอย่างผลพลอยได้ที่มีประโยชน์เชิงประยุกต์</h3>
+                <p>- การเคลือบแข็งผิววัสดุสำหรับอุตสาหกรรม SME</p>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity4/16.png"><br>
+                </div>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity4/15.png"><br>
+                </div>
+
+                <br style="clear: both;">
+                <p>&nbsp;</p>
+
+                <p>- การเคลือบแข็งผิววัสดุสำหรับอุตสาหกรรม SME</p>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity4/18.png"><br>
+                </div>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity4/17.png"><br>
+                </div>
+
+                <br style="clear: both;">
+                <p>&nbsp;</p>
+
+                <h3>จ) คณะทำงาน</h3>
+                <table style="margin-left: 24px;">
+                    <tr style="vertical-align: top;">
+                        <td>
+                            นักวิจัย :
+                        </td>
+                        <td style="text-align: left;">
+                            ผศ.ดร. บุญโชติ เผ่าสวัสดิ์ยรรยง  ผู้ประสานงาน <em>ผู้ประสานงาน</em><br>
+                            ผศ.กิรณันต์ รัตนธรรมพันธุ์<br>
+                            ผศ.ดร. สุคเณศ ตุงคะสมิต<br>
+                            ผศ.ดร. สกุลธรรม เสนาะพิมพ์<br>
+                            ผศ.ดร. สมชาย เกียรติกมลชัย<br>
+                            ผศ.ดร. วรวรรณ พันธุมนาวิน<br>
+                            ดร. สตรีรัตน์ โฮดัค<br>
+                            ดร. มนต์เทียน เทียนประทีป
+                        </td>
+                    </tr>
+                    <tr style="vertical-align: top;">
+                        <td>
+                            นิสิต/นักศึกษาปริญญาเอก :<br>
+                            (ปีการศึกษา 2551)
+                        </td>
+                        <td style="text-align: left;">
+                            นางสาวกัญจน์ชญา หงส์เลิศคงสกุล<br>
+                            นายครรชิต กำลังกล้า<br>
+                            นางสาวจิราภรณ์ พงษ์โสภา<br>
+                            นางสาวอาภาพร ทองผุด
+                        </td>
+                    </tr>
+                    <tr style="vertical-align: top;">
+                        <td>
+                            นิสิต/นักศึกษาปริญญาโท :<br>
+                            (ปีการศึกษา 2551)	
+                        </td>
+                        <td style="text-align: left;">
+                            นายสุรการ ฐิติอนันต์<br>
+                            นางสาวเพ็ญสุภา คัมภิรานนท์<br>
+                            นางสาวกันยา ตปนียากร<br>
+                            นางสาวแคทรียา ทวิทรัพย์<br>
+                            นางสาวโชติวรรณ รัตนเสถียร<br>
+                            นางสาวศุภศรี แซ่เฮ้ง<br>
+                            นางสาวปิยรัตน์ เจิมสุจริต<br>
+                            นายพรชัย ลุยะพันธุ์<br>
+                            นายศิริชัย ปิยะอักษรศักดิ์<br>
+                            นางสาวสุรางค์ สุมนาวดี<br>
+                            นางสาวพรเทพิน ปรานศิลป์<br>
+                        </td>
+                    </tr>
+                </table>
+                <p>&nbsp;</p>
+
+                <h3>สถานที่ติดต่อ</h3>
+                <p>
+                    ภาควิชาฟิสิกส์ คณะวิทยาศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย เขตปทุมวัน กรุงเทพฯ 10330<br>
+                    โทรศัพท์ : 02-218-5137, 02-218-5138, 02-218-5289<br>
+                    โทรสาร : 02-253-1150<br>
+                    E-mail : paosawat@sc.chula.ac.th
+                </p>
+
+            </div>
+
             <?php
-        } elseif ($lab == '') {
-            
+        } elseif ($lab == 'plasma_surface') {
+            ?>
+            <div class="row">
+                <h2 style="text-align: center;">ห้องปฏิบัติการวิจัยพลาสมาสำหรับวิทยาศาสตร์พื้นผิว<br>
+                    Plasma for Surface Science Research Laboratory
+                </h2>
+                <h3>ขอบเขต</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กิจกรรมวิจัย/ศึกษาด้านพลาสมาสำหรับวิทยาศาสตร์พื้นผิว เน้นการศึกษาอันตรกิริยา (interaction) ระหว่างพลาสมากับพื้นผิววัสดุ (materials surface) เพื่อให้พื้นผิววัสดุมีสมบัติตามต้องการโดยการปรับปรุงพื้นผิวด้วยพลาสมา (plasma surface modification) การเคลือบผิวด้วยพลาสมา (plasma deposition) และ การกัดผิวด้วยพลาสมา (plasma etching) กิจกรรมวิจัย/ศึกษานี้จะดำเนินงานครอบคลุมตั้งแต่การออกแบบสร้างอุปกรณ์เครื่องมือที่ใช้ในการสร้างพลาสมา การสร้างพลาสมาแบบต่างๆ ตลอดไปจนถึงการศึกษาอันตรกิริยาของพลาสมาที่มีต่อพื้นผิวของวัสดุ เพื่อการประยุกต์ใช้เชิงอุตสาหกรรม</p>
+
+                <h3>เครื่องมือ</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;อุปกรณ์และเครื่องมือสำหรับสร้างพลาสมาเพื่อใช้ในการปรับปรุงพื้นผิวของวัสดุให้มีสมบัติตามต้องการดังกล่าวข้างต้น ของมหาวิทยาลัยบูรพา ทั้งหมดออกแบบและสร้างขึ้นโดยคณะนักวิจัยของห้องปฏิบัติการวิจัยเอง โดยได้รับการสนับสนุนทุนวิจัยหลักจาก มหาวิทยาลัยบูรพาและสำนักงานกองทุนสนับสนุนการวิจัย ส่วนใหญ่เป็นเครื่องเคลือบในสุญญากาศระบบต่างๆ แบ่งเป็นเครื่องมือขนาดเล็กสำหรับใช้ในงานวิจัยพื้นฐาน และเครื่องมือขนาดใหญ่สำหรับทดลองต้นแบบอุตสาหกรรม ดังนี้</p>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image002.jpg"><br>
+                </div>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image004.jpg"><br>
+                </div>
+                <br style="clear: both;">
+                <p style="text-align: center;"><small>รูปที่ 1 เครื่องเคลือบในสุญญากาศระบบสปัตเตอริงขนาดเล็กสำหรับงานวิจัยพื้นฐาน</small></p>
+                <p>&nbsp;</p>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image006.jpg"><br>
+                </div>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image008.jpg"><br>
+                </div>
+                <br style="clear: both;">
+                <p style="text-align: center;"><small>รูปที่ 2 เครื่องเคลือบในสุญญากาศระบบสปัตเตอริงสำหรับงานวิจัยพื้นฐาน</small></p>
+                <p>&nbsp;</p>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image010.jpg"><br>
+                </div>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image012.jpg"><br>
+                </div>
+                <br style="clear: both;">
+                <p style="text-align: center;"><small>รูปที่ 3 เครื่องเคลือบในสุญญากาศระบบระเหยสารสำหรับงานวิจัยพื้นฐาน</small></p>
+                <p>&nbsp;</p>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image014.jpg"><br>
+                </div>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image016.jpg"><br>
+                </div>
+                <br style="clear: both;">
+                <p style="text-align: center;"><small>รูปที่ 4  เครื่องเคลือบในสุญญากาศระบบสปัตเตอริงสำหรับงานวิจัยพื้นฐานด้านการเคลือบฟิล์มบางแสง</small></p>
+                <p>&nbsp;</p>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image018.jpg"><br>
+                </div>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image020.jpg"><br>
+                </div>
+                <br style="clear: both;">
+                <p style="text-align: center;"><small>รูปที่ 5  เครื่องเคลือบในสุญญากาศระบบสปัตเตอริงสำหรับงานวิจัยต้นแบบอุตสาหกรรมด้านการเคลือบแข็ง</small></p>
+                <p>&nbsp;</p>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image022.jpg"><br>
+                </div>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image024.jpg"><br>
+                </div>
+                <br style="clear: both;">
+                <p style="text-align: center;"><small>รูปที่ 6  เครื่องเคลือบในสุญญากาศระบบสปัตเตอริงสำหรับงานวิจัยต้นแบบอุตสาหกรรม</small></p>
+                <p>&nbsp;</p>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image026.jpg"><br>
+                </div>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image028.jpg"><br>
+                </div>
+                <br style="clear: both;">
+                <p style="text-align: center;"><small>รูปที่ 7 เครื่องเคลือบในสุญญากาศระบบสปัตเตอริงสำหรับงานวิจัยต้นแบบอุตสาหกรรม</small></p>
+                <p>&nbsp;</p>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image030.jpg"><br>
+                </div>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image032.jpg"><br>
+                </div>
+                <br style="clear: both;">
+                <p style="text-align: center;"><small>รูปที่ 8 เครื่องเคลือบในสุญญากาศระบบสปัตเตอริงสำหรับงานเคลือบต้นแบบระดับอุตสาหกรรม</small></p>
+                <p>&nbsp;</p>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image064.jpg"><br>
+                </div>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <p>
+                        <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image065.jpg">
+                    </p>
+                    <p>
+                        <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image066.jpg">
+                        <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image067.jpg">
+                    </p>
+                </div>
+                <br style="clear: both;">
+                <p style="text-align: center;"><small>รูปที่ 9 เครื่องเคลือบในสุญญากาศระบบสปัตเตอริงสำหรับงานเคลือบระดับอุตสาหกรรม</small></p>
+                <p>&nbsp;</p>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image068.jpg"><br>
+                </div>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <p>
+                        <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image069.jpg">
+                    </p>
+                    <p>
+                        <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image070.jpg">
+                        <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image071.jpg">
+                    </p>
+                </div>
+                <br style="clear: both;">
+                <p style="text-align: center;"><small>รูปที่ 10 เครื่องเคลือบในสุญญากาศระบบคาโทดิกอาร์คและสปัตเตอริงสำหรับงานเคลือบระดับอุตสาหกรรม</small></p>
+                <p>&nbsp;</p>
+
+                <h3>การปรับปรุงพื้นผิววัสดุด้วยพลาสมา</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การปรับปรุงพื้นผิววัสดุโดยทั่วไปส่วนใหญ่จะใช้กระบวนการทางเคมีหรือกระบวนการทางความร้อน ซึ่งมีข้อเสียและข้อจำกัดหลายอย่าง เช่น คุณภาพของพื้นผิวที่ได้รับการปรับปรุงแล้วยังไม่ดีนัก วัสดุหรือชิ้นงานที่ต้องการปรับปรุงต้องเหมาะสำหรับกระบวนการทางเคมีเท่านั้น นอกจากนี้ยังเป็นกระบวนการที่ใช้สารเคมีจำนวนมากทำให้เกิดปัญหาต่อสิ่งแวดล้อมอีกด้วย</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ข้อจำกัดเหล่านั้นสามารถแก้ไขได้โดยใช้เทคนิคการปรับปรุงพื้นผิววัสดุด้วยพลาสมา (plasma surface modification) เนื่องจาก พลาสมาที่ใช้ในกระบวนการปรับปรุงพื้นผิววัสดุจะทำอันตรกิริยา (interaction) เฉพาะอะตอมที่มีลักษณะเป็นชั้นบางๆ ที่อยู่บริเวณผิวหน้าของวัสดุเท่านั้น เพื่อให้มีสมบัติตามต้องการเท่านั้น พลาสมาที่ใช้จะไม่มีผลต่อวัสดุทั้งชิ้นงาน (bulk) ที่สำคัญกระบวนการปรับปรุงพื้นผิววัสดุด้วยพลาสมานั้นเป็นกระบวนการที่ไม่จำเป็นต้องใช้ความร้อนซึ่งอาจมีผลต่อสมบัติโดยรวมของชิ้นงาน อีกทั้งยังไม่มีการใช้สารเคมีที่จะก่อให้เกิดปัญหาต่อสิ่งแวดล้อมด้วย</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สำหรับผลงานวิจัยด้านการปรับปรุงพื้นผิววัสดุด้วยพลาสมาที่กำลังทำอยู่ที่มหาวิทยาลัยบูรพาแบ่งออกเป็น 4 กลุ่มหลักดังนี้คือ</p>
+                <ol>
+                    <li>กลุ่มการเคลือบแข็ง (hard coating) เป็นปรับปรุงสมบัติเชิงกลและไตรโบโลยีของพื้นผิววัสดุเพื่อเพิ่มความแข็งและ ความทนทาน</li>
+                    <li>กลุ่มการเคลือบเพื่อสวยงาม (decorative coating) เป็นปรับปรุงสมบัติเชิงผิวของชิ้นงานให้มีความสวยงาม</li>
+                    <li>กลุ่มการเคลือบฟิล์มบางแสง (optical coating) เป็นปรับปรุงสมบัติทางแสงของชิ้นงานให้มีสมบัติตามต้องการ</li>
+                    <li>กลุ่มการเคลือบฟิล์มบางที่สมบัติเฉพาะ (functional coating) เป็นปรับปรุงสมบัติเชิงผิวของวัสดุให้มีสมบัติเฉพาะตามต้องการ เช่น hydrophilic หรือ hydrophobic เป็นต้น</li>
+                </ol>
+
+                <div class="col-sm-6 col-md-4 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image072.jpg">
+                </div>
+
+                <div class="col-sm-6 col-md-4 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image073.jpg">
+                </div>
+                <div class="col-sm-6 col-md-4 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image074.jpg">
+                </div>
+                <div class="col-sm-6 col-md-4 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image075.jpg">
+                </div>
+                <div class="col-sm-6 col-md-4 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image076.jpg">
+                </div>
+                <div class="col-sm-6 col-md-4 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image077.jpg">
+                </div>
+                <br style="clear: both;">
+                <p style="text-align: center;"><small>รูปที่ 11 ตัวอย่างชิ้นงานที่ผ่านการปรับปรุงผิวด้วยกระบวนการเคลือบด้วยพลาสมาในกลุ่มการเคลือบแข็ง</small></p>
+                <p>&nbsp;</p>
+
+                <div class="col-sm-6 col-md-4 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image051.jpg">
+                </div>
+                <div class="col-sm-6 col-md-4 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image053.jpg">
+                </div>
+                <div class="col-sm-6 col-md-4 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image055.jpg">
+                </div>
+                <br style="clear: both;">
+                <p style="text-align: center;"><small>รูปที่ 12 ตัวอย่างชิ้นงานที่ผ่านการปรับปรุงผิวด้วยกระบวนการเคลือบด้วยพลาสมาในกลุ่มการเคลือบสวยงาม</small></p>
+                <p>&nbsp;</p>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image057.jpg"><br>
+                </div>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image059.jpg"><br>
+                </div>
+                <br style="clear: both;">
+                <p style="text-align: center;"><small>รูปที่ 13 ตัวอย่างชิ้นงานที่ผ่านการปรับปรุงผิวด้วยกระบวนการเคลือบด้วยพลาสมาในกลุ่มการเคลือบสวยงาม</small></p>
+                <p>&nbsp;</p>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image061.jpg"><br>
+                </div>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity5/image063.jpg"><br>
+                </div>
+                <br style="clear: both;">
+                <p style="text-align: center;"><small>รูปที่ 14 ตัวอย่างชิ้นงานที่ผ่านการปรับปรุงผิวด้วยกระบวนการเคลือบด้วยพลาสมาในกลุ่มการเคลือบฟิล์มบางที่มีสมบัติเฉพาะ</small></p>
+                <p>&nbsp;</p>
+
+                <h3>จ) คณะทำงาน</h3>
+                <table style="margin-left: 24px;">
+                    <tr style="vertical-align: top;">
+                        <td>
+                            นักวิจัย :
+                        </td>
+                        <td style="text-align: left;">
+                            ผศ.ดร.นิรันดร์ วิทิตอนันต์ <em>ผู้ประสานงาน</em><br>
+                            รศ.ดร.สุรสิงห์  ไชยคุณ<br>
+                            รศ.สำเภา จงจิตต์
+                        </td>
+                    </tr>
+                    <tr style="vertical-align: top;">
+                        <td>
+                            นักศึกษาปริญญาตรี :
+                        </td>
+                        <td style="text-align: left;">
+                            นางสาวจินดาวรรณ  สิงห์คต<br>
+                            นายวุฒิพงศ์  ศาสนสุพิน
+                        </td>
+                    </tr>
+                    <tr style="vertical-align: top;">
+                        <td>
+                            นักศึกษาปริญญาโท :
+                        </td>
+                        <td style="text-align: left;">
+                            นายพึ่งบุญ  ปานศิลา
+                        </td>
+                    </tr>
+                </table>
+                <p>&nbsp;</p>
+
+                <h3>สถานที่ติดต่อ</h3>
+                <p>ภาควิชาฟิสิกส์ คณะวิทยาศาสตร์<br>
+                    มหาวิทยาลัยบูรพา จ.ชลบุรี-20131<br>
+                    โทรศัพท์/โทรสาร : 038-103-084<br>
+                    E-mail : nirun@buu.ac.th<br>
+                    URL : vttf.buu.ac.th
+                </p>
+
+            </div>
+
+        <?php } elseif ($lab == 'agricultural') {
+            ?>
+            <div class="row">
+                <h2 style="text-align: center;">ห้องปฏิบัติการวิจัยเทคโนโลยีพลาสมาเพื่อการประยุกต์ทางกสิกรรม<br>
+                    (Plasma Technology for Agricultural Applications Research Laboratory)
+                </h2>
+                <h3>ประวัติความเป็นมา</h3>
+                <p style="font-weight: bold; font-style: italic;">“กสิกรแข็งขันเป็นกระดูกสันหลังของชาติ   ไทยจะเรืองอำนาจเพราะไทยเป็นชาติกสิกรรม”</p>
+                <p>&nbsp;</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ดังคำกล่าวที่ว่าประเทศที่มีเทคโนโลยีเป็นของตนเองย่อมมีความได้เปรียบในเชิงเศรษฐกิจและเสถียรภาพของสังคม และ ประเทศที่มีความเจริญทางเทคโนโลยีจะต้องมีความเข้มแข็งทางด้านวิทยาศาสตร์พื้นฐานเสียก่อน สำหรับประเทศไทยซึ่งเป็นประเทศกสิกรรม รายได้ของประเทศส่วนหนึ่งได้จากผลผลิตทางการเกษตรปีละหลายหมื่นล้านบาท แต่เรื่องการพัฒนาเทคโนโลยีเพื่อยกระดับการกสิกรรมนั้นมีน้อยมาก ซึ่งในภาวะปัจจุบันไม่ว่าจะเนื่องจากความแปรปรวนของธรรมชาติ เช่น โลกร้อน และปัญหาเรื่องสภาวะแวดล้อมเป็นพิษ เช่น น้ำเน่าเสีย การใช้สารเคมี  หรือแม้แต่วิกฤติพลังงาน เหล่านี้ล้วนส่งผลในแง่ลบต่อเศรษฐกิจของประเทศด้านกสิกรรมทั้งสิ้น</p>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity6/image002.jpg"><br>
+                </div>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity6/image004.jpg"><br>
+                </div>
+                <br style="clear: both;">
+                <p>&nbsp;</p>
+
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ห้องปฏิบัติการวิจัยพลาสมาเชิงประยุกต์ด้านกสิกรรม ได้จัดตั้งขึ้นเมื่อปีพ.ศ. 2544 โดยมีความมุ่งหมายที่จะพัฒนาแนวทางของการวิจัยระดับพื้นฐานและการศึกษาระดับบัณฑิตศึกษาที่จะสร้างองค์ความรู้ใหม่ทางด้านพลาสมาเชิงประยุกต์ด้านกสิกรรม รวมทั้งมุ่งเน้นที่จะผลิตบุคลากรที่มีความสามารถเฉพาะทางสำหรับการแก้ปัญหาที่มีความยากและซับซ้อนทางด้าน พลังงาน สิ่งแวดล้อม สุขภาพ การสร้างเทคโนโลยีใหม่เพื่อเศรษฐกิจแบบยั่งยืน และเพื่อต่อยอดงานวิจัยไปสู่การใช้งานจริงและถ่ายทอดเทคโนโลยีสู่ชุมชน ลดการเสียดุลการค้าจากต่างประเทศ</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โดยได้เริ่มทำการวิจัยโครงการเพื่อพัฒนาแหล่งกำเนิดไอออนบีมความหนาแน่นสูงเมื่อปีพ.ศ. 2545 โครงการดังกล่าวเป็นส่วนหนึ่งของชุดโครงการเซลล์แสงแดดไทยซึ่งมี ดร.วิโรจน์ ตันตราภรณ์ เป็นที่ปรึกษาชุดโครงการ เป้าหมายการวิจัยของชุดโครงการคือต้องการที่จะสร้างเซลล์แสงแดดที่มีประสิทธิภาพสูงที่สุดในโลกและจัดตั้งโรงงานผลิตขึ้นในประเทศไทย จึงทำให้ชุดโครงการเป็นโครงการที่ได้รับทุนวิจัยอย่างต่อเนื่องจากภาครัฐมาเป็นเวลากว่า 5 ปี สำหรับการสร้างไอออนบีมความหนาแน่นสูงนั้นจำเป็นที่จะต้องเทคโนโลยีและวิทยาการต่างๆหลายด้านเช่น เทคโนโลยีคลื่นแม่เหล็กไฟฟ้าความถี่สูง(RF, Microwave) เทคโนโลยีสุญญากาศ เทคโนโลยีการกำเนิดพลาสมา เป็นต้น ทำให้นักวิจัยสามารถนำเทคโนโลยีดังกล่าวไปประยุกต์ใช้สำหรับการกสิกรรมต่างๆ ได้เช่น การอบแห้งวัสดุทางการเกษตรด้วยเทคโนโลยีไมโครเวฟ การบำบัดน้ำเสียด้วยเทคโนโลยีพลาสมา หรือการอบแห้งสมุนไพรในสุญญากาศด้วยไมโครเวฟ เป็นต้น</p>
+                <p>&nbsp;</p>
+
+                <h3>วิสัยทัศน์</h3>
+                <p style="text-align: center;">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity6/image006.gif">
+                </p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วิสัยทัศน์ของห้องวิจัยจะมองแนวทางการวิจัยเปรียบเสมือนต้นไม้ใหญ่ ที่มีการเรียนรู้และการวิจัยฟิสิกส์เป็นรากฐานที่สำคัญต่อการสร้างลำต้นขององค์ความรู้ใหญ่ที่จะสามารถแตกกิ่งก้านสาขาออกเป็นแขนงของเทคโนโลยีในด้านต่างๆ ได้แก่ การพัฒนาเทคโนโลยีใหม่เพื่อการจดสิทธิบัตร การสร้างเทคโนโลยีในเชิงพานิชย์ สำหรับชุมชนและอุตสาหกรรม การผลิตบัณฑิตศึกษา โท-เอกและการตีพิมพ์ และ การเรียนรู้วิทยาศาสตร์ของชุมชน ขณะเดียวกันส่วนยอดก็จำเป็นที่จะต้องพัฒนาวิทยาศาสตร์ในระดับปริญญาตรีให้เจริญเติบโตเพื่อออกดอกออกผลเป็นกำลังของต้นอ่อนของวิทยาศาสตร์แบบยั่งยืนต่อไปในอนาคต</p>
+                <p>&nbsp;</p>
+
+                <h3>พันธกิจ</h3>
+                <ol>
+                    <li>ดำเนินการวิจัยในเชิงลึกเกี่ยวฟิสิกส์และเทคโนยีของพลาสมาและไอออนบีม เพื่อสร้างองค์ความรู้ที่ทันสมัย มีมาตรฐานในระดับสากล</li>
+                    <li>ประยุกต์ใช้ความรู้ของพลาสมา ไอออนบีม และคลื่นแม่เหล็กไฟฟ้าความถี่สูงเพื่อพัฒนานวตกรรมและเทคโนโลยีเพื่อยกระดับมาตรฐานการผลิตทางด้านกสิกรรมของประเทศให้สูงขึ้น</li>
+                    <li>พัฒนาและสร้างบุคลากรที่มีศักยภาพสูงในการวิจัยทางด้านพลาสมา ไอออนบีม และคลื่นแม่เหล็กไฟฟ้าความถี่สูง</li>
+                    <li>ทำการเผยแพร่องค์ความรู้ทางด้านพลาสมา ไอออนบีม และคลื่นแม่เหล็กไฟฟ้าความถี่สูง  ไปยังสังคมกลุ่มต่างๆ เช่นนักเรียน นักศึกษา และประชาชนทั่วไป</li>
+                    <li>ร่วมวิจัยกับนักวิจัยในสาขาอื่นๆ เช่นการแพทย์ วัสดุศาสตร์ สิ่งแวดล้อม และอิเล็กทรอนิกส์ เพื่อประยุกต์ใช้งานองค์ความรู้ทางด้านพลาสมา ไอออนบีม และคลื่นแม่เหล็กไฟฟ้าความถี่สูง</li>
+                </ol>
+                <p>&nbsp;</p>
+
+                <h3>ผลงานวิจัย</h3>
+                <strong>1. ผลงานวิจัยเพื่อการพัฒนาในเชิงพานิชย์</strong>
+                <p><span style="font-weight: bold; font-style: italic;">1.1  ชุดทดลองฟิสิกส์และเทคโนโลยีไมโครเวฟ</span> ซึ่งประกอบด้วย</p>
+                <ul>
+                    <li>เครื่องจ่ายความต่างศักย์สูงของแมกนีตรอน 0 – 200 W</li>
+                    <li>Microwave leak detector</li>
+                    <li>Multi-mode resonant cavity</li>
+                </ul>
+                <p><span style="text-decoration: underline; font-weight: bold;">ความต้องการ</span> บริษัท ESSOM (http://www.essom.com/about.php) สนใจที่จะทำตลาดในและต่างประเทศ</p>
+                <p style="text-align: center;">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity6/image023.jpg">
+                </p>    
+                <p>&nbsp;</p>
+
+                <p><span style="font-weight: bold; font-style: italic;">1.2  การพัฒนา Microwave drying system สำหรับทำอาหารอัดเม็ดแห้ง</span> ซึ่งประกอบด้วย</p>
+                <ul>
+                    <li>เครื่องจ่ายความต่างศักย์สูงของแมกนีตรอน 0-600 วัตต์</li>
+                    <li>Slot waveguide antenna</li>
+                </ul>
+                <p><span style="text-decoration: underline; font-weight: bold;">ความต้องการ</span> บริษัทไทรอัมเอ็นจิเนียริ่ง (http://www.triumphthailand.com/tec-whychoose-tec.html) สนับสนุนทุนวิจัยเพื่อพัฒนาเครื่องต้นแบบ</p>
+                <p style="text-align: center;">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity6/image022.jpg">
+                </p>    
+                <p>&nbsp;</p>
+
+                <p><span style="font-weight: bold; font-style: italic;">1.3  การพัฒนาระบบอบรังนกด้วยคลื่นไมโครเวฟภายใต้สภาวะสุญญากาศ</span> ซึ่งประกอบด้วย</p>
+                <ul>
+                    <li>ห้องสุญญากาศความดันต่ำกว่า 30 ทอร์</li>
+                    <li>ปั๊มสุญญากาศ</li>
+                    <li>ระบบการจ่ายและการส่งกำลังคลื่นไมโครเวฟ</li>
+                    <li>ระบบควบคุมอัตโนมัติ</li>
+                </ul>
+                <p><span style="text-decoration: underline; font-weight: bold;">ความต้องการ</span> บริษัทขวัยมุย (23 ถ.พานิชสัมพันธ์ อ.ปากพนัง จ.นครฯ โทร.075-517195) สั่งซื้อเพื่อนำไปพัฒนาผลิตภัณฑ์ฯเพื่อการส่งออก</p>
+                <p style="text-align: center;">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity6/image014.gif">
+                </p>    
+                <p>&nbsp;</p>
+
+                <p><span style="font-weight: bold; font-style: italic;">1.4  ระบบการกำเนิดโอโซนประสิทธิภาพสูง</span> ซึ่งประกอบด้วย</p>
+                <ul>
+                    <li> หลอดโอโซนแบบ Atmospheric glow barrier discharge</li>
+                    <li>แหล่งกำเนิดคลื่นวิทยุความต่างศักย์สูง และความถี่สูง</li>
+                </ul>
+                <p><span style="text-decoration: underline; font-weight: bold;">ความต้องการ</span> ร่วมกับบริษัทเอเชียเทค อินดัสทรี จำกัด(http://www.ozzon.com/) พัฒนาหลอดโอโซน และเครื่องจ่ายกำลังคลื่นวิทยุประสิทธิภาพสูง</p>
+                <p style="text-align: center;">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity6/image020.jpg">
+                </p>    
+                <p>&nbsp;</p>
+
+                <p><span style="font-weight: bold; font-style: italic;">เครื่องอบปลากึ่งแห้งด้วยคลื่นไมโครเวฟได้อย่างมีประสิทธิภาพ</span> ซึ่งสามารถทำปลากึ่งแห้งในระบบปิด ประหยัดพลังงาน และสามารถควบคุมการปนเปื้อนจากแมลง ฝุ่นละออง ได้อย่างมีประสิทธิภาพ</p>                
+                <p><span style="text-decoration: underline; font-weight: bold;">ความต้องการ</span> กำลังพัฒนาเพื่อให้เหมาะสมกับความต้องการของชุมชน</p>
+                <p style="text-align: center;">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity6/image021.jpg">
+                </p>    
+                <p>&nbsp;</p>
+
+                <p><strong>2. โครงการวิจัย</strong></p>
+                <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.1 โครงการวิจัย 5 ปีย้อนหลัง</strong></p>
+                <table width="80%" border="1" align="center" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td align="center"><strong>ชื่อโครงการ</strong></td>
+                            <td align="center"><strong>แหล่งทุน</strong></td>
+                            <td align="center"><strong>งบประมาณ (บาท)</strong></td>
+                            <td align="center"><strong>ระยะเวลา</strong></td>
+                        </tr>
+                        <tr>
+                            <td width="40%">การพัฒนาไอออนบีมสำหรับการเซาะร่องในโซลาร์เซลแบบคลับแซนด์วิช</td>
+                            <td width="20%">สกว.</td>
+                            <td width="20%">2,631,200</td>
+                            <td width="20%">พย.45- พย.47 </td>
+                        </tr>
+                        <tr>
+                            <td>การพัฒนาระบบเครื่องกำเนิดโอโซนโดยใช้เทคนิค Barrier discharge สำหรับการจัดเก็บเงาะ ทุเรียนและพืชผัก</td>
+                            <td>สกอ.</td>
+                            <td>876,700</td>
+                            <td>มิย. 47- มิย.48 </td>
+                        </tr>
+                        <tr>
+                            <td>การพัฒนาเตาอบปลาแห้งไมโครเวฟประสิทธิภาพสูง</td>
+                            <td>สกอ.</td>
+                            <td>420,200</td>
+                            <td>เมย.48- เมย.49 </td>
+                        </tr>
+                        <tr>
+                            <td>การพัฒนาไอออนบีมสำหรับการเซาะร่องในโซลาร์เซลแบบคลับแซนด์วิช</td>
+                            <td>สกว.</td>
+                            <td>2,109,323</td>
+                            <td>กย.48-กย.49</td>
+                        </tr>
+                        <tr>
+                            <td>การพัฒนาระบบการผลิตน้ำโอโซนอัตโนมัติเพื่อการเพาะเลี้ยงกุ้งอย่างยั่งยืน</td>
+                            <td>มูลนิธิโทเรฯ</td>
+                            <td>190,000</td>
+                            <td>กพ. 49 – กพ.50</td>
+                        </tr>
+                        <tr>
+                            <td>การพัฒนาไอออนบีมความหนาแน่นและความคมสูงของอะตอมธาตุชนิดต่าง ๆ </td>
+                            <td>พพ. ร่วมกับ สกว.</td>
+                            <td>1,438,657</td>
+                            <td>กย. 2549 – กย.2550</td>
+                        </tr>
+                        <tr>
+                            <td>การพัฒนาระบบอบปลาแห้งกึ่งอัตโนมัติด้วยคลื่นไมโครเวฟ</td>
+                            <td>สกอ.</td>
+                            <td>84,000</td>
+                            <td>มิย.50- มิย.51</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&nbsp;</p>
+
+                <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2 โครงการวิจัยที่กำลังดำเนินการอยู่ในปัจจุบัน</strong></p>
+                <table width="80%" border="1" align="center" cellpadding="0" cellspacing="0">
+                    <tbody>
+                        <tr>
+                            <td align="center"><strong>ชื่อโครงการ</strong></td>
+                            <td align="center"><strong>แหล่งทุน</strong></td>
+                            <td align="center"><strong>งบประมาณ (บาท)</strong></td>
+                            <td align="center"><strong>ระยะเวลา</strong></td>
+                        </tr>
+                        <tr>
+                            <td width="40%">การเพิ่มประสิทธิภาพการผลิตอาหารสัตว์อัดเม็ดด้วยคลื่นไมโครเวฟ</td>
+                            <td width="20%">บริษัทไทรอัมพ์เอ็นจิเนียริ่งจำกัด</td>
+                            <td width="20%">330,000</td>
+                            <td width="20%">ตค. 50- มิย.51</td>
+                        </tr>
+                        <tr>
+                            <td>การพัฒนาชุดขยายคลื่นวิทยุโซลิดสเตทแบบมอดูลาร์ความถี่ 118 เมกะเฮิร์ต ขนาด 2.5 กิโลวัตต์</td>
+                            <td>ศูนย์ปฏิบัติการเครื่องกำเนิดแสงซินโครตรอนฯ</td>
+                            <td>2,120,800</td>
+                            <td>พย.50- พย.52 </td>
+                        </tr>
+                        <tr>
+                            <td>การพัฒนาแบบจำลองทางคณิตศาสตร์เพื่ออธิบายการดูดกลืนคลื่นวิทยุของตัวอ่อนแมลงในผลเงาะ</td>
+                            <td>สวทช.</td>
+                            <td>150,000</td>
+                            <td>ตค.50 – ตค.51</td>
+                        </tr>
+                        <tr>
+                            <td>เทคโนโลยีพลาสมาเพื่อการทำให้ปราศจากเชื้อสำหรับเครื่องมือแพทย์</td>
+                            <td>วช.</td>
+                            <td>8,000,000</td>
+                            <td>2 ปี</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>&nbsp;</p>
+
+                <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.2 โครงการวิจัยที่กำลังดำเนินการอยู่ในปัจจุบัน</strong></p>
+                <table width="80%" border="1" align="center" cellpadding="0" cellspacing="0">
+                    <tbody><tr>
+                            <td align="center"><strong>ชื่อโครงการ</strong></td>
+                            <td align="center"><strong>แหล่งทุน</strong></td>
+                            <td align="center"><strong>งบประมาณ (บาท)</strong></td>
+                            <td align="center"><strong>ระยะเวลา</strong></td>
+                        </tr>
+                        <tr>
+                            <td width="40%">การพัฒนาพลาสมาที่ความดันต่ำด้วยคลื่นความถี่วิทยุเพื่อการปรับปรุงผิวของเมมเบรน แบบต่อเนื่องกึ่งอัตโนมัติ</td>
+                            <td width="20%">ศูนย์นาโนเทคโนโลยีแห่งชาติ</td>
+                            <td width="20%">619,600</td>
+                            <td width="20%">1 ปี </td>
+                        </tr>
+                        <tr>
+                            <td>การพัฒนาไอออนบีมความหนาแน่นและความคมสูงของอะตอมธาตุชนิดต่าง ๆ </td>
+                            <td>พพ. ร่วมกับ สถาบันเทคโนโลยีนิวเคลียร์ฯ</td>
+                            <td>1,753,637</td>
+                            <td>1 ปี </td>
+                        </tr>
+
+                    </tbody></table>
+                <p>&nbsp;</p>
+
+                <h3>จ) คณะทำงาน</h3>
+                <table style="margin-left: 24px;">
+                    <tr style="vertical-align: top;">
+                        <td>
+                            นักวิจัย :
+                        </td>
+                        <td style="text-align: left;">
+                            ผศ.ดร.หมุดตอเล็บ หนิสอ  <em>ผู้ประสานงาน</em><br>
+                            อาจารย์  พันธุ์ศักดิ์ เกิดทองมี<br>
+                            นายไพรวัลย์ เกิดทองมี
+                        </td>
+                    </tr>
+                    <tr style="vertical-align: top;">
+                        <td>
+                            เจ้าหน้าที่เทคนิค :
+                        </td>
+                        <td style="text-align: left;">
+                            นายธรรรมนูญ ศรีน่วม<br>
+                            นายเฉลิม เต๊ะสนู
+                        </td>
+                    </tr>                    
+                </table>
+                <p>&nbsp;</p>
+
+                <h3>สถานที่ติดต่อ</h3>
+                <p>อาคารศูนย์เครื่องวิทยาศาสตร์ 5 (B5) มหาวิทยาลัยวลัยลักษณ์<br>
+                    222 ต. ไทยบุรี อ.ท่าศาลา จ.นครศรีธรรมราช 80160<br>
+                    โทรศัพท์ : 075-673-229<br>
+                    โทรสาร : 075-672-004<br>
+                    E-mail : nmudtorl@wu.ac.th
+                </p>
+
+            </div>
+            <?php
+        } elseif ($lab == 'membrane') {
+            ?>
+
+            <div class="row">
+                <h2>ห้องปฏิบัติการวิจัยวิทยาศาสตร์และเทคโนโลยีเมมเบรน<br>
+                    (Membrane Science and Technology Research Laboratory)
+                </h2>
+                <h3>(ก) ขอบเขต</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;งานวิจัย/ศึกษาของหน่วยปฏิบัติการวิจัยด้านเซลล์และเมมเบรนสังเคราะห์จัดอยู่ในแขนงวิชาการที่เรียกว่า “ชีวฟิสิกส์ (Biophysics)” โดยจะเน้นให้ความสนใจใน 2 ด้าน ดังต่อไปนี้</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ด้านเซลล์เน้นงานด้านกลศาสตร์เชิงไฟฟ้าของเซลล์แขวนลอย (Electro-mechanics of cell suspension) พฤติกรรมของเซลล์เดี่ยวในสนามไฟฟ้ามีหลายรูปแบบ เช่น การเกิดโซ่เซลล์ การเคลื่อนที่เชิงเส้น การเคลื่อนที่เชิงมุม การยืด-หดของเยื่อหุ้มเซลล์ การเปิดของรูบนเยื่อหุ้มเซลล์แบบชั่วคราว การเกิดไดอิเล็กทริกเบรคดาวน์ การศึกษาสมบัติของเซลล์หลังติดเชื้อ และบอกการมีชีวิตของเซลล์ เป็นต้น พฤติกรรมเหล่านี้เกิดจากการเหนี่ยวนำขั้วคู่ (ไดโพล) แบบชั่วคราวภายในเซลล์ โดยอาศัยขั้วไฟฟ้ารูปแบบต่างๆและใช้สัญญานไฟฟ้าย่านความถี่คลื่นวิทยุ นักวิจัยบางกลุ่มสนใจพัฒนาแบบจำลองเชิงคณิตศาสตร์เพื่ออธิบายพฤติกรรมเชิงกลของเซลล์ที่มีรูปร่างต่างๆ บ้างสนใจพัฒนาการนำพฤติกรรมในสนามไฟฟ้าเหล่านี้ไปใช้ประโยชน์ ความสัมพันธ์ระหว่างสมบัติไดอิเล็กทริกเชิงซ้อนของเซลล์และสารละลาย สามารถนำไปวิเคราะห์สมบัติเชิงไฟฟ้าที่เปลี่ยนไปของเยื่อหุ้มเซลล์และภายในเซลล์ภายใต้เงื่อนไขของสิ่งแวดล้อมที่จัดขึ้น</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; สำหรับด้านเยื่อบางสังเคราะห์ ทางหน่วยปฏิบัติการวิจัยเน้นการใช้วัสดุชีวภาพที่มีในท้องถิ่น เช่นไคโตซาน เซลลูโลส และน้ำยาง โครงการวิจัย/ศึกษานี้ต้องบูรณาการบุคลากรหลายสาขาร่วมกัน นอกจากฟิสิกส์แล้วยังประกอบด้วยสาขาวัสดุศาสตร์ อุตสาหกรรมอาหาร และวิศวกรรมโยธา งานจึงมีขอบเขตกว้าง จากการผลิตเยื่อบางชนิดรูพรุนและชนิดแน่น เพื่อการกรอง ศึกษาวิธีวิเคราะห์สมบัติของเยื่อกรอง การปรับปรุงผิวด้วยเทคนิคลำอนุภาคและพลาสมา การทำรูพรุนด้วยเทคนิคนิวเคลียร์ สำหรับเยื่อที่มีประจุ การศึกษาจะเน้นด้านสมบัติการแพร่ของประจุและการนำไฟฟ้าของเยื่อบาง นอกจากนี้ยังมีเยื่อพอลิเมอร์อื่นๆเช่น เซลลูโลสอะซิเตด เซรามิกส์และโลหะ เป็นต้น ส่วนงานด้านประยุกต์ เน้นน้ำดื่ม การบำบัดน้ำเสีย การแยกโปรตีน หรือเอ็นไซม์ออกจากน้ำทิ้งโรงงานอุตสาหกรรมอาหารทะเล และการแยกแก๊ส เป็นต้น</p>
+                <p>&nbsp;</p>
+
+                <h3>(ข) เครื่องมือที่เกี่ยวข้อง</h3>
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity7/image001.png">
+                </div>
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 277px; height: auto;" src="http://www.thep-center.org/images/activity7/image003.png">
+                </div>
+                <br style="clear: both;">
+                <p style="text-align: center;"><small>อุปกรณ์ศึกษาเซลล์ในสนามไฟฟ้าและ Micro-chip</small></p>
+                <p>&nbsp;</p>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity7/image006.gif">
+                </div>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity7/image008.gif">
+                </div>
+                <br style="clear: both;">
+                <p style="text-align: center;"><small>ผลของสนามไฟฟ้าต่อเซลล์แขวนลอย</small></p>
+                <p>&nbsp;</p>
+
+                <p style="text-align: center;">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity7/imageABC.png">
+                </p>
+                <p style="text-align: center;"><small>อุปกรณ์เตรียมเยื่อบาง (ก) เครื่องผลิตเยื่อกรองแบบท่อกลวง (ข) เครื่องผลิตเยื่อกรองแบบแผ่น (ค) เครื่องตัดเยื่อกรอง</small></p>
+
+
+                <h3>ง) การศึกษา/วิจัยที่พยายามยืนบนขาตนเอง</h3>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ทิศทางของงานวิจัยเน้นการนำไปใช้งานในชุมชนภาคใต้ เช่นการผลิตน้ำดื่มปลอดสารหนู และสาธิตการทำงานของระบบกรองน้ำแบบเคลื่อนที่ได้ พร้อมทั้งผลิตน้ำดื่มให้หมู่บ้านเป็นเวลา 3 เดือน ที่จังหวัดนครศรีธรรมราช การผลิตเยื่อกรองที่สามารถกำจัดสารแทนนินออกจากน้ำบ่อของชุมชนได้ นอกจากนี้ด้านพลังงานทางเลือก หน่วยปฏิบัติการวิจัยฯกำลังศึกษาการผลิตเยื่อบางที่ใช้สำหรับแยกแก๊สชีวภาพ และแยกสารอินทรีย์ในน้ำทิ้งโรงงานยางพารา ซึ่งเป็นสาเหตุของกลิ่นที่กลับส่งผลเชิงลบต่ออุตสาหกรรมการท่องเที่ยวในภาคใต้ ส่วนงานด้าน Recovery & Reuse ได้เก็บสารมีค่าจากน้ำทิ้งโรงงานอาหารทะเล เช่นเอ็นไซม์และโปรตีน เป็นการเพิ่มมูลค่าให้กับท้องถิ่น โดยทำวิจัยร่วมกับโรงงานอุตสาหกรรมในพื้นที่</p>
+
+                <div class="col-sm-6 col-md-4 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity7/image031.gif"><br>
+                    <small>1 ประชุมร่วมกับนักวิชาการในชุมชน</small>
+                </div>
+                <div class="col-sm-6 col-md-4 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity7/image029.jpg"><br>
+                    <small>2 ขนย้ายเครื่องผลิตน้ำดื่มปลอดสารหนู</small>
+                </div>
+                <div class="col-sm-6 col-md-4 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity7/image033.png"><br>
+                    <small>3 สาธิตการใช้งาน</small>
+                </div>
+                <br style="clear: both;">                
+                <p>&nbsp;</p>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity7/image035.jpg"><br>
+                    <small>อุปกรณ์ศึกษาเซลล์ในสนามไฟฟ้าและ Micro-chip</small>
+                </div>
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity7/image037.jpg"><br>
+                    <small>กล้วยไม้หายาก ที่ได้รับการอนุรักษ์บนเกาะพระทองู</small>
+                </div>
+                <br style="clear: both;">
+                <p>&nbsp;</p>
+
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity7/image041.jpg"><br>
+                    <small>น้ำบ่อชาวบ้านที่ปนเปื้อนด้วนแทนนิน</small>
+                </div>
+                <div class="col-sm-6 col-md-6 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity7/image039.gif"><br>
+                    <small>น้ำที่กรองแล้วด้วยเยื่อเซลลูโลสอะซิเตด</small>
+                </div>
+                <br style="clear: both;">
+                <p>&nbsp;</p>
+
+                <div class="col-sm-6 col-md-3 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity7/image043.jpg">
+                </div>
+                <div class="col-sm-6 col-md-3 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity7/image045.jpg">
+                </div>
+                <div class="col-sm-6 col-md-3 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity7/image047.jpg">
+                </div>
+                <div class="col-sm-6 col-md-3 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity7/image049.jpg">
+                </div>
+                <br style="clear: both;">
+                <p style="text-align: center;"><small>เครื่องผลิตน้ำดื่มแบบเคลื่อนที่ซึ่งหน่วยปฏิบัติการวิจัยฯได้ริเริ่มใช้ผลิตน้ำดื่มช่วยผู้ประสพอุทกภัยในเขตหาดใหญ่-สงขลาในปี 2547</small></p>
+                <p>&nbsp;</p>
+
+                <div class="col-sm-6 col-md-3 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity7/image051.jpg">
+                </div>
+                <div class="col-sm-6 col-md-3 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity7/image053.jpg">
+                </div>
+                <div class="col-sm-6 col-md-3 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity7/image055.gif">
+                </div>
+                <div class="col-sm-6 col-md-3 text-center">
+                    <img style="max-width: 100%; height: auto;" src="http://www.thep-center.org/images/activity7/image057.jpg">
+                </div>
+                <br style="clear: both;">
+                <p style="text-align: center;"><small>อบรมการผลิตน้ำดื่มด้วยเยื่อสังเคราะห์ให้มูลนิธิศุภนิมิตประเทศไทย และสร้างระบบผลิตน้ำดื่มจากน้ำผิวดิน</small></p>
+                <p>&nbsp;</p>
+
+                <h3>คณะทำงาน</h3>
+                <table style="margin-left: 24px;">
+                    <tr style="vertical-align: top;">
+                        <td>
+                            นักวิจัย :
+                        </td>
+                        <td style="text-align: left;">
+                            รศ. ดร. พิกุล  วณิชาภิชาติ  <em>ผู้ประสานงาน</em><br>
+                            รศ. ดร. ธวัช ชิตตระการี<br>
+                            ผศ. ดร. ยุทธนา ระวณิชย์กุล<br>
+                            ดร. สุขสวัสดิ์  ศิริจารุกุล<br>
+                            ผศ. ดร. วิรัช ทวีปรีดา<br>
+                            ผศ. ดรุณี  ผ่องสุวรรณ<br>
+                            ผศ. ดร.วิโรจน์ ยูรวงศ์<br>
+                            ผศ. ดร. พรทิพย์ ศรีแดง
+                        </td>
+                    </tr>
+                    <tr style="vertical-align: top;">
+                        <td>
+                            นักศึกษาปริญญาโท :
+                        </td>
+                        <td style="text-align: left;">
+                            1. นางสาวรัชนก สังข์คำ<br>
+                            2. นางสาวธนิตพร นาคกุล<br>
+                            3. นายอาคม สมสอ<br>
+                            4. นายรัฐพงษ์ หนูหมาด<br>
+                            5. นางสาวศุภลักษณ์ อรรณพ<br>
+                            6. นางสาวอุมาพร ปรีชา<br>
+                            7. นางสาวนฤมล ทองมาก<br>
+                            8. นายเกียรติฉัตร์ แกว่นกสิกรรม
+                        </td>
+                    </tr>
+                    <tr style="vertical-align: top;">
+                        <td>
+                            นักศึกษาปริญญาเอก :
+                        </td>
+                        <td style="text-align: left;">
+                            1. นางสาวอาพร ละออกอ<br>
+                            2. นางสาวกัญจนพร วชิรอนันต์<br>
+                            3. นายปัณณวิชช์ สุขประเสริฐ
+                        </td>
+                    </tr>
+                    <tr style="vertical-align: top;">
+                        <td>
+                            เผู้ช่วยวิจัย :
+                        </td>
+                        <td style="text-align: left;">
+                            1. นางสาวพัสตราภรณ์  ชุมแก่น
+                            2. นายธีรยศถ์ ทองศรี<br>
+                            3. นางสาวอิษฎา ศิลปรัตน์<br>
+                        </td>
+                    </tr>
+                    <tr style="vertical-align: top;">
+                        <td>
+                            เจ้าหน้าที่เทคนิค :
+                        </td>
+                        <td style="text-align: left;">
+                            นายอำนวย  แก้วไพบูลย์<br>
+                            นายจำรัส ณ สุวรรณ
+                        </td>
+                    </tr>
+                </table>
+                <p>&nbsp;</p>
+
+                <h3>สถานที่ติดต่อ</h3>
+                <p>
+                    ภาควิชาฟิสิกส์ คณะวิทยาศาสตร์<br>
+                    มหาวิทยาลัยสงขลานครินทร์ อ. หาดใหญ่ จ. สงขลา – 90112<br>
+                    โทรศัพท์ : 074 - 288749<br>
+                    โทรสาร : 074 - 212817<br>
+                    E-mail : pikul.v@psu.ac.thackeray
+                </p>
+
+            </div>
+
+            <?php
         }
         ?>
 
