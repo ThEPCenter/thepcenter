@@ -129,7 +129,7 @@ $news_type = 'network-academic';
                             echo '                            
                             <div id="news-' . $p['id'] . '">
                                 <h3 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . htmlspecialchars_decode($p['title']) . '</a></h3>
-                                <small><em>' . thai_date($p['date']) . '</em></small>
+                                <p><small><em>' . thai_date($p['date']) . '</em></small></p>
                                 <p>' . $p['content_short'] . ' <a href="' . $p['type'] . '-news.php?news_id=' . $p['id'] . '">... อ่านต่อ</a></p>
                             </div>
                             <hr>
