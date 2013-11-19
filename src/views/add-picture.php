@@ -40,15 +40,15 @@ if ($_POST) {
     exit;
 }
 
-doc_head('ศูนย์ความเป็นเลิศด้านฟิสิกส์');
-$galley_id = $_GET['gallery_id'];
+$gallery_id = $_GET['gallery_id'];
 
-$sql_g = "SELECT * FROM 
-            tb_gallery 
+$sql_g = "SELECT * FROM tb_gallery 
             WHERE id = $gallery_id;
         ";
 $re_g = mysql_query($sql_g);
 $g = mysql_fetch_array($re_g);
+
+doc_head('ศูนย์ความเป็นเลิศด้านฟิสิกส์');
 ?>
 
 </head>

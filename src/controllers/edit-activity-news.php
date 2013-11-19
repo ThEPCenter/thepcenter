@@ -85,7 +85,7 @@ $p = mysql_fetch_array($result);
         });
     </script>
     <p>&nbsp;</p>
-    
+
     <div class="form-group">
         <label>เนื้อหาฉบับย่อ</label>
         <textarea class="form-control" name="content_short" rows="4"><?php echo $p['content_short']; ?></textarea>
@@ -114,11 +114,6 @@ $p = mysql_fetch_array($result);
     </div>
     <p>&nbsp;</p>
 
-    <?php
-    $sql_g = "SELECT * FROM tb_gallery WHERE id = {$p['gallery_id']};";
-    $re_g = mysql_query($sql_g);
-    $g = mysql_fetch_array($re_g);
-    ?>
     <div class="form-group">
         <label>แกลอรี</label>
         <div id="show-gall"></div>

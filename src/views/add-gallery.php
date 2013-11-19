@@ -9,7 +9,7 @@ if ($_POST) {
     $sql = "INSERT INTO tb_gallery VALUES (0, '$title', '$detail' , '$modified');";
     @mysql_query($sql) or die(mysql_error());
 
-    header("Location: add-picture.php");
+    header("Location: gallery.php");
     exit();
 }
 

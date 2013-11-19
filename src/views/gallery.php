@@ -86,8 +86,13 @@ doc_head('Gallery');
                 <div class="col-xs-6 col-sm-4 col-md-3">
                     <div style="width: 197px; height: 240px; border:1px solid rgba(0, 0, 0, .1);">
                         <div style="width: 195px; height: 195px; overflow: hidden; border-bottom: 1px solid rgba(0, 0, 0, .1);">
-                            <a href="gallery.php?gal_id=' . $gal['id'] . '">
-                                <p style="text-align: center;"><img style="height: 195px;" src="../img/picture/' . $pic['name'] . '"</p>
+                            <a title="' . $gal['title'] . '" href="gallery.php?gal_id=' . $gal['id'] . '">
+                                <img class="example-image" src="../images/pixel-vfl3z5WfW.gif" 
+                            style="vertical-align: middle; 
+                            background: no-repeat white url(../img/picture/' . $pic['name'] . ') -50px 0; 
+                            background-size: 300px auto; 
+                            width: 195px;
+                            height: 195px;">
                             </a>                            
                         </div>
                         <div style="max-width: 195px;">
