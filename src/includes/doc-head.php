@@ -19,9 +19,16 @@
           <script src="../themes/assets/js/html5shiv.js"></script>
           <script src="../themes/assets/js/respond.min.js"></script>
         <![endif]-->
-                
+
         <script src="../plugins/jqueryui/jquery-1.10.2.js"></script>
         <script src="../plugins/jqueryui/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
         <!-- CKEditor -->
         <script src="../plugins/ckeditor/ckeditor.js"></script>
-        
+
+        <!-- Datepicker -->
+        <link href="../plugins/jqueryui/jquery-ui-1.10.3/themes/base/jquery-ui.css" rel="stylesheet" />
+        <style>
+            #ui-datepicker-div{
+                width: 316px;
+            }
+        </style>

@@ -1,15 +1,15 @@
 <?php
 require_once '../system/system.php';
-doc_head('ฟิสิกส์อุตสากรรม');
-$type = 'industrial';
-?>
+doc_head('ฟิสิกส์ในชีวิตประจำวัน');
+$type = 'daily-life';
+?>       
 </head>
 
 <body>
     <div class="container">
         <?php get_includes('header'); ?>
 
-        <div id="show-social" class="row">
+        <div class="row">
 
             <?php
             if (isset($_GET['article_id'])) {
@@ -69,34 +69,7 @@ $type = 'industrial';
                 </div>
                 <?php
             } elseif (isset($_GET['show'])) {
-                echo '<h2 class="text-center">ฟิสิกส์อุตสาหกรรม</h2>';
-
-                // ========= Add news ====================================
-                $admin_txt = '  
-                <p>
-                    <a id="add-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-plus"></span> Add</a>
-                </p>
-                <hr>
-                ';
-                admin($admin_txt);
-                ?>
-
-                <script>
-                    $(function() {
-                        $("#add-news").click(function() {
-                            $(document).ajaxStart(function() {
-                                $("#show-social").html("<div class=\"span12 text-center\" ><img src=\"../images/demo_wait.gif\"></div>");
-                            });
-                            $.get("<?php controll('add-news'); ?>", {add_news: "<?php echo $news_type; ?>"},
-                            function(data) {
-                                $("#show-social").html(data);
-                            }
-                            );
-                        });
-
-                    });
-                </script>
-                <?php
+                echo '<h2 class="text-center">ฟิสิกส์ในชีวิตประจำวัน</h2>';
                 $sql = "SELECT * FROM tb_social WHERE type = '$type' ORDER BY date DESC;";
                 $result = mysql_query($sql);
                 if (mysql_num_rows($result) > 0) {

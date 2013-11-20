@@ -79,7 +79,7 @@
 
                 <li>▪ <a href="industrial.php">ฟิสิกส์อุตสาหกรรม</a></li>
 
-                <li>▪ <a href="#">ฟิสิกส์ในชีวิตประจำวัน</a></li>
+                <li>▪ <a href="daily-life.php">ฟิสิกส์ในชีวิตประจำวัน</a></li>
 
             </ul>
         </div> 
