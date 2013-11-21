@@ -11,14 +11,14 @@ if ($_POST) {
     $content_long = htmlspecialchars($_POST['content_long'], ENT_QUOTES);
     $modified = date("Y-m-d H:i:s");
 
-    $sql = "INSERT INTO 
+    $sql = "REPLACE INTO
                 tb_social
             VALUES 
                 ($id, '$type', '$title', '$date', '$featured_img', '$content_short', '$content_long', '$modified');
             ";
 
     @mysql_query($sql) or die(mysql_error());
-    header("Location: ../views/$type.php");
+    header("Location: ../views/$type.php?article_id=$id");
     exit();
 }
 
@@ -35,7 +35,7 @@ if (!empty($result)) {
 }
 ?>
 
-<h2 class="text-center">แก้ไขทความ <?php social_name_th($type); ?></h2>                   
+<h2 class="text-center">แก้ไขบทความ <?php social_name_th($p['type']); ?></h2>                   
 
 <form role="form" name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
 
@@ -91,5 +91,5 @@ if (!empty($result)) {
         </script>
     </div>
 
-    <button type="submit" class="btn btn-default">Submit</button> <a href="../views/<?php echo $type ?>.php" title="Cancel"><strong>Cancel</strong></a>
+    <button type="submit" class="btn btn-default">Submit</button> <a href="../views/<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>" title="Cancel"><strong>Cancel</strong></a>
 </form>

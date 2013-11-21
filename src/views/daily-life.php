@@ -19,6 +19,32 @@ $type = 'daily-life';
                 <div class="col-sm-9 col-md-9">
 
                     <?php
+                    
+                    //========== Edit Social ==============================
+                    $admin_txt = '  
+                    <p>
+                        <a id="edit-social" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-wrench"></span> Edit</a> 
+                    </p>                            
+                    <script>
+                        $(function() {
+                            $("#edit-social").click(function() {
+                                $(document).ajaxStart(function() {
+                                    $("#show-social").html("<div class=\"span12 text-center\" ><img src=\"../images/demo_wait.gif\"></div>");
+                                });
+                                $.get("' . controller('edit-social') . '", {edit_social:' . $article_id . '},
+                                function(data) {
+                                    $("#show-social").html(data);
+                                }
+                                );
+                            });
+
+                        });
+                    </script>
+                             ';
+                    admin($admin_txt);
+                    
+                    // =========================================================
+                    
                     $sql = "SELECT * FROM tb_social WHERE id = $article_id AND type = '$type';";
                     $result = mysql_query($sql);
                     if (!empty($result)) {
@@ -26,7 +52,7 @@ $type = 'daily-life';
                             echo '
                 
                     <div>
-                        <h3>' . htmlspecialchars_decode($p['title']) . '</h3>
+                        <h2>' . htmlspecialchars_decode($p['title']) . '</h2>
                         <p><small><em>' . thai_date($p['date']) . '</small></em></p>
                         ' . htmlspecialchars_decode($p['content_long']) . '
                     </div>

@@ -20,36 +20,31 @@ $type = 'industrial';
                 <div class="col-sm-9 col-md-9">
 
                     <?php
-                    echo '                            
-                            <div id="social-' . $article_id . '">
-                                ';
+                    //========== Edit Social ==============================
                     $admin_txt = '  
-                                <p>
-                                    <a id="edit-social" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-wrench"></span> Edit</a> 
-                                </p>
-                            ';
-                    admin($admin_txt);
-                    echo '
-                            </div>
-                      ';
-                    ?>
+                    <p>
+                        <a id="edit-social" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-wrench"></span> Edit</a> 
+                    </p>                            
                     <script>
                         $(function() {
-                            $('#edit-social').click(function() {
+                            $("#edit-social").click(function() {
                                 $(document).ajaxStart(function() {
-                                    $('#show-social').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
+                                    $("#show-social").html("<div class=\"span12 text-center\" ><img src=\"../images/demo_wait.gif\"></div>");
                                 });
-                                $.get("<?php controll('edit-social'); ?>", {edit_social: <?php echo $article_id; ?>},
+                                $.get("' . controller('edit-social') . '", {edit_social:' . $article_id . '},
                                 function(data) {
-                                    $('#show-social').html(data);
+                                    $("#show-social").html(data);
                                 }
                                 );
                             });
 
                         });
                     </script>
-
-                    <?php
+                             ';
+                    admin($admin_txt);
+                    
+                    // =========================================================
+                    
                     $sql = "SELECT * FROM tb_social WHERE id = $article_id AND type = '$type';";
                     $result = mysql_query($sql);
                     if (!empty($result)) {
