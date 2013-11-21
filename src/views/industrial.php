@@ -1,5 +1,6 @@
 <?php
 require_once '../system/system.php';
+
 doc_head('ฟิสิกส์อุตสากรรม');
 $type = 'industrial';
 ?>
@@ -19,12 +20,42 @@ $type = 'industrial';
                 <div class="col-sm-9 col-md-9">
 
                     <?php
+                    echo '                            
+                            <div id="social-' . $article_id . '">
+                                ';
+                    $admin_txt = '  
+                                <p>
+                                    <a id="edit-social" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-wrench"></span> Edit</a> 
+                                </p>
+                            ';
+                    admin($admin_txt);
+                    echo '
+                            </div>
+                      ';
+                    ?>
+                    <script>
+                        $(function() {
+                            $('#edit-social').click(function() {
+                                $(document).ajaxStart(function() {
+                                    $('#show-social').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
+                                });
+                                $.get("<?php controll('edit-social'); ?>", {edit_social: <?php echo $article_id; ?>},
+                                function(data) {
+                                    $('#show-social').html(data);
+                                }
+                                );
+                            });
+
+                        });
+                    </script>
+
+                    <?php
                     $sql = "SELECT * FROM tb_social WHERE id = $article_id AND type = '$type';";
                     $result = mysql_query($sql);
                     if (!empty($result)) {
                         while ($p = mysql_fetch_array($result)) {
-                            echo '
-                
+
+                            echo '                
                     <div>
                         <h3>' . htmlspecialchars_decode($p['title']) . '</h3>
                         <p><small><em>' . thai_date($p['date']) . '</small></em></p>
@@ -32,7 +63,7 @@ $type = 'industrial';
                     </div>
                 
                             ';
-                        }
+                        } // END while
                     } else {
                         echo '
                         <div class="bs-example">
@@ -71,23 +102,19 @@ $type = 'industrial';
             } elseif (isset($_GET['show'])) {
                 echo '<h2 class="text-center">ฟิสิกส์อุตสาหกรรม</h2>';
 
-                // ========= Add news ====================================
+                // ========= AJAX for Add social ====================================
                 $admin_txt = '  
                 <p>
                     <a id="add-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-plus"></span> Add</a>
                 </p>
                 <hr>
-                ';
-                admin($admin_txt);
-                ?>
-
                 <script>
                     $(function() {
                         $("#add-news").click(function() {
                             $(document).ajaxStart(function() {
                                 $("#show-social").html("<div class=\"span12 text-center\" ><img src=\"../images/demo_wait.gif\"></div>");
                             });
-                            $.get("<?php controll('add-news'); ?>", {add_news: "<?php echo $news_type; ?>"},
+                            $.get("' . controller('add-social') . '", {add_social: "' . $type . '"},
                             function(data) {
                                 $("#show-social").html(data);
                             }
@@ -96,7 +123,11 @@ $type = 'industrial';
 
                     });
                 </script>
-                <?php
+                        ';
+                admin($admin_txt);
+
+                // ====================================================================
+
                 $sql = "SELECT * FROM tb_social WHERE type = '$type' ORDER BY date DESC;";
                 $result = mysql_query($sql);
                 if (mysql_num_rows($result) > 0) {

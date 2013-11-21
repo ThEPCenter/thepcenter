@@ -229,4 +229,14 @@ function name_news($news_type) {
     }
 }
 
+// ============================================
+
+function social_name_th($social_type){
+    if($social_type == 'industrial'){
+        echo 'ฟิสิกส์อุตสาหกรรม';
+    }elseif ($social_type == 'daily-life') {
+        echo 'ฟิสิกส์ในชีวิตประจำวัน';
+    }
+}
+
 ?>
