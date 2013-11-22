@@ -35,26 +35,32 @@ if (!isset($_GET['edit_news'])) {
 //=====================================
 
 $edit_id = $_GET['edit_news'];
+$news_type_th = urldecode($_GET['news_type_th']);
 $sql = "SELECT * FROM tb_news WHERE id = $edit_id;";
 $result = mysql_query($sql);
 $p = mysql_fetch_array($result);
+
+
 ?>
 
-<h2 class="text-center">แก้ไข ข่าววิชาการจากเครือข่าย</h2>                   
+<h2 class="text-center">แก้ไข ข่าว<?php echo $news_type_th; ?></h2>                   
 
 <form role="form" name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    
     <input name="edit_id" type="hidden" value="<?php echo $p['id']; ?>">
     <input name="type" type="hidden" value="<?php echo $p['type']; ?>">
-    
+
     <div class="form-group">
         <label>หัวข้อข่าว</label>
-        <input type="text" name="title"  class="form-control" value="<?php echo htmlspecialchars_decode($p['title']); ?>" />
+        <input type="text" name="title"  class="form-control" value="<?php echo htmlspecialchars_decode($p['title']); ?>">
     </div>
     
+    <?php if($news_type == 'network-academic'){ ?>
     <div class="form-group">
         <label>หัวข้อข่าวภาษาอังกฤษ</label>
         <input type="text" name="title_en"  class="form-control" value="<?php echo htmlspecialchars_decode($p['title_en']); ?>">
     </div>
+    <?php } ?> 
     
     <div class="form-group">
         <label>วันที่</label>
@@ -69,11 +75,10 @@ $p = mysql_fetch_array($result);
     
     <h4>Feature image</h4>
     <p id="show-img">
-        <img class="img-responsive" style="margin: auto;" src="<?php echo htmlspecialchars_decode($p['featured_img']); ?>">
     </p>
     <div class="form-group">
         <label>Feature image url</label>
-        <input type="text" id="featured_img" name="featured_img"  class="form-control" value="<?php echo htmlspecialchars_decode($p['featured_img']); ?>">
+        <input type="text" id="featured_img" name="featured_img"  class="form-control" />
     </div>
     <script>
         $(function(){            
@@ -85,48 +90,72 @@ $p = mysql_fetch_array($result);
         });
     </script>
     <p>&nbsp;</p>
+    
 
     <div class="form-group">
         <label>เนื้อหาฉบับย่อ</label>
         <textarea name="content_short" class="form-control" rows="4"><?php echo $p['content_short']; ?></textarea>
     </div>
-    
+
+    <?php if($news_type == 'network-academic'){ ?>
     <div class="form-group">
         <label>เนื้อหาฉบับย่อภาษาอังกฤษ</label>
-        <textarea name="content_short_en" class="form-control" rows="4"><?php echo $p['content_short_en']; ?></textarea>
+        <textarea name="content_short_en" class="form-control" rows="4"></textarea>
     </div>
-
+    <?php } ?>
+    
     <div class="form-group">
         <label>เนื้อหาฉบับเต็ม</label>
-        <textarea name="content_long">
-            <?php echo htmlspecialchars_decode($p['content_long']); ?>
-        </textarea>
+        <textarea name="content_long"></textarea>
         <script>
             CKEDITOR.replace('content_long');
         </script>
     </div>
     
+    <?php if($news_type == 'network-academic'){ ?>
     <div class="form-group">
         <label>เนื้อหาฉบับเต็มภาษาอังกฤษ</label>
-        <textarea name="content_long_en">
-            <?php echo htmlspecialchars_decode($p['content_long_en']); ?>
-        </textarea>
+        <textarea name="content_long_en"></textarea>
         <script>
             CKEDITOR.replace('content_long_en');
         </script>
     </div>
-
+    <?php } ?>
+    
     <strong>อื่นๆ</strong>
-    <?php
-    if ($p['new'] == 'y') {
-        $chk = ' checked';
-    }
-    ?>
     <div class="checkbox">
         <label>
-            <input type="checkbox" name="new" value="y"<?php echo $chk; ?>> ข่าวใหม่
+            <input type="checkbox" name="new"> ข่าวใหม่
         </label>
     </div>
     <p>&nbsp;</p>
-    <button type="submit" class="btn btn-default">Submit</button> | <a href="../views/network-academic-news.php?news_id=<?php echo $p['id']; ?>" title="Cancel"><strong>Cancel</strong></a>
+    
+    <?php if ($news_type == 'pr') { ?>
+        <div class="form-group">
+            <label>URL รูปภาพ</label>
+            <input type="text" name="picture"  class="form-control">
+        </div>
+        <p>&nbsp;</p>
+        <?php
+    } // END if
+
+    if ($news_type == 'activity') {
+        ?>
+        <div class="form-group">
+            <label>แกลอรี</label>
+            <span>เลือกแกลอรี หรือ </span><a href="gallery.php?add_gal=new" target="_blank">เพื่มแกลอรีใหม่</a>
+            <select name="gallery_id" class="form-control" id="gallery_id">
+                <option id="gal-0" value="0">...</option>
+                <?php
+                $sql_g = "SELECT * FROM tb_gallery;";
+                $result_g = mysql_query($sql_g);
+                while ($g = mysql_fetch_array($result_g)) {
+                    echo '<option id="gal-' . $g['id'] . '" value="' . $g['id'] . '">' . $g['title'] . '</option>';
+                } // END while
+                ?>
+            </select>        
+        </div>
+    <?php } ?>
+
+    <button type="submit" class="btn btn-default">Submit</button> | <a href="../views/<?php echo $news_type ?>-news.php" title="Cancel"><strong>Cancel</strong></a>
 </form>

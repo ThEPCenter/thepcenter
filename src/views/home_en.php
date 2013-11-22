@@ -8,7 +8,7 @@ doc_head('Thailand Center of Excellence in Physics');
 <body>
     <div class="container">
 
-        <?php get_includes('header_en'); ?>
+        <?php get_includes('home-header_en'); ?>
 
         <div class="row">
 
@@ -27,7 +27,7 @@ doc_head('Thailand Center of Excellence in Physics');
                         <img class="img-responsive" style="margin: auto;" src="<?php echo $p['featured_img']; ?>">
                     </div>                                                
                     <h3><a href="<?php echo $p['type'] ?>-news_en.php?news_id=<? echo $p['id']; ?>"><?php echo $p['title_en']; ?></a></h3>
-                    <?php echo $p['content_short_en']; ?> <a href="<?php echo $p['type'] ?>-news_en.php?news_id=<?php echo $p['id']; ?>">... Read more</a></p>
+                    <?php echo $p['content_short_en']; ?> <a href="<?php echo $p['type'] ?>-news_en.php?news_id=<?php echo $p['id']; ?>">... Read more</a>
                 </div>
             </div>
 

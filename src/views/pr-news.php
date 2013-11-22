@@ -1,8 +1,10 @@
 <?php
 require_once '../system/system.php';
 
-doc_head('ข่าวประชาสัมพันธ์');
 $news_type = 'pr';
+$news_type_th = 'ประชาสัมพันธ์';
+
+doc_head($news_type_th);
 ?>
 
 <!-- Datepicker -->
@@ -12,7 +14,6 @@ $news_type = 'pr';
         width: 316px;
     }
 </style>
-
 </head>
 
 <body>
@@ -20,9 +21,7 @@ $news_type = 'pr';
 
         <?php get_includes('header'); ?>
 
-        <div class="row">
-
-
+        <div id="show-news" class="row">
             <?php
             if (isset($_GET['news_id'])) {
                 $news_id = $_GET['news_id'];
@@ -32,61 +31,70 @@ $news_type = 'pr';
                 if ($p['type'] != 'pr') {
                     echo '
                     <script>
-                        window.location = \'pr-news.php\';
+                        window.location = "' . $news_type . '-news.php";
                     </script>     
                     ';
                 }
                 ?>
-                <div class="col-md-9">
-                    <?
+                <div class="col-sm-9 col-md-9">
+                    <?php
                     echo '                            
                             <div id="news-' . $p['id'] . '">
                                 ';
-                    admin('<p><a id="edit-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-wrench"></span> Edit</a></p>');
+                    $admin_txt = '  
+                                <p>
+                                    <a id="edit-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-wrench"></span> Edit</a> 
+                                </p>
+                            ';
+                    admin($admin_txt);
                     echo '
-                                <h3>' . htmlspecialchars_decode($p['title']) . '</h3>
+                                <h2>' . htmlspecialchars_decode($p['title']) . '</h2>
                                 <p><small><em>' . thai_date($p['date']) . '</small></em></p>
-                                <p class="text-center"><img class="img-responsiv" src="' . $p['picture'] . '"></p>
                                 ' . htmlspecialchars_decode($p['content_long']) . '
                             </div>
-                            ';
+                      ';
                     ?>
                     <script>
-                        $(function(){
-                            $('#edit-news').click(function(){
-                                $(document).ajaxStart(function(){
-                                    $('.bs-example').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
+                        $(function() {
+                            $('#edit-news').click(function() {
+                                $(document).ajaxStart(function() {
+                                    $('#show-news').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
                                 });
-                                $.get("<?php controll('edit-pr-news'); ?>", {edit_news: "<?php echo $p['id']; ?>"}, 
-                                function(data){ $('.bs-example').html(data); }
-                            );
+                                $.get("<?php controll('edit-news'); ?>", {edit_news: "<?php echo $p['id']; ?>", news_type_th: "<?php echo urlencode($news_type_th); ?>"},
+                                function(data) {
+                                    $('#show-news').html(data);
+                                }
+                                );
                             });
-                                                                                
+
                         });
                     </script>
                 </div>
 
-                <div class="col-md-3">
-                    <h3 class="text-center">ข่าวประชาสัมพันธ์ย้อนหลัง</h3>
+                <div class="col-sm-3 col-md-3">
+                    <h3 class="text-center">ข่าว<?php echo $news_type_th; ?>ย้อนหลัง</h3>
                     <?php
-                    $news_id = $_GET['news_id'];
-                    $sql = "SELECT * FROM tb_news WHERE type = 'pr' ORDER BY date DESC;";
-                    $result = mysql_query($sql);
-                    while($p = mysql_fetch_array($result)){
+                    $sql_etc = "SELECT * FROM tb_news 
+                        WHERE type = '$news_type'
+                        ORDER BY date DESC
+                        LIMIT 4;";
+                    $re_etc = mysql_query($sql_etc);
+                    while ($etc = mysql_fetch_array($re_etc)) {
                         echo '
-                          <p><a href="pr-news.php?news_id=' . $p['id'] . '">' . htmlspecialchars_decode($p['title']) . '</a></p>
-                          <hr>
-                        ';
-                    } // END while                    
+                    <p><a href="' . $etc['type'] . '-news.php?news_id=' . $etc['id'] . '">' . htmlspecialchars_decode($etc['title']) . '</a></p>                    
+                    <hr>
+                    ';
+                    } // END while
                     ?>
-                    <a href="pr-news.php"><em>ดูหัวข้อข่าวทั้งหมด</em></a>
+                    <p><a href="<?php echo $news_type; ?>-news.php"><em>หัวข้อข่าวทั้งหมด</em></a></p>
                 </div>
                 <?php
             } else {
                 ?>
-                <div class="col-md-12">
-                    <h2 class="text-center">ข่าวประชาสัมพันธ์</h2>
+                <div class="col-sm-12 col-md-12">
+                    <h2 class="text-center">ข่าว<?php echo $news_type_th; ?></h2>
                     <?php
+                    // ========= Add news ====================================
                     $admin_txt = '  
                 <p>
                     <a id="add-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-plus"></span> Add</a>
@@ -94,31 +102,37 @@ $news_type = 'pr';
                 <hr>
                             ';
                     admin($admin_txt);
-                    ?>            
+                    ?>
+
                     <script>
-                        $(function(){         
-                            $('#add-news').click(function(){
-                                $(document).ajaxStart(function(){
-                                    $('.bs-example').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
+                        $(function() {
+                            $("#add-news").click(function() {
+                                $(document).ajaxStart(function() {
+                                    $("#show-news").html("<div class=\"span12 text-center\" ><img src=\"../images/demo_wait.gif\"></div>");
                                 });
-                                $.get("<?php controll('add-news'); ?>", {add_news: "<?php echo $news_type; ?>"}, 
-                                function(data){ $('.bs-example').html(data); }
-                            );
+                                $.get("<?php controll('add-news'); ?>", {add_news: "<?php echo $news_type; ?>"},
+                                function(data) {
+                                    $("#show-news").html(data);
+                                }
+                                );
                             });
-                                                                                    
+
                         });
                     </script>
+
                     <?php
-                    $sql = "SELECT * FROM tb_news WHERE type = 'pr' ORDER BY date DESC;";
+                    // ------------------------------------------------------------
+
+                    $sql = "SELECT * FROM tb_news WHERE type = '$news_type' ORDER BY date DESC;";
                     $result = mysql_query($sql);
                     $num_news = mysql_num_rows($result);
                     if ($num_news > 0) {
-                        $l = 0;
                         while ($p = mysql_fetch_array($result)) {
                             echo '                            
                             <div id="news-' . $p['id'] . '">
                                 <h3 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . htmlspecialchars_decode($p['title']) . '</a></h3>
-                                <small><em>' . thai_date($p['date']) . '</small></em>                                
+                                <p><small><em>' . thai_date($p['date']) . '</em></small></p>
+                                <p>' . $p['content_short'] . ' <a href="' . $p['type'] . '-news.php?news_id=' . $p['id'] . '">... อ่านต่อ</a></p>
                             </div>
                             <hr>
                             ';
@@ -132,7 +146,6 @@ $news_type = 'pr';
             } // END if else
             ?>
 
-            <p>&nbsp;</p>            
         </div>
 
         <?php get_includes('footer'); ?>
@@ -140,6 +153,7 @@ $news_type = 'pr';
     <!-- /.container -->
 
     <?php get_includes('bootstrap-core'); ?>
+    <script src="../plugins/jqueryui/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
 
 </body>
 </html>

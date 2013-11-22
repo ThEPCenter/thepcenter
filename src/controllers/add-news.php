@@ -48,12 +48,14 @@ $news_type = $_GET['add_news'];
         <label>หัวข้อข่าว</label>
         <input type="text" name="title"  class="form-control">
     </div>
-
+    
+    <?php if($news_type == 'network-academic'){ ?>
     <div class="form-group">
         <label>หัวข้อข่าวภาษาอังกฤษ</label>
         <input type="text" name="title_en"  class="form-control">
     </div>
-
+    <?php } ?> 
+    
     <div class="form-group">
         <label>วันที่</label>
         <input type="text" id="datepicker" name="date">
@@ -63,7 +65,8 @@ $news_type = $_GET['add_news'];
             $( "#datepicker" ).datepicker();   // Date Picker
         }); /* END jQuery */
     </script>
-
+    <p>&nbsp;</p>
+    
     <h4>Feature image</h4>
     <p id="show-img">
     </p>
@@ -80,19 +83,21 @@ $news_type = $_GET['add_news'];
             
         });
     </script>
-    <p>&nbsp;</p>
-    
-<?php if($news_type == 'network-academic'){ ?>
+    <p>&nbsp;</p>    
+
     <div class="form-group">
         <label>เนื้อหาฉบับย่อ</label>
         <textarea name="content_short" class="form-control" rows="4"></textarea>
     </div>
-
+    <p>&nbsp;</p>
+    
+    <?php if($news_type == 'network-academic'){ ?>
     <div class="form-group">
         <label>เนื้อหาฉบับย่อภาษาอังกฤษ</label>
         <textarea name="content_short_en" class="form-control" rows="4"></textarea>
     </div>
-
+    <?php } ?>
+    
     <div class="form-group">
         <label>เนื้อหาฉบับเต็ม</label>
         <textarea name="content_long"></textarea>
@@ -101,6 +106,7 @@ $news_type = $_GET['add_news'];
         </script>
     </div>
     
+    <?php if($news_type == 'network-academic'){ ?>
     <div class="form-group">
         <label>เนื้อหาฉบับเต็มภาษาอังกฤษ</label>
         <textarea name="content_long_en"></textarea>
@@ -108,18 +114,7 @@ $news_type = $_GET['add_news'];
             CKEDITOR.replace('content_long_en');
         </script>
     </div>
-
-<?php } else { ?>
-    
-    <div class="form-group">
-        <label>เนื้อหา</label>
-        <textarea name="content_long"></textarea>
-        <script>
-            CKEDITOR.replace('content_long');
-        </script>
-    </div>
-
-<?php } ?>
+    <?php } ?>
     
     <strong>อื่นๆ</strong>
     <div class="checkbox">
@@ -127,22 +122,14 @@ $news_type = $_GET['add_news'];
             <input type="checkbox" name="new"> ข่าวใหม่
         </label>
     </div>
-    <p>&nbsp;</p>
+    <p>&nbsp;</p>    
     
-    <?php if ($news_type == 'pr') { ?>
-        <div class="form-group">
-            <label>URL รูปภาพ</label>
-            <input type="text" name="picture"  class="form-control">
-        </div>
-        <p>&nbsp;</p>
-        <?php
-    } // END if
-
+    <?php
     if ($news_type == 'activity') {
         ?>
         <div class="form-group">
             <label>แกลอรี</label>
-            <span>เลือกแกลอรี หรือ </span><a href="gallery.php?add_gal=new" target="_blank">เพื่มแกลอรีใหม่</a>
+            <span>เลือกแกลอรี หรือ </span><a href="add-gallery.php">เพื่มแกลอรีใหม่</a>
             <select name="gallery_id" class="form-control" id="gallery_id">
                 <option id="gal-0" value="0">...</option>
                 <?php

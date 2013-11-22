@@ -21,7 +21,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-12 col-md-6">
-                <h2 class="text-center">ข่าววิชาการจากเครือข่าย</h2>
+                <h2 class="text-center"><a href="network-academic-news.php">ข่าววิชาการจากเครือข่าย</a></h2>
                 <a href="<?php echo $p['type'] ?>-news.php?news_id=<? echo $p['id']; ?>"><img class="img-responsive" style="margin: auto; border: 1px solid #666666;" alt="Featured image" src="<?php echo $p['featured_img']; ?>"></a>
                 <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<? echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
                 <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
@@ -36,7 +36,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-6 col-md-3">
-                <h2 class="text-center">ข่าวกิจกรรม</h2>
+                <h2 class="text-center"><a href="activity-news.php">ข่าวกิจกรรม</a></h2>
                 <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><img class="img-responsive" style="margin: auto; border: 1px solid #666666;" alt="Featured image" src="<?php echo $p['featured_img']; ?>"></a>
                 <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
                 <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
@@ -51,7 +51,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-6 col-md-3 ">
-                <h2 class="text-center">ข่าวประชาสัมพันธ์/ข่าวพิเศษ</h2>
+                <h2 class="text-center"><a href="pr-news.php">ข่าวประชาสัมพันธ์</a>/<a href="special-news.php">ข่าวพิเศษ</a></h2>
                 <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><img class="img-responsive" style="margin: auto; border: 1px solid #666666;" alt="Featured image" src="<?php echo $p['featured_img']; ?>"></a>
                 <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
                 <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
