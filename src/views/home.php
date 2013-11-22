@@ -42,16 +42,31 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                 <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
 
-            <!-- Special / Pr news -->
+            <!-- Pr news -->
             <?php
             $sql = "SELECT * FROM tb_news 
-                WHERE type = 'special' OR type = 'pr'
+                WHERE type = 'pr'
                 ORDER BY date DESC;";
             $result = mysql_query($sql);
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-6 col-md-3 ">
-                <h2 class="text-center"><a href="pr-news.php">ข่าวประชาสัมพันธ์</a>/<a href="special-news.php">ข่าวพิเศษ</a></h2>
+                <h2 class="text-center"><a href="pr-news.php">ข่าวประชาสัมพันธ์</a></h2>
+                <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><img class="img-responsive" style="margin: auto; border: 1px solid #666666;" alt="Featured image" src="<?php echo $p['featured_img']; ?>"></a>
+                <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
+                <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
+            </div>
+            
+            <!-- Special news -->
+            <?php
+            $sql = "SELECT * FROM tb_news 
+                WHERE type = 'special'
+                ORDER BY date DESC;";
+            $result = mysql_query($sql);
+            $p = mysql_fetch_array($result);
+            ?>
+            <div class="col-sm-6 col-md-3 ">
+                <h2 class="text-center"><a href="special-news.php">ข่าวพิเศษ</a></h2>
                 <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><img class="img-responsive" style="margin: auto; border: 1px solid #666666;" alt="Featured image" src="<?php echo $p['featured_img']; ?>"></a>
                 <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
                 <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
@@ -88,57 +103,45 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
             <h2>ศูนย์วิจัยเครือข่าย</h2>
 
-            <div class="col-xs-6 col-sm-4 col-md-2">
-                <a href="research-center.php?show_center=TFP">
-                    <div class="text-center" style="background-color: #8f8f8f;">                    
-                        <h2>TFP</h2>
-                        <p>&nbsp;</p>                    
-                    </div>
+            <div class="col-xs-6 col-sm-2 col-md-2">
+                <a title="ศูนย์วิจัยทางฟิสิกส์ของฟิล์มบาง" href="research-center.php?show_center=TFP">
+                    <img style="margin: 0 auto; border: 1px solid #666666;" class="img-responsive" src="../images/center/TFP_300.png">
+                    <p style="font-size: 90%;">ศูนย์วิจัยทางฟิสิกส์ของฟิล์มบาง</p>
                 </a>
             </div>
 
-            <div class="col-xs-6 col-sm-4 col-md-2">
-                <a href="research-center.php?show_center=PPP">
-                    <div class="text-center" style="background-color: #8f8f8f;">
-                        <h2>PPP</h2>
-                        <p>&nbsp;</p>
-                    </div>
+            <div class="col-xs-6 col-sm-2 col-md-2">
+                <a title="ศูนย์วิจัยทางฟิสิกส์ของลำอนุภาคและพลาสมา" href="research-center.php?show_center=PPP">                        
+                    <img style="margin: 0 auto; border: 1px solid #666666;" class="img-responsive" src="../images/center/ppp_300.png">
+                    <p style="font-size: 90%;">ศูนย์วิจัยทางฟิสิกส์ของลำอนุภาคและพลาสมา</p>
                 </a>
             </div>
 
-            <div class="col-xs-6 col-sm-4 col-md-2">
-                <a href="research-center.php?show_center=NSP">
-                    <div class="text-center" style="background-color: #8f8f8f;">
-                        <h2>NSP</h2>
-                        <p>&nbsp;</p>
-                    </div>
+            <div class="col-xs-6 col-sm-2 col-md-2">
+                <a title="ศูนย์วิจัยทางนาโนสเกลฟิสิกส์" href="research-center.php?show_center=NSP">
+                    <img style="margin: 0 auto; border: 1px solid #666666;" class="img-responsive" src="../images/center/nano_300.png">
+                    <p style="font-size: 90%;">ศูนย์วิจัยทางนาโนสเกลฟิสิกส์</p>
                 </a>
             </div>
 
-            <div class="col-xs-6 col-sm-4 col-md-2">
-                <a href="research-center.php?show_center=IGP">
-                    <div class="text-center" style="background-color: #8f8f8f;">
-                        <h2>IGP</h2>
-                        <p>&nbsp;</p>
-                    </div>
+            <div class="col-xs-6 col-sm-2 col-md-2">
+                <a title="ศูนย์วิจัยทางฟิสิกส์บูรณาการ" href="research-center.php?show_center=IGP">
+                    <img style="margin: 0 auto; border: 1px solid #666666;" class="img-responsive" src="../images/center/IGP_300.png">
+                    <p style="font-size: 90%;">ศูนย์วิจัยทางฟิสิกส์บูรณาการ</p>
                 </a>
             </div>
 
-            <div class="col-xs-6 col-sm-4 col-md-2">
-                <a href="research-center.php?show_center=CTP">
-                    <div class="text-center" style="background-color: #8f8f8f;">
-                        <h2>CTP</h2>
-                        <p>&nbsp;</p>
-                    </div>
+            <div class="col-xs-6 col-sm-2 col-md-2">
+                <a title="ศูนย์วิจัยทางฟิสิกส์คำนวณและทฤษฎี" href="research-center.php?show_center=CTP">
+                    <img style="margin: 0 auto; border: 1px solid #666666;" class="img-responsive" src="../images/center/CTP_300.png">
+                    <p style="font-size: 90%;">ศูนย์วิจัยทางฟิสิกส์คำนวณและทฤษฎี</p>
                 </a>
             </div>
 
-            <div class="col-xs-6 col-sm-4 col-md-2">
-                <a href="research-center.php?show_center=ThEP">
-                    <div class="text-center" style="background-color: #8f8f8f;">
-                        <h2>ThEP</h2>                        
-                        <p>(โครงการจัดตั้ง)</p>
-                    </div>
+            <div class="col-xs-6 col-sm-2 col-md-2">
+                <a title="โครงการจัดตั้ง" href="research-center.php?show_center=ThEP">
+                    <img style="margin: 0 auto; border: 1px solid #666666;" class="img-responsive" src="../images/center/thep_atom_chip_300.png">
+                    <p style="font-size: 90%;">โครงการจัดตั้งห้องปฏิบัติการวิจัย</p>
                 </a>
             </div>
         </div> <!-- /.row -->

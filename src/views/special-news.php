@@ -83,7 +83,7 @@ doc_head('ข่าวพิเศษ');
                     ';
                     } // END while
                     ?>
-                    <a href="special-news.php"><em>หัวข้อข่าวทั้งหมด</em></a>
+                    <a class="all-title" href="special-news.php"><em>หัวข้อข่าวทั้งหมด</em></a>
                 </div>
                 <?php
             } else {

@@ -554,7 +554,7 @@ doc_head($center);
                 <?php
             } elseif ($show_center == 'ThEP') {
                 ?>
-                <h2 class="text-center">สำนักงานกลางศูนย์ความเป็นเลิศด้านฟิสิกส์</h2>
+                <h2 class="text-center">โครงการจัดตั้งห้องปฏิบัติการวิจัย</h2>
                 <h3 class="text-center"></h3>
                 <img class="img-responsive" style="margin:0 auto;" src="../images/under-construction.jpg">
 

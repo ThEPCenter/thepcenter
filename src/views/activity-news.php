@@ -142,7 +142,7 @@ doc_head('ข่าวกิจกรรม');
                     ';
                     } // END while
                     ?>
-                    <a href="activity-news.php"><em>หัวข้อข่าวทั้งหมด</em></a>
+                    <a class="all-title" href="activity-news.php"><em>หัวข้อข่าวทั้งหมด</em></a>
                 </div>
 
                 <?php

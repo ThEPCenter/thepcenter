@@ -28,12 +28,12 @@
                 <li class="li-head">สำนักงานกลาง</li>
 
                 <li>▪ <a href="location.php">ที่ตั้งหน่วยงาน</a></li>
+                
+                <li>▪ <a href="document.php">เอกสารเผยแพร่</a></li>
 
                 <li>▪ <a href="form.php">แบบฟอร์ม</a></li>
 
-                <li>▪ <a href="http://mail.google.com/a/thep-center.org" target="_blank">E-mail</a></li>
-
-                <li>▪ <a href="document.php">เอกสารเผยแพร่</a></li>
+                <li>▪ <a href="http://mail.google.com/a/thep-center.org" target="_blank">E-mail</a></li>                
 
                 <li>▪ <a href="http://eofficethep.com" target="_blank">E-Office</a></li>
 
@@ -45,7 +45,7 @@
         <div class="col-xs-6 col-sm-3 col-md-3" >
             <ul>
 
-                <li class="li-head">หมาวิทยาลัย...</li>
+                <li class="li-head">มหาวิทยาลัย</li>
 
                 <li>▪ <a href="http://www.cmu.ac.th" target="_blank">มหาวิทยาลัยเชียงใหม่</a></li>
 
@@ -87,11 +87,11 @@
     </div>
 
     <div class="row">
-        <div style="text-align: right; padding-top: 20px; padding-right: 20px;">
-            <b>ศูนย์ความเป็นเลิศด้านฟิสิกส์</b><br>
-            ตู้ ปณ.70 มหาวิทยาลัยเชียงใหม่ อ.เมือง จ.เชียงใหม่ 50202<br>
-            โทรศัพท์ (053) 942650-3 โทรสาร (053) 222774
+        <p>&nbsp;</p>
+        <div style="text-align: center; padding-right: 20px;">
+            <b>ศูนย์ความเป็นเลิศด้านฟิสิกส์</b> ตู้ ปณ.70 มหาวิทยาลัยเชียงใหม่ อ.เมือง จ.เชียงใหม่ 50202 โทรศัพท์ (053) 942650-3 โทรสาร (053) 222774
         </div>
+        <p>&nbsp;</p>
     </div>
 
 </footer>

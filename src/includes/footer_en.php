@@ -74,11 +74,11 @@
 
         <div class="col-xs-6 col-sm-3 col-md-3">
             <ul>
-                <li class="li-head">Physics and Social</li>
+                <li class="li-head">News</li>
 
-                <li>▪ <a href="industrial_en.php">Industrial Physics.</a></li>
+                <li>▪ <a href="network-academic-news_en.php">Research News from Members</a></li>
 
-                <li>▪ <a href="#">Physics in Daily Life.</a></li>
+                
 
             </ul>
         </div> 
@@ -86,11 +86,11 @@
     </div>
 
     <div class="row">
-        <div style="text-align: right; padding-top: 20px;  padding-right: 20px;">
-            <b>Thailand Center of Excellence in Physics</b><br>
-            P.O.Box 70 Chiang Mai University, Chiang Mai 50202 Thailand<br>
-            Tel: +66 53 942650-3 FAX : +66 53 222774
+        <p>&nbsp;</p>
+        <div style="text-align: center; padding-right: 20px;">
+            <b>Thailand Center of Excellence in Physics</b> P.O.Box 70 Chiang Mai University, Chiang Mai 50202 Thailand Tel: +66 53 942650-3 FAX : +66 53 222774
         </div>
+        <p>&nbsp;</p>
     </div>
 </footer>
 <!-- / footer -->

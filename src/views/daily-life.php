@@ -82,7 +82,7 @@ $type = 'daily-life';
                             ';
                         } // END while
                         ?>
-                        <a href="<?php echo $type; ?>.php?show=all"><em>บทความทั้งหมด</em></a>
+                    <a class="all-title" href="<?php echo $type; ?>.php?show=all"><em>บทความทั้งหมด</em></a>
                         <?php
                     } else {
                         echo '
@@ -176,7 +176,7 @@ $type = 'daily-life';
                             ';
                         } // END while
                         ?>
-                        <a href="<?php echo $type; ?>.php?show=all"><em>บทความทั้งหมด</em></a>
+                    <a class="all-title" href="<?php echo $type; ?>.php?show=all"><em>บทความทั้งหมด</em></a>
                         <?php
                     } else {
                         echo '

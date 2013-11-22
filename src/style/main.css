@@ -203,6 +203,10 @@ table {
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
+a.all-title{
+    color: green;
+}
+
 @media (min-width: 1200px)  {
     .container {
         max-width: 100%;

@@ -86,7 +86,7 @@ doc_head($news_type_th);
                     ';
                     } // END while
                     ?>
-                    <p><a href="<?php echo $news_type; ?>-news.php"><em>หัวข้อข่าวทั้งหมด</em></a></p>
+                    <p><a class="all-title" href="<?php echo $news_type; ?>-news.php"><em>หัวข้อข่าวทั้งหมด</em></a></p>
                 </div>
                 <?php
             } else {

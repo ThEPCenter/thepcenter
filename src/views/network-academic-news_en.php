@@ -82,7 +82,7 @@ $news_type = 'network-academic';
                     ';
                     } // END while
                     ?>
-                    <p><a href="network-academic-news_en.php"><em>All news</em></a></p>
+                    <p><a class="all-title" href="network-academic-news_en.php"><em>All news</em></a></p>
                 </div>
                 <?php
             } else {
