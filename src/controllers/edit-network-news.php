@@ -98,9 +98,7 @@ $p = mysql_fetch_array($result);
 
     <div class="form-group">
         <label>เนื้อหาฉบับเต็ม</label>
-        <textarea name="content_long">
-            <?php echo htmlspecialchars_decode($p['content_long']); ?>
-        </textarea>
+        <textarea name="content_long"><?php echo htmlspecialchars_decode($p['content_long']); ?></textarea>
         <script>
             CKEDITOR.replace('content_long');
         </script>
@@ -108,9 +106,7 @@ $p = mysql_fetch_array($result);
     
     <div class="form-group">
         <label>เนื้อหาฉบับเต็มภาษาอังกฤษ</label>
-        <textarea name="content_long_en">
-            <?php echo htmlspecialchars_decode($p['content_long_en']); ?>
-        </textarea>
+        <textarea name="content_long_en"><?php echo htmlspecialchars_decode($p['content_long_en']); ?></textarea>
         <script>
             CKEDITOR.replace('content_long_en');
         </script>

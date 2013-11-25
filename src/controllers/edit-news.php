@@ -75,10 +75,11 @@ $p = mysql_fetch_array($result);
     
     <h4>Feature image</h4>
     <p id="show-img">
+        <img class="img-responsive" style="margin: auto;" src="<?php echo htmlspecialchars_decode($p['featured_img']); ?>">
     </p>
     <div class="form-group">
         <label>Feature image url</label>
-        <input type="text" id="featured_img" name="featured_img"  class="form-control" />
+        <input type="text" id="featured_img" name="featured_img"  class="form-control" value="<?php echo htmlspecialchars_decode($p['featured_img']); ?>">
     </div>
     <script>
         $(function(){            
@@ -100,13 +101,13 @@ $p = mysql_fetch_array($result);
     <?php if($news_type == 'network-academic'){ ?>
     <div class="form-group">
         <label>เนื้อหาฉบับย่อภาษาอังกฤษ</label>
-        <textarea name="content_short_en" class="form-control" rows="4"></textarea>
+        <textarea name="content_short_en" class="form-control" rows="4"><?php echo $p['content_short_en']; ?></textarea>
     </div>
     <?php } ?>
     
     <div class="form-group">
         <label>เนื้อหาฉบับเต็ม</label>
-        <textarea name="content_long"></textarea>
+        <textarea name="content_long"><?php echo htmlspecialchars_decode($p['content_long']); ?></textarea>
         <script>
             CKEDITOR.replace('content_long');
         </script>
@@ -115,7 +116,7 @@ $p = mysql_fetch_array($result);
     <?php if($news_type == 'network-academic'){ ?>
     <div class="form-group">
         <label>เนื้อหาฉบับเต็มภาษาอังกฤษ</label>
-        <textarea name="content_long_en"></textarea>
+        <textarea name="content_long_en"><?php echo htmlspecialchars_decode($p['content_long_en']); ?></textarea>
         <script>
             CKEDITOR.replace('content_long_en');
         </script>
@@ -123,9 +124,14 @@ $p = mysql_fetch_array($result);
     <?php } ?>
     
     <strong>อื่นๆ</strong>
+    <?php
+    if ($p['new'] == 'y') {
+        $chk = ' checked';
+    }
+    ?>
     <div class="checkbox">
         <label>
-            <input type="checkbox" name="new"> ข่าวใหม่
+            <input type="checkbox" name="new" value="y"<?php echo $chk; ?>> ข่าวใหม่
         </label>
     </div>
     <p>&nbsp;</p>
@@ -133,7 +139,7 @@ $p = mysql_fetch_array($result);
     <?php if ($news_type == 'pr') { ?>
         <div class="form-group">
             <label>URL รูปภาพ</label>
-            <input type="text" name="picture"  class="form-control">
+            <input type="text" name="picture"  class="form-control" value="<?php echo htmlspecialchars_decode($p['picture']); ?>">
         </div>
         <p>&nbsp;</p>
         <?php
@@ -157,5 +163,5 @@ $p = mysql_fetch_array($result);
         </div>
     <?php } ?>
 
-    <button type="submit" class="btn btn-default">Submit</button> | <a href="../views/<?php echo $news_type ?>-news.php" title="Cancel"><strong>Cancel</strong></a>
+    <button type="submit" class="btn btn-default">Submit</button> | <a href="../views/<?php echo $p['type']; ?>-news.php?news_id=<?php echo $p['id']; ?>" title="Cancel"><strong>Cancel</strong></a>
 </form>
