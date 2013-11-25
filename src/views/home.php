@@ -22,7 +22,12 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             ?>
             <div class="col-sm-12 col-md-6">
                 <h2 class="text-center"><a href="network-academic-news.php">ข่าววิชาการจากเครือข่าย</a></h2>
-                <a href="<?php echo $p['type'] ?>-news.php?news_id=<? echo $p['id']; ?>"><img class="img-responsive" style="margin: auto; border: 1px solid #666666;" alt="Featured image" src="<?php echo $p['featured_img']; ?>"></a>
+                
+                <div class="featured-image-network">                    
+                    <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">
+                        <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
+                    </a>
+                </div>
                 <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<? echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
                 <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
@@ -37,7 +42,11 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             ?>
             <div class="col-sm-6 col-md-3">
                 <h2 class="text-center"><a href="activity-news.php">ข่าวกิจกรรม</a></h2>
-                <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><img class="img-responsive" style="margin: auto; border: 1px solid #666666;" alt="Featured image" src="<?php echo $p['featured_img']; ?>"></a>
+                <div class="featured-image-box">                    
+                    <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">
+                        <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
+                    </a>
+                </div>
                 <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
                 <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
@@ -52,7 +61,11 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             ?>
             <div class="col-sm-6 col-md-3 ">
                 <h2 class="text-center"><a href="special-news.php">ข่าวพิเศษ</a></h2>
-                <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><img class="img-responsive" style="margin: auto; border: 1px solid #666666;" alt="Featured image" src="<?php echo $p['featured_img']; ?>"></a>
+                <div class="featured-image-box">                    
+                    <a style="text-align: center;" href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">
+                        <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
+                    </a>
+                </div>
                 <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
                 <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
@@ -73,55 +86,58 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             ?>
             <div class="col-sm-6 col-md-3 ">
                 <h2 class="text-center"><a href="pr-news.php">ข่าวประชาสัมพันธ์</a></h2>
-                <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><img class="img-responsive" style="margin: auto; border: 1px solid #666666;" alt="Featured image" src="<?php echo $p['featured_img']; ?>"></a>
+                <div class="featured-image-box">                    
+                    <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">
+                        <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
+                    </a>
+                </div>
                 <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
                 <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
 
-            <!-- Special news -->
+            <!-- Industrial  Physics -->
             <?php
-            $sql = "SELECT * FROM tb_news 
-                WHERE type = 'special'
+            $sql = "SELECT * FROM tb_social 
+                WHERE type = 'industrial'
                 ORDER BY date DESC;";
             $result = mysql_query($sql);
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-6 col-md-3 ">
-                <h2 class="text-center"><a href="special-news.php">ข่าวพิเศษ</a></h2>
-                <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><img class="img-responsive" style="margin: auto; border: 1px solid #666666;" alt="Featured image" src="<?php echo $p['featured_img']; ?>"></a>
-                <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
-                <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
+                <h2 class="text-center"><a href="industrial.php">ฟิสิกส์อุตสาหกรรม</a></h2>
+                <div class="featured-image-box">                    
+                    <a href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>">
+                        <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
+                    </a>
+                </div>
+                <h3><a href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
+                <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
 
 
-            <!-- Pr news -->
+            <!-- Physics in Daily Life Physics -->
             <?php
-            $sql = "SELECT * FROM tb_news 
-                WHERE type = 'pr'
+            $sql = "SELECT * FROM tb_social 
+                WHERE type = 'daily-life'
                 ORDER BY date DESC;";
             $result = mysql_query($sql);
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-6 col-md-3 ">
-                <h2 class="text-center"><a href="pr-news.php">ข่าวประชาสัมพันธ์</a></h2>
-                <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><img class="img-responsive" style="margin: auto; border: 1px solid #666666;" alt="Featured image" src="<?php echo $p['featured_img']; ?>"></a>
-                <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
-                <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
+                <h2 class="text-center"><a href="industrial.php">ฟิสิกส์ในชีวิตประจำวัน</a></h2>
+                <div class="featured-image-box">                    
+                    <a href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>">
+                        <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
+                    </a>
+                </div>
+                <h3><a href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
+                <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
 
-            <!-- Special news -->
-            <?php
-            $sql = "SELECT * FROM tb_news 
-                WHERE type = 'special'
-                ORDER BY date DESC;";
-            $result = mysql_query($sql);
-            $p = mysql_fetch_array($result);
-            ?>
+            <!-- ... news -->
+
             <div class="col-sm-6 col-md-3 ">
-                <h2 class="text-center"><a href="special-news.php">ข่าวพิเศษ</a></h2>
-                <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><img class="img-responsive" style="margin: auto; border: 1px solid #666666;" alt="Featured image" src="<?php echo $p['featured_img']; ?>"></a>
-                <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
-                <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
+
             </div>
 
         </div>

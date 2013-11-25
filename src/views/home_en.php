@@ -58,57 +58,45 @@ doc_head('Thailand Center of Excellence in Physics');
 
             <h2>Research Center</h2>
 
-            <div class="col-xs-6 col-sm-4 col-md-2">
-                <a href="research-center_en.php?show_center=TFP">
-                    <div class="text-center" style="background-color: #8f8f8f;">                    
-                        <h2>TFP</h2>
-                        <p>&nbsp;</p>                    
-                    </div>
+            <div class="col-xs-6 col-sm-2 col-md-2">
+                <a title="Research Center in Thin Film Physics" href="research-center_en.php?show_center=TFP">
+                    <img style="margin: 0 auto; border: 1px solid #666666;" class="img-responsive" src="../images/center/TFP_300.png">
+                    <p style="font-size: 90%;">Research Center in Thin Film Physics</p>
                 </a>
             </div>
 
-            <div class="col-xs-6 col-sm-4 col-md-2">
-                <a href="research-center_en.php?show_center=PPP">
-                    <div class="text-center" style="background-color: #8f8f8f;">
-                        <h2>PPP</h2>
-                        <p>&nbsp;</p>
-                    </div>
+            <div class="col-xs-6 col-sm-2 col-md-2">
+                <a title="Research Center in Particle Beam and Plasma Physics" href="research-center_en.php?show_center=PPP">                        
+                    <img style="margin: 0 auto; border: 1px solid #666666;" class="img-responsive" src="../images/center/ppp_300.png">
+                    <p style="font-size: 90%;">Research Center in Particle Beam and Plasma Physics</p>
                 </a>
             </div>
 
-            <div class="col-xs-6 col-sm-4 col-md-2">
-                <a href="research-center_en.php?show_center=NSP">
-                    <div class="text-center" style="background-color: #8f8f8f;">
-                        <h2>NSP</h2>
-                        <p>&nbsp;</p>
-                    </div>
+            <div class="col-xs-6 col-sm-2 col-md-2">
+                <a title="Research Center in Nanoscale Physics" href="research-center_en.php?show_center=NSP">
+                    <img style="margin: 0 auto; border: 1px solid #666666;" class="img-responsive" src="../images/center/nano_300.png">
+                    <p style="font-size: 90%;">Research Center in Nanoscale Physics</p>
                 </a>
             </div>
 
-            <div class="col-xs-6 col-sm-4 col-md-2">
-                <a href="research-center_en.php?show_center=IGP">
-                    <div class="text-center" style="background-color: #8f8f8f;">
-                        <h2>IGP</h2>
-                        <p>&nbsp;</p>
-                    </div>
+            <div class="col-xs-6 col-sm-2 col-md-2">
+                <a title="Research Center in Integrated Physics" href="research-center_en.php?show_center=IGP">
+                    <img style="margin: 0 auto; border: 1px solid #666666;" class="img-responsive" src="../images/center/IGP_300.png">
+                    <p style="font-size: 90%;">Research Center in Integrated Physics</p>
                 </a>
             </div>
 
-            <div class="col-xs-6 col-sm-4 col-md-2">
-                <a href="research-center_en.php?show_center=CTP">
-                    <div class="text-center" style="background-color: #8f8f8f;">
-                        <h2>CTP</h2>
-                        <p>&nbsp;</p>
-                    </div>
+            <div class="col-xs-6 col-sm-2 col-md-2">
+                <a title="Research Center in Computational and Theoretical Physics" href="research-center_en.php?show_center=CTP">
+                    <img style="margin: 0 auto; border: 1px solid #666666;" class="img-responsive" src="../images/center/CTP_300.png">
+                    <p style="font-size: 90%;">Research Center in Computational and Theoretical Physics</p>
                 </a>
             </div>
 
-            <div class="col-xs-6 col-sm-4 col-md-2">
-                <a href="research-center_en.php?show_center=ThEP">
-                    <div class="text-center" style="background-color: #8f8f8f;">
-                        <h2>ThEP</h2>                        
-                        <p>&nbsp;</p>
-                    </div>
+            <div class="col-xs-6 col-sm-2 col-md-2">
+                <a title="Establishment of New Research Laboratories" href="research-center_en.php?show_center=ThEP">
+                    <img style="margin: 0 auto; border: 1px solid #666666;" class="img-responsive" src="../images/center/thep_atom_chip_300.png">
+                    <p style="font-size: 90%;">Establishment of New Research Laboratories</p>
                 </a>
             </div>
         </div>
