@@ -22,7 +22,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             ?>
             <div class="col-sm-12 col-md-6">
                 <h2 class="text-center"><a href="network-academic-news.php">ข่าววิชาการจากเครือข่าย</a></h2>
-                
+
                 <div class="featured-image-network">                    
                     <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">
                         <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
@@ -134,13 +134,21 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                 <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
 
-            <!-- ... news -->
-
+            <!-- ประกาศ -->
+            
             <div class="col-sm-6 col-md-3 ">
-
+                <h2 class="text-center"><a href="">ประกาศ...</a></h2>
+                <div class="featured-image-box">                    
+                    <a href="">
+                        <img class="fetured-image" src="" alt="Featured image">
+                    </a>
+                </div>
+                <h3><a href="">ประกาศ</a></h3>
+                <p>*** ******* **** ******** ***** <a href="">... อ่านต่อ</a></p>
             </div>
 
-        </div>
+        </div>  <!-- /.row -->
+
         <p>&nbsp;</p>
 
         <!-- =========================================================================================== -->
