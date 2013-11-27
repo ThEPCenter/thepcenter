@@ -1,6 +1,6 @@
 <?php
 require_once '../system/system.php';
-doc_head('ศูนย์ความเป็นเลิศด้านฟิสิกส์');
+doc_head('Location & Map');
 ?>
 
 </head>

@@ -30,6 +30,8 @@
                 <li>▪ <a href="location.php">ที่ตั้งหน่วยงาน</a></li>
                 
                 <li>▪ <a href="document.php">เอกสารเผยแพร่</a></li>
+                
+                <li>▪ <a href="annual-report.php">รายงานประจำปี</a></li>
 
                 <li>▪ <a href="form.php">แบบฟอร์ม</a></li>
 

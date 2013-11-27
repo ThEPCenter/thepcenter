@@ -37,36 +37,40 @@ $news_type = 'network-academic';
                 <div class="col-sm-9 col-md-9">
                     <?php
                     echo '                            
-                            <div id="news-' . $p['id'] . '">
+                            
                                 ';
                     $admin_txt = '  
                                 <p>
                                     <a id="edit-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-wrench"></span> Edit</a> 
                                 </p>
-                            ';
-                    admin($admin_txt);
-                    echo '
-                                <h2>' . htmlspecialchars_decode($p['title']) . '</h2>
-                                <p><small><em>' . thai_date($p['date']) . '</small></em></p>
-                                ' . htmlspecialchars_decode($p['content_long']) . '
-                            </div>
-                      ';
-                    ?>
+                                
                     <script>
                         $(function() {
-                            $('#edit-news').click(function() {
+                            $("#edit-news").click(function() {
                                 $(document).ajaxStart(function() {
-                                    $('#show-news').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
+                                    $("#show-news").html("<div class=\"span12 text-center\"><img src=\"../images/demo_wait.gif\"></div>");
                                 });
-                                $.get("<?php controll('edit-network-news'); ?>", {edit_news: "<?php echo $p['id']; ?>"},
+                                $.get("' . controller('edit-network-news') . '", {edit_news: "' . $p['id'] . '"},
                                 function(data) {
-                                    $('#show-news').html(data);
+                                    $("#show-news").html(data);
                                 }
                                 );
                             });
 
                         });
                     </script>
+                            ';
+                    admin($admin_txt);
+                    // ----------------------------------------------------------------
+
+                    echo '
+                                <h2>' . htmlspecialchars_decode($p['title']) . '</h2>
+                                <p><small><em>' . thai_date($p['date']) . '</small></em></p>
+                                ' . htmlspecialchars_decode($p['content_long']) . '
+                            
+                      ';
+                    ?>
+
                 </div>
 
                 <div class="col-sm-3 col-md-3">
@@ -114,19 +118,25 @@ $news_type = 'network-academic';
                 </script>         
                             ';
                     admin($admin_txt);
-                    
+
                     // ------------------------------------------------------------
 
                     $sql = "SELECT * FROM tb_news WHERE type = 'network-academic' ORDER BY date DESC;";
                     $result = mysql_query($sql);
                     $num_news = mysql_num_rows($result);
                     if ($num_news > 0) {
+
                         while ($p = mysql_fetch_array($result)) {
-                            echo '                            
-                            <div id="news-' . $p['id'] . '">
-                                <h3 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . htmlspecialchars_decode($p['title']) . '</a></h3>
-                                <p><small><em>' . thai_date($p['date']) . '</em></small></p>
-                                <p>' . $p['content_short'] . ' <a href="' . $p['type'] . '-news.php?news_id=' . $p['id'] . '">... อ่านต่อ</a></p>
+                            echo '
+                            <div class="row">
+                                <div class="col-md-3 text-center">
+                                    <img style="max-width: 100%; height: auto;" src="' . $p['featured_img'] . '">
+                                </div>
+                                <div class="col-md-9">
+                                    <h3 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . htmlspecialchars_decode($p['title']) . '</a></h3>
+                                    <p><small><em>' . thai_date($p['date']) . '</em></small></p>
+                                    <p>' . $p['content_short'] . ' <a href="' . $p['type'] . '-news.php?news_id=' . $p['id'] . '">... อ่านต่อ</a></p>
+                                </div>
                             </div>
                             <hr>
                             ';
@@ -135,7 +145,9 @@ $news_type = 'network-academic';
                         echo '<h3 class="text-center">ขออภัย ไม่พบข้อมูล</h3>';
                     }
                     ?>
+                    
                 </div>
+            
                 <?php
             } // END if else
             ?>

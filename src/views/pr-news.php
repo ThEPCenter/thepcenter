@@ -123,16 +123,22 @@ doc_head($news_type_th);
                     <?php
                     // ------------------------------------------------------------
 
-                    $sql = "SELECT * FROM tb_news WHERE type = '$news_type' ORDER BY date DESC;";
+                    $sql = "SELECT * FROM tb_news WHERE type = 'pr' ORDER BY date DESC;";
                     $result = mysql_query($sql);
                     $num_news = mysql_num_rows($result);
                     if ($num_news > 0) {
+
                         while ($p = mysql_fetch_array($result)) {
-                            echo '                            
-                            <div id="news-' . $p['id'] . '">
-                                <h3 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . htmlspecialchars_decode($p['title']) . '</a></h3>
-                                <p><small><em>' . thai_date($p['date']) . '</em></small></p>
-                                <p>' . $p['content_short'] . ' <a href="' . $p['type'] . '-news.php?news_id=' . $p['id'] . '">... อ่านต่อ</a></p>
+                            echo '
+                            <div class="row">
+                                <div class="col-md-3 text-center">
+                                    <img style="max-width: 100%; height: auto;" src="' . $p['featured_img'] . '">
+                                </div>
+                                <div class="col-md-9">
+                                    <h3 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . htmlspecialchars_decode($p['title']) . '</a></h3>
+                                    <p><small><em>' . thai_date($p['date']) . '</em></small></p>
+                                    <p>' . $p['content_short'] . ' <a href="' . $p['type'] . '-news.php?news_id=' . $p['id'] . '">... อ่านต่อ</a></p>
+                                </div>
                             </div>
                             <hr>
                             ';

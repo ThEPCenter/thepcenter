@@ -1,6 +1,6 @@
 <?php
 require_once '../system/system.php';
-doc_head('เอกสารเผยแพร่');
+doc_head('เอกสารเผยแพร่ - ศูนย์ความเป็นเลิศด้านฟิสิกส์');
 ?>       
 </head>
 
@@ -13,7 +13,7 @@ doc_head('เอกสารเผยแพร่');
                 <h2 class="text-center">เอกสารเผยแพร่</h2>
                 <p>&nbsp;</p>
                 
-                    <h3><a href="../files/bookofstrategy.pdf" target="_blank"><strong>1. การบริหารจัดการยุทธศาสตร์สู่ความสำเร็จ</strong></a></h3> เรียบเรียงโดย ดร.มารยาท สมุทรสาคร
+                    <h3><a href="../files/bookofstrategy.pdf" target="_blank">1. การบริหารจัดการยุทธศาสตร์สู่ความสำเร็จ</a></h3> เรียบเรียงโดย ดร.มารยาท สมุทรสาคร
                 
                 <p><a href="../files/bookofstrategy.pdf" target="_blank"><img class="img-responsive" style="margin: 0 auto;" src="../images/book_s.jpg"></a></p>
 

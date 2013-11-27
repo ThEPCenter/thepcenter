@@ -29,6 +29,8 @@
                 <li class="li-head">ThEP Office</li>
 
                 <li>▪ <a href="location_en.php">Location & Map</a></li>
+                
+                <li>▪ <a href="annual-report_en.php">Annual Report</a></li>
 
                 <li>▪ <a href="http://mail.google.com/a/thep-center.org" target="_blank">E-mail</a></li>
 

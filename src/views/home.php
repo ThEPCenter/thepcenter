@@ -124,7 +124,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-6 col-md-3 ">
-                <h2 class="text-center"><a href="industrial.php">ฟิสิกส์ในชีวิตประจำวัน</a></h2>
+                <h2 class="text-center"><a href="daily-life.php">ฟิสิกส์ในชีวิตประจำวัน</a></h2>
                 <div class="featured-image-box">                    
                     <a href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>">
                         <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">

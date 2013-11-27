@@ -65,25 +65,30 @@ doc_head('ข่าวกิจกรรม');
 
                 <div class="col-sm-9 col-md-9">
                     <?php
-                    admin('<p><a id="edit-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-wrench"></span> Edit</a></p>');
-                    ?>
+                    // =========================== Edit News ======================================
+                    $admin_txt = '
+                    <p><a id="edit-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-wrench"></span> Edit</a></p>
+                             ';
+                    $txt = '
                     <script>
                         $(function() {
-                            $('#edit-news').click(function() {
+                            $("#edit-news").click(function() {
                                 $(document).ajaxStart(function() {
-                                    $('#show-news').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
+                                    $("#show-news").html("<div class=\"span12 text-center\" ><img src=\"../images/demo_wait.gif\"></div>");
                                 });
-                                $.get("<?php controll('edit-activity-news'); ?>", {edit_news: "<?php echo $n['id']; ?>"},
+                                $.get("' . controller('edit-activity-news') . '", {edit_news: "' . $n['id'] . '"},
                                 function(data) {
-                                    $('#show-news').html(data);
+                                    $("#show-news").html(data);
                                 }
                                 );
                             });
 
                         });
-                    </script>  
-
-                    <?php
+                    </script>    
+                            ';
+                    admin($admin_txt . $txt);
+                    // -------------------------------------------------------------------
+                    
                     echo '                            
             <div id="news-' . $n['id'] . '">
                 <h2>' . htmlspecialchars_decode($n['title']) . '</h2>
@@ -120,7 +125,7 @@ doc_head('ข่าวกิจกรรม');
                             </div>
 
                             <p>จำนวนทั้งหมด <?php echo $no_p; ?> ภาพ</p>
-    <?php } // END if (!empty($result_p))   ?>
+                        <?php } // END if (!empty($result_p))   ?>
                         <p>&nbsp;</p>
                         <p><a href="home.php">กลับหน้าหลัก</a> | <a href="activity-news.php">ไปหน้าข่าวกิจกรรม</a></p>
                     </div>
@@ -156,16 +161,14 @@ doc_head('ข่าวกิจกรรม');
                     <a id="add-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-plus"></span> Add</a>
                 </p>
                 <hr>
-                            ';
-                admin($admin_txt);
-                ?>
+                
                 <script>
                     $(function() {
                         $("#add-news").click(function() {
                             $(document).ajaxStart(function() {
                                 $("#show-news").html("<div class=\"span12 text-center\" ><img src=\"../images/demo_wait.gif\"></div>");
                             });
-                            $.get("<?php controll('add-news'); ?>", {add_news: "<?php echo $news_type; ?>"},
+                            $.get("' . controller('add-news') . '", {add_news: "' . $news_type . '"},
                             function(data) {
                                 $("#show-news").html(data);
                             }
@@ -174,7 +177,10 @@ doc_head('ข่าวกิจกรรม');
 
                     });
                 </script>
-                <?php
+                       ';
+                admin($admin_txt);
+                // -----------------------------------------------------------------
+                
                 $sql_act = "SELECT * FROM tb_news 
                 WHERE type = 'activity' 
                 ORDER BY date DESC;
@@ -218,17 +224,17 @@ doc_head('ข่าวกิจกรรม');
                     ?>
                 </table>
 
-            <?php
-        } // END if GET else 
-        ?>
+                <?php
+            } // END if GET else 
+            ?>
         </div>
-<?php
-get_includes('footer');
-?>
+        <?php
+        get_includes('footer');
+        ?>
 
     </div>    
     <!-- /.container -->    
-<?php get_includes('bootstrap-core'); ?>
+    <?php get_includes('bootstrap-core'); ?>
     <!-- Lightbox JavaScript
 ================================================== -->
     <script src="<?php plugins('lightbox2.6/lightbox/js/lightbox-2.6.min.js'); ?>"></script>

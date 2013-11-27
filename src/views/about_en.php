@@ -1,6 +1,6 @@
 <?php
 require_once '../system/system.php';
-doc_head('แนวทางของศูนย์');
+doc_head('Approach');
 ?>
 
 </head>

@@ -125,12 +125,22 @@ $type = 'daily-life';
                 
                 $sql = "SELECT * FROM tb_social WHERE type = '$type' ORDER BY date DESC;";
                 $result = mysql_query($sql);
-                if (mysql_num_rows($result) > 0) {
+                $num_news = mysql_num_rows($result);
+                if ($num_news > 0) {
+
                     while ($p = mysql_fetch_array($result)) {
                         echo '
-                        <h3><a href="' . $type . '.php?article_id=' . $p['id'] . '">' . htmlspecialchars_decode($p['title']) . '</a></h3>
-                        <small><em>' . thai_date($p['date']) . '</em></small>
-                        <hr>
+                            <div class="row">
+                                <div class="col-md-3 text-center">
+                                    <img style="max-width: 100%; height: auto;" src="' . $p['featured_img'] . '">
+                                </div>
+                                <div class="col-md-9">
+                                    <h3 style="display: inline;"><a onclick="window.location=\'?article_id=' . $p['id'] . '\';" style="cursor: pointer;">' . htmlspecialchars_decode($p['title']) . '</a></h3>
+                                    <p><small><em>' . thai_date($p['date']) . '</em></small></p>
+                                    <p>' . $p['content_short'] . ' <a href="' . $p['type'] . '.php?article_id=' . $p['id'] . '">... อ่านต่อ</a></p>
+                                </div>
+                            </div>
+                            <hr>
                             ';
                     } // END while
                 }

@@ -53,16 +53,18 @@ doc_head('ข่าวพิเศษ');
                       ';
                     ?>
                     <script>
-                        $(function(){
-                            $('#edit-news').click(function(){
-                                $(document).ajaxStart(function(){
+                        $(function() {
+                            $('#edit-news').click(function() {
+                                $(document).ajaxStart(function() {
                                     $('#show-news').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
                                 });
-                                $.get("<?php controll('edit-special-news'); ?>", {edit_news: "<?php echo $p['id']; ?>"}, 
-                                function(data){ $('#show-news').html(data); }
-                            );
+                                $.get("<?php controll('edit-special-news'); ?>", {edit_news: "<?php echo $p['id']; ?>"},
+                                function(data) {
+                                    $('#show-news').html(data);
+                                }
+                                );
                             });
-                                                                                                                                        
+
                         });
                     </script>
                 </div>
@@ -118,12 +120,18 @@ doc_head('ข่าวพิเศษ');
                     $result = mysql_query($sql);
                     $num_news = mysql_num_rows($result);
                     if ($num_news > 0) {
-                        $l = 0;
+
                         while ($p = mysql_fetch_array($result)) {
-                            echo '                            
-                            <div id="news-' . $p['id'] . '">
-                                <h3 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . htmlspecialchars_decode($p['title']) . $new_gif . '</a></h3>
-                                <small><em>' . thai_date($p['date']) . '</em></small>                               
+                            echo '
+                            <div class="row">
+                                <div class="col-md-3 text-center">
+                                    <img style="max-width: 100%; height: auto;" src="' . $p['featured_img'] . '">
+                                </div>
+                                <div class="col-md-9">
+                                    <h3 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . htmlspecialchars_decode($p['title']) . '</a></h3>
+                                    <p><small><em>' . thai_date($p['date']) . '</em></small></p>
+                                    <p>' . $p['content_short'] . ' <a href="' . $p['type'] . '-news.php?news_id=' . $p['id'] . '">... อ่านต่อ</a></p>
+                                </div>
                             </div>
                             <hr>
                             ';
@@ -132,7 +140,9 @@ doc_head('ข่าวพิเศษ');
                         echo '<h3 class="text-center">ขออภัย ไม่พบข้อมูล</h3>';
                     }
                     ?>
+
                 </div>
+
                 <?php
             } // END if else
             ?>
@@ -147,8 +157,8 @@ doc_head('ข่าวพิเศษ');
     <?php get_includes('bootstrap-core'); ?>
     <script type='text/javascript'>
 
-        $(function(){
-            
+        $(function() {
+
         });
 
     </script>
