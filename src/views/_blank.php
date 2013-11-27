@@ -12,6 +12,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
         <div class="row">
             <h2 class="text-center">_blank</h2>
+            <img class="img-responsive" style="margin:0 auto;" src="../images/under-construction.jpg">
         </div>
 
         <?php get_includes('footer'); ?>
