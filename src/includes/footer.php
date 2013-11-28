@@ -39,7 +39,7 @@
 
                 <li>▪ <a href="http://eofficethep.com" target="_blank">E-Office</a></li>
 
-                <li>▪ <a href="https://www.facebook.com/pages/Thailand-Center-of-Excellence-in-Physics/118201038353964" target="_blank">facebook</a></li>
+                <li>▪ <a href="https://www.facebook.com/pages/Thailand-Center-of-Excellence-in-Physics/118201038353964" target="_blank">Facebook</a></li>
 
             </ul>
         </div>
@@ -47,7 +47,7 @@
         <div class="col-xs-6 col-sm-3 col-md-3" >
             <ul>
 
-                <li class="li-head">มหาวิทยาลัย</li>
+                <li class="li-head">มหาวิทยาลัยพันธมิตร</li>
 
                 <li>▪ <a href="http://www.cmu.ac.th" target="_blank">มหาวิทยาลัยเชียงใหม่</a></li>
 
