@@ -1,7 +1,11 @@
 
 
 <div class="row">
-    <a title="ศูนย์ความเป็นเลิศด้านฟิสิกส์" href="home.php"><img class="img-responsive" style="margin: 0 auto;" src="../images/131112_banner_960x100.png"></a>
+    <div class="col-md-12">
+        <a title="ศูนย์ความเป็นเลิศด้านฟิสิกส์" href="home.php">
+            <img class="img-responsive" style="margin: 0 auto;" src="../images/131112_banner_960x100.png">
+        </a>
+    </div>    
 </div>
 
 <div class="row">

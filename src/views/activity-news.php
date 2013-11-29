@@ -68,8 +68,6 @@ doc_head('ข่าวกิจกรรม');
                     // =========================== Edit News ======================================
                     $admin_txt = '
                     <p><a id="edit-news" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-wrench"></span> Edit</a></p>
-                             ';
-                    $txt = '
                     <script>
                         $(function() {
                             $("#edit-news").click(function() {
@@ -86,7 +84,7 @@ doc_head('ข่าวกิจกรรม');
                         });
                     </script>    
                             ';
-                    admin($admin_txt . $txt);
+                    admin($admin_txt);
                     // -------------------------------------------------------------------
                     
                     echo '                            
@@ -194,24 +192,14 @@ doc_head('ข่าวกิจกรรม');
                         while ($a = mysql_fetch_array($re_act)) {
                             echo '                            
                                 <tr>
-                                    <td><a href="activity-news.php?news_id=' . $a['id'] . '">
-                             ';
-                            $sql_pic = "SELECT * FROM tb_picture 
-                            WHERE gallery_id = {$a['gallery_id']} 
-                            ORDER BY id;    
-                        ";
-                            $re_pic = mysql_query($sql_pic);
-                            if (!empty($re_pic)) {
-                                $pic = mysql_fetch_array($re_pic);
-                            }
-                            echo '               
+                                    <td><a href="activity-news.php?news_id=' . $a['id'] . '">                                           
                                             <img class="example-image" src="../images/pixel-vfl3z5WfW.gif" alt="image ' . $i . ' 0f ' . $no_p . ' thumb" 
-                            style="vertical-align: middle; 
-                            background:no-repeat #ccc url(../img/picture/' . $pic['name'] . ') -40px 0; 
-                            background-size: 132px auto; 
-                            width: 86px;
-                            height: 86px;">                            
-                                    </a>
+                                                style="vertical-align: middle; 
+                                                background:no-repeat #ccc url(' . $a['featured_img'] . ') -40px 0; 
+                                                background-size: 132px auto; 
+                                                width: 86px;
+                                                height: 86px;">                            
+                                        </a>
                                     </td>
                                     <td><a href="activity-news.php?news_id=' . $a['id'] . '">' . $a['title'] . '</a><br> 
                                         <small><em>' . thai_date($a['date']) . '</em></small></td>
