@@ -3,6 +3,36 @@ require_once '../system/system.php';
 doc_head('ศูนย์ความเป็นเลิศด้านฟิสิกส์');
 ?>
 
+<!-- Start edit Dec 2, 2013 "fancybox" -->
+
+<!-- Add jQuery library -->
+<script type="text/javascript" src="../plugins/fancyBox-2.1.5/lib/jquery-1.10.1.min.js"></script>
+
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="../plugins/fancyBox-2.1.5/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+<!-- Add fancyBox main JS and CSS files -->
+<script type="text/javascript" src="../plugins/fancyBox-2.1.5/source/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="../plugins/fancyBox-2.1.5/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+        // $('.fancybox').fancybox();
+
+        $.fancybox.open('../../upload02/king.jpg');
+
+    });
+</script>
+
+<style type="text/css">
+    .fancybox-custom .fancybox-skin {
+        box-shadow: 0 0 50px #222;
+    }
+</style>
+
+<!-- End  edit Dec 2, 2013 -->
+
 </head>
 
 <body>
@@ -135,7 +165,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             </div>
 
             <!-- ประกาศ -->
-            
+
             <div class="col-sm-6 col-md-3 ">
                 <h2 class="text-center">ประกาศ</h2>
                 <div class="featured-image-box">                    
@@ -153,7 +183,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
         </div>  <!-- /.row -->
 
         <p>&nbsp;</p>
-       
+
 
         <!-- =========================================================================================== -->        
 
@@ -203,10 +233,10 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                 </a>
             </div>
         </div> <!-- /.row -->
-        
+
         <p>&nbsp;</p>
-        
-         <!-- =========================================================================================== -->
+
+        <!-- =========================================================================================== -->
 
         <div class="row">
 

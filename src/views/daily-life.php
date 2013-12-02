@@ -19,7 +19,6 @@ $type = 'daily-life';
                 <div class="col-sm-9 col-md-9">
 
                     <?php
-                    
                     //========== Edit Social ==============================
                     $admin_txt = '  
                     <p>
@@ -42,9 +41,9 @@ $type = 'daily-life';
                     </script>
                              ';
                     admin($admin_txt);
-                    
+
                     // =========================================================
-                    
+
                     $sql = "SELECT * FROM tb_social WHERE id = $article_id AND type = '$type';";
                     $result = mysql_query($sql);
                     if (!empty($result)) {
@@ -82,7 +81,7 @@ $type = 'daily-life';
                             ';
                         } // END while
                         ?>
-                    <a class="all-title" href="<?php echo $type; ?>.php?show=all"><em>บทความทั้งหมด</em></a>
+                        <a class="all-title" href="<?php echo $type; ?>.php?show=all"><em>บทความทั้งหมด</em></a>
                         <?php
                     } else {
                         echo '
@@ -96,7 +95,7 @@ $type = 'daily-life';
                 <?php
             } elseif (isset($_GET['show'])) {
                 echo '<h2 class="text-center">ฟิสิกส์ในชีวิตประจำวัน</h2>';
-                
+
                 // ========= AJAX for Add social ====================================
                 $admin_txt = '  
                 <p>
@@ -120,9 +119,9 @@ $type = 'daily-life';
                 </script>
                         ';
                 admin($admin_txt);
-                
+
                 // ====================================================================
-                
+
                 $sql = "SELECT * FROM tb_social WHERE type = '$type' ORDER BY date DESC;";
                 $result = mysql_query($sql);
                 $num_news = mysql_num_rows($result);
@@ -131,10 +130,12 @@ $type = 'daily-life';
                     while ($p = mysql_fetch_array($result)) {
                         echo '
                             <div class="row">
-                                <div class="col-md-3 text-center">
-                                    <img style="max-width: 100%; height: auto;" src="' . $p['featured_img'] . '">
+                                <div class="col-md-2 text-center">
+                                    <a title="' . htmlspecialchars_decode($p['title']) . '" onclick="window.location=\'?article_id=' . $p['id'] . '\';" style="cursor: pointer;">
+                                        <img style="max-width: 100%; height: auto;" src="' . $p['featured_img'] . '">
+                                    </a>
                                 </div>
-                                <div class="col-md-9">
+                                <div class="col-md-10">
                                     <h3 style="display: inline;"><a onclick="window.location=\'?article_id=' . $p['id'] . '\';" style="cursor: pointer;">' . htmlspecialchars_decode($p['title']) . '</a></h3>
                                     <p><small><em>' . thai_date($p['date']) . '</em></small></p>
                                     <p>' . $p['content_short'] . ' <a href="' . $p['type'] . '.php?article_id=' . $p['id'] . '">... อ่านต่อ</a></p>
@@ -186,7 +187,7 @@ $type = 'daily-life';
                             ';
                         } // END while
                         ?>
-                    <a class="all-title" href="<?php echo $type; ?>.php?show=all"><em>บทความทั้งหมด</em></a>
+                        <a class="all-title" href="<?php echo $type; ?>.php?show=all"><em>บทความทั้งหมด</em></a>
                         <?php
                     } else {
                         echo '

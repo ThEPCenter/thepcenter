@@ -124,10 +124,12 @@ doc_head('ข่าวพิเศษ');
                         while ($p = mysql_fetch_array($result)) {
                             echo '
                             <div class="row">
-                                <div class="col-md-3 text-center">
-                                    <img style="max-width: 100%; height: auto;" src="' . $p['featured_img'] . '">
+                                <div class="col-md-2 text-center">
+                                    <a title="' . htmlspecialchars_decode($p['title']) . '" onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">
+                                        <img style="max-width: 100%; height: auto;" src="' . $p['featured_img'] . '">
+                                    </a>
                                 </div>
-                                <div class="col-md-9">
+                                <div class="col-md-10">
                                     <h3 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . htmlspecialchars_decode($p['title']) . '</a></h3>
                                     <p><small><em>' . thai_date($p['date']) . '</em></small></p>
                                     <p>' . $p['content_short'] . ' <a href="' . $p['type'] . '-news.php?news_id=' . $p['id'] . '">... อ่านต่อ</a></p>
