@@ -10,19 +10,21 @@ if ($_POST) {
             $caption = htmlspecialchars($_POST['caption' . $i], ENT_QUOTES);
             $file = $_FILES[$upl]['tmp_name'];
             $file_name = htmlspecialchars($_FILES[$upl]['name'], ENT_QUOTES);
-            $new_file_name = substr(md5(microtime()), rand(0, 26), 8) . '.' . get_file_type($file_name);
+            
+            // $new_file_name = substr(md5(microtime()), rand(0, 26), 8) . '.' . get_file_type($file_name);
+            
             $pic_no = 1;
             $type = $_FILES[$upl]['type'];
             $size = $_FILES[$upl]['size'];
-            $dir = '../img/picture'; // The directory that you want to download the file into it.
-            $path = $dir . '/' . $new_file_name;
+            $dir = '../../upload02/img/picture'; // The directory that you want to download the file into it.
+            $path = $dir . '/' . $file_name;
             $modified = date("Y-m-d H:i:s");
             if (file_exists($dir)) {
                 if (move_uploaded_file($file, $path)) { //upload file to path folder
                     $sql = "INSERT INTO 
                                     tb_picture
                                 VALUES
-                                    (0, '$new_file_name', '$caption', '$gallery_id', $pic_no, '$type', '$size', '$dir', '$modified');        
+                                    (0, '$file_name', '$caption', '$gallery_id', $pic_no, '$type', '$size', '$dir', '$modified');        
                     ";
                     @mysql_query($sql) or die(mysql_error());
                 } else {

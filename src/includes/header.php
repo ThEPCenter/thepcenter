@@ -1,9 +1,9 @@
 
 
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12" style="padding-top: 0;">
         <a title="ศูนย์ความเป็นเลิศด้านฟิสิกส์" href="home.php">
-            <img class="img-responsive" style="margin: 0 auto;" src="../images/131112_banner_960x100.png">
+            <img class="img-responsive" style="margin: 0 auto;" src="../images/thep_head_8_1200.png">
         </a>
     </div>    
 </div>

@@ -52,6 +52,8 @@
                 <li>▪ <a href="http://www.cmu.ac.th/index_eng.php" target="_blank">Chiang Mai University</a></li>
 
                 <li>▪ <a href="http://www.chula.ac.th/cuen" target="_blank">Chulalongkorn University</a></li>
+                
+                <li>▪ <a href="http://www.kku.ac.th/?l=en" target="_blank">Khon Kaen University</a></li>
 
                 <li>▪ <a href="http://www.mahidol.ac.th" target="_blank">Mahidol University</a></li>
 

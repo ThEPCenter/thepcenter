@@ -52,6 +52,8 @@
                 <li>▪ <a href="http://www.cmu.ac.th" target="_blank">มหาวิทยาลัยเชียงใหม่</a></li>
 
                 <li>▪ <a href="http://www.chula.ac.th" target="_blank">จุฬาลงกรณ์มหาวิทยาลัย</a></li>
+                
+                <li>▪ <a href="http://www.kku.ac.th" target="_blank">มหาวิทยาลัยขอนแก่น</a></li>
 
                 <li>▪ <a href="http://www.mahidol.ac.th/th" target="_blank">มหาวิทยาลัยมหิดล</a></li>
 

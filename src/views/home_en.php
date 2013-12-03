@@ -21,12 +21,14 @@ doc_head('Thailand Center of Excellence in Physics');
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-12 col-md-6">
-                <h2 class="text-center">Research News from Members</h2>
+                <h2 class="text-center"><a title="Research News from Members" href="network-academic-news_en.php">Research News from Members</a></h2>
                 <div>
                     <div style="border: 1px solid #666666;">
-                        <img class="img-responsive" style="margin: auto;" src="<?php echo $p['featured_img']; ?>">
+                        <a title="<?php echo $p['title_en']; ?>" href="<?php echo $p['type'] ?>-news_en.php?news_id=<? echo $p['id']; ?>">
+                            <img class="img-responsive" style="margin: auto;" src="<?php echo $p['featured_img']; ?>">
+                        </a>
                     </div>                                                
-                    <h3><a href="<?php echo $p['type'] ?>-news_en.php?news_id=<? echo $p['id']; ?>"><?php echo $p['title_en']; ?></a></h3>
+                    <h3><a style="font-weight: 400;" href="<?php echo $p['type'] ?>-news_en.php?news_id=<? echo $p['id']; ?>"><?php echo $p['title_en']; ?></a></h3>
                     <?php echo $p['content_short_en']; ?> <a href="<?php echo $p['type'] ?>-news_en.php?news_id=<?php echo $p['id']; ?>">... Read more</a>
                 </div>
             </div>
@@ -109,16 +111,15 @@ doc_head('Thailand Center of Excellence in Physics');
 
     <?php get_includes('bootstrap-core'); ?>
     <script type='text/javascript'>
-            
+
         $(function(){
-            $("#btn-center").click(function(){
-                $("#center-list").toggle();
-            });
-                
-            $("#eq").click(function(){
-                $("#eq-list").toggle();
-            });
-            
+        $("#btn-center").click(function(){
+        $("#center-list").toggle();
+        });
+                $("#eq").click(function(){
+        $("#eq-list").toggle();
+        });
+
     </script>
 
 </body>

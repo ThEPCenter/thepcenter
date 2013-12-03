@@ -33,10 +33,10 @@ doc_head('Gallery');
                 <div class="col-xs-6 col-sm-4 col-md-3">
                     <div style="width: 197px; height: 236px; border:1px solid rgba(0, 0, 0, .1);">
                         <div style="width: 195px; height: 195px; overflow: hidden; border-bottom: 1px solid rgba(0, 0, 0, .1);">
-                            <a class="pic-link" href="../img/picture/' . $p['name'] . '" data-lightbox="gal-' . $p['gallery_id'] . '" title="' . $p['caption'] . '"> 
+                            <a class="pic-link" href="../../upload02/img/picture/' . $p['name'] . '" data-lightbox="gal-' . $p['gallery_id'] . '" title="' . $p['caption'] . '"> 
                                 <img class="example-image" src="../images/pixel-vfl3z5WfW.gif" alt="image ' . $i . ' 0f ' . $no_p . ' thumb" 
                             style="vertical-align: middle; 
-                            background: no-repeat white url(../img/picture/' . $p['name'] . ') -50px 0; 
+                            background: no-repeat white url(../../upload02/img/picture/' . $p['name'] . ') -50px 0; 
                             background-size: 300px auto; 
                             width: 195px;
                             height: 195px;">
@@ -89,7 +89,7 @@ doc_head('Gallery');
                             <a title="' . $gal['title'] . '" href="gallery.php?gal_id=' . $gal['id'] . '">
                                 <img class="example-image" src="../images/pixel-vfl3z5WfW.gif" 
                             style="vertical-align: middle; 
-                            background: no-repeat white url(../img/picture/' . $pic['name'] . ') -50px 0; 
+                            background: no-repeat white url(../../upload02/img/picture/' . $pic['name'] . ') -50px 0; 
                             background-size: 300px auto; 
                             width: 195px;
                             height: 195px;">

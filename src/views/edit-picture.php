@@ -41,7 +41,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                 <input type="hidden" name="id" value="<?php echo $p['id'] ?>">
                 <input type="hidden" name="gallery_id" value="<?php echo $p['gallery_id'] ?>">
 
-                <p class="text-center"><img style="max-width: 100%; height: auto;" src="../img/picture/<?php echo $p['name']; ?>"></p>
+                <p class="text-center"><img style="max-width: 100%; height: auto;" src="../../upload02/img/picture/<?php echo $p['name']; ?>"></p>
 
                 <div>
                     <p><strong>ชื่อภาพ</strong></p>
@@ -51,7 +51,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
                 <div class="form-group">
                     <p><strong>URL ของภาพ</strong></p>
-                    <p class="p-input"><?php echo BASEPATH . 'img/picture/' . $p['name'] ?></p>
+                    <p class="p-input"><?php echo DOMAIN . '/upload02/img/picture/' . $p['name'] ?></p>
                 </div>
 
                 <div class="form-group">

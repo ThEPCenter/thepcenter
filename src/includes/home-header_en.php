@@ -1,6 +1,6 @@
 
 <div class="row">
-    <a title="Thailand Center of Excellence in Physics" href="home_en.php"><img class="img-responsive" style="margin: 0 auto;" alt="ThEP-Center" src="../images/thep_head_7_1200.png"></a>
+    <a title="Thailand Center of Excellence in Physics" href="home_en.php"><img class="img-responsive" style="margin: 0 auto;" alt="ThEP-Center" src="../images/thep_head_9_1200.png"></a>
 </div>
 
 <div class="row">

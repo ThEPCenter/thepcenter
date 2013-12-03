@@ -108,10 +108,10 @@ doc_head('ข่าวกิจกรรม');
                                     $i++;
                                     echo '
                         
-                    <a class="pic-link" href="../img/picture/' . $p['name'] . '" data-lightbox="gal-' . $n['gallery_id'] . '" title="' . $p['caption'] . '">                            
+                    <a class="pic-link" href="../../upload02/img/picture/' . $p['name'] . '" data-lightbox="gal-' . $n['gallery_id'] . '" title="' . $p['caption'] . '">                            
                         <img class="example-image" src="../images/pixel-vfl3z5WfW.gif" alt="image ' . $i . ' 0f ' . $no_p . ' thumb" 
                             style="vertical-align: middle; 
-                            background: no-repeat white url(../img/picture/' . $p['name'] . ') -50px 0; 
+                            background: no-repeat white url(../../upload02/img/picture/' . $p['name'] . ') -50px 0; 
                             background-size: 240px auto; 
                             width: 160px;
                             height: 160px;">                            

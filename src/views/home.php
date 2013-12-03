@@ -58,7 +58,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                         <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
                     </a>
                 </div>
-                <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<? echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
+                <h3><a style="font-weight: 400;" href="<?php echo $p['type'] ?>-news.php?news_id=<? echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
                 <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
 
@@ -77,7 +77,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                         <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
                     </a>
                 </div>
-                <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
+                <h3><a style="font-weight: 400;" href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
                 <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
 
@@ -96,7 +96,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                         <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
                     </a>
                 </div>
-                <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
+                <h3><a style="font-weight: 400;" href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
                 <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
 
@@ -121,7 +121,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                         <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
                     </a>
                 </div>
-                <h3><a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
+                <h3><a style="font-weight: 400;" href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
                 <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
 
@@ -140,7 +140,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                         <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
                     </a>
                 </div>
-                <h3><a href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
+                <h3><a style="font-weight: 400;" href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
                 <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
 
@@ -160,7 +160,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                         <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
                     </a>
                 </div>
-                <h3><a href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
+                <h3><a style="font-weight: 400;" href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
                 <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
 
@@ -173,7 +173,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                         <img class="fetured-image" src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-frc3/1459733_554680657955820_388638317_n.png" alt="Featured image">
                     </a>
                 </div>
-                <h3><a href="spc2014.php">การประชุมวิชาการสมาคมฟิสิกส์ไทย ครั้งที่ 9 ประจำปี 2557</a></h3>
+                <h3><a  style="font-weight: 400;" href="spc2014.php">การประชุมวิชาการสมาคมฟิสิกส์ไทย ครั้งที่ 9 ประจำปี 2557</a></h3>
                 <p>
                     วันที่ 26 - 29 มีนาคม พ.ศ.2557 ณ หอประชุมใหญ่ มหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน จังหวัดนครราชสีมา <br>
                     มหาวิทยาลัยเทคโนโลยีราชมงคลสุวรรณภูมิ มหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน และมหาวิทยาลัยราช
