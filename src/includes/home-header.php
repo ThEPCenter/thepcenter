@@ -1,18 +1,20 @@
 <?php
 /*
 $sessionid = session_id();
-
-$counter_id = "SELECT id FROM counter WHERE  sessionid = '$sessionid'  "; // Show All
+echo $sessionid . '  xxxxxxxxxx yyyyyyyyyy';
+//$counter_id	= $db->GetOne("SELECT id FROM counter WHERE  sessionid = '$sessionid'  ");
+$counter_id = "SELECT id FROM counter WHERE  sessionid = '$sessionid';"; // Show All
 $result = mysql_query($counter_id) or die(mysql_error());
-$rs = mysql_fetch_array($result);
-$counterid = $rs["id"];
-
+// $rs = mysql_fetch_array($result);
+// $counterid = $rs["id"];
 $now = date("Y-m-d H:i:s");
-if (!$result) {
-    $sql = "INSERT INTO counter (`sessionid` ,`created` ,`updated`) VALUES ( '$sessionid','$now','$now')";
-    mysql_query($sql);
+$nums = mysql_num_rows($result);
+echo " Number = $nums ";
+if ($nums == 0) {
+    $sql = "INSERT INTO counter
+  VALUES (0, '$sessionid','$now','$now');";
+    @mysql_query($sql) or die(mysql_error());
 }
-
 $countershow = "SELECT id FROM counter ORDER BY id DESC"; // Show All
 $result = mysql_query($countershow) or die(mysql_error());
 $rs = mysql_fetch_array($result);

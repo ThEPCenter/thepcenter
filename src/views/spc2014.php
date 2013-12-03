@@ -126,7 +126,7 @@ doc_head('Siam Physics Congress 2014: SPC2014');
                     เป็นวิทยากรบรรยายรับเชิญมากมาย</p>
                 <p>&nbsp;</p>
 
-                <p><u><strong>ข้อมูลเพิ่มเติม:</strong></u> <a target="_blank" href="http://www.spc2014.org">http://www.spc2014.org</a></p>
+                <p><u><strong>ข้อมูลเพิ่มเติม:</strong></u> <a target="_blank" href="http://www.spc2014.org" title="SPC2014 : Siam Physics Congress| The 9th Annual Conference of the Thai Physics Society March 26-29, 2014, Rajamangala University of Technology Isan">http://www.spc2014.org</a></p>
                 <p>&nbsp;</p>
 
                 <p><u><strong>ติดต่อ สอบถาม:</strong></u><br>
