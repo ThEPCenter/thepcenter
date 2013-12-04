@@ -13,17 +13,32 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background-color: #FFF;
+    background-color: #CFCA8F;
+    /*
     font-family: 'TH Niramit AS';
     font-size: 20px;
     line-height: 24px;
+    */
+    font-size: 13px;
     color: #333;	
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    /*
     font-family: 'TH Niramit AS';
+    */
     font-weight: bold;
 }
+
+h2, .h2 {
+    font-size: 20px;
+}
+
+h3, .h3 {
+    font-size: 16px;
+}
+
+
 a{
     text-decoration: none;
     color: #039;
@@ -35,7 +50,7 @@ a:hover {
 }
 
 a:visited {
-    color: #609
+    color: #5B2056; /* #609; */
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,  .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
@@ -44,10 +59,15 @@ h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,  .h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
 }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover,  .h1 a:hover, .h2 a:hover, .h3 a:hover, .h4 a:hover, .h5 a:hover, .h6 a:hover {
     text-decoration: none;
-    color: #003399;
+    color: #039;
 }
 h1 a:visited, h2 a:visited, h3 a:visited, h4 a:visited, h5 a:visited, h6 a:visited,  .h1 a:visited, .h2 a:visited, .h3 a:visited, .h4 a:visited, .h5 a:visited, .h6 a:visited {
     color: #333;
+}
+
+h3 a.header-title{
+    font-weight: normal;
+    color: #0300A6;
 }
 
 #slide {
@@ -121,20 +141,20 @@ ul {
 }
 
 #sitefooternav li a {
-    color: #004499;
+    color: #039;
 }
 #sitefooternav li a:hover {
     color: #333;
     font-weight: bold;
 }
 #sitefooternav li a:visited {
-    color: #609;
+    color: #5B2056;
 }
 
 footer {
     margin-top: 1px;
     width: 100%;
-    background-color: #e0e0e0;
+    background-color: #A6A272; /* #e0e0e0 */
     position: absolute;
     left: 0;
 }

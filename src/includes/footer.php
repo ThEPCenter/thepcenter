@@ -19,19 +19,19 @@
                 <li>▪ <a href="structure.php">โครงสร้างองค์กร</a></li>
 
                 <li>▪ <a href="personel.php">บุคลากร</a></li>
+                
+                <li>▪ <a href="location.php">ที่ตั้งหน่วยงาน</a></li>
 
             </ul>
         </div>
 
         <div class="col-xs-6 col-sm-3 col-md-3" >
             <ul>
-                <li class="li-head">สำนักงานกลาง</li>
-
-                <li>▪ <a href="location.php">ที่ตั้งหน่วยงาน</a></li>
-                
-                <li>▪ <a href="document.php">เอกสารเผยแพร่</a></li>
+                <li class="li-head">ข้อมูลทั่วไป</li>
                 
                 <li>▪ <a href="annual-report.php">รายงานประจำปี</a></li>
+                
+                <li>▪ <a href="#">ผลงานตีพิมพ์</a></li>
 
                 <li>▪ <a href="form.php">แบบฟอร์ม</a></li>
 
@@ -84,6 +84,8 @@
                 <li>▪ <a href="industrial.php">ฟิสิกส์อุตสาหกรรม</a></li>
 
                 <li>▪ <a href="daily-life.php">ฟิสิกส์ในชีวิตประจำวัน</a></li>
+                
+                <li>▪ <a href="document.php">การบริหารจัดการยุทธศาสตร์สู่ความสำเร็จ</a></li>
 
             </ul>
         </div> 
