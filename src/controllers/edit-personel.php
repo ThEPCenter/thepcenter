@@ -118,7 +118,8 @@ $p = mysql_fetch_array($result);
         <div class="form-group">
             <label class="col-sm-2 control-label">Email</label>
             <div class="col-sm-10">
-                <input type="email" class="form-control" name="email" value="<?php echo $p['email']; ?>">
+                <!-- type="email" -->
+                <input type="text" class="form-control" name="email" value="<?php echo $p['email']; ?>"> 
             </div>
         </div>
         <div class="form-group">

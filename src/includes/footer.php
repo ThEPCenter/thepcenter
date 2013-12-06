@@ -40,8 +40,11 @@
                 <li>▪ <a href="http://eofficethep.com" target="_blank">E-Office</a></li>
 
                 <li>▪ <a href="https://www.facebook.com/pages/Thailand-Center-of-Excellence-in-Physics/118201038353964" target="_blank">Facebook</a></li>
-
+                
+                <li>▪ <a href="#">เว็บลิงค์</a></li>
+                
             </ul>
+            
         </div>
 
         <div class="col-xs-6 col-sm-3 col-md-3" >
@@ -53,25 +56,25 @@
 
                 <li>▪ <a href="http://www.chula.ac.th" target="_blank">จุฬาลงกรณ์มหาวิทยาลัย</a></li>
                 
+                <li>▪ <a href="http://www.kmitl.ac.th" target="_blank">สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</a></li>
+                
+                <li>▪ <a href="http://www.mahidol.ac.th/th" target="_blank">มหาวิทยาลัยมหิดล</a></li>
+                
+                <li>▪ <a href="http://www.sut.ac.th" target="_blank">มหาวิทยาลัยเทคโนโลยีสุรนารี</a></li>                
+                
                 <li>▪ <a href="http://www.kku.ac.th" target="_blank">มหาวิทยาลัยขอนแก่น</a></li>
 
-                <li>▪ <a href="http://www.mahidol.ac.th/th" target="_blank">มหาวิทยาลัยมหิดล</a></li>
+                <li>▪ <a href="http://www.kmutt.ac.th" target="_blank">มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</a></li>
+                
+                <li>▪ <a href="http://www.buu.ac.th" target="_blank">มหาวิทยาลัยบูรพา</a></li>
+                
+                <li>▪ <a href="http://www.wu.ac.th" target="_blank">มหาวิทยาลัยวลัยลักษณ์</a></li>
+                
+                <li>▪ <a href="http://www.psu.ac.th" target="_blank">มหาวิทยาลัยสงขลานครินทร์</a></li>
 
                 <li>▪ <a href="http://www.swu.ac.th" target="_blank">มหาวิทยาลัยศรีนครินทรวิโรฒ</a></li>
 
-                <li>▪ <a href="http://www.psu.ac.th" target="_blank">มหาวิทยาลัยสงขลานครินทร์</a></li>
-
-                <li>▪ <a href="http://www.kmitl.ac.th" target="_blank">สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</a></li>
-
-                <li>▪ <a href="http://www.buu.ac.th" target="_blank">มหาวิทยาลัยบูรพา</a></li>
-
                 <li>▪ <a href="http://www.nu.ac.th" target="_blank">มหาวิทยาลัยนเรศวร</a></li>
-
-                <li>▪ <a href="http://www.sut.ac.th" target="_blank">มหาวิทยาลัยเทคโนโลยีสุรนารี</a></li>
-
-                <li>▪ <a href="http://www.wu.ac.th" target="_blank">มหาวิทยาลัยวลัยลักษณ์</a></li>
-
-                <li>▪ <a href="http://www.kmutt.ac.th" target="_blank">มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี</a></li>
 
             </ul>
         </div>
