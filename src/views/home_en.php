@@ -28,12 +28,12 @@ doc_head('Thailand Center of Excellence in Physics');
                             <img class="img-responsive" style="margin: auto;" src="<?php echo $p['featured_img']; ?>">
                         </a>
                     </div>                                                
-                    <h3><a style="font-weight: 400;" href="<?php echo $p['type'] ?>-news_en.php?news_id=<? echo $p['id']; ?>"><?php echo $p['title_en']; ?></a></h3>
+                    <h3><a class="header-title" href="<?php echo $p['type'] ?>-news_en.php?news_id=<? echo $p['id']; ?>"><?php echo $p['title_en']; ?></a></h3>
                     <?php echo $p['content_short_en']; ?> <a href="<?php echo $p['type'] ?>-news_en.php?news_id=<?php echo $p['id']; ?>">... Read more</a>
                 </div>
             </div>
 
-            <!-- Activity news -->
+            <!-- ThEP Center Brochure -->
             <?php
             $sql = "SELECT * FROM tb_news 
                 WHERE type = 'activity'
@@ -42,9 +42,9 @@ doc_head('Thailand Center of Excellence in Physics');
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-12 col-md-6">
-                <h2 class="text-center">ThEP Center Brochure</h2>
+                <h2 class="text-center"><a href="brochure_en.php">ThEP Center Brochure</a></h2>
                 <div>
-                    <a title="ThEP Center Brochure" href="#">
+                    <a title="ThEP Center Brochure" href="brochure_en.php">
                         <img class="img-responsive" style="border: 1px solid #666666;" src="http://www.thep-center.org/uploadfile/Form/eng/ThEP_Center_Brochure_Main.png" >
                     </a>
                 </div>
