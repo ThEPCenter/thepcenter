@@ -65,7 +65,7 @@ if ($_SESSION['fancy'] == "first") {
     <div class="container">
 
         <div class="row">
-            <a title="ศูนย์ความเป็นเลิศด้านฟิสิกส์" href="home.php"><img class="img-responsive" style="margin: 0 auto;" src="../images/thep_head_9_1200.png"></a>
+            <a title="ศูนย์ความเป็นเลิศด้านฟิสิกส์" href="home.php"><img class="img-responsive" style="margin: 0 auto;" src="../images/thep_head_10_1200.png"></a>
         </div>
 
         <div class="row">
