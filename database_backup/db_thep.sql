@@ -16,6 +16,27 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 -- --------------------------------------------------------
 
 -- 
+-- โครงสร้างตาราง `counter`
+-- 
+
+CREATE TABLE `counter` (
+  `id` int(11) NOT NULL auto_increment,
+  `sessionid` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `created` varchar(255) collate utf8_unicode_ci NOT NULL,
+  `updated` varchar(255) collate utf8_unicode_ci NOT NULL,
+  PRIMARY KEY  (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+
+-- 
+-- dump ตาราง `counter`
+-- 
+
+INSERT INTO `counter` VALUES (1, '5f8dd6a6c6a77bf0658f409ee6e1aa77', '2013-12-06 12:05:36', '2013-12-06 12:05:36');
+INSERT INTO `counter` VALUES (2, '7f0df181a7a58769c6b93f973fa29e20', '2013-12-06 14:58:03', '2013-12-06 14:58:03');
+
+-- --------------------------------------------------------
+
+-- 
 -- โครงสร้างตาราง `tb_article`
 -- 
 

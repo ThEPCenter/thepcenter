@@ -41,7 +41,7 @@
 
                 <li>▪ <a href="https://www.facebook.com/pages/Thailand-Center-of-Excellence-in-Physics/118201038353964" target="_blank">Facebook</a></li>
                 
-                <li>▪ <a href="#">เว็บลิงค์</a></li>
+                <li>▪ <a href="weblink.php">เว็บลิงค์</a></li>
                 
             </ul>
             
