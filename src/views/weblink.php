@@ -130,6 +130,26 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                 <div class="row">
                     <div class="col-sm-2 col-md-2"></div>
                     <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.tint.or.th">สถาบันเทคโนโลยีนิวเคลียร์แห่งชาติ (องค์การมหาชน)</a>
+                    </div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.tint.or.th">http://www.tint.or.th</a>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-2 col-md-2"></div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.narit.or.th">สถาบันวิจัยดาราศาสตร์แห่งชาติ (องค์การมหาชน) </a>
+                    </div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.narit.or.th">http://www.narit.or.th</a>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-2 col-md-2"></div>
+                    <div class="col-sm-5 col-md-5">
                         <a target="_blank" href="http://www.mtec.or.th">ศูนย์เทคโนโลยีโลหะและวัสดุแห่งชาติ (MTEC)</a>
                     </div>
                     <div class="col-sm-5 col-md-5">
@@ -137,6 +157,26 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                     </div>
                 </div>
                 
+                <div class="row">
+                    <div class="col-sm-2 col-md-2"></div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.nanotec.or.th">ศูนย์นาโนเทคโนโลยีแห่งชาติ</a>
+                    </div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.nanotec.or.th">http://www.nanotec.or.th</a>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-2 col-md-2"></div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.oaep.go.th">สำนักงานปรมาณูเพื่อสันติ</a>
+                    </div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.oaep.go.th">http://www.oaep.go.th</a>
+                    </div>
+                </div>
+                                
                 <div class="row">
                     <div class="col-sm-2 col-md-2"></div>
                     <div class="col-sm-5 col-md-5">
@@ -304,6 +344,127 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                         <a target="_blank" href="http://www.sci.nu.ac.th/physics">http://www.sci.nu.ac.th/physics</a>
                     </div>
                 </div>
+                
+                <div class="row">
+                    <div class="col-sm-2 col-md-2"></div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://physics.sci.ku.ac.th">ภาควิชาฟิสิกส์ มหาวิทยาลัยเกษตรศาสตร์</a>
+                    </div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://physics.sci.ku.ac.th">http://physics.sci.ku.ac.th</a>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-2 col-md-2"></div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://science.sci.tu.ac.th/phys">ภาควิชาฟิสิกส์ มหาวิทยาลัยธรรมศาสตร์</a>
+                    </div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://science.sci.tu.ac.th/phys">http://science.sci.tu.ac.th/phys</a>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-2 col-md-2"></div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.phy.sc.su.ac.th">ภาควิชาฟิสิกส์ มหาวิทยาลัยศิลปากร</a>
+                    </div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.phy.sc.su.ac.th">http://www.phy.sc.su.ac.th</a>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-2 col-md-2"></div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.imi.kmutnb.ac.th">ภาควิชาฟิสิกส์อุตสาหกรรมและอุปกรณ์การแพทย์ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าพระนครเหนือ</a>
+                    </div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.imi.kmutnb.ac.th">http://www.imi.kmutnb.ac.th</a>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-2 col-md-2"></div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.sci.rmutt.ac.th/physics">สาขาวิชาฟิสิกส์ มหาวิทยาลัยเทคโนโลยีราชมงคลธัญบุรี</a>
+                    </div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.sci.rmutt.ac.th/physics">http://www.sci.rmutt.ac.th/physics</a>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-2 col-md-2"></div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.science.mju.ac.th/Physics">ภาควิชาฟิสิกส์ มหาวิทยาลัยแม่โจ้</a>
+                    </div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.science.mju.ac.th/Physics">http://www.science.mju.ac.th/Physics</a>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-2 col-md-2"></div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.phys.sci.ubu.ac.th">ภาควิชาฟิสิกส์ มหาวิทยาลัยอุบลราชธานี</a>
+                    </div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.phys.sci.ubu.ac.th">http://www.phys.sci.ubu.ac.th</a>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-2 col-md-2"></div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.physics.science.msu.ac.th">ภาควิชาฟิสิกส์ มหาวิทยาลัยมหาสารคาม</a>
+                    </div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.physics.science.msu.ac.th">http://www.physics.science.msu.ac.th</a>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-2 col-md-2"></div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.sci.tsu.ac.th/physics">สาขาวิชาฟิสิกส์ มหาวิทยาลัยทักษิณ</a>
+                    </div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.sci.tsu.ac.th/physics">http://www.sci.tsu.ac.th/physics</a>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-2 col-md-2"></div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://physics.sci.rmutsb.ac.th">สาขาวิชาฟิสิกส์ มหาวิทยาลัยเทคโนโลยีราชมงคลสุวรรณภูมิ</a>
+                    </div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://physics.sci.rmutsb.ac.th">http://physics.sci.rmutsb.ac.th</a>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-2 col-md-2"></div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.sci.rmuti.ac.th/physics">สาขาวิชาฟิสิกส์ประยุกต์ มหาวิทยาลัยเทคโนโลยีราชมงคลอีสาน</a>
+                    </div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.sci.rmuti.ac.th/physics">http://www.sci.rmuti.ac.th/physics</a>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-2 col-md-2"></div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://physic.sci.snru.ac.th">สาขาวิชาฟิสิกส์ มหาวิทยาลัยราชภัฏสกลนคร</a>
+                    </div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://physic.sci.snru.ac.th">http://physic.sci.snru.ac.th</a>
+                    </div>
+                </div>
+                
                 <p>&nbsp;</p>
                 <p>&nbsp;</p>
                 
