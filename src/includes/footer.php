@@ -31,7 +31,7 @@
                 
                 <li>▪ <a href="annual-report.php">รายงานประจำปี</a></li>
                 
-                <li>▪ <a href="#">ผลงานตีพิมพ์</a></li>
+                <li>▪ <a href="publication.php">ผลงานตีพิมพ์</a></li>
 
                 <li>▪ <a href="form.php">แบบฟอร์ม</a></li>
 

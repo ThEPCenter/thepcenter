@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Thailand Center of Excellence in Physics. ศูนย์ความเป็นเลิศด้านฟิสิกส์">
-        <meta name="keywords" content="Physics, Thailand Center of Excellence in Physics, ฟิสิกส์, ศูนย์ความเป็นเลิศด้านฟิสิกส์, ThEP" />
+        <meta name="keywords" content="Physics, Thailand Center of Excellence in Physics, ฟิสิกส์, ศูนย์ความเป็นเลิศด้านฟิสิกส์, ฟิสิกส์ไทย, ThEP" />
         <meta name="author" content="Thailand Center of Excellence in Physics. ศูนย์ความเป็นเลิศด้านฟิสิกส์">
         <link rel="shortcut icon" href="../../assets/ico/favicon.png">
 
