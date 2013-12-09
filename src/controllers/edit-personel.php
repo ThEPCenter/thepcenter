@@ -43,7 +43,7 @@ $sql = "SELECT * FROM tb_personel WHERE id = $edit_id;";
 $result = mysql_query($sql);
 $p = mysql_fetch_array($result);
 ?>
-<div>
+<div class="col-md-12">
     <h2 style="text-align: center;">แก้ไขข้อบุคลากร</h2>
     <form class="form-horizontal" role="form" name = "form1" method = "post" action = "<?php echo $_SERVER['PHP_SELF']; ?>">
         
@@ -118,8 +118,7 @@ $p = mysql_fetch_array($result);
         <div class="form-group">
             <label class="col-sm-2 control-label">Email</label>
             <div class="col-sm-10">
-                <!-- type="email" -->
-                <input type="text" class="form-control" name="email" value="<?php echo $p['email']; ?>"> 
+                <input type="email" class="form-control" name="email" value="<?php echo $p['email']; ?>" multiple> 
             </div>
         </div>
         <div class="form-group">

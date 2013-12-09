@@ -40,89 +40,93 @@ $result = mysql_query($sql);
 $p = mysql_fetch_array($result);
 ?>
 
-<h2 class="text-center">แก้ไข ข่าววิชาการจากเครือข่าย</h2>                   
+<div class="col-md-12">
 
-<form role="form" name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-    <input name="edit_id" type="hidden" value="<?php echo $p['id']; ?>">
-    <input name="type" type="hidden" value="<?php echo $p['type']; ?>">
-    
-    <div class="form-group">
-        <label>หัวข้อข่าว</label>
-        <input type="text" name="title"  class="form-control" value="<?php echo htmlspecialchars_decode($p['title']); ?>" />
-    </div>
-    
-    <div class="form-group">
-        <label>หัวข้อข่าวภาษาอังกฤษ</label>
-        <input type="text" name="title_en"  class="form-control" value="<?php echo htmlspecialchars_decode($p['title_en']); ?>">
-    </div>
-    
-    <div class="form-group">
-        <label>วันที่</label>
-        <input type="text" id="datepicker" name="date" class="form-control" value="<?php echo date("m/d/Y", strtotime($p['date'])); ?>">
-    </div>
-    <script>
-        $(function() {                
-            $( "#datepicker" ).datepicker();   // Date Picker
-        }); /* END jQuery */
-    </script>
-    <p>&nbsp;</p>
-    
-    <h4>Feature image</h4>
-    <p id="show-img">
-        <img class="img-responsive" style="margin: auto;" src="<?php echo htmlspecialchars_decode($p['featured_img']); ?>">
-    </p>
-    <div class="form-group">
-        <label>Feature image url</label>
-        <input type="text" id="featured_img" name="featured_img"  class="form-control" value="<?php echo htmlspecialchars_decode($p['featured_img']); ?>">
-    </div>
-    <script>
-        $(function(){            
-            $("#featured_img").blur(function(){            
-                var img_url = $("#featured_img").val();
-                $("#show-img").html("<img src=\"" + img_url + "\" style=\"max-width: 100%; height: auto; margin: auto;\">");           
+    <h2 class="text-center">แก้ไข ข่าววิชาการจากเครือข่าย</h2>                   
+
+    <form role="form" name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+        <input name="edit_id" type="hidden" value="<?php echo $p['id']; ?>">
+        <input name="type" type="hidden" value="<?php echo $p['type']; ?>">
+
+        <div class="form-group">
+            <label>หัวข้อข่าว</label>
+            <textarea name="title" class="form-control" rows="2"><?php echo htmlspecialchars_decode($p['title']); ?></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>หัวข้อข่าวภาษาอังกฤษ</label>
+            <textarea name="title_en" class="form-control" rows="2"><?php echo htmlspecialchars_decode($p['title_en']); ?></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>วันที่</label>
+            <input type="text" id="datepicker" name="date" class="form-control" value="<?php echo date("m/d/Y", strtotime($p['date'])); ?>">
+        </div>
+        <script>
+            $(function() {
+                $("#datepicker").datepicker();   // Date Picker
+            }); /* END jQuery */
+        </script>
+        <p>&nbsp;</p>
+
+        <h4>Feature image</h4>
+        <p id="show-img">
+            <img class="img-responsive" style="margin: auto;" src="<?php echo htmlspecialchars_decode($p['featured_img']); ?>">
+        </p>
+        <div class="form-group">
+            <label>Feature image url</label>
+            <input type="text" id="featured_img" name="featured_img"  class="form-control" value="<?php echo htmlspecialchars_decode($p['featured_img']); ?>">
+        </div>
+        <script>
+            $(function() {
+                $("#featured_img").blur(function() {
+                    var img_url = $("#featured_img").val();
+                    $("#show-img").html("<img src=\"" + img_url + "\" style=\"max-width: 100%; height: auto; margin: auto;\">");
+                });
+
             });
-            
-        });
-    </script>
-    <p>&nbsp;</p>
-
-    <div class="form-group">
-        <label>เนื้อหาฉบับย่อ</label>
-        <textarea name="content_short" class="form-control" rows="4"><?php echo $p['content_short']; ?></textarea>
-    </div>
-    
-    <div class="form-group">
-        <label>เนื้อหาฉบับย่อภาษาอังกฤษ</label>
-        <textarea name="content_short_en" class="form-control" rows="4"><?php echo $p['content_short_en']; ?></textarea>
-    </div>
-
-    <div class="form-group">
-        <label>เนื้อหาฉบับเต็ม</label>
-        <textarea name="content_long"><?php echo htmlspecialchars_decode($p['content_long']); ?></textarea>
-        <script>
-            CKEDITOR.replace('content_long');
         </script>
-    </div>
-    
-    <div class="form-group">
-        <label>เนื้อหาฉบับเต็มภาษาอังกฤษ</label>
-        <textarea name="content_long_en"><?php echo htmlspecialchars_decode($p['content_long_en']); ?></textarea>
-        <script>
-            CKEDITOR.replace('content_long_en');
-        </script>
-    </div>
+        <p>&nbsp;</p>
 
-    <strong>อื่นๆ</strong>
-    <?php
-    if ($p['new'] == 'y') {
-        $chk = ' checked';
-    }
-    ?>
-    <div class="checkbox">
-        <label>
-            <input type="checkbox" name="new" value="y"<?php echo $chk; ?>> ข่าวใหม่
-        </label>
-    </div>
-    <p>&nbsp;</p>
-    <button type="submit" class="btn btn-default">Submit</button> | <a href="../views/network-academic-news.php?news_id=<?php echo $p['id']; ?>" title="Cancel"><strong>Cancel</strong></a>
-</form>
+        <div class="form-group">
+            <label>เนื้อหาฉบับย่อ</label>
+            <textarea name="content_short" class="form-control" rows="4"><?php echo $p['content_short']; ?></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>เนื้อหาฉบับย่อภาษาอังกฤษ</label>
+            <textarea name="content_short_en" class="form-control" rows="8"><?php echo $p['content_short_en']; ?></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>เนื้อหาฉบับเต็ม</label>
+            <textarea name="content_long"><?php echo htmlspecialchars_decode($p['content_long']); ?></textarea>
+            <script>
+                CKEDITOR.replace('content_long');
+            </script>
+        </div>
+
+        <div class="form-group">
+            <label>เนื้อหาฉบับเต็มภาษาอังกฤษ</label>
+            <textarea name="content_long_en"><?php echo htmlspecialchars_decode($p['content_long_en']); ?></textarea>
+            <script>
+                CKEDITOR.replace('content_long_en');
+            </script>
+        </div>
+
+        <strong>อื่นๆ</strong>
+        <?php
+        if ($p['new'] == 'y') {
+            $chk = ' checked';
+        }
+        ?>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="new" value="y"<?php echo $chk; ?>> ข่าวใหม่
+            </label>
+        </div>
+        <p>&nbsp;</p>
+        <button type="submit" class="btn btn-default">Submit</button> | <a href="../views/network-academic-news.php?news_id=<?php echo $p['id']; ?>" title="Cancel"><strong>Cancel</strong></a>
+    </form>
+
+</div>
