@@ -74,7 +74,7 @@ $news_type = 'network-academic';
                 </div>
 
                 <div class="col-sm-3 col-md-3">
-                    <h3 class="text-center">ข่าววิชาการฯ ย้อนหลัง</h3>
+                    <h3 class="text-center header-type">ข่าววิชาการฯ ย้อนหลัง</h3>
                     <?php
                     $sql_etc = "SELECT * FROM tb_news 
                         WHERE type = 'network-academic'
@@ -94,7 +94,7 @@ $news_type = 'network-academic';
             } else {
                 ?>
                 <div class="col-sm-12 col-md-12">
-                    <h2 class="text-center">ข่าววิขาการจากเครือข่าย</h2>
+                    <h2 class="text-center header-type">ข่าววิขาการจากเครือข่าย</h2>
                     <?php
                     // ========= Add news ====================================
                     $admin_txt = '  
@@ -129,10 +129,12 @@ $news_type = 'network-academic';
                         while ($p = mysql_fetch_array($result)) {
                             echo '
                             <div class="row">
-                                <div class="col-md-3 text-center">
-                                    <img style="max-width: 100%; height: auto;" src="' . $p['featured_img'] . '">
+                                <div class="col-md-2 text-center">
+                                    <a title="' . htmlspecialchars_decode($p['title']) . '" onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">
+                                        <img style="max-width: 100%; height: auto;" src="' . $p['featured_img'] . '">
+                                    </a>
                                 </div>
-                                <div class="col-md-9">
+                                <div class="col-md-10">
                                     <h3 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . htmlspecialchars_decode($p['title']) . '</a></h3>
                                     <p><small><em>' . thai_date($p['date']) . '</em></small></p>
                                     <p>' . $p['content_short'] . ' <a href="' . $p['type'] . '-news.php?news_id=' . $p['id'] . '">... อ่านต่อ</a></p>

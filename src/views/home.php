@@ -43,10 +43,14 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
     $(document).ready(function() {
         // $('.fancybox').fancybox();
 <?php
+/*
+ 
 if ($_SESSION['fancy'] == "first") {
     echo '$.fancybox.open("../../upload02/king.jpg");';
     unset($_SESSION['fancy']);
 }
+ 
+*/
 ?>
     });
 </script>
@@ -87,11 +91,11 @@ if ($_SESSION['fancy'] == "first") {
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-12 col-md-6">
-                <h2 class="text-center"><a href="network-academic-news.php">ข่าววิชาการจากเครือข่าย</a></h2>
+                <h2 class="text-center"><a class="header-type" href="network-academic-news.php">ข่าววิชาการจากเครือข่าย</a></h2>
 
                 <div class="featured-image-network">                    
                     <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">
-                        <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
+                        <img class="fetured-image" title="<?php echo htmlspecialchars_decode($p['title']); ?>" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
                     </a>
                 </div>
                 <h3><a class="header-title" href="<?php echo $p['type'] ?>-news.php?news_id=<? echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
@@ -107,10 +111,10 @@ if ($_SESSION['fancy'] == "first") {
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-6 col-md-3">
-                <h2 class="text-center"><a href="activity-news.php">ข่าวกิจกรรม</a></h2>
+                <h2 class="text-center"><a class="header-type" href="activity-news.php">ข่าวกิจกรรม</a></h2>
                 <div class="featured-image-box">                    
                     <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">
-                        <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
+                        <img class="fetured-image" title="<?php echo htmlspecialchars_decode($p['title']); ?>" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
                     </a>
                 </div>
                 <h3><a class="header-title" href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
@@ -126,10 +130,10 @@ if ($_SESSION['fancy'] == "first") {
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-6 col-md-3 ">
-                <h2 class="text-center"><a href="special-news.php">ข่าวพิเศษ</a></h2>
+                <h2 class="text-center"><a class="header-type" href="special-news.php">ข่าวพิเศษ</a></h2>
                 <div class="featured-image-box">                    
                     <a style="text-align: center;" href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">
-                        <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
+                        <img class="fetured-image" title="<?php echo htmlspecialchars_decode($p['title']); ?>" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
                     </a>
                 </div>
                 <h3><a class="header-title" href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
@@ -151,10 +155,10 @@ if ($_SESSION['fancy'] == "first") {
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-6 col-md-3 ">
-                <h2 class="text-center"><a href="pr-news.php">ข่าวประชาสัมพันธ์</a></h2>
+                <h2 class="text-center"><a class="header-type" href="pr-news.php">ข่าวประชาสัมพันธ์</a></h2>
                 <div class="featured-image-box">                    
                     <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">
-                        <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
+                        <img class="fetured-image" title="<?php echo htmlspecialchars_decode($p['title']); ?>" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
                     </a>
                 </div>
                 <h3><a class="header-title" href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
@@ -170,10 +174,10 @@ if ($_SESSION['fancy'] == "first") {
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-6 col-md-3 ">
-                <h2 class="text-center"><a href="industrial.php">ฟิสิกส์อุตสาหกรรม</a></h2>
+                <h2 class="text-center"><a class="header-type" href="industrial.php">ฟิสิกส์อุตสาหกรรม</a></h2>
                 <div class="featured-image-box">                    
                     <a href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>">
-                        <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
+                        <img class="fetured-image" title="<?php echo htmlspecialchars_decode($p['title']); ?>" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
                     </a>
                 </div>
                 <h3><a class="header-title" href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
@@ -190,10 +194,10 @@ if ($_SESSION['fancy'] == "first") {
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-6 col-md-3 ">
-                <h2 class="text-center"><a href="daily-life.php">ฟิสิกส์ในชีวิตประจำวัน</a></h2>
+                <h2 class="text-center"><a class="header-type" href="daily-life.php">ฟิสิกส์ในชีวิตประจำวัน</a></h2>
                 <div class="featured-image-box">                    
                     <a href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>">
-                        <img class="fetured-image" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
+                        <img class="fetured-image" title="<?php echo htmlspecialchars_decode($p['title']); ?>" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
                     </a>
                 </div>
                 <h3><a class="header-title" href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
@@ -203,10 +207,10 @@ if ($_SESSION['fancy'] == "first") {
             <!-- ประกาศ -->
 
             <div class="col-sm-6 col-md-3 ">
-                <h2 class="text-center">ประกาศ</h2>
+                <h2 class="text-center"><a class="header-type">ประกาศ</a></h2>
                 <div class="featured-image-box">                    
                     <a href="spc2014.php">
-                        <img class="fetured-image" src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-frc3/1459733_554680657955820_388638317_n.png" alt="Featured image">
+                        <img class="fetured-image" title="การประชุมวิชาการสมาคมฟิสิกส์ไทย ครั้งที่ 9 ประจำปี 2557" src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-frc3/1459733_554680657955820_388638317_n.png" alt="Featured image">
                     </a>
                 </div>
                 <h3><a class="header-title" href="spc2014.php">การประชุมวิชาการสมาคมฟิสิกส์ไทย ครั้งที่ 9 ประจำปี 2557</a></h3>
@@ -225,7 +229,7 @@ if ($_SESSION['fancy'] == "first") {
 
         <div class="row">
 
-            <h2>ศูนย์วิจัยเครือข่าย</h2>
+            <h2 class="header-type">ศูนย์วิจัยเครือข่าย</h2>
 
             <div class="col-xs-6 col-sm-2 col-md-2">
                 <a title="ศูนย์วิจัยทางฟิสิกส์ของฟิล์มบาง" href="research-center.php?show_center=TFP">
@@ -276,7 +280,7 @@ if ($_SESSION['fancy'] == "first") {
 
         <div class="row">
 
-            <h2>หน่วยเครื่องมือวิเคราะห์กลาง</h2>
+            <h2 class="header-type">หน่วยเครื่องมือวิเคราะห์กลาง</h2>
 
             <div class="col-sm-6 col-md-6">
                 <a href="central-equipment.php?eq=XPS">

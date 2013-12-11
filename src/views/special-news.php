@@ -70,7 +70,7 @@ doc_head('ข่าวพิเศษ');
                 </div>
 
                 <div class="col-sm-3 col-md-3">
-                    <h3 class="text-center">ข่าวพิเศษย้อนหลัง</h3>
+                    <h3 class="text-center header-type">ข่าวพิเศษย้อนหลัง</h3>
                     <?php
                     $sql_etc = "SELECT * FROM tb_news 
                         WHERE type = 'special'
@@ -91,7 +91,7 @@ doc_head('ข่าวพิเศษ');
             } else {
                 ?>
                 <div class="col-sm-12 col-md-12">
-                    <h2 class="text-center">ข่าวพิเศษ</h2>
+                    <h2 class="text-center header-type">ข่าวพิเศษ</h2>
                     <?php
                     // ========= Add news ====================================
                     $admin_txt = '  

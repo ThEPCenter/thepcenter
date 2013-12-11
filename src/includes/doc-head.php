@@ -13,7 +13,7 @@
 
         <!-- Custom styles for this template -->
         <link href="../themes/assets/css/docs.css" rel="stylesheet" media="screen">
-        <link href="../style/main.css" rel="stylesheet" type="text/css" media="screen">
+        <link href="../style/main.css?v=<?php echo date("YmdHis"); ?>" rel="stylesheet" type="text/css" media="screen">
 
         <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!--[if lt IE 9]>

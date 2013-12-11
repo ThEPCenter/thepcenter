@@ -68,7 +68,7 @@ $news_type = 'network-academic';
                 </div>
 
                 <div class="col-sm-3 col-md-3">
-                    <h3 class="text-center">Another News</h3>
+                    <h3 class="text-center header-type">Another News</h3>
                     <?php
                     $sql_etc = "SELECT * FROM tb_news 
                         WHERE (type = 'network-academic') AND (title_en != '')
@@ -88,7 +88,7 @@ $news_type = 'network-academic';
             } else {
                 ?>
                 <div class="col-sm-12 col-md-12">
-                    <h2 class="text-center">Research News from Members</h2>
+                    <h2 class="text-center header-type">Research News from Members</h2>
                     <?php
                     // ========= Add news ====================================
                     $admin_txt = '  
@@ -113,7 +113,7 @@ $news_type = 'network-academic';
                                                                     
                         });
                     </script>
-
+                    
                     <?php
                     // ------------------------------------------------------------
 
@@ -122,13 +122,21 @@ $news_type = 'network-academic';
                     $num_news = mysql_num_rows($result);
                     if ($num_news > 0) {
                         while ($p = mysql_fetch_array($result)) {
-                            echo '                            
-                            <div id="news-' . $p['id'] . '">
+                            echo '
+                        <div class="row">
+                            <div class="col-md-2 text-center">
+                                <a title="' . htmlspecialchars_decode($p['title_en']) . '" onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">
+                                    <img style="max-width: 100%; height: auto;" src="' . $p['featured_img'] . '">
+                                </a>
+                            </div>
+                            
+                            <div class="col-md-10" id="news-' . $p['id'] . '">
                                 <h3 style="display: inline;"><a onclick="window.location=\'?news_id=' . $p['id'] . '\';" style="cursor: pointer;">' . htmlspecialchars_decode($p['title_en']) . '</a></h3>
                                 <p><small><em>' . date("F j, Y.", strtotime($p['date'])) . '</em></small></p>
                                 <p>' . $p['content_short_en'] . ' <a href="' . $p['type'] . '-news_en.php?news_id=' . $p['id'] . '">... Read more</a></p>
                             </div>
-                            <hr>
+                        </div> <!-- /.row -->  
+                        <hr>
                             ';
                         } // END while
                     } else {

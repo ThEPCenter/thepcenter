@@ -131,7 +131,7 @@ doc_head('ข่าวกิจกรรม');
                 </div>
 
                 <div class="col-sm-3 col-md-3">
-                    <h3 class="text-center">ข่าวกิจกรรมย้อนหลัง</h3>
+                    <h3 class="text-center header-type">ข่าวกิจกรรมย้อนหลัง</h3>
                     <?php
                     $sql_etc = "SELECT * FROM tb_news 
                         WHERE type = 'activity'
@@ -151,7 +151,7 @@ doc_head('ข่าวกิจกรรม');
                 <?php
             } else {
                 ?>
-                <h2 class="text-center">ข่าวกิจกรรม</h2>
+                <h2 class="text-center header-type">ข่าวกิจกรรม</h2>
                 <?php
                 // ========= Add news ====================================
                 $admin_txt = '  
@@ -192,7 +192,7 @@ doc_head('ข่าวกิจกรรม');
                         while ($a = mysql_fetch_array($re_act)) {
                             echo '                            
                                 <tr>
-                                    <td><a href="activity-news.php?news_id=' . $a['id'] . '">                                           
+                                    <td><a title="' . htmlspecialchars_decode($a['title']) . '" href="activity-news.php?news_id=' . $a['id'] . '">                                           
                                             <img class="example-image" src="../images/pixel-vfl3z5WfW.gif" alt="image ' . $i . ' 0f ' . $no_p . ' thumb" 
                                                 style="vertical-align: middle; 
                                                 background:no-repeat #ccc url(' . $a['featured_img'] . ') -40px 0; 

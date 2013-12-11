@@ -2,7 +2,7 @@
 <h2 class="text-center">แบบฟอร์ม : งานธุรการ และอื่นๆ</h2>
 <div class="row">
     <div class="col-md-8 col-md-offset-3">
-        <p><a href="../files/form_administration/LOGO_ThEP.jpg">1. ตราสัญลักษณ์ ศูนย์ความเป็นเลิศด้านฟิสิกส์ (ThEP-Logo)</a></p>
+        <p><a target="_blank" href="../files/form_administration/LOGO_ThEP.jpg">1. ตราสัญลักษณ์ ศูนย์ความเป็นเลิศด้านฟิสิกส์ (ThEP-Logo)</a></p>
 
         <p>2. แบบฟอร์มการลา (2556)</p>
         <ul>

@@ -21,7 +21,7 @@ doc_head('Thailand Center of Excellence in Physics');
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-12 col-md-6">
-                <h2 class="text-center"><a title="Research News from Members" href="network-academic-news_en.php">Research News from Members</a></h2>
+                <h2 class="text-center"><a class="header-type" title="Research News from Members" href="network-academic-news_en.php">Research News from Members</a></h2>
                 <div>
                     <div style="border: 1px solid #666666;">
                         <a title="<?php echo $p['title_en']; ?>" href="<?php echo $p['type'] ?>-news_en.php?news_id=<? echo $p['id']; ?>">
@@ -42,7 +42,7 @@ doc_head('Thailand Center of Excellence in Physics');
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-12 col-md-6">
-                <h2 class="text-center"><a href="brochure_en.php">ThEP Center Brochure</a></h2>
+                <h2 class="text-center"><a class="header-type" href="brochure_en.php">ThEP Center Brochure</a></h2>
                 <div>
                     <a title="ThEP Center Brochure" href="brochure_en.php">
                         <img class="img-responsive" style="border: 1px solid #666666;" src="http://www.thep-center.org/uploadfile/Form/eng/ThEP_Center_Brochure_Main.png" >
@@ -58,7 +58,7 @@ doc_head('Thailand Center of Excellence in Physics');
 
         <div class="row">
 
-            <h2>Research Center</h2>
+            <h2 class="header-type">Research Center</h2>
 
             <div class="col-xs-6 col-sm-2 col-md-2">
                 <a title="Research Center in Thin Film Physics" href="research-center_en.php?show_center=TFP">

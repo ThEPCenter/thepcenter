@@ -69,7 +69,7 @@ $type = 'daily-life';
                 </div>
 
                 <div class="col-sm-3 col-md-3">                    
-                    <h3 class="text-center">บทความย้อนหลัง</h3>
+                    <h3 class="text-center header-type">บทความย้อนหลัง</h3>
                     <?php
                     $sql = "SELECT * FROM tb_social WHERE type = '$type' ORDER BY date DESC;";
                     $result = mysql_query($sql);
@@ -94,7 +94,7 @@ $type = 'daily-life';
                 </div>
                 <?php
             } elseif (isset($_GET['show'])) {
-                echo '<h2 class="text-center">ฟิสิกส์ในชีวิตประจำวัน</h2>';
+                echo '<h2 class="text-center header-type">ฟิสิกส์ในชีวิตประจำวัน</h2>';
 
                 // ========= AJAX for Add social ====================================
                 $admin_txt = '  

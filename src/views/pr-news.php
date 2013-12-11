@@ -72,7 +72,7 @@ doc_head($news_type_th);
                 </div>
 
                 <div class="col-sm-3 col-md-3">
-                    <h3 class="text-center">ข่าว<?php echo $news_type_th; ?>ย้อนหลัง</h3>
+                    <h3 class="text-center header-type">ข่าว<?php echo $news_type_th; ?>ย้อนหลัง</h3>
                     <?php
                     $sql_etc = "SELECT * FROM tb_news 
                         WHERE type = '$news_type'
@@ -92,7 +92,7 @@ doc_head($news_type_th);
             } else {
                 ?>
                 <div class="col-sm-12 col-md-12">
-                    <h2 class="text-center">ข่าว<?php echo $news_type_th; ?></h2>
+                    <h2 class="text-center header-type">ข่าว<?php echo $news_type_th; ?></h2>
                     <?php
                     // ========= Add news ====================================
                     $admin_txt = '  
