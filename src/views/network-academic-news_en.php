@@ -48,6 +48,7 @@ $news_type = 'network-academic';
                     echo '
                                 <h2>' . htmlspecialchars_decode($p['title_en']) . '</h2>
                                 <p><small><em>' . date("F j, Y.", strtotime($p['date'])) . '</small></em></p>
+                                <p>&nbsp;</p>
                                 ' . htmlspecialchars_decode($p['content_long_en']) . '
                             </div>
                       ';
