@@ -210,7 +210,7 @@ if ($_SESSION['fancy'] == "first") {
                 <h2 class="text-center"><a class="header-type">ประกาศ</a></h2>
                 <div class="featured-image-box">                    
                     <a href="spc2014.php">
-                        <img class="fetured-image" title="การประชุมวิชาการสมาคมฟิสิกส์ไทย ครั้งที่ 9 ประจำปี 2557" src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-frc3/1459733_554680657955820_388638317_n.png" alt="Featured image">
+                        <img class="fetured-image" title="การประชุมวิชาการสมาคมฟิสิกส์ไทย ครั้งที่ 9 ประจำปี 2557" src="http://www.thep-center.org/upload02/spc2014/spc2014_profile.png" alt="Featured image">
                     </a>
                 </div>
                 <h3><a class="header-title" href="spc2014.php">การประชุมวิชาการสมาคมฟิสิกส์ไทย ครั้งที่ 9 ประจำปี 2557</a></h3>

@@ -91,6 +91,7 @@ doc_head('ข่าวกิจกรรม');
             <div id="news-' . $n['id'] . '">
                 <h2>' . htmlspecialchars_decode($n['title']) . '</h2>
                 <p class="fg-color-green"><small><em>' . thai_date($n['date']) . '</small></em></p>
+                <p>&nbsp;</p>
                 ' . htmlspecialchars_decode($n['content_long']) . '
             </div>';
                     ?>

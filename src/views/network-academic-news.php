@@ -66,6 +66,7 @@ $news_type = 'network-academic';
                     echo '
                                 <h2>' . htmlspecialchars_decode($p['title']) . '</h2>
                                 <p><small><em>' . thai_date($p['date']) . '</small></em></p>
+                                <p>&nbsp;</p>
                                 ' . htmlspecialchars_decode($p['content_long']) . '
                             
                       ';
