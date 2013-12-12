@@ -210,10 +210,10 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                 <div class="row">
                     <div class="col-sm-2 col-md-2"></div>
                     <div class="col-sm-5 col-md-5">
-                        <a target="_blank" href="http://www.cast.cn/CastEn">CAST</a>
+                        <a target="_blank" href="http://english.cas.cn">Chinese Academy Of Sciences (CAS)</a>
                     </div>
                     <div class="col-sm-5 col-md-5">
-                        <a target="_blank" href="http://www.cast.cn/CastEn">http://www.cast.cn/CastEn</a>
+                        <a target="_blank" href="http://english.cas.cn">http://english.cas.cn</a>
                     </div>
                 </div>
                 
