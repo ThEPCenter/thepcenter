@@ -1,6 +1,7 @@
 thepcenter
 ==========
 
-New version of ThEP's website.
+New 2013 version of ThEP's website (thep-center.org).
 
-The demo of this project is available now at http://www.thep-center.org/test2013/src2 .
+The official release available now at http://www.thep-center.org.
+
