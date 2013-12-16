@@ -40,526 +40,530 @@ doc_head($center);
     <div class="container">
         <?php get_includes('header'); ?>
         <div class="row">
-            <?php
-            if ($show_center == 'TFP') {
-                ?>
-                <h2 class="text-center"><? echo $center; ?><br>(Research Center in Thin Film Physics)</h2>
-                <h3>ที่มา</h3>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;จากนโยบายของสำนักงานคณะกรรมการการอุดมศึกษาที่จะจัดตั้งศูนย์ความเป็นเลิศด้านฟิสิกส์  กลุ่มคณาจารย์และนักวิจัยผู้ซึ่งมีความเชี่ยวชาญในสาขาวิชาฟิสิกส์ทางด้านฟิสิกส์ของฟิล์มบาง จากมหาวิทยาลัยหลักของรัฐจำนวน 4 มหาวิทยาลัยคือ จุฬาลงกรณ์มหาวิทยาลัย  มหาวิทยาลัยขอนแก่น  มหาวิทยาลัยเชียงใหม่  และมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี ได้เล็งเห็นถึงความสำคัญในการรวมกลุ่มของบุคลากรที่มีความเชี่ยวชาญที่เหมือนหรือใกล้เคียงกัน เพื่อพัฒนาความเป็นเลิศทางด้านวิชาการและการวิจัยให้ทั่วถึงทั้งในส่วนกลางและส่วนภูมิภาค จึงได้มีความเห็นร่วมกันเพื่อจัดตั้งศูนย์ศูนย์วิจัยทางฟิสิกส์ของฟิล์มบาง (Research Center in Thin Film Physics) โดยมีศูนย์กลางอยู่ที่ภาควิชาฟิสิกส์ คณะวิทยาศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย มีการดำเนินงานภายใต้แผนของศูนย์ความเป็นเลิศด้านฟิสิกส์
-                </p>
-                <p>&nbsp;</p>
-
-                <h3>จุดประสงค์</h3>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ศูนย์วิจัยทางฟิสิกส์ของฟิล์มบาง ได้จัดตั้งขึ้นโดยมีจุดประสงค์เพื่อพัฒนาและผลิตทรัพยากรบุคคลและองค์ความรู้ใหม่ในศาสตร์ทางด้านฟิสิกส์ของฟิล์มบาง   มีการปรับโครงสร้างพื้นฐานในการทำวิจัยให้ได้มาตรฐานสากล    ส่งเสริมให้มีความร่วมมือระหว่างกลุ่มมหาวิทยาลัยและระหว่างมหาวิทยาลัยกับภาคอุตสาหกรรมที่เกี่ยวข้อง  รวมถึงสร้างบรรยากาศทางวิชาการและวิจัยในระดับนานาชาติ เพื่อนำองค์ความรู้ที่เกิดขึ้นไปใช้ให้เกิดประโยชน์กับความต้องการของประเทศ เพิ่มศักยภาพในการแข่งขันของประเทศทางด้านวิทยาศาสตร์และเทคโนโลยีในเวทีโลก และเสริมสร้างการพัฒนาที่ยั่งยืนของประเทศต่อไป
-                </p>
-                <p>&nbsp;</p>
-
-                <h3>ห้องปฎิบัติการในเครือข่าย</h3>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ศูนย์วิจัยทางฟิสิกส์ของฟิล์มบางประกอบด้วยห้องปฏิบัติการต่างๆ จำนวน 4 ห้องปฏิบัติการ คือ
-                </p>
-                <h3><em>1) ห้องปฏิบัติการวิจัยฟิสิกส์สารกึ่งตัวนำ (Semiconductor Physics Research Laboratory)</em></h3>
-                <p>
-                    ภาควิชาฟิสิกส์  คณะวิทยาศาสตร์  จุฬาลงกรณ์มหาวิทยาลัย<br>
-                    โทรศัพท์ : 02-218-7687, 02-218-5108   โทรสาร : 02-253-1150<br>
-                    Website – http://rctfp.phys.sc.chula.ac.th
-                </p>
-                <p>&nbsp;</p>
-
-                <h3><em>2) ห้องปฏิบัติการวิจัยฟิสิกส์ของแข็ง</em></h3>
-                <p>
-                    ภาควิชาฟิสิกส์  คณะวิทยาศาสตร์  มหาวิทยาลัยขอนแก่น<br>
-                    โทรศัพท์:   043-202222 -39 ต่อ 1894    โทรสาร:  043-203359
-                </p>
-                <p>&nbsp;</p>
-
-                <h3><em>3) ห้องปฏิบัติการวิจัยฟิสิกส์ประยุกต์  (Applied Physics Research Laboratory)</em></h3>
-                <p>
-                    ภาควิชาฟิสิกส์  คณะวิทยาศาสตร์  มหาวิทยาลัยเชียงใหม่<br>
-                    โทรศัพท์: 053-943375 ต่อ 11 โทรสาร:  053-357511<br>
-                    Website – http://www.physics.science.cmu.ac.th/aprl/aprl.htm
-                </p>
-                <p>&nbsp;</p>
-
-                <h3><em>4) ห้องปฏิบัติการวิจัยเทคโนโลยีฟิล์มบาง </em></h3>
-                <p>
-                    ภาควิชาฟิสิกส์  คณะวิทยาศาสตร์  มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี<br>
-                    โทรศัพท์: 02-470-8876,  02-470-8873   โทรสาร: 02-427-8785
-                </p>
-                <p>&nbsp;</p>
-
-                <h3>งานวิจัย</h3>
-                <p>ศูนย์วิจัยทางฟิสิกส์ของฟิล์มบางจะมีการพัฒนาและการดำเนินการวิจัยในระยะแรกแบบ interdisciplinary ซึ่งมีหัวข้อหลัก ๆ เช่น</p>
-
-                <ul>
-                    <li>
-                        <p>
-                            การศึกษาวิจัยสมบัติพื้นฐานทางฟิสิกส์ของสารกึ่งตัวนำสำหรับประดิษฐ์เป็นเซลล์แสงอาทิตย์แบบฟิล์มบาง ที่มีโครงสร้างพิเศษเพื่อการพัฒนาให้มีประสิทธิภาพที่สูงขึ้นจากเซลล์แสงอาทิตย์ที่ใช้อยู่ทั่วไป
-                        </p>
-                        <table cellspacing="0" cellpadding="0" border="1">
-                            <tbody>
-                                <tr>
-                                    <td width="292" align="center" valign="top"><img src="../images/cluster1/01.png" width="180" height="136">
-                                        <p align="center">&nbsp;</p></td><td width="324" align="center" valign="top"><img src="../images/cluster1/02.png" width="160" height="134"></td>
-                                </tr>
-                                <tr>
-                                    <td width="292" valign="top" class="PictureDiscribe"><p align="center"><em><span lang="th" xml:lang="th">ระบบระเหยสารสำหรับชั้นฟิล์มบาง </span></em><em>CIGS</em></p></td>
-                                    <td width="324" valign="top" class="PictureDiscribe"><p align="center"><em><span lang="th" xml:lang="th">ระบบ </span></em><em>molecular beam epitaxy <span lang="th" xml:lang="th">สำหรับฟิล์มบาง </span>CIGS</em></p></td>
-                                </tr>
-                                <tr>
-                                    <td align="center" valign="top"><img src="../images/cluster1/03.png" width="164" height="130"></td>
-                                    <td width="324" align="center" valign="top"><img src="../images/cluster1/04.png" width="179" height="130"></td>
-                                </tr>
-                                <tr>
-                                    <td valign="top" width="292"></td>
-                                    <td valign="top" width="324"></td>
-                                </tr>
-                                <tr>
-                                    <td width="292" valign="top" class="PictureDiscribe"><p align="center"><em>CIGS<span lang="th" xml:lang="th"> </span>Thin Film Solar Cells under I-V Testing</em></p></td>
-                                    <td width="324" valign="top" class="PictureDiscribe"><p align="center"><em>CIGS<span lang="th" xml:lang="th"> </span>Thin Film Solar Mini-module</em></p></td>
-                                </tr>
-                                <tr>
-                                    <td align="center" valign="top"><img src="../images/cluster1/05.png" width="197" height="151"></td>
-                                    <td width="324" align="center" valign="top"><img src="../images/cluster1/06.png" width="189" height="151"></td>
-                                </tr>
-                                <tr>
-                                    <td valign="top" width="292"></td>
-                                    <td valign="top" width="324"></td>
-                                </tr>
-                                <tr>
-                                    <td width="292" valign="top" class="PictureDiscribe"><p align="center"><em><span lang="th" xml:lang="th">ประสิทธิภาพและ </span></em><em>quantum efficiency <span lang="th" xml:lang="th">ของ </span>CIGS<span lang="th" xml:lang="th"> </span>Solar   Cells</em><span lang="th" xml:lang="th"></span></p></td>
-                                    <td width="324" valign="top" class="PictureDiscribe"><p align="center"><em><span lang="th" xml:lang="th">ประสิทธิภาพของ </span></em><em>CIGS<span lang="th" xml:lang="th"> </span>Solar Mini-module</em></p></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p>&nbsp;</p>
-                    </li>
-                    <li>
-                        <p>
-                            การศึกษาวิจัยสมบัติทางฟิสิกส์พื้นผิวของฟิล์มบางที่เตรียมโดยวิธี molecular beam epitaxy ทั้งในด้านการทดลองและทฤษฎีพื้นฐาน
-                        </p>
-                        <table cellspacing="0" cellpadding="0" border="1">
-                            <tbody>
-                                <tr>
-                                    <td valign="top" width="292"></td>
-                                    <td valign="top" width="324"></td>
-                                </tr>
-                                <tr>
-                                    <td valign="top" width="292"><p align="center"><img src="../images/cluster1/07.png" width="201" height="133"></p></td>
-                                    <td width="324" valign="top"><p align="center"><img src="../images/cluster1/08.png" width="184" height="133"></p></td>
-                                </tr>
-                                <tr>
-                                    <td valign="top" class="PictureDiscribe"><em><span lang="th" xml:lang="th">การศึกษาผิวของฟิล์มบางโดยใช้ </span></em><em>Atomic   Force Microscope</em></td>
-                                    <td width="324" valign="top" class="PictureDiscribe"><em><span lang="th" xml:lang="th">การจำลองการเกิดของฟิล์มบางโดย </span></em><em>Computer   Simulation</em></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p>&nbsp;</p> 
-                    </li>
-                    <li>
-                        <p>การศึกษาวิจัยสมบัติทางฟิสิกส์ของสารกึ่งตัวนำแถบพลังงานกว้างสำหรับการพัฒนาประสิทธิภาพสูงสิ่งประดิษฐ์ทางด้าน optoelectronics และ photovoltaic</p>
-                        <table cellspacing="0" cellpadding="0" border="1">
-                            <tbody>
-                                <tr>
-                                    <td valign="top" width="292"></td>
-                                    <td valign="top" width="324"></td>
-                                </tr>
-                                <tr>
-                                    <td valign="top" width="292"><p align="center"><img src="../images/cluster1/09.png"></p></td>
-                                    <td width="324" valign="top"><p align="center"><img src="../images/cluster1/10.png"></p></td>
-                                </tr>
-                                <tr>
-                                    <td valign="top" class="PictureDiscribe"><em><span lang="th" xml:lang="th">ระบบเตรียมฟิล์มบางโปร่งใสนำไฟฟ้า</span></em><em></em></td>
-                                    <td width="324" valign="top" class="PictureDiscribe"><em><span lang="th" xml:lang="th">ฟิล์มบาง </span></em><em>ZnO</em><em>(Al)</em></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p>&nbsp;</p>
-                    </li>
-                    <li>
-                        <p>การศึกษาวิจัยสมบัติฟิสิกส์ของฟิล์มบางสำหรับประดิษฐ์ smart window ในการใช้พลังงานอย่างประหยัดและมีประสิทธิภาพ</p>
-                        <table cellspacing="0" cellpadding="0" border="1">
-                            <tbody>
-                                <tr>
-                                    <td align="center" valign="top"><img src="../images/cluster1/11.png"></td>
-                                    <td align="center"><img src="../images/cluster1/12.png"></td>
-                                </tr>
-                                <tr>
-                                    <td valign="top" class="PictureDiscribe"><p align="center"><em>Schematic diagram ของ smart window ที่ใช้ควบคู่กับ <br>
-                                                solar cell (Source : NREL,   USA)</em></p></td>
-                                    <td valign="top" class="PictureDiscribe"><p align="center"><em><span lang="th" xml:lang="th">ตัวอย่างของ</span></em><em> smart window (Source :   NREL, USA)</em></p></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p>&nbsp;</p>
-                    </li>
-                    <li>
-                        <p>การประดิษฐ์เซลล์แสงอาทิตย์ชนิดดายเซนซิไทด์</p>
-                        <table cellspacing="0" cellpadding="0" border="1">
-                            <tbody>
-                                <tr>
-                                    <td align="center" valign="top"><img src="../images/cluster1/13.png"></td>
-                                    <td align="center" valign="top"><img src="../images/cluster1/14.png"></td>
-                                </tr>
-                                <tr>
-                                    <td valign="top" class="PictureDiscribe"><p align="center"><em>Schematic diagram <span lang="th" xml:lang="th">ของ </span>dye-sensitized solar cell</em></p></td>
-                                    <td valign="top" class="PictureDiscribe"><p align="center"><em>Dye-sensitized solar cell <span lang="th" xml:lang="th">(มหาวิทยาลัยขอนแก่น)</span></em><em><span lang="th" xml:lang="th"></span></em></p></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p>&nbsp;</p>
-                    </li>
-                    <li>
-                        <p>การศึกษาวิจัยและพัฒนาระบบตรวจวัดก๊าซโดยใช้เทคโนโลยีฟิล์มบางของสารประกอบโลหะออกไซด์</p>
-                        <table cellspacing="0" cellpadding="0" border="1">
-                            <tbody>
-                                <tr>
-                                    <td width="292" align="center" valign="top"><img src="../images/cluster1/15.png"></td>
-                                    <td width="324" align="center" valign="top"><img src="../images/cluster1/16.png"></td>
-                                </tr>
-                                <tr>
-                                    <td width="292" valign="top" class="PictureDiscribe"><p align="center"><em>ZnO</em><em> Nanostructure <span lang="th" xml:lang="th">สำหรับ </span>gas sensor <span lang="th" xml:lang="th">และ </span>dye-sensitized solar   cell</em></p></td>
-                                    <td width="324" valign="top" class="PictureDiscribe"><p align="center"><em>Schematic diagram <span lang="th" xml:lang="th">ของ </span>thin film gas sensor</em><em></em></p></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <p>&nbsp;</p>
-                    </li>
-                </ul>
+            <div class="col-md-12">
                 <?php
-            } elseif ($show_center == 'PPP') {
-                ?>
-                <h2 class="text-center"><? echo $center; ?><br>(Research Center in Particle Beam and Plasma Physics)</h2>
-                <h3>ความสำคัญ</h3>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;คงไม่เป็นการพูดเกินเลย ถ้าจะกล่าวว่ามนุษย์นั้น เกิดมาในท่ามกลางห่ากระสุน แต่เป็นกระสุนอนุภาคของรังสีคอสมิค (ทั้งชนิดปฐมภูมิและทุติยภูมิ) ประจักษ์พยานที่เห็นได้กับตา ก็คือ แสงเหนือ (Aurora borealis) และแสงใต้ (Aurora australis)
-                </p>
-                <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                    <tbody>
+                if ($show_center == 'TFP') {
+                    ?>
+                    <h2 class="text-center"><? echo $center; ?><br>(Research Center in Thin Film Physics)</h2>
+                    <h3>ที่มา</h3>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;จากนโยบายของสำนักงานคณะกรรมการการอุดมศึกษาที่จะจัดตั้งศูนย์ความเป็นเลิศด้านฟิสิกส์  กลุ่มคณาจารย์และนักวิจัยผู้ซึ่งมีความเชี่ยวชาญในสาขาวิชาฟิสิกส์ทางด้านฟิสิกส์ของฟิล์มบาง จากมหาวิทยาลัยหลักของรัฐจำนวน 4 มหาวิทยาลัยคือ จุฬาลงกรณ์มหาวิทยาลัย  มหาวิทยาลัยขอนแก่น  มหาวิทยาลัยเชียงใหม่  และมหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี ได้เล็งเห็นถึงความสำคัญในการรวมกลุ่มของบุคลากรที่มีความเชี่ยวชาญที่เหมือนหรือใกล้เคียงกัน เพื่อพัฒนาความเป็นเลิศทางด้านวิชาการและการวิจัยให้ทั่วถึงทั้งในส่วนกลางและส่วนภูมิภาค จึงได้มีความเห็นร่วมกันเพื่อจัดตั้งศูนย์ศูนย์วิจัยทางฟิสิกส์ของฟิล์มบาง (Research Center in Thin Film Physics) โดยมีศูนย์กลางอยู่ที่ภาควิชาฟิสิกส์ คณะวิทยาศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย มีการดำเนินงานภายใต้แผนของศูนย์ความเป็นเลิศด้านฟิสิกส์
+                    </p>
+                    <p>&nbsp;</p>
+
+                    <h3>จุดประสงค์</h3>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ศูนย์วิจัยทางฟิสิกส์ของฟิล์มบาง ได้จัดตั้งขึ้นโดยมีจุดประสงค์เพื่อพัฒนาและผลิตทรัพยากรบุคคลและองค์ความรู้ใหม่ในศาสตร์ทางด้านฟิสิกส์ของฟิล์มบาง   มีการปรับโครงสร้างพื้นฐานในการทำวิจัยให้ได้มาตรฐานสากล    ส่งเสริมให้มีความร่วมมือระหว่างกลุ่มมหาวิทยาลัยและระหว่างมหาวิทยาลัยกับภาคอุตสาหกรรมที่เกี่ยวข้อง  รวมถึงสร้างบรรยากาศทางวิชาการและวิจัยในระดับนานาชาติ เพื่อนำองค์ความรู้ที่เกิดขึ้นไปใช้ให้เกิดประโยชน์กับความต้องการของประเทศ เพิ่มศักยภาพในการแข่งขันของประเทศทางด้านวิทยาศาสตร์และเทคโนโลยีในเวทีโลก และเสริมสร้างการพัฒนาที่ยั่งยืนของประเทศต่อไป
+                    </p>
+                    <p>&nbsp;</p>
+
+                    <h3>ห้องปฎิบัติการในเครือข่าย</h3>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ศูนย์วิจัยทางฟิสิกส์ของฟิล์มบางประกอบด้วยห้องปฏิบัติการต่างๆ จำนวน 4 ห้องปฏิบัติการ คือ
+                    </p>
+                    <h3><em>1) ห้องปฏิบัติการวิจัยฟิสิกส์สารกึ่งตัวนำ (Semiconductor Physics Research Laboratory)</em></h3>
+                    <p>
+                        ภาควิชาฟิสิกส์  คณะวิทยาศาสตร์  จุฬาลงกรณ์มหาวิทยาลัย<br>
+                        โทรศัพท์ : 02-218-7687, 02-218-5108   โทรสาร : 02-253-1150<br>
+                        Website – http://rctfp.phys.sc.chula.ac.th
+                    </p>
+                    <p>&nbsp;</p>
+
+                    <h3><em>2) ห้องปฏิบัติการวิจัยฟิสิกส์ของแข็ง</em></h3>
+                    <p>
+                        ภาควิชาฟิสิกส์  คณะวิทยาศาสตร์  มหาวิทยาลัยขอนแก่น<br>
+                        โทรศัพท์:   043-202222 -39 ต่อ 1894    โทรสาร:  043-203359
+                    </p>
+                    <p>&nbsp;</p>
+
+                    <h3><em>3) ห้องปฏิบัติการวิจัยฟิสิกส์ประยุกต์  (Applied Physics Research Laboratory)</em></h3>
+                    <p>
+                        ภาควิชาฟิสิกส์และวัสดุศาสตร์ คณะวิทยาศาสตร์ มหาวิทยาลัยเชียงใหม่<br>
+                        โทรศัพท์: 053-943375 ต่อ 11 โทรสาร:  053-357511<br>
+                        Website – http://www.physics.science.cmu.ac.th/aprl/aprl.htm
+                    </p>
+                    <p>&nbsp;</p>
+
+                    <h3><em>4) ห้องปฏิบัติการวิจัยเทคโนโลยีฟิล์มบาง </em></h3>
+                    <p>
+                        ภาควิชาฟิสิกส์ คณะวิทยาศาสตร์ มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี<br>
+                        โทรศัพท์: 02-470-8876, 02-470-8873 โทรสาร: 02-427-8785
+                    </p>
+                    <p>&nbsp;</p>
+
+                    <h3>งานวิจัย</h3>
+                    <p>ศูนย์วิจัยทางฟิสิกส์ของฟิล์มบางจะมีการพัฒนาและการดำเนินการวิจัยในระยะแรกแบบ interdisciplinary ซึ่งมีหัวข้อหลัก ๆ เช่น</p>
+
+                    <ul>
+                        <li>
+                            <p>
+                                การศึกษาวิจัยสมบัติพื้นฐานทางฟิสิกส์ของสารกึ่งตัวนำสำหรับประดิษฐ์เป็นเซลล์แสงอาทิตย์แบบฟิล์มบาง ที่มีโครงสร้างพิเศษเพื่อการพัฒนาให้มีประสิทธิภาพที่สูงขึ้นจากเซลล์แสงอาทิตย์ที่ใช้อยู่ทั่วไป
+                            </p>
+                            <table cellspacing="0" cellpadding="0" border="1">
+                                <tbody>
+                                    <tr>
+                                        <td width="292" align="center" valign="top"><img src="../images/cluster1/01.png" width="180" height="136">
+                                            <p align="center">&nbsp;</p></td><td width="324" align="center" valign="top"><img src="../images/cluster1/02.png" width="160" height="134"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="292" valign="top" class="PictureDiscribe"><p align="center"><em><span lang="th" xml:lang="th">ระบบระเหยสารสำหรับชั้นฟิล์มบาง </span></em><em>CIGS</em></p></td>
+                                        <td width="324" valign="top" class="PictureDiscribe"><p align="center"><em><span lang="th" xml:lang="th">ระบบ </span></em><em>molecular beam epitaxy <span lang="th" xml:lang="th">สำหรับฟิล์มบาง </span>CIGS</em></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" valign="top"><img src="../images/cluster1/03.png" width="164" height="130"></td>
+                                        <td width="324" align="center" valign="top"><img src="../images/cluster1/04.png" width="179" height="130"></td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="292"></td>
+                                        <td valign="top" width="324"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="292" valign="top" class="PictureDiscribe"><p align="center"><em>CIGS<span lang="th" xml:lang="th"> </span>Thin Film Solar Cells under I-V Testing</em></p></td>
+                                        <td width="324" valign="top" class="PictureDiscribe"><p align="center"><em>CIGS<span lang="th" xml:lang="th"> </span>Thin Film Solar Mini-module</em></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td align="center" valign="top"><img src="../images/cluster1/05.png" width="197" height="151"></td>
+                                        <td width="324" align="center" valign="top"><img src="../images/cluster1/06.png" width="189" height="151"></td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="292"></td>
+                                        <td valign="top" width="324"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="292" valign="top" class="PictureDiscribe"><p align="center"><em><span lang="th" xml:lang="th">ประสิทธิภาพและ </span></em><em>quantum efficiency <span lang="th" xml:lang="th">ของ </span>CIGS<span lang="th" xml:lang="th"> </span>Solar   Cells</em><span lang="th" xml:lang="th"></span></p></td>
+                                        <td width="324" valign="top" class="PictureDiscribe"><p align="center"><em><span lang="th" xml:lang="th">ประสิทธิภาพของ </span></em><em>CIGS<span lang="th" xml:lang="th"> </span>Solar Mini-module</em></p></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>&nbsp;</p>
+                        </li>
+                        <li>
+                            <p>
+                                การศึกษาวิจัยสมบัติทางฟิสิกส์พื้นผิวของฟิล์มบางที่เตรียมโดยวิธี molecular beam epitaxy ทั้งในด้านการทดลองและทฤษฎีพื้นฐาน
+                            </p>
+                            <table cellspacing="0" cellpadding="0" border="1">
+                                <tbody>
+                                    <tr>
+                                        <td valign="top" width="292"></td>
+                                        <td valign="top" width="324"></td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="292"><p align="center"><img src="../images/cluster1/07.png" width="201" height="133"></p></td>
+                                        <td width="324" valign="top"><p align="center"><img src="../images/cluster1/08.png" width="184" height="133"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" class="PictureDiscribe"><em><span lang="th" xml:lang="th">การศึกษาผิวของฟิล์มบางโดยใช้ </span></em><em>Atomic   Force Microscope</em></td>
+                                        <td width="324" valign="top" class="PictureDiscribe"><em><span lang="th" xml:lang="th">การจำลองการเกิดของฟิล์มบางโดย </span></em><em>Computer   Simulation</em></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>&nbsp;</p> 
+                        </li>
+                        <li>
+                            <p>การศึกษาวิจัยสมบัติทางฟิสิกส์ของสารกึ่งตัวนำแถบพลังงานกว้างสำหรับการพัฒนาประสิทธิภาพสูงสิ่งประดิษฐ์ทางด้าน optoelectronics และ photovoltaic</p>
+                            <table cellspacing="0" cellpadding="0" border="1">
+                                <tbody>
+                                    <tr>
+                                        <td valign="top" width="292"></td>
+                                        <td valign="top" width="324"></td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" width="292"><p align="center"><img src="../images/cluster1/09.png"></p></td>
+                                        <td width="324" valign="top"><p align="center"><img src="../images/cluster1/10.png"></p></td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" class="PictureDiscribe"><em><span lang="th" xml:lang="th">ระบบเตรียมฟิล์มบางโปร่งใสนำไฟฟ้า</span></em><em></em></td>
+                                        <td width="324" valign="top" class="PictureDiscribe"><em><span lang="th" xml:lang="th">ฟิล์มบาง </span></em><em>ZnO</em><em>(Al)</em></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>&nbsp;</p>
+                        </li>
+                        <li>
+                            <p>การศึกษาวิจัยสมบัติฟิสิกส์ของฟิล์มบางสำหรับประดิษฐ์ smart window ในการใช้พลังงานอย่างประหยัดและมีประสิทธิภาพ</p>
+                            <table cellspacing="0" cellpadding="0" border="1">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" valign="top"><img src="../images/cluster1/11.png"></td>
+                                        <td align="center"><img src="../images/cluster1/12.png"></td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" class="PictureDiscribe"><p align="center"><em>Schematic diagram ของ smart window ที่ใช้ควบคู่กับ <br>
+                                                    solar cell (Source : NREL,   USA)</em></p></td>
+                                        <td valign="top" class="PictureDiscribe"><p align="center"><em><span lang="th" xml:lang="th">ตัวอย่างของ</span></em><em> smart window (Source :   NREL, USA)</em></p></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>&nbsp;</p>
+                        </li>
+                        <li>
+                            <p>การประดิษฐ์เซลล์แสงอาทิตย์ชนิดดายเซนซิไทด์</p>
+                            <table cellspacing="0" cellpadding="0" border="1">
+                                <tbody>
+                                    <tr>
+                                        <td align="center" valign="top"><img src="../images/cluster1/13.png"></td>
+                                        <td align="center" valign="top"><img src="../images/cluster1/14.png"></td>
+                                    </tr>
+                                    <tr>
+                                        <td valign="top" class="PictureDiscribe"><p align="center"><em>Schematic diagram <span lang="th" xml:lang="th">ของ </span>dye-sensitized solar cell</em></p></td>
+                                        <td valign="top" class="PictureDiscribe"><p align="center"><em>Dye-sensitized solar cell <span lang="th" xml:lang="th">(มหาวิทยาลัยขอนแก่น)</span></em><em><span lang="th" xml:lang="th"></span></em></p></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>&nbsp;</p>
+                        </li>
+                        <li>
+                            <p>การศึกษาวิจัยและพัฒนาระบบตรวจวัดก๊าซโดยใช้เทคโนโลยีฟิล์มบางของสารประกอบโลหะออกไซด์</p>
+                            <table cellspacing="0" cellpadding="0" border="1">
+                                <tbody>
+                                    <tr>
+                                        <td width="292" align="center" valign="top"><img src="../images/cluster1/15.png"></td>
+                                        <td width="324" align="center" valign="top"><img src="../images/cluster1/16.png"></td>
+                                    </tr>
+                                    <tr>
+                                        <td width="292" valign="top" class="PictureDiscribe"><p align="center"><em>ZnO</em><em> Nanostructure <span lang="th" xml:lang="th">สำหรับ </span>gas sensor <span lang="th" xml:lang="th">และ </span>dye-sensitized solar   cell</em></p></td>
+                                        <td width="324" valign="top" class="PictureDiscribe"><p align="center"><em>Schematic diagram <span lang="th" xml:lang="th">ของ </span>thin film gas sensor</em><em></em></p></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p>&nbsp;</p>
+                        </li>
+                    </ul>
+                    <?php
+                } elseif ($show_center == 'PPP') {
+                    ?>
+                    <h2 class="text-center"><? echo $center; ?><br>(Research Center in Particle Beam and Plasma Physics)</h2>
+                    <h3>ความสำคัญ</h3>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;คงไม่เป็นการพูดเกินเลย ถ้าจะกล่าวว่ามนุษย์นั้น เกิดมาในท่ามกลางห่ากระสุน แต่เป็นกระสุนอนุภาคของรังสีคอสมิค (ทั้งชนิดปฐมภูมิและทุติยภูมิ) ประจักษ์พยานที่เห็นได้กับตา ก็คือ แสงเหนือ (Aurora borealis) และแสงใต้ (Aurora australis)
+                    </p>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td align="center">
+                                    <img src="../images/cluster2/northlight.JPG" width="222" height="228">										</td>
+                                <td align="center">
+                                    <img src="../images/cluster2/southlight.JPG" width="273" height="176"> 										</td>
+                            </tr>
+                            <tr>
+                                <td class="PictureDiscribe">แสงเหนือที่เมือง Anchorage มลรัฐอะแลสกา , สหรัฐอเมริกา (http://www.smeter.net/aurora/images-orange/1-18-05-orange-1.jpg)										</td>
+                                <td class="PictureDiscribe">แสงใต้ที่เมือง Hobart  รัฐแทสมาเนียของออสเตรเลีย (outreach.atnf.csiro.au/.../sun_earth.html)										</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>&nbsp;</p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;มีการประเมินไว้ว่าความเข้มของห่ากระสุนอนุภาคคอสมิคทุติยภูมิ มีค่าเฉลี่ยประมาณ 100 ตัว/ตร.ม./วินาที แหล่งกำเนิดหนึ่งของรังสีคอสมิคปฐมภูมิก็คือดวงอาทิตย์ของเรานั่นเอง ซึ่งอาจถือได้ว่าเป็นก้อนพลาสมา (Plasma) ลูกใหญ่โตมโหฬาร (เส้นผ่าศูนย์กลาง 1.39 ล้านกิโลเมตร) คำว่าพลาสมาในที่นี้เป็นคนละสิ่งกับพลาสมาในเลือดซึ่งเป็นของเหลว พลาสมาในที่นี้คือ สถานะที่ 4 ของสสารที่ประจุไฟฟ้าลบ เช่น อนุภาคอิเล็กตรอนกับประจุไฟฟ้าบวก เช่น พวกไอออนบวก (ไอออน หมายถึง อะตอมหรือโมเลกุลที่ได้รับเพิ่มหรือสูญเสียอิเล็กตรอนจากที่มีอยู่เดิม) สามารถอยู่ปนเปกันแบบต่างคนต่างอยู่ได้ ถึงแม้จะยังคงมีแรงดูดคูลอมบ์ระหว่างประจุไฟฟ้าลบกับประจุไฟฟ้าบวกดำรงอยู่ด้วยตลอดเวลาก็ตาม
+                    </p>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td align="center">
+                                    <img src="../images/cluster2/sun.jpg" width="253" height="191">										</td>
+                            </tr>
+                            <tr>
+                                <td class="PictureDiscribe">
+                                    ภาพถ่ายจากดาวเทียม SOHO แสดงให้เห็นการพวยพุ่งของพลาสมาบนผิวดวงอาทิตย์ ซึ่งตรงแกนกลางมีอุณหภูมิสูงถึง 20 ล้านเซลเซียส  (apod.nasa.gov/apod/ap060807.html)										</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>&nbsp;</p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;จึงเห็นได้ว่าในธรรมชาตินั้น เรื่องของอนุภาคประจุไฟฟ้าที่มีพลังงานจลน์ กับเรื่องของพลาสมามีการผสานผูกพันกันอยู่อย่างแนบแน่น และดำรงอยู่มาคู่กับการวิวัฒนาการของสิ่งมีชีวิตบนโลกใบนี้ ชีวิตดำรงอยู่ได้ด้วยพลังงานจากก้อนพลาสมายักษ์ที่เรียกว่าดวงอาทิตย์ที่ผลิตรังสีคอสมิคซึ่งมีส่วนทำให้เกิดการกลายพันธ์ในธรรมชาติ
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ในชีวิตประจำวันของโลกยุคนี้ พวกเราใช้ลำอนุภาคกันอยู่แทบทุกวัน นั่นคือ ลำอนุภาคอิเล็กตรอนพลังงาน 25 keV ในหลอดภาพโทรทัศน์(ชนิด cathode ray tube) ซึ่งเป็นตัวการสำคัญที่ทำให้เม็ดสีบนจอภาพเกิดเรืองแสงให้เห็นเป็นสีแดง (610 nm) เขียว (510 - 525 nm)และน้ำเงิน (450 nm) จากปรากฏการณ์ Cathodoluminescence หรือในโรงพยาบาลขนาดใหญ่บางแห่ง เช่น โรงพยาบาลศิริราช หรือ โรงพยาบาลมหาราชนครเชียงใหม่ เป็นต้น ก็มีเครื่องเร่งอนุภาคอิเล็กตรอนพลังงานในเรือน 4-18 MeV ใช้ในการบำบัดรักษามะเร็งบางชนิด แต่บางโรงพยาบาลในสหรัฐอเมริกา แคนาดา หรือสวิตเซอร์แลนด์ ฯลฯ ก็ใช้วิธีการรักษามะเร็งของต่อมลูกหมาก นัยน์ตา หรือสมองด้วยลำอนุภาคโปรตอนพลังงานสูง
+                    </p>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td align="center" width="50%"><img src="../images/cluster2/ray.jpg" width="280" height="207"></td>
+                                <td align="center" width="50%">
+                                    <img src="../images/cluster2/eye.jpg" width="314" height="206"> 										</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center"><small>เครื่องเร่งอนุภาคอิเล็กตรอนเพื่อการบำบัดรักษามะเร็งของหน่วยรังสีรักษา ภาควิชารังสีวิทยา คณะแพทยศาสตร์ มหาวิทยาลัยเชียงใหม่  ซึ่งมีราคาเครื่องละ 60 ล้านบาท</small></td>
+                                <td class="text-center"><small>การบำบัดรักษามะเร็งดวงตาโดยใช้ลำอนุภาคโปรตอนพลังงาน 20 - 500 MeV ที่ผลิตจากเครื่องเร่งอนุภาคไซโคลตรอนของศูนย์วิจัยแห่งชาติ TRIUMF  ประเทศแคนาดา (http://www.triumf.info/public/tech_transfer/treatment.php)</small></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>&nbsp;</p>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
                         <tr>
                             <td align="center">
-                                <img src="../images/cluster2/northlight.JPG" width="222" height="228">										</td>
-                            <td align="center">
-                                <img src="../images/cluster2/southlight.JPG" width="273" height="176"> 										</td>
+                                <img src="../images/cluster2/beam.jpg" width="217" height="170">
+                            </td>
                         </tr>
                         <tr>
-                            <td class="PictureDiscribe">แสงเหนือที่เมือง Anchorage มลรัฐอะแลสกา , สหรัฐอเมริกา (http://www.smeter.net/aurora/images-orange/1-18-05-orange-1.jpg)										</td>
-                            <td class="PictureDiscribe">แสงใต้ที่เมือง Hobart  รัฐแทสมาเนียของออสเตรเลีย (outreach.atnf.csiro.au/.../sun_earth.html)										</td>
+                            <td class="text-center">
+                                ระบบ E-beam Sterilization สำหรับอุปกรณ์ทางการแพทย์ (www.devicelink.com/mpb/archive/97/07/002.html)
+                            </td>
                         </tr>
-                    </tbody>
-                </table>
-                <p>&nbsp;</p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;มีการประเมินไว้ว่าความเข้มของห่ากระสุนอนุภาคคอสมิคทุติยภูมิ มีค่าเฉลี่ยประมาณ 100 ตัว/ตร.ม./วินาที แหล่งกำเนิดหนึ่งของรังสีคอสมิคปฐมภูมิก็คือดวงอาทิตย์ของเรานั่นเอง ซึ่งอาจถือได้ว่าเป็นก้อนพลาสมา (Plasma) ลูกใหญ่โตมโหฬาร (เส้นผ่าศูนย์กลาง 1.39 ล้านกิโลเมตร) คำว่าพลาสมาในที่นี้เป็นคนละสิ่งกับพลาสมาในเลือดซึ่งเป็นของเหลว พลาสมาในที่นี้คือ สถานะที่ 4 ของสสารที่ประจุไฟฟ้าลบ เช่น อนุภาคอิเล็กตรอนกับประจุไฟฟ้าบวก เช่น พวกไอออนบวก (ไอออน หมายถึง อะตอมหรือโมเลกุลที่ได้รับเพิ่มหรือสูญเสียอิเล็กตรอนจากที่มีอยู่เดิม) สามารถอยู่ปนเปกันแบบต่างคนต่างอยู่ได้ ถึงแม้จะยังคงมีแรงดูดคูลอมบ์ระหว่างประจุไฟฟ้าลบกับประจุไฟฟ้าบวกดำรงอยู่ด้วยตลอดเวลาก็ตาม
-                </p>
-                <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                    <tbody>
+                    </table>
+                    <p>&nbsp;</p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ส่วนอุปกรณ์ทางการแพทย์ เช่น เสื้อกาวน์ผ่าตัด , ถุงมือ , เข็ม, ไหม , ไตเทียม ฯลฯ ก็ใช้วิธีการฆ่าเชื้อด้วยลำอนุภาคอิเล็กตรอนพลังงานในเรือน 1.5-4.5 MeV ด้วย (นอกเหนือจากการใช้รังสีแกมมาของโคบอลต์-60) ซึ่งมีบริษัทเอกชนที่ให้บริการในเรื่องนี้อย่างเป็นทางการแล้วเช่น Sterigenics International Inc. หรือ Isotron เป็นต้น แต่ในวงการเซมิคอนดัคเตอร์ และหัวอ่าน/เขียน ของฮาร์ดดิสก์ มีวิธีมาตรฐานในการทำความสะอาดแผ่นซิลิกอนเวเฟอร์ ที่เรียกว่า เทคนิค Ion Beam Milling คือใช้ลำไอออนอาร์กอน พลังงานในเรือน keV ระดมยิงเพื่อกระเทาะลอกผิวหน้าชั้นบางๆ ออกโดยเป็นกระบวนการที่มีความสะอาดสูงที่ไม่ก่อให้เกิดมลทินปนเปื้อน
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ที่กล่าวมานี้ คือ ตัวอย่างเพียงส่วนน้อยของการนำลำอนุภาค/ไอออนมาใช้ประโยชน์ เพื่อเพิ่มคุณภาพชีวิตและความก้าวหน้าของมนุษย์ชาติที่กำลังดำเนินการอยู่อย่างเป็นกิจวัตรปกติ
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ในกรณีของพลาสมาก็ไม่ยิ่งหย่อนไปกว่ากันเพราะมีการใช้สอยกันอยู่อย่างเป็นกิจวัตรประจำวันเช่นกัน ซึ่งที่ใกล้ตัวที่สุดก็คือ พลาสมาในหลอดไฟฟลูออร์เรสเซนต์ ที่ถูกสร้างขึ้นมาเพื่อเป็นแหล่งกำเนิดของอนุภาคอิเล็กตรอนและไอออนอิสระ เพื่อใช้เป็นตัวกระตุ้นอะตอมของปรอทให้ปล่อยรังสี UV ให้ไปกระตุ้นสารเรืองแสงที่ฉาบอยู่ด้านในของหลอดแก้วให้เปลงแสง แต่ที่กำลังได้รับความนิยมเพิ่มขึ้นเรื่อยๆ เพราะสามารถทำจอภาพขนาดใหญ่มากได้โดยที่มีรูปร่างแบนบางและเบาจนสามารถแขวนข้างฝาได้ ก็คือ พลาสมาTV ที่ใช้ประโยชน์จากสภาพพลาสมาของก๊าซซีนอน (Xenon) ขนาดจิ๋วที่มีปริมาตรในระดับ 0.004 ลูกบาศก์มิลลิเมตร (ต่อ 1 sub-pixel) ส่วนพลาสมาที่มีขนาดใหญ่ขึ้นมาในระดับครึ่งลูกบาศก์เซนติเมตรและมีความเข้มสูงเช่นพลาสมาของก๊าซอาร์กอนหรือฮีเลี่ยมก็ถูกทำออกมาเป็นเครื่อง Plasma Arc Welding (PAW) เพื่อใช้ในการเชื่อมโลหะสำหรับงานที่ต้องการคุณภาพสูง
+                    </p>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td align="center" width="50%"><img src="../images/cluster2/tv.jpg" width="265" height="266"></td>
+                            <td align="center" width="50%">
+                                <img src="../images/cluster2/plasma.jpg" width="265" height="248"> 										</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center">ภาพวาดแสดงกระบวนการสร้างจุดแสงสีเขียวจากหลุม cavity หนึ่งของจอพลาสมาTV (sanjayk.ram.googlepages.com/pdp)											</td>
+                            <td class="text-center">Plasma Arc Welding   (www.pro-fusiononline.com/welding/plasma.htm)											</td>
+                        </tr>
+                    </table>
+                    <p>&nbsp;</p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ส่วนพลาสมาขนาดใหญ่ที่มีปริมาตรระดับหลายร้อยลูกบาศก์เมตร ก็อาจจะเป็นทางออกของวิกฤติการณ์พลังงานและสภาวะโลกร้อน เพราะโครงการ ITER ( International Thermonuclear Experimental Reactor) ที่เป็นโครงการนานาชาติมูลค่ากว่า 2 แสนล้านบาท(เฉพาะค่าก่อสร้างเท่านั้น) ได้เริ่มต้นขึ้นแล้วตั้งแต่เมื่อตอนต้นปีพ.ศ. 2551 เพื่อพยายามพัฒนาสร้างและควบคุมเตาปฏิกรณ์ TOKAMAK ที่ใช้สร้างพลาสมาของก๊าซดิวทีเรียมผสมก๊าซตริเตียม เพื่อชักนำให้เกิดปฏิกิริยาดี-ทีนิวเคลียร์ฟิวชัน (d-T nuclear fusion) คล้ายที่กำลังเกิดอยู่ในดวงอาทิตย์ เพื่อนำพลังงาน [ที่มีเชื้อเพลิงมากกว่า ถูกกว่า และสะอาดกว่าปฏิกิริยานิวเคลียร์ฟิสชัน (nuclear fission) ที่ใช้ยูเรเนียม-235 เป็นเชื้อเพลิง] มาใช้ผลิตไฟฟ้า
+                    </p>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
                         <tr>
                             <td align="center">
-                                <img src="../images/cluster2/sun.jpg" width="253" height="191">										</td>
+                                <img src="../images/cluster2/tokamark.jpg" width="224" height="238">										</td>
                         </tr>
                         <tr>
                             <td class="PictureDiscribe">
-                                ภาพถ่ายจากดาวเทียม SOHO แสดงให้เห็นการพวยพุ่งของพลาสมาบนผิวดวงอาทิตย์ ซึ่งตรงแกนกลางมีอุณหภูมิสูงถึง 20 ล้านเซลเซียส  (apod.nasa.gov/apod/ap060807.html)										</td>
+                                ภาพวาดเตาปฏิกรณ์ TOKAMAK ของโครงการ ITER ที่จะสร้างขึ้นที่เมือง Cadarache ทางตอนใต้ของประเทศฝรั่งเศส ซึ่งคาดว่าจะสร้างเสร็จในปีพ.ศ. 2559 ห้องกักเก็บพลาสมาของ ITER จะมีขนาด 840 ลูกบาศก์เมตร ซึ่งจะเป็นที่อยู่ของพลาสมาที่มีอุณหภูมิสูงประมาณ 150 ล้านเซลเซียส: (http://www.mofa.go.jp/policy/s_tech/iter/image/what_02.jpg)										</td>
                         </tr>
-                    </tbody>
-                </table>
-                <p>&nbsp;</p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;จึงเห็นได้ว่าในธรรมชาตินั้น เรื่องของอนุภาคประจุไฟฟ้าที่มีพลังงานจลน์ กับเรื่องของพลาสมามีการผสานผูกพันกันอยู่อย่างแนบแน่น และดำรงอยู่มาคู่กับการวิวัฒนาการของสิ่งมีชีวิตบนโลกใบนี้ ชีวิตดำรงอยู่ได้ด้วยพลังงานจากก้อนพลาสมายักษ์ที่เรียกว่าดวงอาทิตย์ที่ผลิตรังสีคอสมิคซึ่งมีส่วนทำให้เกิดการกลายพันธ์ในธรรมชาติ
-                </p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ในชีวิตประจำวันของโลกยุคนี้ พวกเราใช้ลำอนุภาคกันอยู่แทบทุกวัน นั่นคือ ลำอนุภาคอิเล็กตรอนพลังงาน 25 keV ในหลอดภาพโทรทัศน์(ชนิด cathode ray tube) ซึ่งเป็นตัวการสำคัญที่ทำให้เม็ดสีบนจอภาพเกิดเรืองแสงให้เห็นเป็นสีแดง (610 nm) เขียว (510 - 525 nm)และน้ำเงิน (450 nm) จากปรากฏการณ์ Cathodoluminescence หรือในโรงพยาบาลขนาดใหญ่บางแห่ง เช่น โรงพยาบาลศิริราช หรือ โรงพยาบาลมหาราชนครเชียงใหม่ เป็นต้น ก็มีเครื่องเร่งอนุภาคอิเล็กตรอนพลังงานในเรือน 4-18 MeV ใช้ในการบำบัดรักษามะเร็งบางชนิด แต่บางโรงพยาบาลในสหรัฐอเมริกา แคนาดา หรือสวิตเซอร์แลนด์ ฯลฯ ก็ใช้วิธีการรักษามะเร็งของต่อมลูกหมาก นัยน์ตา หรือสมองด้วยลำอนุภาคโปรตอนพลังงานสูง
-                </p>
-                <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                    <tbody>
-                        <tr>
-                            <td align="center" width="50%"><img src="../images/cluster2/ray.jpg" width="280" height="207"></td>
-                            <td align="center" width="50%">
-                                <img src="../images/cluster2/eye.jpg" width="314" height="206"> 										</td>
-                        </tr>
-                        <tr>
-                            <td class="text-center"><small>เครื่องเร่งอนุภาคอิเล็กตรอนเพื่อการบำบัดรักษามะเร็งของหน่วยรังสีรักษา ภาควิชารังสีวิทยา คณะแพทยศาสตร์ มหาวิทยาลัยเชียงใหม่  ซึ่งมีราคาเครื่องละ 60 ล้านบาท</small></td>
-                            <td class="text-center"><small>การบำบัดรักษามะเร็งดวงตาโดยใช้ลำอนุภาคโปรตอนพลังงาน 20 - 500 MeV ที่ผลิตจากเครื่องเร่งอนุภาคไซโคลตรอนของศูนย์วิจัยแห่งชาติ TRIUMF  ประเทศแคนาดา (http://www.triumf.info/public/tech_transfer/treatment.php)</small></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p>&nbsp;</p>
-                <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td align="center">
-                            <img src="../images/cluster2/beam.jpg" width="217" height="170">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">
-                            ระบบ E-beam Sterilization สำหรับอุปกรณ์ทางการแพทย์ (www.devicelink.com/mpb/archive/97/07/002.html)
-                        </td>
-                    </tr>
-                </table>
-                <p>&nbsp;</p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ส่วนอุปกรณ์ทางการแพทย์ เช่น เสื้อกาวน์ผ่าตัด , ถุงมือ , เข็ม, ไหม , ไตเทียม ฯลฯ ก็ใช้วิธีการฆ่าเชื้อด้วยลำอนุภาคอิเล็กตรอนพลังงานในเรือน 1.5-4.5 MeV ด้วย (นอกเหนือจากการใช้รังสีแกมมาของโคบอลต์-60) ซึ่งมีบริษัทเอกชนที่ให้บริการในเรื่องนี้อย่างเป็นทางการแล้วเช่น Sterigenics International Inc. หรือ Isotron เป็นต้น แต่ในวงการเซมิคอนดัคเตอร์ และหัวอ่าน/เขียน ของฮาร์ดดิสก์ มีวิธีมาตรฐานในการทำความสะอาดแผ่นซิลิกอนเวเฟอร์ ที่เรียกว่า เทคนิค Ion Beam Milling คือใช้ลำไอออนอาร์กอน พลังงานในเรือน keV ระดมยิงเพื่อกระเทาะลอกผิวหน้าชั้นบางๆ ออกโดยเป็นกระบวนการที่มีความสะอาดสูงที่ไม่ก่อให้เกิดมลทินปนเปื้อน
-                </p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ที่กล่าวมานี้ คือ ตัวอย่างเพียงส่วนน้อยของการนำลำอนุภาค/ไอออนมาใช้ประโยชน์ เพื่อเพิ่มคุณภาพชีวิตและความก้าวหน้าของมนุษย์ชาติที่กำลังดำเนินการอยู่อย่างเป็นกิจวัตรปกติ
-                </p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ในกรณีของพลาสมาก็ไม่ยิ่งหย่อนไปกว่ากันเพราะมีการใช้สอยกันอยู่อย่างเป็นกิจวัตรประจำวันเช่นกัน ซึ่งที่ใกล้ตัวที่สุดก็คือ พลาสมาในหลอดไฟฟลูออร์เรสเซนต์ ที่ถูกสร้างขึ้นมาเพื่อเป็นแหล่งกำเนิดของอนุภาคอิเล็กตรอนและไอออนอิสระ เพื่อใช้เป็นตัวกระตุ้นอะตอมของปรอทให้ปล่อยรังสี UV ให้ไปกระตุ้นสารเรืองแสงที่ฉาบอยู่ด้านในของหลอดแก้วให้เปลงแสง แต่ที่กำลังได้รับความนิยมเพิ่มขึ้นเรื่อยๆ เพราะสามารถทำจอภาพขนาดใหญ่มากได้โดยที่มีรูปร่างแบนบางและเบาจนสามารถแขวนข้างฝาได้ ก็คือ พลาสมาTV ที่ใช้ประโยชน์จากสภาพพลาสมาของก๊าซซีนอน (Xenon) ขนาดจิ๋วที่มีปริมาตรในระดับ 0.004 ลูกบาศก์มิลลิเมตร (ต่อ 1 sub-pixel) ส่วนพลาสมาที่มีขนาดใหญ่ขึ้นมาในระดับครึ่งลูกบาศก์เซนติเมตรและมีความเข้มสูงเช่นพลาสมาของก๊าซอาร์กอนหรือฮีเลี่ยมก็ถูกทำออกมาเป็นเครื่อง Plasma Arc Welding (PAW) เพื่อใช้ในการเชื่อมโลหะสำหรับงานที่ต้องการคุณภาพสูง
-                </p>
-                <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td align="center" width="50%"><img src="../images/cluster2/tv.jpg" width="265" height="266"></td>
-                        <td align="center" width="50%">
-                            <img src="../images/cluster2/plasma.jpg" width="265" height="248"> 										</td>
-                    </tr>
-                    <tr>
-                        <td class="text-center">ภาพวาดแสดงกระบวนการสร้างจุดแสงสีเขียวจากหลุม cavity หนึ่งของจอพลาสมาTV (sanjayk.ram.googlepages.com/pdp)											</td>
-                        <td class="text-center">Plasma Arc Welding   (www.pro-fusiononline.com/welding/plasma.htm)											</td>
-                    </tr>
-                </table>
-                <p>&nbsp;</p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ส่วนพลาสมาขนาดใหญ่ที่มีปริมาตรระดับหลายร้อยลูกบาศก์เมตร ก็อาจจะเป็นทางออกของวิกฤติการณ์พลังงานและสภาวะโลกร้อน เพราะโครงการ ITER ( International Thermonuclear Experimental Reactor) ที่เป็นโครงการนานาชาติมูลค่ากว่า 2 แสนล้านบาท(เฉพาะค่าก่อสร้างเท่านั้น) ได้เริ่มต้นขึ้นแล้วตั้งแต่เมื่อตอนต้นปีพ.ศ. 2551 เพื่อพยายามพัฒนาสร้างและควบคุมเตาปฏิกรณ์ TOKAMAK ที่ใช้สร้างพลาสมาของก๊าซดิวทีเรียมผสมก๊าซตริเตียม เพื่อชักนำให้เกิดปฏิกิริยาดี-ทีนิวเคลียร์ฟิวชัน (d-T nuclear fusion) คล้ายที่กำลังเกิดอยู่ในดวงอาทิตย์ เพื่อนำพลังงาน [ที่มีเชื้อเพลิงมากกว่า ถูกกว่า และสะอาดกว่าปฏิกิริยานิวเคลียร์ฟิสชัน (nuclear fission) ที่ใช้ยูเรเนียม-235 เป็นเชื้อเพลิง] มาใช้ผลิตไฟฟ้า
-                </p>
-                <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td align="center">
-                            <img src="../images/cluster2/tokamark.jpg" width="224" height="238">										</td>
-                    </tr>
-                    <tr>
-                        <td class="PictureDiscribe">
-                            ภาพวาดเตาปฏิกรณ์ TOKAMAK ของโครงการ ITER ที่จะสร้างขึ้นที่เมือง Cadarache ทางตอนใต้ของประเทศฝรั่งเศส ซึ่งคาดว่าจะสร้างเสร็จในปีพ.ศ. 2559 ห้องกักเก็บพลาสมาของ ITER จะมีขนาด 840 ลูกบาศก์เมตร ซึ่งจะเป็นที่อยู่ของพลาสมาที่มีอุณหภูมิสูงประมาณ 150 ล้านเซลเซียส: (http://www.mofa.go.jp/policy/s_tech/iter/image/what_02.jpg)										</td>
-                    </tr>
-                </table>
-                <p>&nbsp;</p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;องค์ความรู้ทางฟิสิกส์และเทคโนโลยีของลำอนุภาคและพลาสมาจึงมีคุณค่าทางวิชาการสูง ที่ให้ทั้งผลประโยชน์ทางธุรกิจ และจะเป็นหนทางรอดของโลกอนาคต
-                </p>
-                <p>&nbsp;</p>
+                    </table>
+                    <p>&nbsp;</p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;องค์ความรู้ทางฟิสิกส์และเทคโนโลยีของลำอนุภาคและพลาสมาจึงมีคุณค่าทางวิชาการสูง ที่ให้ทั้งผลประโยชน์ทางธุรกิจ และจะเป็นหนทางรอดของโลกอนาคต
+                    </p>
+                    <p>&nbsp;</p>
 
-                <div class="col-md-6" style="text-align: center;">
-                    <h3>องค์ประกอบของศูนย์วิจัย PPP</h3>
-                    <img style="max-width: 100%; height: auto;" src="../images/cluster2/ppp-map3.jpg">
-                </div>
-                <div class="col-md-6">
-                    <h3 style="text-align: center;">ลิงค์ข้อมูลของแต่ละห้องปฏิบัติการวิจัย</h3>
+                    <div class="col-md-6" style="text-align: center;">
+                        <h3>องค์ประกอบของศูนย์วิจัย PPP</h3>
+                        <img style="max-width: 100%; height: auto;" src="../images/cluster2/ppp-map3.jpg">
+                    </div>
+                    <div class="col-md-6">
+                        <h3 style="text-align: center;">ลิงค์ข้อมูลของแต่ละห้องปฏิบัติการวิจัย</h3>
+                        <ol>
+                            <li><a href="ppp-lab.php?lab=ion_beam">ห้องปฏิบัติการวิจัยด้านลำไอออนและการประยุกต์</a></li>
+                            <li><a href="ppp-lab.php?lab=femtosecond">ห้องปฏิบัติการวิจัยลำอิเล็กตรอนและโฟตอนห้วงเฟมโตวินาที</a></li>
+                            <li><a href="ppp-lab.php?lab=plasma_bio">ห้องปฏิบัติการวิจัยพลาสมาไบโอและพลังงานสะอาด</a></li>
+                            <li><a href="ppp-lab.php?lab=plasma_advanced">ห้องปฏิบัติการวิจัยพลาสมาและเทคโนโลยีวัสดุขั้นสูง</a></li>
+                            <li><a href="ppp-lab.php?lab=plasma_surface">ห้องปฏิบัติการวิจัยพลาสมาสำหรับวิทยาศาสตร์พื้นผิว</a></li>
+                            <li><a href="ppp-lab.php?lab=agricultural">ห้องปฏิบัติการวิจัยเทคโนโลยีพลาสมาเพื่อการประยุกต์ทางกสิกรรม</a></li>
+                            <li><a href="ppp-lab.php?lab=membrane">ห้องปฏิบัติการวิจัยวิทยาศาสตร์และเทคโนโลยีเมมเบรน</a></li>
+                        </ol>
+                    </div>
+
+                    <?php
+                } elseif ($show_center == 'NSP') {
+                    ?>
+                    <h2 class="text-center"><? echo $center; ?></h2>
+                    <h3 class="text-center"></h3>
+                    <img class="img-responsive" style="margin:0 auto;" src="../images/under-construction.jpg">
+
+                    <?php
+                } elseif ($show_center == 'IGP') {
+                    ?>
+                    <h2 class="text-center"><?php echo $center; ?><br>(Research Center in Integrated Physics)</h2>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การจัดตั้งศูนย์วิจัยฟิสิกส์บูรณาการจะเน้นการทำวิจัยแบบเข้มข้นในสาขาหลัก 6 สาขา ได้แก่  ฟิสิกส์ศึกษา  ทัศนศาสตร์ประยุกต์  ธรณีฟิสิกส์  ชีวฟิสิกส์  ฟิสิกส์วัสดุ  ฟิสิกส์ดาราศาสตร์และอวกาศ   ในลักษณะภาคีอุดมศึกษาและวิจัย  ที่ประกอบไปด้วยมหาวิทยาลัยแกนนำ  3  มหาวิทยาลัยและมหาวิทยาลัยเครือข่าย  11  มหาวิทยาลัย  ดังต่อไปนี้
+                    </p>
+                    <h4>เครื่องมือ</h4>
                     <ol>
-                        <li><a href="ppp-lab.php?lab=ion_beam">ห้องปฏิบัติการวิจัยด้านลำไอออนและการประยุกต์</a></li>
-                        <li><a href="ppp-lab.php?lab=femtosecond">ห้องปฏิบัติการวิจัยลำอิเล็กตรอนและโฟตอนห้วงเฟมโตวินาที</a></li>
-                        <li><a href="ppp-lab.php?lab=plasma_bio">ห้องปฏิบัติการวิจัยพลาสมาไบโอและพลังงานสะอาด</a></li>
-                        <li><a href="ppp-lab.php?lab=plasma_advanced">ห้องปฏิบัติการวิจัยพลาสมาและเทคโนโลยีวัสดุขั้นสูง</a></li>
-                        <li><a href="ppp-lab.php?lab=plasma_surface">ห้องปฏิบัติการวิจัยพลาสมาสำหรับวิทยาศาสตร์พื้นผิว</a></li>
-                        <li><a href="ppp-lab.php?lab=agricultural">ห้องปฏิบัติการวิจัยเทคโนโลยีพลาสมาเพื่อการประยุกต์ทางกสิกรรม</a></li>
-                        <li><a href="ppp-lab.php?lab=membrane">ห้องปฏิบัติการวิจัยวิทยาศาสตร์และเทคโนโลยีเมมเบรน</a></li>
+                        <li>มหาวิทยาลัยมหิดล*</li>
+                        <li>มหาวิทยาลัยศรีนครินทรวิโรฒ**</li>
+                        <li>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี**</li>
+                        <li>จุฬาลงกรณ์มหาวิทยาลัย</li>
+                        <li>มหาวิทยาลัยเกษตรศาสตร์</li>
+                        <li>มหาวิทยาลัยขอนแก่น</li>
+                        <li>มหาวิทยาลัยวลัยลักษณ์</li>
+                        <li>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหาร ลาดกระบัง</li>
+                        <li>มหาวิทยาลัยสงขลานครินทร์</li>
+                        <li>มหาวิทยาลัยธรรมศาสตร์</li>
+                        <li>มหาวิทยาลัยนเรศวร</li>
+                        <li>มหาวิทยาลัยแม่ฟ้าหลวง</li>
+                        <li>มหาวิทยาลัยบูรพา</li>
+                        <li> มหาวิทยาลัยอุบลราชธานี</li>
                     </ol>
-                </div>
+                    <p>*สถาบันแกนนำและประสานงานคลัสเตอร์ฯ<br>
+                        **สถาบันแกนนำ</p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โดยเน้นเพื่อให้เกิดความเชื่อมโยงเครือข่ายระหว่างสถาบันการศึกษา และมีการเชื่อมโยงกันภายในศูนย์วิจัยและระหว่างศูนย์วิจัย ในด้านการเรียนการสอนระดับบัณฑิตศึกษา ด้านการวิจัยและการใช้ทรัพยากรร่วมกัน ศูนย์วิจัยนี้จะทำหน้าที่เป็นจุดเชื่อมโยงระหว่างกลุ่มวิจัยในมหาวิทยาลัยที่ร่วมโครงการกับผู้ใช้ประโยชน์ในภาคอุตสาหกรรม เพื่อส่งเสริมให้เกิดการถ่ายทอดองค์ความรู้และเทคโนโลยี โดยที่นักวิจัยสามารถทุ่มเทเวลาในการทำงานวิชาการที่เน้นความเชี่ยวชาญได้อย่างเต็มที่
+                    </p>
+                    <p>&nbsp</p>
+                    <h3>1. หน่วยวิจัยฟิสิกส์ศึกษา (Physics Education Research Unit)</h3>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สถาบันแกนนำ:	มหาวิทยาลัยศรีนครินทรวิโรฒ*<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สถาบันเครือข่าย: มหาวิทยาลัยมหิด</p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การวิจัยในสาขาฟิสิกส์ศึกษาเป็นความร่วมมือกันระหว่างสถาบันเครือข่ายของโครงการฯ โดยมีภาควิชาฟิสิกส์ คณะวิทยาศาสตร์ มหาวิทยาลัยมหิดลซึ่งมีความเชี่ยวชาญในด้านความรู้และทฤษฎีฟิสิกส์พื้นฐาน โดยสถาบันนวัตกรรมและพัฒนากระบวนการเรียนรู้ มหาวิทยาลัยมหิดล ซึ่งมีความเชี่ยวชาญด้านนวัตกรรมการศึกษาเป็นแกนนำ ร่วมกับภาควิชาฟิสิกส์ คณะวิทยาศาสตร์ มหาวิทยาลัยศรีนครินทรวิโรฒซึ่งมีความเชี่ยวชาญในด้านการเรียนการสอน การพัฒนาหลักสูตร และภาควิชาฟิสิกส์ คณะวิทยาศาสตร์ มหาวิทยาลัยขอนแก่นซึ่งมีความเชี่ยวชาญในด้านฟิสิกส์ศึกษา ร่วมเป็นเครือข่ายงานวิจัย เพื่อเป็นส่วนผลักดันให้เกิดความเชื่อมโยงระหว่าง คณาจารย์วิทยาศาสตร์ที่เน้นหนักการวิจัยทางวิทยาศาสตร์บริสุทธิ์ และคณาจารย์ทางด้านศึกษาศาสตร์หรือครุศาสตร์ซึ่งเน้นหนักทางด้านวิธีการเรียนการสอน จิตวิทยาการศึกษาซึ่งเป็นพื้นฐานของศาสตร์อื่นๆ รวมถึงความเชื่อมโยงที่จะนำผลของการวิจัยและองค์ความรู้ที่เกิดขึ้นเพื่อไปถ่ายทอดสู่ทุกระดับการศึกษา และทำหน้าที่ให้บริการด้านวิชาการแก่ชุมชน สร้างเครือข่ายความร่วมมือกันในการแก้ปัญหาการเรียนการสอนฟิสิกส์ระดับโรงเรียนของครูวิทยาศาสตร์ทั่วประเทศ
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;นอกจากนี้ภาควิชาฟิสิกส์มหาวิทยาลัยศรีนครินทรวิโรฒ ยังมีความร่วมมือกับศูนย์วิทยาศาสตร์ศึกษา (Science Education Center) มหาวิทยาลัยศรีนครินทรวิโรฒ ในการผลิตดุษฎีบัณฑิตสาขาวิทยาศาสตร์ศึกษา ยิ่งไปกว่านั้น ยังมีความร่วมมือกับภาควิชาฟิสิกส์ คณะวิทยาศาสตร์ ของมหาวิทยาลัยในเครือเทา-งาม (มหาวิทยาลัยศรีนครินทรวิโรฒ มหาวิทยาลัยบูรพา  มหาวิทยาลัยทักษิณ  มหาวิทยาลัยนเรศวร  มหาวิทยาลัยมหาสารคาม) ในการร่างหลักสูตรปรัชญาดุษฎีบัณฑิต สาขาฟิสิกส์ ซึ่งจะนำไปสู่ความร่วมมือทางวิชาการและการวิจัยระหว่างมหาวิทยาลัยในเครือเทา-งาม
+                    </p>
+                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td align="center"><img src="../images/cluster4/image002.jpg"></td>
+                            <td align="center"><img src="../images/cluster4/image004.jpg"></td>
+                        </tr>
+                    </table>
+                    <p>&nbsp;</p>
 
-                <?php
-            } elseif ($show_center == 'NSP') {
-                ?>
-                <h2 class="text-center"><? echo $center; ?></h2>
-                <h3 class="text-center"></h3>
-                <img class="img-responsive" style="margin:0 auto;" src="../images/under-construction.jpg">
+                    <h3>2. หน่วยวิจัยทัศนศาสตร์ประยุกต์ (Applied Optics Research Unit)</h3>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สถาบันแกนนำ:	มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี<br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สถาบันเครือข่าย: มหาวิทยาลัยมหิดล
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การรวมกลุ่มกันของนักวิจัยด้านทัศนศาสตร์ซึ่งรวมคนที่ทำงานด้าน แสง เลเซอร์ ไฟเบอร์ออพติก ออพโตอิเล็กทรอนิกส์ รวมทั้งการเคลือบฟิล์มบางในสุญญากาศสำหรับอุปกรณ์ทางด้านแสง จากที่ต่างๆเข้าด้วยกันจะเป็นการสร้างบรรยากาศงานวิจัยที่ดี และขยายกำลังคนได้ กลุ่มวิจัยจะเน้นพัฒนาผลิตภัณฑ์และงานวิจัยใหม่ๆ ขีดความสามารถในการแข่งขันของประเทศ เช่น พัฒนาเครื่องเลเซอร์ต้นแบบสำหรับประยุกต์ใช้กระบวนการผลิตทางด้านโลหะและอโลหะ เลเซอร์สำหรับงานทางด้านอัญมณีและเครื่องประดับในประเทศไทย และการเคลือบฟิล์มบางสำหรับกระจกแว่นตา กระจกอาคาร และการเคลือบผิวแข็งโดยวิธีระเหยสารและสปัตเตอริง ซึ่งเป็นไปตามความต้องการของผู้ประกอบการภายในประเทศ การพึ่งพาตนเองของศูนย์นั้นจะมีอยู่สองรูปแบบหลัก คือ ทางตรงโดยการให้ค่าตอบแทน และให้งบประมาณสนับสนุนการวิจัย ส่วนในทางอ้อมนั้นการให้นักวิจัยทำงานตรงกับความต้องการของอุตสาหกรรมจะทำให้เจ้าภาพอุตสาหกรรมช่วยสนับสนุนทั้งทางด้านเงินทุน อุปกรณ์ และบุคลากร ซึ่งสิ่งต่างๆ เหล่านี้จะช่วยกระตุ้นให้นักวิจัยตระหนักถึงความสำคัญของงานที่ทำและมีแรงจูงใจในการทำงานมากขึ้น
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;มหาวิทยาลัยมหิดลมีการผลิตงานวิจัยทางด้านทัศนศาสตร์มาอย่างต่อเนื่อง จึงมีประสบการณ์ในงานวิจัยทางด้านทัศนศาสตร์ประยุกต์ ปัจจุบันงานวิจัยทางด้านทัศนศาสตร์ประยุกต์มีการดำเนินงานเน้นไปที่สองหัวข้อซึ่งเป็นกุญแจสำคัญในการพัฒนาอุตสาหกรรมในประเทศ สองหัวข้อดังกล่าวคือ
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. การพัฒนาแหล่งกำเนิดแสงเลเซอร์และการประยุกต์ใช้เลเซอร์เพื่อใช้ในอุตสาหกรรมเพื่อทดแทนการนำเข้า ด้วยเหตุที่อุตสาหกรรมหลายแขนงในปัจจุบันมีแหล่งกำเนิดแสงเลเซอร์เกี่ยวข้องอยู่ด้วยเป็นจำนวนมาก ทำให้ประโยชน์จากงานวิจัยในหัวข้อนี้เกิดกับอุตสาหกรรมของประเทศโดยตรงและ
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. การพัฒนาวิธีการวัดทางทัศนศาสตร์ซึ่งเป็นวิธีหนึ่งในการวัดที่ไม่ทำลายชิ้นงานโดยในปัจจุบันได้รับการยอมรับว่าเป็นวิธีการที่จำเป็นในการตรวจสอบคุณภาพสินค้าในอุตสาหกรรม ผลสัมฤทธิ์ของงานวิจัยทั้งสองหัวข้อนอกจากจะอยู่ในรูปของผลิตภัณฑ์และวิธีการใหม่ๆในการตรวจสอบแล้ว ความชำนาญที่เกิดในขณะศึกษาและพัฒนาก็สามารถนำมาใช้ในการเรียนการสอนได้อีกด้วย โดยศูนย์ทางด้านทัศนศาสตร์จะสามารถสร้างเครื่องต้นแบบ วิธีการต้นแบบ เพื่อถ่ายทอดเทคโนโลยีให้กับผู้ประกอบการ ให้บริการวิจัย และยังสามารถทำงานวิจัยในโรงงาน โดยเป็นวิจัยเพื่อหาเครื่องมือหรือวิธีการที่เหมาะสมกับความต้องการและงานที่เฉพาะผู้ประกอบการแต่ละรายได้
+                    </p>
+                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td align="center"><img src="../images/cluster4/image006.jpg"></td>
+                            <td align="center"><img src="../images/cluster4/image008.jpg"></td>
+                        </tr>
+                    </table>
+                    <p>&nbsp;</p>
 
-                <?php
-            } elseif ($show_center == 'IGP') {
-                ?>
-                <h2 class="text-center"><?php echo $center; ?><br>(Research Center in Integrated Physics)</h2>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การจัดตั้งศูนย์วิจัยฟิสิกส์บูรณาการจะเน้นการทำวิจัยแบบเข้มข้นในสาขาหลัก 6 สาขา ได้แก่  ฟิสิกส์ศึกษา  ทัศนศาสตร์ประยุกต์  ธรณีฟิสิกส์  ชีวฟิสิกส์  ฟิสิกส์วัสดุ  ฟิสิกส์ดาราศาสตร์และอวกาศ   ในลักษณะภาคีอุดมศึกษาและวิจัย  ที่ประกอบไปด้วยมหาวิทยาลัยแกนนำ  3  มหาวิทยาลัยและมหาวิทยาลัยเครือข่าย  11  มหาวิทยาลัย  ดังต่อไปนี้
-                </p>
-                <h4>เครื่องมือ</h4>
-                <ol>
-                    <li>มหาวิทยาลัยมหิดล*</li>
-                    <li>มหาวิทยาลัยศรีนครินทรวิโรฒ**</li>
-                    <li>มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี**</li>
-                    <li>จุฬาลงกรณ์มหาวิทยาลัย</li>
-                    <li>มหาวิทยาลัยเกษตรศาสตร์</li>
-                    <li>มหาวิทยาลัยขอนแก่น</li>
-                    <li>มหาวิทยาลัยวลัยลักษณ์</li>
-                    <li>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหาร ลาดกระบัง</li>
-                    <li>มหาวิทยาลัยสงขลานครินทร์</li>
-                    <li>มหาวิทยาลัยธรรมศาสตร์</li>
-                    <li>มหาวิทยาลัยนเรศวร</li>
-                    <li>มหาวิทยาลัยแม่ฟ้าหลวง</li>
-                    <li>มหาวิทยาลัยบูรพา</li>
-                    <li> มหาวิทยาลัยอุบลราชธานี</li>
-                </ol>
-                <p>*สถาบันแกนนำและประสานงานคลัสเตอร์ฯ<br>
-                    **สถาบันแกนนำ</p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;โดยเน้นเพื่อให้เกิดความเชื่อมโยงเครือข่ายระหว่างสถาบันการศึกษา และมีการเชื่อมโยงกันภายในศูนย์วิจัยและระหว่างศูนย์วิจัย ในด้านการเรียนการสอนระดับบัณฑิตศึกษา ด้านการวิจัยและการใช้ทรัพยากรร่วมกัน ศูนย์วิจัยนี้จะทำหน้าที่เป็นจุดเชื่อมโยงระหว่างกลุ่มวิจัยในมหาวิทยาลัยที่ร่วมโครงการกับผู้ใช้ประโยชน์ในภาคอุตสาหกรรม เพื่อส่งเสริมให้เกิดการถ่ายทอดองค์ความรู้และเทคโนโลยี โดยที่นักวิจัยสามารถทุ่มเทเวลาในการทำงานวิชาการที่เน้นความเชี่ยวชาญได้อย่างเต็มที่
-                </p>
-                <p>&nbsp</p>
-                <h3>1. หน่วยวิจัยฟิสิกส์ศึกษา (Physics Education Research Unit)</h3>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สถาบันแกนนำ:	มหาวิทยาลัยศรีนครินทรวิโรฒ*<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สถาบันเครือข่าย: มหาวิทยาลัยมหิด</p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การวิจัยในสาขาฟิสิกส์ศึกษาเป็นความร่วมมือกันระหว่างสถาบันเครือข่ายของโครงการฯ โดยมีภาควิชาฟิสิกส์ คณะวิทยาศาสตร์ มหาวิทยาลัยมหิดลซึ่งมีความเชี่ยวชาญในด้านความรู้และทฤษฎีฟิสิกส์พื้นฐาน โดยสถาบันนวัตกรรมและพัฒนากระบวนการเรียนรู้ มหาวิทยาลัยมหิดล ซึ่งมีความเชี่ยวชาญด้านนวัตกรรมการศึกษาเป็นแกนนำ ร่วมกับภาควิชาฟิสิกส์ คณะวิทยาศาสตร์ มหาวิทยาลัยศรีนครินทรวิโรฒซึ่งมีความเชี่ยวชาญในด้านการเรียนการสอน การพัฒนาหลักสูตร และภาควิชาฟิสิกส์ คณะวิทยาศาสตร์ มหาวิทยาลัยขอนแก่นซึ่งมีความเชี่ยวชาญในด้านฟิสิกส์ศึกษา ร่วมเป็นเครือข่ายงานวิจัย เพื่อเป็นส่วนผลักดันให้เกิดความเชื่อมโยงระหว่าง คณาจารย์วิทยาศาสตร์ที่เน้นหนักการวิจัยทางวิทยาศาสตร์บริสุทธิ์ และคณาจารย์ทางด้านศึกษาศาสตร์หรือครุศาสตร์ซึ่งเน้นหนักทางด้านวิธีการเรียนการสอน จิตวิทยาการศึกษาซึ่งเป็นพื้นฐานของศาสตร์อื่นๆ รวมถึงความเชื่อมโยงที่จะนำผลของการวิจัยและองค์ความรู้ที่เกิดขึ้นเพื่อไปถ่ายทอดสู่ทุกระดับการศึกษา และทำหน้าที่ให้บริการด้านวิชาการแก่ชุมชน สร้างเครือข่ายความร่วมมือกันในการแก้ปัญหาการเรียนการสอนฟิสิกส์ระดับโรงเรียนของครูวิทยาศาสตร์ทั่วประเทศ
-                </p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;นอกจากนี้ภาควิชาฟิสิกส์มหาวิทยาลัยศรีนครินทรวิโรฒ ยังมีความร่วมมือกับศูนย์วิทยาศาสตร์ศึกษา (Science Education Center) มหาวิทยาลัยศรีนครินทรวิโรฒ ในการผลิตดุษฎีบัณฑิตสาขาวิทยาศาสตร์ศึกษา ยิ่งไปกว่านั้น ยังมีความร่วมมือกับภาควิชาฟิสิกส์ คณะวิทยาศาสตร์ ของมหาวิทยาลัยในเครือเทา-งาม (มหาวิทยาลัยศรีนครินทรวิโรฒ มหาวิทยาลัยบูรพา  มหาวิทยาลัยทักษิณ  มหาวิทยาลัยนเรศวร  มหาวิทยาลัยมหาสารคาม) ในการร่างหลักสูตรปรัชญาดุษฎีบัณฑิต สาขาฟิสิกส์ ซึ่งจะนำไปสู่ความร่วมมือทางวิชาการและการวิจัยระหว่างมหาวิทยาลัยในเครือเทา-งาม
-                </p>
-                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td align="center"><img src="../images/cluster4/image002.jpg"></td>
-                        <td align="center"><img src="../images/cluster4/image004.jpg"></td>
-                    </tr>
-                </table>
-                <p>&nbsp;</p>
+                    <h3>3. หน่วยวิจัยธรณีฟิสิกส์ (Geophysics Research Unit)</h3>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กลุ่มวิจัยธรณีฟิสิกส์ที่รวมตัวกันมาจากมหาวิทยาลัยมหิดล มหาวิทยาลัยสงขลานครินทร์ มหาวิทยาลัยขอนแก่น และมหาวิทยาลัยบูรพา มีเป้าหมายในการพัฒนางานวิจัย เสริมสร้างองค์ความรู้และเทคโนโลยีใหม่ๆ ทางธรณีฟิสิกส์ให้เทียบเท่ากับต่างประเทศ พร้อมทั้งนำไปประยุกต์ใช้แก้ปัญหาของประเทศได้อย่างมีประสิทธิภาพ นอกจากนี้เพื่อความเป็นเลิศทางวิชาการ กลุ่มธรณีฟิสิกส์ยังต้องการเสริมสร้างบรรยากาศทางวิชาการขึ้นในมหาวิทยาลัยเพื่อดึงดูดคนรุ่นใหม่ที่มีความรู้ความสามารถทางวิชาการเข้ามาเป็นบุคลากรของสถาบัน พร้อมพัฒนาคุณภาพการศึกษาของนักศึกษามหาวิทยาลัยตั้งแต่ระดับปริญญาตรีจนถึงบัณฑิตศึกษา งานวิจัยของกลุ่มธรณีฟิสิกส์จะมีทิศทางที่กำหนดเอาไว้อย่างชัดเจนและสอดคล้องกับยุทธศาสตร์ของชาติ โดยจะมีการพัฒนางบประมาณอย่างมีประสิทธิภาพ นอกจากนี้แล้ว กลุ่มวิจัยธรณีฟิสิกส์ยังมีเครือข่ายที่สนับสนุนงานวิจัยของกลุ่มทั้งในประเทศและต่างประเทศอีกหลายหน่วยงานทั้งจากภาครัฐและบริษัทเอกช
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กลุ่มธรณีฟิสิกส์ได้แบ่งงานวิจัยที่สำคัญต่อการพัฒนาประเทศออกเป็นด้านต่างๆ ดังนี้
+                    </p>
+                    <ol>
+                        <li>การศึกษาลักษณะของเปลือกโลกและเทคโทนิคของประเทศไทยทั้งในระดับท้องถิ่นและระดับประเทศ/li>
+                        <li>การศึกษารอยเลื่อนต่างๆ ในประเทศ ความเสี่ยงต่อแผ่นดินไหวของประเทศและผลกระทบจากแผ่นดินไหว</li>
+                        <li>การประยุกต์ใช้ความรู้ทางธรณีฟิสิกส์ในการแก้ปัญหาสิ่งแวดล้อมและโบราณสถาน</li>
+                        <li>การหาแหล่งทรัพยากรธรรมชาติทั้งแร่ ก๊าซธรรมชาติและน้ำมันโดยใช้ความรู้ทางธรณีฟิสิกส์ และแหล่งพลังความร้อนใต้พิภพ</li>
+                        <li>การพัฒนาซอฟแวร์เพื่อใช้ในงานธรณีฟิสิกส์</li>
+                        <li>การศึกษาฟิสิกส์ของโลกและดาวเคราะห์อื่นๆ</li>
+                    </ol>
+                    <p class="text-center"><img src="../images/cluster4/image010.jpg"></p>
+                    <p>&nbsp;</p>
 
-                <h3>2. หน่วยวิจัยทัศนศาสตร์ประยุกต์ (Applied Optics Research Unit)</h3>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สถาบันแกนนำ:	มหาวิทยาลัยเทคโนโลยีพระจอมเกล้าธนบุรี<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สถาบันเครือข่าย: มหาวิทยาลัยมหิดล
-                </p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การรวมกลุ่มกันของนักวิจัยด้านทัศนศาสตร์ซึ่งรวมคนที่ทำงานด้าน แสง เลเซอร์ ไฟเบอร์ออพติก ออพโตอิเล็กทรอนิกส์ รวมทั้งการเคลือบฟิล์มบางในสุญญากาศสำหรับอุปกรณ์ทางด้านแสง จากที่ต่างๆเข้าด้วยกันจะเป็นการสร้างบรรยากาศงานวิจัยที่ดี และขยายกำลังคนได้ กลุ่มวิจัยจะเน้นพัฒนาผลิตภัณฑ์และงานวิจัยใหม่ๆ ขีดความสามารถในการแข่งขันของประเทศ เช่น พัฒนาเครื่องเลเซอร์ต้นแบบสำหรับประยุกต์ใช้กระบวนการผลิตทางด้านโลหะและอโลหะ เลเซอร์สำหรับงานทางด้านอัญมณีและเครื่องประดับในประเทศไทย และการเคลือบฟิล์มบางสำหรับกระจกแว่นตา กระจกอาคาร และการเคลือบผิวแข็งโดยวิธีระเหยสารและสปัตเตอริง ซึ่งเป็นไปตามความต้องการของผู้ประกอบการภายในประเทศ การพึ่งพาตนเองของศูนย์นั้นจะมีอยู่สองรูปแบบหลัก คือ ทางตรงโดยการให้ค่าตอบแทน และให้งบประมาณสนับสนุนการวิจัย ส่วนในทางอ้อมนั้นการให้นักวิจัยทำงานตรงกับความต้องการของอุตสาหกรรมจะทำให้เจ้าภาพอุตสาหกรรมช่วยสนับสนุนทั้งทางด้านเงินทุน อุปกรณ์ และบุคลากร ซึ่งสิ่งต่างๆ เหล่านี้จะช่วยกระตุ้นให้นักวิจัยตระหนักถึงความสำคัญของงานที่ทำและมีแรงจูงใจในการทำงานมากขึ้น
-                </p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;มหาวิทยาลัยมหิดลมีการผลิตงานวิจัยทางด้านทัศนศาสตร์มาอย่างต่อเนื่อง จึงมีประสบการณ์ในงานวิจัยทางด้านทัศนศาสตร์ประยุกต์ ปัจจุบันงานวิจัยทางด้านทัศนศาสตร์ประยุกต์มีการดำเนินงานเน้นไปที่สองหัวข้อซึ่งเป็นกุญแจสำคัญในการพัฒนาอุตสาหกรรมในประเทศ สองหัวข้อดังกล่าวคือ
-                </p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. การพัฒนาแหล่งกำเนิดแสงเลเซอร์และการประยุกต์ใช้เลเซอร์เพื่อใช้ในอุตสาหกรรมเพื่อทดแทนการนำเข้า ด้วยเหตุที่อุตสาหกรรมหลายแขนงในปัจจุบันมีแหล่งกำเนิดแสงเลเซอร์เกี่ยวข้องอยู่ด้วยเป็นจำนวนมาก ทำให้ประโยชน์จากงานวิจัยในหัวข้อนี้เกิดกับอุตสาหกรรมของประเทศโดยตรงและ
-                </p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. การพัฒนาวิธีการวัดทางทัศนศาสตร์ซึ่งเป็นวิธีหนึ่งในการวัดที่ไม่ทำลายชิ้นงานโดยในปัจจุบันได้รับการยอมรับว่าเป็นวิธีการที่จำเป็นในการตรวจสอบคุณภาพสินค้าในอุตสาหกรรม ผลสัมฤทธิ์ของงานวิจัยทั้งสองหัวข้อนอกจากจะอยู่ในรูปของผลิตภัณฑ์และวิธีการใหม่ๆในการตรวจสอบแล้ว ความชำนาญที่เกิดในขณะศึกษาและพัฒนาก็สามารถนำมาใช้ในการเรียนการสอนได้อีกด้วย โดยศูนย์ทางด้านทัศนศาสตร์จะสามารถสร้างเครื่องต้นแบบ วิธีการต้นแบบ เพื่อถ่ายทอดเทคโนโลยีให้กับผู้ประกอบการ ให้บริการวิจัย และยังสามารถทำงานวิจัยในโรงงาน โดยเป็นวิจัยเพื่อหาเครื่องมือหรือวิธีการที่เหมาะสมกับความต้องการและงานที่เฉพาะผู้ประกอบการแต่ละรายได้
-                </p>
-                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td align="center"><img src="../images/cluster4/image006.jpg"></td>
-                        <td align="center"><img src="../images/cluster4/image008.jpg"></td>
-                    </tr>
-                </table>
-                <p>&nbsp;</p>
+                    <h3>4. หน่วยวิจัยชีวฟิสิกส์ (Biophysics Research Unit)</h3>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นการวิจัยเชิงบูรณาการระหว่างศาสตร์พื้นฐานต่าง ๆ โดยมี ฟิสิกส์ เป็นแกนหลัก ซึ่งจะถูกนำไปผนวกใช้กับศาสตร์พื้นฐานอื่นๆ ได้แก่ ชีววิทยา คณิตศาสตร์ เคมี และคอมพิวเตอร์ ปัญหาหลักที่จะทำการศึกษาวิจัย คือ ระบบทางชีวภาพและทางการแพทย์ เช่น ระบบของเซลล์มะเร็ง และ ระบบของเซลล์แบกทีเรียที่ทำให้เกิดโรคฉี่หนู (Leptospirosis) โดยจะศึกษาถึงผลกระทบของปัจจัยทางกายภาพและเคมีที่มีอิทธิพลต่อชีวิตประจำวัน ได้แก่ ผลของสนามไฟฟ้า สนามแม่เหล็ก และอนุภาคนาโน ต่อระบบของเซลล์ รวมถึงการศึกษาถึงความสัมพันธ์ของสมบัติและการเปลี่ยนแปลงของระบบชีวภาพในระดับจุลภาคและมหภาค เช่น การเปลี่ยนแปลงทางรูปแบบ(pattern)การเจริญของกลุ่มเซลล์ ไปจนถึงการศึกษาสมบัติในระดับนาโนของแต่ละเซลล์ การศึกษารูปพรรณสัณฐาน(morphology) การเกิดการเปลี่ยนแปลงในเชิงชีวเคมี ไฟฟ้าเคมี การศึกษาในแง่ของพิษวิทยา การเปลี่ยนแปลงของโปรตีน และดีเอ็นเอ
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วิธีวิจัยจะเป็นการบูรณาการของวิธีต่างๆ ได้แก่การทดลองในห้องวิจัย ด้านพยาธิวิทยาของโรค ห้องวิจัยที่สถาบันมะเร็งแห่งชาติ ห้องวิจัยที่ศูนย์วิจัยนาโนศาสตร์ และห้องวิจัยเชิงคำนวณด้านฟิสิกส์และคณิตศาสตร์ การเชื่อมโยงของวิธีวิจัยต่างๆจะถูกใช้อย่างมีขั้นตอนอย่างชัดเจน เริ่มจาก ข้อมูลจากห้องทดลอง การเสนอแบบจำลองทางคณิตศาสตร์ การจำลองแบบเชิงคอมพิวเตอร์ จนกระทั่งได้องค์ความรู้ที่สมเหตุสมผลเป็นที่ยอมรับด้านวิชาการ และนำไปประยุกต์ใช้งานได้
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ผลที่ได้จากงานวิจัยจะนำไปสู่ความรู้ความเข้าใจใหม่ๆที่เกี่ยวข้องกับระบบทางชีววิทยา และผลงานวิชาการที่จะตีพิมพ์เผยแพร่ รวมถึงนวัตกรรมในรูปฐานข้อมูลในลักษณะภาพถ่ายของเซลล์เชื้อโรค หรือ เซลล์มะเร็ง นวัตกรรมการสร้าง chemical probe เพื่อนำไปตรวจเชื้อโรคหรือสมบัติของเซลล์ และการนำเสนอวิธีการรักษาโรคมะเร็งแบบใหม่ ซึ่งจะก่อประโยชน์ต่อวงการแพทย์และสาธารณสุข ของประเทศ
+                    </p>
+                    <p class="text-center"><img src="../images/cluster4/image012.jpg"></p>
+                    <p>&nbsp;</p>
 
-                <h3>3. หน่วยวิจัยธรณีฟิสิกส์ (Geophysics Research Unit)</h3>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กลุ่มวิจัยธรณีฟิสิกส์ที่รวมตัวกันมาจากมหาวิทยาลัยมหิดล มหาวิทยาลัยสงขลานครินทร์ มหาวิทยาลัยขอนแก่น และมหาวิทยาลัยบูรพา มีเป้าหมายในการพัฒนางานวิจัย เสริมสร้างองค์ความรู้และเทคโนโลยีใหม่ๆ ทางธรณีฟิสิกส์ให้เทียบเท่ากับต่างประเทศ พร้อมทั้งนำไปประยุกต์ใช้แก้ปัญหาของประเทศได้อย่างมีประสิทธิภาพ นอกจากนี้เพื่อความเป็นเลิศทางวิชาการ กลุ่มธรณีฟิสิกส์ยังต้องการเสริมสร้างบรรยากาศทางวิชาการขึ้นในมหาวิทยาลัยเพื่อดึงดูดคนรุ่นใหม่ที่มีความรู้ความสามารถทางวิชาการเข้ามาเป็นบุคลากรของสถาบัน พร้อมพัฒนาคุณภาพการศึกษาของนักศึกษามหาวิทยาลัยตั้งแต่ระดับปริญญาตรีจนถึงบัณฑิตศึกษา งานวิจัยของกลุ่มธรณีฟิสิกส์จะมีทิศทางที่กำหนดเอาไว้อย่างชัดเจนและสอดคล้องกับยุทธศาสตร์ของชาติ โดยจะมีการพัฒนางบประมาณอย่างมีประสิทธิภาพ นอกจากนี้แล้ว กลุ่มวิจัยธรณีฟิสิกส์ยังมีเครือข่ายที่สนับสนุนงานวิจัยของกลุ่มทั้งในประเทศและต่างประเทศอีกหลายหน่วยงานทั้งจากภาครัฐและบริษัทเอกช
-                </p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;กลุ่มธรณีฟิสิกส์ได้แบ่งงานวิจัยที่สำคัญต่อการพัฒนาประเทศออกเป็นด้านต่างๆ ดังนี้
-                </p>
-                <ol>
-                    <li>การศึกษาลักษณะของเปลือกโลกและเทคโทนิคของประเทศไทยทั้งในระดับท้องถิ่นและระดับประเทศ/li>
-                    <li>การศึกษารอยเลื่อนต่างๆ ในประเทศ ความเสี่ยงต่อแผ่นดินไหวของประเทศและผลกระทบจากแผ่นดินไหว</li>
-                    <li>การประยุกต์ใช้ความรู้ทางธรณีฟิสิกส์ในการแก้ปัญหาสิ่งแวดล้อมและโบราณสถาน</li>
-                    <li>การหาแหล่งทรัพยากรธรรมชาติทั้งแร่ ก๊าซธรรมชาติและน้ำมันโดยใช้ความรู้ทางธรณีฟิสิกส์ และแหล่งพลังความร้อนใต้พิภพ</li>
-                    <li>การพัฒนาซอฟแวร์เพื่อใช้ในงานธรณีฟิสิกส์</li>
-                    <li>การศึกษาฟิสิกส์ของโลกและดาวเคราะห์อื่นๆ</li>
-                </ol>
-                <p class="text-center"><img src="../images/cluster4/image010.jpg"></p>
-                <p>&nbsp;</p>
+                    <h3>5. หน่วยวิจัยฟิสิกส์วัสดุ (Materials Physics Research Unit)</h3>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นการวิจัยที่เน้นการประยุกต์ใช้ศาสตร์ฟิสิกส์ในการบูรณาการร่วมกับศาสตร์ทางด้านเคมีและชีววิทยา เพื่อทำการศึกษาและวิจัย ฟิสิกส์วัสดุ เพื่อเข้าใจถึงพื้นฐานของการทำงานร่วมกันของวัสดุที่มีธรรมชาติ เพื่อประยุกต์มาใช้เป็นต้นแบบในการเตรียมวัสดุสังเคราะห์ สำหรับการวิจัยนั้นจะครอบคลุมทั้งระบบที่เป็นสารอินทรีย์ สารอินนินทรีย์ และวัสดุประกอบ
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การศึกษาสมบัติตัวนำยิ่งยวดและสารแม่เหล็ก เป็นตัวอย่างปรากฏการณ์ที่ต้องใช้ความรู้ที่ลึกซึ้งทางด้านฟิสิกส์ในการอธิบาย ซึ่ง ศ.สุทัศน์ ยกส้าน ศ.อี มิง ถัง และ ศ.จูเลียน พอลเตอร์ เป็นนักฟิสิกส์ที่มีชื่อเสียงในประเทศไทยที่ศึกษาวิจัยในทฤษฎีสภาวะตัวนำยิ่งยวด และความเป็นแม่เหล็กและมีผลงานวิจัยในระดับนานาชาติอย่างต่อเนื่องกว่า 100 เรื่อง
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การประยุกต์ศาสตร์ทางด้านฟิสิกส์และพอลิเมอร์ เพื่อศึกษาวัสดุสังเคราะห์ที่นำมาประยุกต์ใช้หลายด้านไม่เพียงแต่ใช้เป็นวัสดุโครงสร้างราคาถูก แต่ยังสามารถใช้ความรู้ทางพอลิเมอร์ฟิสิกส์โดยการวิศวกรรมโมเลกุลสายโซ่พอลิเมอร์เพื่อการประยุกต์ใช้ในงานด้านอื่นๆ
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ในปัจจุบันทางเครือข่ายได้มีการดำเนินการทางด้าน การพัฒนาเทคนิค การออกแบบ และ จำลอง ระบบโมเลกุลด้วยคอมพิวเตอร์สมรรถนะสูง ทั้งในระบบโมเลกุลที่ใช้ในทางอิเล็กทรอนิกส์ตัวตรวจวัด และระบบทางชีววิทยา เนื่องจากความซับซ้อนของระบบโมเลกุลที่ตรวจสอบ ความสามารถของการคำนวณแบบจำลองด้วยคอมพิวเตอร์นี้เป็นเครื่องมือที่สำคัญมากในการวิจัยทางวัสดุนาโน นอกจากนี้หน่วยวิจัยมีความสามารถในการสังเคราะห์สารและฟิล์มบาง วิเคราะห์และตรวจสอบสารในระดับโมเลกุลและฟิล์มบางและมีศักยภาพในการประดิษฐ์โมเลกุลเหล่านี้ให้เป็นอุปกรณ์ที่ใช้งานได้จริง ศักยภาพเหล่านี้ทำให้หน่วยวิจัยมีความพร้อมทั้งทางด้านการออกแบบ การสร้าง การวัดและความเข้าใจในทฤษฎีในวัสดุและอุปกรณ์นาโ
+                    </p>
+                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td align="center"><img src="../images/cluster4/image014.jpg"></td>
+                            <td align="center"><img src="../images/cluster4/image016.jpg"></td>
+                        </tr>
+                    </table>
+                    <p>&nbsp;</p>
 
-                <h3>4. หน่วยวิจัยชีวฟิสิกส์ (Biophysics Research Unit)</h3>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นการวิจัยเชิงบูรณาการระหว่างศาสตร์พื้นฐานต่าง ๆ โดยมี ฟิสิกส์ เป็นแกนหลัก ซึ่งจะถูกนำไปผนวกใช้กับศาสตร์พื้นฐานอื่นๆ ได้แก่ ชีววิทยา คณิตศาสตร์ เคมี และคอมพิวเตอร์ ปัญหาหลักที่จะทำการศึกษาวิจัย คือ ระบบทางชีวภาพและทางการแพทย์ เช่น ระบบของเซลล์มะเร็ง และ ระบบของเซลล์แบกทีเรียที่ทำให้เกิดโรคฉี่หนู (Leptospirosis) โดยจะศึกษาถึงผลกระทบของปัจจัยทางกายภาพและเคมีที่มีอิทธิพลต่อชีวิตประจำวัน ได้แก่ ผลของสนามไฟฟ้า สนามแม่เหล็ก และอนุภาคนาโน ต่อระบบของเซลล์ รวมถึงการศึกษาถึงความสัมพันธ์ของสมบัติและการเปลี่ยนแปลงของระบบชีวภาพในระดับจุลภาคและมหภาค เช่น การเปลี่ยนแปลงทางรูปแบบ(pattern)การเจริญของกลุ่มเซลล์ ไปจนถึงการศึกษาสมบัติในระดับนาโนของแต่ละเซลล์ การศึกษารูปพรรณสัณฐาน(morphology) การเกิดการเปลี่ยนแปลงในเชิงชีวเคมี ไฟฟ้าเคมี การศึกษาในแง่ของพิษวิทยา การเปลี่ยนแปลงของโปรตีน และดีเอ็นเอ
-                </p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;วิธีวิจัยจะเป็นการบูรณาการของวิธีต่างๆ ได้แก่การทดลองในห้องวิจัย ด้านพยาธิวิทยาของโรค ห้องวิจัยที่สถาบันมะเร็งแห่งชาติ ห้องวิจัยที่ศูนย์วิจัยนาโนศาสตร์ และห้องวิจัยเชิงคำนวณด้านฟิสิกส์และคณิตศาสตร์ การเชื่อมโยงของวิธีวิจัยต่างๆจะถูกใช้อย่างมีขั้นตอนอย่างชัดเจน เริ่มจาก ข้อมูลจากห้องทดลอง การเสนอแบบจำลองทางคณิตศาสตร์ การจำลองแบบเชิงคอมพิวเตอร์ จนกระทั่งได้องค์ความรู้ที่สมเหตุสมผลเป็นที่ยอมรับด้านวิชาการ และนำไปประยุกต์ใช้งานได้
-                </p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ผลที่ได้จากงานวิจัยจะนำไปสู่ความรู้ความเข้าใจใหม่ๆที่เกี่ยวข้องกับระบบทางชีววิทยา และผลงานวิชาการที่จะตีพิมพ์เผยแพร่ รวมถึงนวัตกรรมในรูปฐานข้อมูลในลักษณะภาพถ่ายของเซลล์เชื้อโรค หรือ เซลล์มะเร็ง นวัตกรรมการสร้าง chemical probe เพื่อนำไปตรวจเชื้อโรคหรือสมบัติของเซลล์ และการนำเสนอวิธีการรักษาโรคมะเร็งแบบใหม่ ซึ่งจะก่อประโยชน์ต่อวงการแพทย์และสาธารณสุข ของประเทศ
-                </p>
-                <p class="text-center"><img src="../images/cluster4/image012.jpg"></p>
-                <p>&nbsp;</p>
+                    <h3>6. หน่วยวิจัยฟิสิกส์ดาราศาสตร์และอวกาศ (Astrophysics and Space Physics Research Unit)</h3>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;พายุสุริยะทำให้เกิดภัยชนิดหนึ่งที่เริ่มตระหนักถึงในประเทศไทย และทั่วโลก ที่เรียกว่า สภาพอวกาศ (space weather) คือผลที่เกิดจากปรากฏการณ์หรือเหตุการณ์ต่างๆ บนดวงอาทิตย์ เช่น การปะทุที่ผิวดวงอาทิตย์ (solar flare) หรือการปลดปล่อยก้อนมวลจากโคโรนา (coronal mass ejection: CME) ทำให้อนุภาคในอวกาศโดยเฉพาะอนุภาคที่มีประจุ เช่น โปรตอน อิเล็กตรอน ฯลฯ ซึ่งจะมีความหนาแน่นเพิ่มมากขึ้น เมื่ออนุภาคเหล่านี้ผ่านเข้าสู่บรรยากาศของโลก รวมทั้งคลื่นกระแทกจาก CME จะส่งผลกระทบต่อโลกและกิจกรรมต่างๆ ของมนุษย์ เช่น ผลกระทบต่อดาวเทียม ยานอวกาศ ระบบไฟฟ้า การส่งสัญญาณผ่านคลื่นวิทยุ เป็นต้น ซึ่งจะก่อให้เกิดผลกระทบต่อกิจกรรมทางเศรษฐกิจ รวมถึงความมั่นคงของประเทศ
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การติดตั้งสถานีตรวจวันนิวตรอนสิรินธร จะผลิตข้อมูลใหม่ที่ไม่เหมือนสถานีอื่นๆในโลก เนื่องจากประเทศไทยอยู่ในตำแหน่งที่วัดอนุภาครังสีคอสมิก (อนุภาคจากอวกาศ) ที่มีพลังงานสูงที่สุด (>16 GeV) กลุ่มนักวิจัยจะทำงานวิจัยอย่างต่อเนื่องเกี่ยวกับพายุสุริยะ และหัวข้อที่เกี่ยวข้อง เช่น การวิเคราะห์ข้อมูลจากสถานีตรวจวัดนิวตรอนสิรินธร การเคลื่อนที่ของอนุภาคในอวกาศภายใต้อิทธิพลของสนามแม่เหล็กปั่นป่วน และพลศาสตร์ไม่เชิงเส้น ซึ่งเกิดขึ้นกับพลาสมาในอวกาศและพลาสมาชนิดอื่น
+                    </p>
+                    <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td align="center"><img src="../images/cluster4/image018.jpg"></td>
+                            <td align="center"><img src="../images/cluster4/image020.jpg"></td>
+                        </tr>
+                    </table>
+                    <p>&nbsp;</p>
 
-                <h3>5. หน่วยวิจัยฟิสิกส์วัสดุ (Materials Physics Research Unit)</h3>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เป็นการวิจัยที่เน้นการประยุกต์ใช้ศาสตร์ฟิสิกส์ในการบูรณาการร่วมกับศาสตร์ทางด้านเคมีและชีววิทยา เพื่อทำการศึกษาและวิจัย ฟิสิกส์วัสดุ เพื่อเข้าใจถึงพื้นฐานของการทำงานร่วมกันของวัสดุที่มีธรรมชาติ เพื่อประยุกต์มาใช้เป็นต้นแบบในการเตรียมวัสดุสังเคราะห์ สำหรับการวิจัยนั้นจะครอบคลุมทั้งระบบที่เป็นสารอินทรีย์ สารอินนินทรีย์ และวัสดุประกอบ
-                </p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การศึกษาสมบัติตัวนำยิ่งยวดและสารแม่เหล็ก เป็นตัวอย่างปรากฏการณ์ที่ต้องใช้ความรู้ที่ลึกซึ้งทางด้านฟิสิกส์ในการอธิบาย ซึ่ง ศ.สุทัศน์ ยกส้าน ศ.อี มิง ถัง และ ศ.จูเลียน พอลเตอร์ เป็นนักฟิสิกส์ที่มีชื่อเสียงในประเทศไทยที่ศึกษาวิจัยในทฤษฎีสภาวะตัวนำยิ่งยวด และความเป็นแม่เหล็กและมีผลงานวิจัยในระดับนานาชาติอย่างต่อเนื่องกว่า 100 เรื่อง
-                </p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การประยุกต์ศาสตร์ทางด้านฟิสิกส์และพอลิเมอร์ เพื่อศึกษาวัสดุสังเคราะห์ที่นำมาประยุกต์ใช้หลายด้านไม่เพียงแต่ใช้เป็นวัสดุโครงสร้างราคาถูก แต่ยังสามารถใช้ความรู้ทางพอลิเมอร์ฟิสิกส์โดยการวิศวกรรมโมเลกุลสายโซ่พอลิเมอร์เพื่อการประยุกต์ใช้ในงานด้านอื่นๆ
-                </p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ในปัจจุบันทางเครือข่ายได้มีการดำเนินการทางด้าน การพัฒนาเทคนิค การออกแบบ และ จำลอง ระบบโมเลกุลด้วยคอมพิวเตอร์สมรรถนะสูง ทั้งในระบบโมเลกุลที่ใช้ในทางอิเล็กทรอนิกส์ตัวตรวจวัด และระบบทางชีววิทยา เนื่องจากความซับซ้อนของระบบโมเลกุลที่ตรวจสอบ ความสามารถของการคำนวณแบบจำลองด้วยคอมพิวเตอร์นี้เป็นเครื่องมือที่สำคัญมากในการวิจัยทางวัสดุนาโน นอกจากนี้หน่วยวิจัยมีความสามารถในการสังเคราะห์สารและฟิล์มบาง วิเคราะห์และตรวจสอบสารในระดับโมเลกุลและฟิล์มบางและมีศักยภาพในการประดิษฐ์โมเลกุลเหล่านี้ให้เป็นอุปกรณ์ที่ใช้งานได้จริง ศักยภาพเหล่านี้ทำให้หน่วยวิจัยมีความพร้อมทั้งทางด้านการออกแบบ การสร้าง การวัดและความเข้าใจในทฤษฎีในวัสดุและอุปกรณ์นาโ
-                </p>
-                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td align="center"><img src="../images/cluster4/image014.jpg"></td>
-                        <td align="center"><img src="../images/cluster4/image016.jpg"></td>
-                    </tr>
-                </table>
-                <p>&nbsp;</p>
+                    <?php
+                } elseif ($show_center == 'CTP') {
+                    ?>
+                    <h2 class="text-center"><? echo $center; ?><br>(Research Center in Computational and Theoretical Physics)</h2>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ในบรรดาสาขาย่อยต่างๆ ทางฟิสิกส์ของประเทศไทย ถือได้ว่าฟิสิกส์เชิงคำนวณและเชิงทฤษฎีเป็นสาขาที่มีผลผลิตงานวิจัยที่มีความเป็นเลิศ ในระดับที่ได้รับการยอมรับให้ตีพิมพ์ในวารสารนานาชาติชั้นสูงที่มีการตรวจสอบอย่างเคร่งครัด อย่างต่อเนื่อง สม่ำเสมอ และมีจำนวนมากที่สุด แสดงให้เห็นถึง ศักยภาพความเชี่ยวชาญทัดเทียมนักฟิสิกส์นานาชาติ และ การผลิตผลงานวิจัยที่ต่อเนื่องสม่ำเสมอของคณาจารย์นักฟิสิกส์เชิงคำนวณและเชิงทฤษฎีที่กระจายอยู่ ณ สถาบันต่างๆ อย่างไรก็ดี ผลงานเหล่านี้ในรายละเอียดแล้ว ส่วนใหญ่เกิดจากความสนใจ มุ่งมั่น และ การทำงานโดดเดี่ยวเฉพาะตัว หรือ การติดต่อร่วมมือกับผู้เชี่ยวชาญต่างชาติที่รู้จักกันเป็นการส่วนตัว แต่นักฟิสิกส์เชิงคำนวณและเชิงทฤษฎีของไทยเอง ในอดีตยังไม่มีโอกาสรวมตัวเป็นปึกแผ่น และ ไม่ได้รับการสนับสนุนเท่าที่ควร ทำให้การพัฒนางานวิจัยด้านนี้ไม่สามารถดำเนินได้อย่างเต็มประสิทธิภาพ ขาดการบูรณาการของศาสตร์ต่างๆ เพื่อแก้ไขโจทย์ปัญหาร่วมกัน เป็นที่ทราบกันดีว่าเนื้อหาวิชาฟิสิกส์เป็นศาสตร์ที่ยากและลึกซึ้ง นักฟิสิกส์เชิงคำนวณและเชิงทฤษฎีแต่ละคนมักมีความเชี่ยวชาญลึกซึ้งเฉพาะสาขาย่อยของตน แต่โดยธรรมชาติโจทย์วิจัยฟิสิกส์ในชีวิตจริง มักจะเกี่ยวข้องกับหลากหลายสาขาย่อย ดังนั้น การรวมตัวเป็นปึกแผ่นของนักฟิสิกส์เชิงคำนวณและเชิงทฤษฎีประกอบกับนักฟิสิกส์ทดลองที่เกี่ยวข้อง ในรูปศูนย์วิจัย จะทำให้สามารถร่วมกันวิจัยโจทย์ปัญหาที่ซับซ้อนและตรงกับชีวิตจริงมากขึ้น ตัวอย่างเช่น
+                    </p>
+                    <ul>
+                        <li>นักฟิสิกส์เชิงคำนวณด้านสารควบแน่น ซึ่งใช้คอมพิวเตอร์ในการจำลองสมบัติต่างๆของสาร ทั้งทางแสง ไฟฟ้า และ แม่เหล็ก หากมีการร่วมมือกับนักฟิสิกส์ทฤษฎีที่เชี่ยวชาญด้านทฤษฎีด้านแม่เหล็กไฟฟ้า ก็จะสามารถบูรณาการร่วมกันศึกษาเชิงลึก แปรผลที่วัดได้ลึกซึ้งขึ้น หรือ ร่วมกันพัฒนาโปรแกรมคำนวณให้สามารถจำลองสมบัติอื่นๆที่สามารถวัดได้จากการทดลอง</li>
+                        <li>นักฟิสิกส์ที่ศึกษาแบบจำลองของสารในสเกลใหญ่ (หลายแสนอะตอม) โดยเทคนิควิธีมอนติคาร์โล ต้องอาศัยพารามิเตอร์พื้นฐานจากการคำนวณและทฤษฎีระดับอะตอม ซึ่งนักฟิสิกส์เชิงคำนวณในสเกลอะตอมและนักฟิสิกส์ทฤษฎีด้านอนุภาคสามารถบูรณาการร่วมกันได้</li>
+                        <li>แบบจำลองต่างๆ ตั้งแต่อันตรกิริยาระหว่างอะตอมในผลึก จนถึง ระหว่างอิเล็กตรอนกับโฮล มักต้องใช้ความรู้ทางปัญหาหลายอนุภาค (Many Body problems) ซึ่งนักทฤษฎีด้านทฤษฎีสนามควอนตัม จะสามารถให้คำปรึกษาและร่วมงานกันได้</li>
+                    </ul>
+                    <p class="text-center">
+                        <img src="../images/cluster5/RCCT1.jpg"><br>
+                        <small>การวิเคราะห์โครงสร้างระดับอะตอมของอินเดียมออกซิไนไตรด์โดยใช้เทคนิคการวัดการดูดกลืนแสงซินโครตรอนร่วมกับการคำนวณแบบเฟิร์สปรินซิเปิล (first-principles calculations) [J. T-Thienprasert et al., Appl. Phys. Lett. 93, 051903 (2008).]</small>
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ทั้งนี้ การจัดตั้งศูนย์วิจัยทางฟิสิกส์คำนวณและทฤษฎีเพื่อความเป็นปึกแผ่นและทำหน้าที่เป็นคลังสมอง (Think Tank) ของชาตินั้นได้มีการปฏิบัติกันมานานแล้วในอารยะประเทศ อาทิเช่น Center for Advanced Study ณ มหาวิทยาลัย Princeton หรือ Kavli Institute for Theoretical Physics ณ University of California at Santa Barbara ในศูนย์เหล่านี้นักฟิสิกส์จะมีโอกาสแลกเปลี่ยนความรู้ ร่วมกันศึกษาปัญหาจากต่างมุมมอง บูรณาการให้เกิดองค์ความรู้ใหม่โดยมีพื้นฐานความรู้ที่พร้อมมูลจากต่างสาขา สามารถทำวิจัยระดับสูงได้อย่างมีประสิทธิภาพ หากมองย้อนกลับไปในอดีตจะพบว่าแท้จริงแล้วความก้าวหน้าทางวิทยาศาสตร์และเทคโนโลยีในปัจจุบันนี้ เป็นผลสืบเนื่องจากความสำเร็จในการวิจัยทางฟิสิกส์เชิงคำนวณและเชิงทฤษฎี อย่างไรก็ดี ความสำเร็จแทบทั้งสิ้นเกิดจากการรวมกลุ่มของนักฟิสิกส์เพื่อถกปัญหา วิจัยร่วมกัน และได้รับการสนับสนุนทั้งด้าน ทุนทรัพย์ และ การบริหารจัดการที่ดี การที่เรารู้จักและสามารถนำพลังงานนิวเคลียร์มาใช้ได้ก็สืบเนื่องจากการแนะนำโดยนักฟิสิกส์ทฤษฎีที่พบว่าแท้จริงมวลก็คือพลังงานรูปหนึ่ง และ หากเราสามารถเปลี่ยนมวลเป็นพลังงาน จะได้พลังงานปริมาณมหาศาล (สมการ E=mc2 ของ Albert Einstein ที่รู้จักกันดีในปัจจุบัน) ยุคอิเล็กทรอนิกส์จะไม่เกิดขึ้น หากไม่มีองค์ความรู้ทางทฤษฎีสสารควบแน่นมาอธิบายการนำไฟฟ้าของสารกึ่งตัวนำ สืบเนื่องต่อมาถึงยุคที่มีอุปกรณ์อิเล็กทรอนิคส์ขั้นสูงซึ่งยิ่งต้องใช้ความรู้ทางทฤษฎีควอนตัมฟิสิกส์ และ ฟิสิกส์คำนวณ ในการออกแบบโครงสร้างควอนตัม (Quantum Structures) ของอุปกรณ์ ยิ่งไปกว่านั้น การพัฒนาสารต่างๆ ทั้ง สารกึ่งตัวนำ สารที่ใช้ประโยชน์สมบัติทางกล (เช่น สารที่แข็งอย่างยิ่ง ทนความร้อนอย่างยิ่ง เบาอย่างยิ่ง ลื่นอย่างยิ่ง เป็นต้น) สารที่มีสมบัติพิเศษทางแสง (เช่น Photonic material) เป็นต้น ล้วนต้องใช้ความรู้ทางฟิสิกส์ทฤษฎี ประกอบกับความสามารถเชิงการคำนวณของนักฟิสิกส์คำนวณ เพื่อร่วมกันจำลองสมบัติของสารในอุดมคติ ก่อนที่จะหาแนวทางสร้างสารเหล่านั้น ดังนั้น ศูนย์วิจัยทางฟิสิกส์คำนวณและทฤษฎี จะมีส่วนสำคัญในการรวบรวมนักฟิสิกส์ที่มีศักยภาพ ทั้งที่มีความพร้อมแล้ว และ ต้องการการสนับสนุนช่วยเหลือแต่มีศักยภาพและตั้งใจจริง มารวมกลุ่มกันอย่างเป็นปึกแผ่น รวมพลังเตรียมความพร้อม และร่วมกันศึกษาวิจัยตามโจทย์ปัญหาของประเทศที่เป็นรูปธรรม เพื่อการพัฒนาประเทศ ที่ยั่งยืน ถาวร ต่อไป
+                    </p>
+                    <p class="text-center">
+                        <img src="../images/cluster5/RCCT2.jpg"><br>
+                        <small>Kavi Institute for Theoretical Physics (KITP) เป็นสถาบันที่มีชื่อเสียงมากในด้านฟิสิกส์คำนวณ ซึ่งก่อตั้งขึ้นในปี 1979 โดย Walter Kohn นักวิทยาศาสตร์ผู้ได้รับรางวัลโนเบล</small>
+                    </p>
+                    <p>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;นอกจากนั้นแล้ว การรวมตัวของนักวิจัยเป็นปึกแผ่นยังเพิ่มศักยภาพการทำวิจัยให้สามารถศึกษาโจทย์ปัญหาที่ใกล้ตัวมากขึ้น จะช่วยยกระบบบัณฑิตศึกษาทางฟิสิกส์เชิงคำนวณและเชิงทฤษฎีให้มีความน่าสนใจยิ่งขึ้น ความร่วมมือต่างสถาบันจะช่วยให้เกิดการช่วยเหลือกันในรูปกลุ่มวิจัยพี่-น้อง และ มีการใช้ร่วมกันซึ่งความสัมพันธ์กับผู้เชี่ยวชาญระดับโลก ช่วยเหลือสมาชิกอื่นในกลุ่มสร้างเครือข่ายกับผู้เชี่ยวชาญนานาชาติที่ตนมีความสัมพันธ์อยู่ โดยรวมแล้วจะเป็นการยกระดับบัณฑิตศึกษาให้ได้มาตรฐานนานาชาติ
+                    </p>
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td align="center" width="50%"><img src="../images/cluster5/RCCT3.jpg" width="265" height="248"></td>
+                            <td align="center" width="50%">
+                                <img src="../images/cluster5/RCCT4.jpg" width="265" height="248"> 										</td>
+                        </tr>
+                        <tr>
+                            <td class="text-center" colspan="2">โรงไฟฟ้านิวเคลียร์ซึ่งใช้พลังงานความร้อนที่ได้จากปฏิกิริยาฟิชชันไปผลิตไอน้ำแทนการสันดาบจากเชื้อเพลิงชนิดที่ก่อให้เกิดมลพิษ</td>
+                        </tr>
+                    </table>
+                    <p>&nbsp;</p>
 
-                <h3>6. หน่วยวิจัยฟิสิกส์ดาราศาสตร์และอวกาศ (Astrophysics and Space Physics Research Unit)</h3>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;พายุสุริยะทำให้เกิดภัยชนิดหนึ่งที่เริ่มตระหนักถึงในประเทศไทย และทั่วโลก ที่เรียกว่า สภาพอวกาศ (space weather) คือผลที่เกิดจากปรากฏการณ์หรือเหตุการณ์ต่างๆ บนดวงอาทิตย์ เช่น การปะทุที่ผิวดวงอาทิตย์ (solar flare) หรือการปลดปล่อยก้อนมวลจากโคโรนา (coronal mass ejection: CME) ทำให้อนุภาคในอวกาศโดยเฉพาะอนุภาคที่มีประจุ เช่น โปรตอน อิเล็กตรอน ฯลฯ ซึ่งจะมีความหนาแน่นเพิ่มมากขึ้น เมื่ออนุภาคเหล่านี้ผ่านเข้าสู่บรรยากาศของโลก รวมทั้งคลื่นกระแทกจาก CME จะส่งผลกระทบต่อโลกและกิจกรรมต่างๆ ของมนุษย์ เช่น ผลกระทบต่อดาวเทียม ยานอวกาศ ระบบไฟฟ้า การส่งสัญญาณผ่านคลื่นวิทยุ เป็นต้น ซึ่งจะก่อให้เกิดผลกระทบต่อกิจกรรมทางเศรษฐกิจ รวมถึงความมั่นคงของประเทศ
-                </p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;การติดตั้งสถานีตรวจวันนิวตรอนสิรินธร จะผลิตข้อมูลใหม่ที่ไม่เหมือนสถานีอื่นๆในโลก เนื่องจากประเทศไทยอยู่ในตำแหน่งที่วัดอนุภาครังสีคอสมิก (อนุภาคจากอวกาศ) ที่มีพลังงานสูงที่สุด (>16 GeV) กลุ่มนักวิจัยจะทำงานวิจัยอย่างต่อเนื่องเกี่ยวกับพายุสุริยะ และหัวข้อที่เกี่ยวข้อง เช่น การวิเคราะห์ข้อมูลจากสถานีตรวจวัดนิวตรอนสิรินธร การเคลื่อนที่ของอนุภาคในอวกาศภายใต้อิทธิพลของสนามแม่เหล็กปั่นป่วน และพลศาสตร์ไม่เชิงเส้น ซึ่งเกิดขึ้นกับพลาสมาในอวกาศและพลาสมาชนิดอื่น
-                </p>
-                <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td align="center"><img src="../images/cluster4/image018.jpg"></td>
-                        <td align="center"><img src="../images/cluster4/image020.jpg"></td>
-                    </tr>
-                </table>
-                <p>&nbsp;</p>
+                    <h3>องค์ประกอบของศูนย์วิจัยทางฟิสิกส์คำนวณและทฤษฎี</h3>
+                    <ol>
+                        <li>ห้องปฏิบัติการวิจัยฟิสิกส์นิวเคลียร์และอนุภาค (ม.เทคโนโลยีสุรนารี)</li>
+                        <li>ห้องปฏิบัติการวิจัยฟิสิกส์ของสารควบแน่น (ม.เทคโนโลยีสุรนารี)</li>
+                        <li>ห้องปฏิบัติการวิจัยฟิสิกส์สภาวะรุนแรง (จุฬาฯ)</li>
+                        <li>ห้องปฏิบัติการวิจัยการจำลองสถานการณ์มอนติคาร์โลและพลศาสตร์ของโมเลกุลในทางฟิสิกส์ (ม.เชียงใหม่)</li>
+                        <li>ห้องปฏิบัติการวิจัยจักรวาลวิทยา</li>
+                    </ol>
 
-                <?php
-            } elseif ($show_center == 'CTP') {
-                ?>
-                <h2 class="text-center"><? echo $center; ?><br>(Research Center in Computational and Theoretical Physics)</h2>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ในบรรดาสาขาย่อยต่างๆ ทางฟิสิกส์ของประเทศไทย ถือได้ว่าฟิสิกส์เชิงคำนวณและเชิงทฤษฎีเป็นสาขาที่มีผลผลิตงานวิจัยที่มีความเป็นเลิศ ในระดับที่ได้รับการยอมรับให้ตีพิมพ์ในวารสารนานาชาติชั้นสูงที่มีการตรวจสอบอย่างเคร่งครัด อย่างต่อเนื่อง สม่ำเสมอ และมีจำนวนมากที่สุด แสดงให้เห็นถึง ศักยภาพความเชี่ยวชาญทัดเทียมนักฟิสิกส์นานาชาติ และ การผลิตผลงานวิจัยที่ต่อเนื่องสม่ำเสมอของคณาจารย์นักฟิสิกส์เชิงคำนวณและเชิงทฤษฎีที่กระจายอยู่ ณ สถาบันต่างๆ อย่างไรก็ดี ผลงานเหล่านี้ในรายละเอียดแล้ว ส่วนใหญ่เกิดจากความสนใจ มุ่งมั่น และ การทำงานโดดเดี่ยวเฉพาะตัว หรือ การติดต่อร่วมมือกับผู้เชี่ยวชาญต่างชาติที่รู้จักกันเป็นการส่วนตัว แต่นักฟิสิกส์เชิงคำนวณและเชิงทฤษฎีของไทยเอง ในอดีตยังไม่มีโอกาสรวมตัวเป็นปึกแผ่น และ ไม่ได้รับการสนับสนุนเท่าที่ควร ทำให้การพัฒนางานวิจัยด้านนี้ไม่สามารถดำเนินได้อย่างเต็มประสิทธิภาพ ขาดการบูรณาการของศาสตร์ต่างๆ เพื่อแก้ไขโจทย์ปัญหาร่วมกัน เป็นที่ทราบกันดีว่าเนื้อหาวิชาฟิสิกส์เป็นศาสตร์ที่ยากและลึกซึ้ง นักฟิสิกส์เชิงคำนวณและเชิงทฤษฎีแต่ละคนมักมีความเชี่ยวชาญลึกซึ้งเฉพาะสาขาย่อยของตน แต่โดยธรรมชาติโจทย์วิจัยฟิสิกส์ในชีวิตจริง มักจะเกี่ยวข้องกับหลากหลายสาขาย่อย ดังนั้น การรวมตัวเป็นปึกแผ่นของนักฟิสิกส์เชิงคำนวณและเชิงทฤษฎีประกอบกับนักฟิสิกส์ทดลองที่เกี่ยวข้อง ในรูปศูนย์วิจัย จะทำให้สามารถร่วมกันวิจัยโจทย์ปัญหาที่ซับซ้อนและตรงกับชีวิตจริงมากขึ้น ตัวอย่างเช่น
-                </p>
-                <ul>
-                    <li>นักฟิสิกส์เชิงคำนวณด้านสารควบแน่น ซึ่งใช้คอมพิวเตอร์ในการจำลองสมบัติต่างๆของสาร ทั้งทางแสง ไฟฟ้า และ แม่เหล็ก หากมีการร่วมมือกับนักฟิสิกส์ทฤษฎีที่เชี่ยวชาญด้านทฤษฎีด้านแม่เหล็กไฟฟ้า ก็จะสามารถบูรณาการร่วมกันศึกษาเชิงลึก แปรผลที่วัดได้ลึกซึ้งขึ้น หรือ ร่วมกันพัฒนาโปรแกรมคำนวณให้สามารถจำลองสมบัติอื่นๆที่สามารถวัดได้จากการทดลอง</li>
-                    <li>นักฟิสิกส์ที่ศึกษาแบบจำลองของสารในสเกลใหญ่ (หลายแสนอะตอม) โดยเทคนิควิธีมอนติคาร์โล ต้องอาศัยพารามิเตอร์พื้นฐานจากการคำนวณและทฤษฎีระดับอะตอม ซึ่งนักฟิสิกส์เชิงคำนวณในสเกลอะตอมและนักฟิสิกส์ทฤษฎีด้านอนุภาคสามารถบูรณาการร่วมกันได้</li>
-                    <li>แบบจำลองต่างๆ ตั้งแต่อันตรกิริยาระหว่างอะตอมในผลึก จนถึง ระหว่างอิเล็กตรอนกับโฮล มักต้องใช้ความรู้ทางปัญหาหลายอนุภาค (Many Body problems) ซึ่งนักทฤษฎีด้านทฤษฎีสนามควอนตัม จะสามารถให้คำปรึกษาและร่วมงานกันได้</li>
-                </ul>
-                <p class="text-center">
-                    <img src="../images/cluster5/RCCT1.jpg"><br>
-                    <small>การวิเคราะห์โครงสร้างระดับอะตอมของอินเดียมออกซิไนไตรด์โดยใช้เทคนิคการวัดการดูดกลืนแสงซินโครตรอนร่วมกับการคำนวณแบบเฟิร์สปรินซิเปิล (first-principles calculations) [J. T-Thienprasert et al., Appl. Phys. Lett. 93, 051903 (2008).]</small>
-                </p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ทั้งนี้ การจัดตั้งศูนย์วิจัยทางฟิสิกส์คำนวณและทฤษฎีเพื่อความเป็นปึกแผ่นและทำหน้าที่เป็นคลังสมอง (Think Tank) ของชาตินั้นได้มีการปฏิบัติกันมานานแล้วในอารยะประเทศ อาทิเช่น Center for Advanced Study ณ มหาวิทยาลัย Princeton หรือ Kavli Institute for Theoretical Physics ณ University of California at Santa Barbara ในศูนย์เหล่านี้นักฟิสิกส์จะมีโอกาสแลกเปลี่ยนความรู้ ร่วมกันศึกษาปัญหาจากต่างมุมมอง บูรณาการให้เกิดองค์ความรู้ใหม่โดยมีพื้นฐานความรู้ที่พร้อมมูลจากต่างสาขา สามารถทำวิจัยระดับสูงได้อย่างมีประสิทธิภาพ หากมองย้อนกลับไปในอดีตจะพบว่าแท้จริงแล้วความก้าวหน้าทางวิทยาศาสตร์และเทคโนโลยีในปัจจุบันนี้ เป็นผลสืบเนื่องจากความสำเร็จในการวิจัยทางฟิสิกส์เชิงคำนวณและเชิงทฤษฎี อย่างไรก็ดี ความสำเร็จแทบทั้งสิ้นเกิดจากการรวมกลุ่มของนักฟิสิกส์เพื่อถกปัญหา วิจัยร่วมกัน และได้รับการสนับสนุนทั้งด้าน ทุนทรัพย์ และ การบริหารจัดการที่ดี การที่เรารู้จักและสามารถนำพลังงานนิวเคลียร์มาใช้ได้ก็สืบเนื่องจากการแนะนำโดยนักฟิสิกส์ทฤษฎีที่พบว่าแท้จริงมวลก็คือพลังงานรูปหนึ่ง และ หากเราสามารถเปลี่ยนมวลเป็นพลังงาน จะได้พลังงานปริมาณมหาศาล (สมการ E=mc2 ของ Albert Einstein ที่รู้จักกันดีในปัจจุบัน) ยุคอิเล็กทรอนิกส์จะไม่เกิดขึ้น หากไม่มีองค์ความรู้ทางทฤษฎีสสารควบแน่นมาอธิบายการนำไฟฟ้าของสารกึ่งตัวนำ สืบเนื่องต่อมาถึงยุคที่มีอุปกรณ์อิเล็กทรอนิคส์ขั้นสูงซึ่งยิ่งต้องใช้ความรู้ทางทฤษฎีควอนตัมฟิสิกส์ และ ฟิสิกส์คำนวณ ในการออกแบบโครงสร้างควอนตัม (Quantum Structures) ของอุปกรณ์ ยิ่งไปกว่านั้น การพัฒนาสารต่างๆ ทั้ง สารกึ่งตัวนำ สารที่ใช้ประโยชน์สมบัติทางกล (เช่น สารที่แข็งอย่างยิ่ง ทนความร้อนอย่างยิ่ง เบาอย่างยิ่ง ลื่นอย่างยิ่ง เป็นต้น) สารที่มีสมบัติพิเศษทางแสง (เช่น Photonic material) เป็นต้น ล้วนต้องใช้ความรู้ทางฟิสิกส์ทฤษฎี ประกอบกับความสามารถเชิงการคำนวณของนักฟิสิกส์คำนวณ เพื่อร่วมกันจำลองสมบัติของสารในอุดมคติ ก่อนที่จะหาแนวทางสร้างสารเหล่านั้น ดังนั้น ศูนย์วิจัยทางฟิสิกส์คำนวณและทฤษฎี จะมีส่วนสำคัญในการรวบรวมนักฟิสิกส์ที่มีศักยภาพ ทั้งที่มีความพร้อมแล้ว และ ต้องการการสนับสนุนช่วยเหลือแต่มีศักยภาพและตั้งใจจริง มารวมกลุ่มกันอย่างเป็นปึกแผ่น รวมพลังเตรียมความพร้อม และร่วมกันศึกษาวิจัยตามโจทย์ปัญหาของประเทศที่เป็นรูปธรรม เพื่อการพัฒนาประเทศ ที่ยั่งยืน ถาวร ต่อไป
-                </p>
-                <p class="text-center">
-                    <img src="../images/cluster5/RCCT2.jpg"><br>
-                    <small>Kavi Institute for Theoretical Physics (KITP) เป็นสถาบันที่มีชื่อเสียงมากในด้านฟิสิกส์คำนวณ ซึ่งก่อตั้งขึ้นในปี 1979 โดย Walter Kohn นักวิทยาศาสตร์ผู้ได้รับรางวัลโนเบล</small>
-                </p>
-                <p>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;นอกจากนั้นแล้ว การรวมตัวของนักวิจัยเป็นปึกแผ่นยังเพิ่มศักยภาพการทำวิจัยให้สามารถศึกษาโจทย์ปัญหาที่ใกล้ตัวมากขึ้น จะช่วยยกระบบบัณฑิตศึกษาทางฟิสิกส์เชิงคำนวณและเชิงทฤษฎีให้มีความน่าสนใจยิ่งขึ้น ความร่วมมือต่างสถาบันจะช่วยให้เกิดการช่วยเหลือกันในรูปกลุ่มวิจัยพี่-น้อง และ มีการใช้ร่วมกันซึ่งความสัมพันธ์กับผู้เชี่ยวชาญระดับโลก ช่วยเหลือสมาชิกอื่นในกลุ่มสร้างเครือข่ายกับผู้เชี่ยวชาญนานาชาติที่ตนมีความสัมพันธ์อยู่ โดยรวมแล้วจะเป็นการยกระดับบัณฑิตศึกษาให้ได้มาตรฐานนานาชาติ
-                </p>
-                <table width="100%" border="0" cellpadding="0" cellspacing="0">
-                    <tr>
-                        <td align="center" width="50%"><img src="../images/cluster5/RCCT3.jpg" width="265" height="248"></td>
-                        <td align="center" width="50%">
-                            <img src="../images/cluster5/RCCT4.jpg" width="265" height="248"> 										</td>
-                    </tr>
-                    <tr>
-                        <td class="text-center" colspan="2">โรงไฟฟ้านิวเคลียร์ซึ่งใช้พลังงานความร้อนที่ได้จากปฏิกิริยาฟิชชันไปผลิตไอน้ำแทนการสันดาบจากเชื้อเพลิงชนิดที่ก่อให้เกิดมลพิษ</td>
-                    </tr>
-                </table>
-                <p>&nbsp;</p>
+                    <?php
+                } elseif ($show_center == 'ThEP') {
+                    ?>
+                    
+                    <h2 class="text-center">โครงการจัดตั้งห้องปฏิบัติการวิจัย</h2>
+                    <h3 class="text-center"></h3>
+                    <img class="img-responsive" style="margin:0 auto;" src="../images/under-construction.jpg">
 
-                <h3>องค์ประกอบของศูนย์วิจัยทางฟิสิกส์คำนวณและทฤษฎี</h3>
-                <ol>
-                    <li>ห้องปฏิบัติการวิจัยฟิสิกส์นิวเคลียร์และอนุภาค (ม.เทคโนโลยีสุรนารี)</li>
-                    <li>ห้องปฏิบัติการวิจัยฟิสิกส์ของสารควบแน่น (ม.เทคโนโลยีสุรนารี)</li>
-                    <li>ห้องปฏิบัติการวิจัยฟิสิกส์สภาวะรุนแรง (จุฬาฯ)</li>
-                    <li>ห้องปฏิบัติการวิจัยการจำลองสถานการณ์มอนติคาร์โลและพลศาสตร์ของโมเลกุลในทางฟิสิกส์ (ม.เชียงใหม่)</li>
-                    <li>ห้องปฏิบัติการวิจัยจักรวาลวิทยา</li>
-                </ol>
-
-                <?php
-            } elseif ($show_center == 'ThEP') {
-                ?>
-                <h2 class="text-center">โครงการจัดตั้งห้องปฏิบัติการวิจัย</h2>
-                <h3 class="text-center"></h3>
-                <img class="img-responsive" style="margin:0 auto;" src="../images/under-construction.jpg">
-
-            <?php } ?>
-        </div>
+                <?php } ?>
+                    
+            </div>
+        </div> <!-- /.row -->
 
         <?php get_includes('footer'); ?>
     </div>
