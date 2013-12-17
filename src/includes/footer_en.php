@@ -32,7 +32,7 @@
 
                 <li>▪ <a href="annual-report_en.php">Annual Report</a></li>
 
-                <li>▪ <a href="#">Publication</a></li>
+                <li>▪ <a href="publication_en.php">Publication</a></li>
 
                 <li>▪ <a href="http://mail.google.com/a/thep-center.org" target="_blank">E-mail</a></li>
 
@@ -96,7 +96,15 @@
     <div class="row">
         <p>&nbsp;</p>
         <div style="text-align: center; padding-right: 20px;">
-            <b>Thailand Center of Excellence in Physics</b> P.O.Box 70 Chiang Mai University, Chiang Mai 50202 Thailand Tel: +66 53 942650-3 FAX : +66 53 222774
+            <b>Thailand Center of Excellence in Physics</b> P.O.Box 70 Chiang Mai University, Chiang Mai 50202 Thailand Tel: +66 53 942650-3 FAX : +66 53 222774 
+<!-- Histats.com  START (hidden counter)-->
+<script type="text/javascript">document.write(unescape("%3Cscript src=%27http://s10.histats.com/js15.js%27 type=%27text/javascript%27%3E%3C/script%3E"));</script>
+<a href="http://www.histats.com" target="_blank" title="free hit counter code" ><script  type="text/javascript" >
+try {Histats.start(1,2537565,4,0,0,0,"");
+Histats.track_hits();} catch(err){};
+</script></a>
+<noscript><a href="http://www.histats.com" target="_blank"><img  src="http://sstatic1.histats.com/0.gif?2537565&101" alt="free hit counter code" border="0"></a></noscript>
+<!-- Histats.com  END  -->
         </div>
         <p>&nbsp;</p>
     </div>

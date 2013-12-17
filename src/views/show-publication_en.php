@@ -16,7 +16,7 @@ $sql = "SELECT * FROM tb_article
 ";
 $result = mysql_query($sql);
 
-doc_head('ผลงานตีพิมพ์ระดับนานาชาติ - ศูนย์ความเป็นเลิศด้านฟิสิกส์');
+doc_head('Publication - Thailand Center of Excellence in Physics');
 ?>       
 </head>
 
@@ -28,12 +28,12 @@ doc_head('ผลงานตีพิมพ์ระดับนานาชา�
         <div class="row">
             <div class="col-md-12">
 
-                <h2 class="text-center header-type">รายชื่อผลงานตีพิมพ์ระดับนานาชาติ</h2>
+                <h2 class="text-center header-type">Publication</h2>
                 <p>&nbsp;</p>
 
                 <?php
                 echo '
-                <h3 align="center">ประจำปี พ.ศ. ' . ($year + 543) . ' (ค.ศ. ' . $year . ')</h3>
+                <h3 style="text-align: center;">Year: ' . $year . '</h3>
                 ';
                 ?>
                 <p>&nbsp;</p>
@@ -82,7 +82,7 @@ doc_head('ผลงานตีพิมพ์ระดับนานาชา�
                     <?php
                 } else {
                     ?>
-                    <p class="text-center"><strong>ขออภัย ไม่พบข้อมูล</strong></p>
+                    <p class="text-center"><strong>Sorry. Data not found.</strong></p>
                     <p>&nbsp;</p>
 
                     <?php
@@ -91,7 +91,7 @@ doc_head('ผลงานตีพิมพ์ระดับนานาชา�
                 mysql_close();
                 ?>
 
-                <p class="text-center"><a href="publication.php?year=<?php echo $year; ?>"> << ย้อนกลับ</a></p>
+                <p class="text-center"><a href="publication_en.php?year=<?php echo $year; ?>"> << Back</a></p>
                 <p>&nbsp;</p>
 
                 <div class="text-center"><a href="#">Up</a></div>
@@ -99,7 +99,7 @@ doc_head('ผลงานตีพิมพ์ระดับนานาชา�
             </div> <!-- /.col-md-12 -->
         </div> <!-- /.row -->
 
-        <?php get_includes('footer'); ?>
+        <?php get_includes('footer_en'); ?>
 
     </div>
 </body>

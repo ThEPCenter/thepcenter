@@ -1,6 +1,6 @@
 <?php
 require_once '../system/system.php';
-doc_head('ผลงานตีพิมพ์ - ศูนย์ความเป็นเลิศด้านฟิสิกส์');
+doc_head('Publication - Thailand Center of Excellence in Physics');
 ?>
 
 </head>
@@ -8,13 +8,13 @@ doc_head('ผลงานตีพิมพ์ - ศูนย์ความเ�
 <body>
     <div class="container">
 
-        <?php get_includes('header'); ?>
+        <?php get_includes('header_en'); ?>
 
         <div class="row">
 
             <div class="col-md-12">
 
-                <h2 class="text-center header-type">รายชื่อผลงานตีพิมพ์ระดับนานาชาติ</h2>
+                <h2 class="text-center header-type">Publication</h2>
                 <p>&nbsp;</p>
 
                 <?php
@@ -23,7 +23,7 @@ doc_head('ผลงานตีพิมพ์ - ศูนย์ความเ�
                     $sql = "SELECT * FROM tb_re_center";
                     $result = mysql_query($sql);
                     echo '
-                <h3 align="center">ประจำปี พ.ศ. ' . ($year + 543) . ' (ค.ศ. ' . $year . ')</h3>
+                <h3 align="center">Year: ' . $year . '</h3>
                 <p>&nbsp;</p>
                             ';
 
@@ -32,7 +32,7 @@ doc_head('ผลงานตีพิมพ์ - ศูนย์ความเ�
                 <table style="width: 350px; margin: 10px auto;">
                     <tr>
                         <td class="text-center" style="background-color: #cccccc; height: 40px; width: 350px;">
-                            <a href="show-publication.php?year=' . $year . '&center=' . $p['re_center_code'] . '&center_name=' . $p['re_center_th'] . '">' . $p['re_center_th'] . ' (' . $p['re_center_code'] . ')</a>
+                            <a href="show-publication_en.php?year=' . $year . '&center=' . $p['re_center_code'] . '&center_name=' . $p['re_center_en'] . '">' . $p['re_center_en'] . ' (' . $p['re_center_code'] . ')</a>
                         </td>
                     </tr>
                 </table>           
@@ -41,7 +41,7 @@ doc_head('ผลงานตีพิมพ์ - ศูนย์ความเ�
                     echo '
                 <p>&nbsp;</p>
         
-                <p align="center"><a href="publication.php"><< ย้อนกลับ</a></p>';
+                <p align="center"><a href="publication_en.php"><< Back</a></p>';
                 } else {
 
                     echo '<div class="text-center">';
@@ -50,7 +50,7 @@ doc_head('ผลงานตีพิมพ์ - ศูนย์ความเ�
                         echo '
                         <table style="width: 250px; margin: 10px auto;">
                             <tr>
-                                <td class="text-center" style="background-color: #cccccc; height: 40px;"><a href="?year=' . $m . '">ประจำปี พ.ศ. ' . ($m + 543) . ' (ค.ศ. ' . $m . ')</a></td>
+                                <td class="text-center" style="background-color: #cccccc; height: 40px;"><a href="?year=' . $m . '">Year: ' . $m . '</a></td>
                             </tr>
                         </table>
                     ';
@@ -71,7 +71,7 @@ doc_head('ผลงานตีพิมพ์ - ศูนย์ความเ�
             ";
                     $result = mysql_query($sql);
                     ?>
-                    <h3>Update ผลงานตีพิมพ์ล่าสุด</h3>
+                    <h3>Update Publication</h3>
                     <table class="table table-bordered">
                         <tr>
                             <td class="text-center"><strong>Title</strong></td>
@@ -111,7 +111,7 @@ doc_head('ผลงานตีพิมพ์ - ศูนย์ความเ�
         </div> <!-- /.row -->
         
         <?php
-        get_includes('footer');
+        get_includes('footer_en');
         ?>
 
     </div> <!-- /.container -->
