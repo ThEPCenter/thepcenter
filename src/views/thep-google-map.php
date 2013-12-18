@@ -32,6 +32,6 @@
         </script>
     </head>
     <body>
-        <div id="map-canvas"<?php  if($_GET['size_map'] != 'full'){ echo ' style="width: 500px; height: 500px;"'; } ?>></div>
+        <div id="map-canvas"<?php /*  if($_GET['size_map'] != 'full'){ echo ' style="width: 500px; height: 500px;"'; } */ ?>></div>
     </body>
 </html>

@@ -11,11 +11,13 @@ doc_head('Executive and Staff');
         <?php get_includes('header_en'); ?>
 
         <div class="row" id="show-personel">
-            <h2 style="text-align: center;">Executive and Staff</h2>
-            
-            <?php
-            // ========= Add personel ====================================
-            $admin_txt = '  
+            <div class="col-md-12">
+
+                <h2 style="text-align: center;">Executive and Staff</h2>
+
+                <?php
+                // ========= Add personel ====================================
+                $admin_txt = '  
                 <p>
                     <a id="add-personel" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-plus"></span> Add</a>
                 </p>
@@ -31,32 +33,33 @@ doc_head('Executive and Staff');
                         });
                 </script>         
                             ';
-            admin($admin_txt);
+                admin($admin_txt);
 
-            // ------------------------------------------------------------
-            $sql = "SELECT * FROM tb_personel ORDER BY code;";
-            $result = mysql_query($sql);
-            ?>
-            <table class="table table-bordered">
-                <?php
-                if (mysql_num_rows($result) > 0) {
-                    while ($p = mysql_fetch_array($result)) {
-                        ?>
-                        <tr>
-                            <td align="center">
-                                <img src="<?php echo $p['photo'] ?>" class="img-responsive" style="width: auto; max-height: 190px;">
-                            </td>
-                            <td>                                            
-                                <p><?php echo $p['title_en'] . ' ' . $p['first_en'] . ' ' . $p['last_en']; ?></p>                                            
-                                <p>Position : <? echo $p['position_en'] ?></p>                                            
-                                <address>
-                                    Tel. : <?php echo $p['phone_en'] ?><br />
-                                    Email: <?php echo $p['email'] ?><br />
-                                </address>
-                                
-                                <?php
-                                // ===================== Edit Personel Data ====================
-                                $admin_txt = '  
+                // ------------------------------------------------------------
+                $sql = "SELECT * FROM tb_personel ORDER BY code;";
+                $result = mysql_query($sql);
+                ?>
+                
+                <table class="table table-bordered">
+                    <?php
+                    if (mysql_num_rows($result) > 0) {
+                        while ($p = mysql_fetch_array($result)) {
+                            ?>
+                            <tr>
+                                <td align="center">
+                                    <img src="<?php echo $p['photo'] ?>" class="img-responsive" style="width: auto; max-height: 190px;">
+                                </td>
+                                <td>                                            
+                                    <p><?php echo $p['title_en'] . ' ' . $p['first_en'] . ' ' . $p['last_en']; ?></p>                                            
+                                    <p>Position : <? echo $p['position_en'] ?></p>                                            
+                                    <address>
+                                        Tel. : <?php echo $p['phone_en'] ?><br />
+                                        Email: <?php echo $p['email'] ?><br />
+                                    </address>
+
+                                    <?php
+                                    // ===================== Edit Personel Data ====================
+                                    $admin_txt = '  
                                 <p>
                                     <a id="edit-personel-' . $p['id'] . '" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-wrench"></span> Edit</a> 
                                 </p>                              
@@ -76,24 +79,25 @@ doc_head('Executive and Staff');
                                 </script> 
                                         ';
 
-                                admin($admin_txt);
-                                // ------------------------------------------------------------------------
-                                
-                                ?>
-                                
-                            </td>                                        
+                                    admin($admin_txt);
+                                    // ------------------------------------------------------------------------
+                                    ?>
+
+                                </td>                                        
+                            </tr>
+                            <?php
+                        } /* END while */
+                    } else {
+                        ?>
+                        <tr>
+                            <td colspan="2" align="center"><b>ขออภัยไม่พบข้อมูล</b></td>
                         </tr>
                         <?php
-                    } /* END while */
-                } else {
+                    }
                     ?>
-                    <tr>
-                        <td colspan="2" align="center"><b>ขออภัยไม่พบข้อมูล</b></td>
-                    </tr>
-                    <?php
-                }
-                ?>
-            </table>
+                </table>
+
+            </div>
         </div>
 
         <?php get_includes('footer_en'); ?>

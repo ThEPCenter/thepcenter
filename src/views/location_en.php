@@ -3,6 +3,28 @@ require_once '../system/system.php';
 doc_head('Location & Map');
 ?>
 
+<style>
+    /* Flexible iFrame */
+
+    .Flexible-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .Flexible-container iframe,   
+    .Flexible-container object,  
+    .Flexible-container embed {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
 </head>
 
 <body>
@@ -11,7 +33,8 @@ doc_head('Location & Map');
         <?php get_includes('header_en'); ?>
 
         <div class="row">
-            <div class="text-center">
+            <div class="col-md-12" style="text-align: center;">
+
                 <h2>Thailand Center of Excellence in Physics - ThEP Center</h2>
                 <p><img src="../images/building.jpg" class="img-responsive" style="width: auto; max-height: 307px; margin: 0 auto;" border="0"></p>
                 <p>&nbsp;</p>
@@ -31,14 +54,23 @@ doc_head('Location & Map');
                 <p>Coordinate : (18.802522, 98.955982)</p>
                 <p><a href="thep-google-map.php?size_map=full&zoom=16" target="_blank"><strong>>> Full Screen <<</strong></a></p>
                 <p>&nbsp;</p>
-                <iframe src="thep-google-map.php" width="500" height="500" frameborder="0"></iframe>
+
+                <div class="row">
+                    <div class="col-sm-2 col-md-2"></div>
+                    <div class="col-sm-8 col-md-8" style="text-align: center;">
+                        <div class="Flexible-container">
+                            <iframe src="thep-google-map.php" frameborder="0" scrolling="no"></iframe>
+                        </div>                            
+                    </div>
+                    <div class="col-sm-2 col-md-2"></div>
+                </div>
+
             </div>
-        </div>
+        </div> <!-- /.row -->
 
         <?php get_includes('footer_en'); ?>
 
-    </div>
-    <!-- /.container -->
+    </div> <!-- /.container -->
 
     <?php get_includes('bootstrap-core'); ?>
 </body>
