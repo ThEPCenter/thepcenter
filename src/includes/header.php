@@ -10,7 +10,10 @@
 
 <div class="row">
     <div class="col-xs-6 col-sm-6 col-md-6"><a href="home.php">หน้าหลัก</a></div>
-    <div class="col-xs-6 col-sm-6 col-md-6 text-right" style="padding-right: 20px;"><?php login('<strong>สวัสดี ' . $_SESSION['login'] . '</strong> | <a href="logout.php">Logout</a>'); ?> <img title="เว็บฉบับภาษาไทย" style="width: 30px;" src="../images/thailand-flag.gif"> <a title="English version" href="home_en.php"><img style="width: 30px;" src="../images/en_ver.gif"></a></div>
+    <div class="col-xs-6 col-sm-6 col-md-6 text-right" style="padding-right: 20px;">
+        <?php login('<span style="background-color: #e7e3b1;"><strong>&nbsp;สวัสดี <span style="color: #cc3000;">' . $_SESSION['login'] . '</span></strong> [ <a href="gallery.php">Gallery</a> | <a href="#">Upload</a> | <a href="logout.php">Logout</a> ] </span>&nbsp;'); ?> 
+        <img title="เว็บฉบับภาษาไทย" style="width: 30px;" src="../images/thailand-flag.gif"> 
+        <a title="English version" href="home_en.php"><img style="width: 30px;" src="../images/en_ver.gif"></a></div>
 </div>
 
 <!-- /#header -->
