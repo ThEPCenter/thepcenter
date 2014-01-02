@@ -39,27 +39,28 @@ doc_head('Executive and Staff');
                 $sql = "SELECT * FROM tb_personel ORDER BY code;";
                 $result = mysql_query($sql);
                 ?>
-                
+
                 <table class="table table-bordered">
                     <?php
                     if (mysql_num_rows($result) > 0) {
                         while ($p = mysql_fetch_array($result)) {
-                            ?>
-                            <tr>
-                                <td align="center">
-                                    <img src="<?php echo $p['photo'] ?>" class="img-responsive" style="width: auto; max-height: 190px;">
-                                </td>
-                                <td>                                            
-                                    <p><?php echo $p['title_en'] . ' ' . $p['first_en'] . ' ' . $p['last_en']; ?></p>                                            
-                                    <p>Position : <? echo $p['position_en'] ?></p>                                            
-                                    <address>
-                                        Tel. : <?php echo $p['phone_en'] ?><br />
-                                        Email: <?php echo $p['email'] ?><br />
-                                    </address>
+                            if ($p['code'] > 0) {
+                                ?>
+                                <tr>
+                                    <td align="center">
+                                        <img src="<?php echo $p['photo'] ?>" class="img-responsive" style="width: auto; max-height: 190px;">
+                                    </td>
+                                    <td>                                            
+                                        <p><?php echo $p['title_en'] . ' ' . $p['first_en'] . ' ' . $p['last_en']; ?></p>                                            
+                                        <p>Position : <? echo $p['position_en'] ?></p>                                            
+                                        <address>
+                                            Tel. : <?php echo $p['phone_en'] ?><br />
+                                            Email: <?php echo $p['email'] ?><br />
+                                        </address>
 
-                                    <?php
-                                    // ===================== Edit Personel Data ====================
-                                    $admin_txt = '  
+                                        <?php
+                                        // ===================== Edit Personel Data ====================
+                                        $admin_txt = '  
                                 <p>
                                     <a id="edit-personel-' . $p['id'] . '" style="cursor: pointer; font-weight: bold;"><span class="glyphicon glyphicon-wrench"></span> Edit</a> 
                                 </p>                              
@@ -79,13 +80,14 @@ doc_head('Executive and Staff');
                                 </script> 
                                         ';
 
-                                    admin($admin_txt);
-                                    // ------------------------------------------------------------------------
-                                    ?>
+                                        admin($admin_txt);
+                                        // ------------------------------------------------------------------------
+                                        ?>
 
-                                </td>                                        
-                            </tr>
-                            <?php
+                                    </td>                                        
+                                </tr>
+                                <?php
+                            } /* END if */
                         } /* END while */
                     } else {
                         ?>
