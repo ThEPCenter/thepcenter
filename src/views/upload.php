@@ -18,9 +18,17 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             <?php
             // =========== Error ==============
             if (isset($_GET['upload_error'])) {
-                echo '	
+                if ($_GET['upload_error'] == 'name_dup') {
+                    echo '	
+                <h3 style="text-align: center;">เกิดข้อผิดพลาด : ' . $_GET['name_2'] . ' <span style="color: red;">ชื่อซ้ำ</span></h3>
+                <p>&nbsp;</p>
+                ';
+                } else {
+                    echo '	
                 <h3 style="text-align: center;">เกิดข้อผิดพลาด : ชื่อไฟล์ต้องเป็น อักษรโรมัน (A-Z, a-z) หรือ ตัวเลข (0-9) หริอ  ขีดล่าง ( _ ) หรือ ขีดกลาง (-) หรือ จุด (.) หรือ วงเล็บ ( ( หรือ ) )  เท่านั้น</h3>
-                <p>&nbsp;</p>				';
+                <p>&nbsp;</p>
+                ';
+                }
             }
             ?>
 
@@ -67,7 +75,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             ?>
 
             <div class="col-md-12">
-                <h2 class="text-center">Upload File</h2>
+                <h2 class="text-center header-type">Upload File</h2>
                 <form role="form" name="form1" method="post" action="../controllers/upload-file.php" enctype="multipart/form-data">
                     <div class="form-group">
                         <label>เลือกไฟล์</label>

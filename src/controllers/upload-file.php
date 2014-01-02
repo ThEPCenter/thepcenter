@@ -51,20 +51,31 @@ if ($_POST) {
             }
         } // END if(isset($_POST['checkbox']))
         // Define New name
-        if (isset($_POST['newname'])) {
+        if (!empty($_POST['newname'])) {
             $new_name = htmlspecialchars($_POST['newname'], ENT_QUOTES);
         } else {
-            $new_name = htmlspecialchars($_FILES['upload']['name'], ENT_QUOTES);
+            $new_name = $file_name;
         }
 
         //check  RegEx 
-        $pattern = "/^[a-zA-Z0-9_\)\.\(\-]/";
-        $name = strtolower($new_name);
-        $str_ext = '.' . get_file_type($name);
-        $name_only_length = strlen($name) - strlen($str_ext);
-        $name_only = substr($name, 0, $name_only_length);
+        $pattern = "/^[a-zA-Z0-9_\)\.\(\-]+\.[a-zA-Z0-9]{2,}$/";
 
-        if (!preg_match($pattern, $name_only)) {
+        /*
+          $name = strtolower($new_name);
+          $str_ext = '.' . get_file_type($name);
+          $name_only_length = strlen($name) - strlen($str_ext);
+          $name_only = substr($name, 0, $name_only_length);
+         */
+
+        if (preg_match($pattern, $new_name)) {
+            $sql = "SELECT * FROM tb_upload WHERE name = '$new_name';";
+            $result = mysql_query($sql);
+
+            if (mysql_num_rows($result) == 1) {
+                echo '<script>window.location = "../views/upload.php?upload_error=name_dup&name_2='. $new_name .'";</script>';
+                exit();
+            }
+        } else {
             echo '<script>window.location = "../views/upload.php?upload_error=name_error";</script>';
             exit();
         }
