@@ -231,7 +231,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                         <a target="_blank" href="http://www.physics.science.cmu.ac.th">ภาควิชาฟิสิกส์และวัสดุศาสตร์ มหาวิทยาลัยเชียงใหม่</a>
                     </div>
                     <div class="col-sm-5 col-md-5">
-                        <a target="_blank" href="http://www.physics.science.cmu.ac.th">http://www.phys.sc.chula.ac.th</a>
+                        <a target="_blank" href="http://www.physics.science.cmu.ac.th">http://www.physics.science.cmu.ac.th</a>
                     </div>
                 </div>
 
