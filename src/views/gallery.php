@@ -42,7 +42,7 @@ doc_head('Gallery');
                             height: 195px;">
                             </a>    
                         </div>
-                        <p>' . $p['caption'] . '<br>
+                        <p>' . $p['name'] . '<br>
                             <a href="edit-picture.php?edit_id=' . $p['id'] . '">Edit Picture</a>
                         </p>
                     </div>
