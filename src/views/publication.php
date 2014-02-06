@@ -3,7 +3,7 @@ require_once '../system/system.php';
 
 if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
     $field_search = $_POST['field_search'];
-    $kw = $_POST['keyword'];
+    $kw = htmlspecialchars($_POST['keyword'], ENT_QUOTES);
     $kw_ori = $kw;
     $match = $_POST['match'];
 
@@ -149,7 +149,7 @@ doc_head('ผลงานตีพิมพ์ - ศูนย์ความเ�
                 <?php
                 if (isset($result) && mysql_num_rows($result) > 0 && !isset($_GET['year'])) {
                     ?>
-                    <h3>ผลงานการค้นหา =>
+                    <h3>ผลการค้นหา =>
 
                         <?php
                         if ($field_search == "name") {
@@ -201,7 +201,7 @@ doc_head('ผลงานตีพิมพ์ - ศูนย์ความเ�
 
                     <?php } elseif (isset($result) && mysql_num_rows($result) == 0 && !isset($_GET['year'])) {
                         ?>
-                    <h3>ผลงานการค้นหา => ขออภัยไม่พบข้อมูล <?php
+                    <h3>ผลการค้นหา => ขออภัยไม่พบข้อมูล <?php
                         if ($field_search == "name") {
                             echo "title";
                         } else {
