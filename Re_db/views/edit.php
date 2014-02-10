@@ -110,7 +110,7 @@ if (isset($_POST['a_id'])) {
         @mysql_query($sql) or die('Error: ' . mysql_error());        
         
         // Rename file        
-        $controll->rename_old($id, $year);
+        // $controll->rename_old($id, $year);
         
         header("Refresh: 1; url=show.php?page=$get_page#$id");
         echo "Data Updated ...";

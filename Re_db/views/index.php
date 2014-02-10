@@ -5,8 +5,8 @@ $pathf = new config();
 
 if ($_POST) {
     $username = mysql_real_escape_string($_POST['username']);
-    $password = mysql_real_escape_string($_POST['password']);
-
+    $password = sha1(mysql_real_escape_string($_POST['password']));
+    
     $sql = "SELECT * FROM tb_user WHERE username = '$username' AND password = '$password';";
     $result = mysql_query($sql);
     if (mysql_num_rows($result) == 1) {

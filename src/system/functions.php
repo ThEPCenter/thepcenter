@@ -175,37 +175,41 @@ window.location = " ' . $location . ' ";
 function login_header($location) {
     if (isset($_SESSION['login'])) {
         header_redirect($location);
-        exit();
     }
 }
 
 function notlogin_header($location) {
     if (!isset($_SESSION['login'])) {
-        header_redirect($location);
-        exit();
+        header_redirect($location); 
     }
 }
 
 function is_login_header($location_1, $location_2) {
     if (isset($_SESSION['login'])) {
-        login_header($location_1);
+        header_redirect($location_1);
     } else {
-        login_header($location_2);
+        header_redirect($location_2);
     }
 }
 
 function login_js($location) {
     if (isset($_SESSION['login'])) {
         js_redirect($location);
-        exit();
     }
 }
 
 function notlogin_js($location) {
     if (!isset($_SESSION['login'])) {
         js_redirect($location);
-        exit();
     }
+}
+
+function is_login_js($location_1, $location_2) {
+	 if (isset($_SESSION['login'])) {
+        js_redirect($location_1);
+    }else{
+		js_redirect($location_2);
+	}
 }
 
 // ============= News ===================
