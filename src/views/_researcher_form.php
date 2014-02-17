@@ -16,7 +16,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
         <div class="row">
 
-            <div class="col-md-12">
+            <div class="col-md-12" style="background-color: #e7e3b1;">
 
                 <h2 class="text-center header-type">Add Researcher Data</h2>
                 <form class="form-horizontal" role="form" name="form1" method="post" action="">
