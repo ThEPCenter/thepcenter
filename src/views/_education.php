@@ -48,12 +48,21 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                     </div>
 
                     <div class="form-group">
-                        <label  class="col-sm-2 control-label" for="grad_year_1">Year Complete </label>
-                        <div class="col-sm-2">
-                            <input class="form-control" type="text" name="grad_year" id="grad_year" placeholder="">
-                        </div>
-                    </div>
+                        <label  class="col-sm-2 control-label" for="grad_year">Year Complete </label>
 
+
+                        <div class="col-sm-3">
+                            <select class="form-control" name="grad_year" id="grad_year">
+                                <option value="">Year</option>
+                                <?php
+                                for ($i = 1960; $i <= date("Y"); $i++) {
+                                    echo '<option value=' . $i . '>' . $i . '</option>';
+                                }
+                                ?>
+                            </select>
+                        </div>
+
+                    </diV>
                     <div class="form-group">
                         <label  class="col-sm-2 control-label" for="grad_university">University/Institue </label>
                         <div class="col-sm-5">
