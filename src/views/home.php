@@ -43,21 +43,25 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
     $(document).ready(function() {
         // $('.fancybox').fancybox();
 <?php
-/*
- 
 if ($_SESSION['fancy'] == "first") {
-    echo '$.fancybox.open("../../upload02/king.jpg");';
+    // echo '$.fancybox.open("../../upload02/king.jpg");';
+    echo '$.fancybox.open("../../upload02/fancybox_image/poster2-sattellite_meeting.jpg")';
     unset($_SESSION['fancy']);
 }
- 
-*/
 ?>
+
+        $(".fancybox-wrap").click(function() {
+            window.open("../../upload02/fancybox_image/poster2-sattellite_meeting.jpg");
+        });
     });
 </script>
 
 <style type="text/css">
     .fancybox-custom .fancybox-skin {
         box-shadow: 0 0 50px #222;
+    }
+    .fancybox-wrap {
+        cursor: pointer;
     }
 </style>
 
