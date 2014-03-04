@@ -45,13 +45,13 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 <?php
 if ($_SESSION['fancy'] == "first") {
     // echo '$.fancybox.open("../../upload02/king.jpg");';
-    echo '$.fancybox.open("../../upload02/fancybox_image/poster2-sattellite_meeting.jpg")';
+    echo '$.fancybox.open("../../upload02/fancybox_image/poster_satellite_meeting.jpg");';
     unset($_SESSION['fancy']);
 }
 ?>
 
         $(".fancybox-wrap").click(function() {
-            window.open("../../upload02/fancybox_image/poster2-sattellite_meeting.jpg");
+            window.open("satellite_meeting.php");
         });
     });
 </script>
