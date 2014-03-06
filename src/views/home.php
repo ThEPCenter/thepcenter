@@ -218,14 +218,15 @@ if ($_SESSION['fancy'] == "first") {
                         <img class="fetured-image" src="../../upload02/notice/microwave_590.jpg" alt="Featured image">
                     </a>
                 </div>
-                
-                <p>&nbsp;</p>
+                <h3><a class="header-title" href="microwave_workshop.php">การอบรมเชิงปฏิบัติการ เครื่องอบไมโครเวฟสำหรับผลิตผลทางการเกษตร</a></h3>            
+               
 
-                <div class="featured-image-box">                    
+                <div class="featured-image-box" style="margin-top: 15px;">                    
                     <a href="kek_3.php" title="The 3rd Particle Physics School in South East Asia">
                         <img class="fetured-image" src="../../upload02/notice/kek3_354.jpg" alt="Featured image">
                     </a>
                 </div>
+                <h3><a class="header-title" href="kek_3.php">The 3rd Particle Physics School in South East Asia</a></h3>            
 
             </div>
 
