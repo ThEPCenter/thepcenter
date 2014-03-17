@@ -222,12 +222,21 @@ if ($_SESSION['fancy'] == "first") {
                
 
                 <div class="featured-image-box" style="margin-top: 15px;">                    
+                    <a href="spc2014.php" title="การประชุมวิชาการสมาคมฟิสิกส์ไทย ครั้งที่ 9 ประจำปี 2557">
+                        <img class="fetured-image" src="../../upload02/spc2014/spc2014_profile.png" alt="Featured image">
+                    </a>
+                </div>
+                <h3><a class="header-title" href="spc2014.php">การประชุมวิชาการสมาคมฟิสิกส์ไทย ครั้งที่ 9 ประจำปี 2557</a></h3>
+                
+                <!--
+                <div class="featured-image-box" style="margin-top: 15px;">                    
                     <a href="kek_3.php" title="The 3rd Particle Physics School in South East Asia">
                         <img class="fetured-image" src="../../upload02/notice/kek3_354.jpg" alt="Featured image">
                     </a>
                 </div>
                 <h3><a class="header-title" href="kek_3.php">The 3rd Particle Physics School in South East Asia</a></h3>            
-
+                -->
+                
             </div>
 
             <!--

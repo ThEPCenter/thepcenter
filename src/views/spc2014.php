@@ -34,7 +34,11 @@ High-Speed Physics เพื่อสื่อถึงองค์ความ�
                 <p>&nbsp;</p>
 
                 <h3>Important Dates:</h3>
-                <p><strong>Abstract Submission Deadline:</strong> <span style="color: red;">January 31, 2014</span></p>
+                <p>
+                    <strong>Abstract Submission Deadline:</strong> 
+                    <span style="color: red; text-decoration:line-through;">January 31, 2014</span>
+                    The Abstract Submission Deadline is really last extended to <span style="color: red;">February 23, 2014</span>.
+                </p>
                 <p>&nbsp;</p>
 
                 <h3>ค่าลงทะเบียนการประชุม</h3>
