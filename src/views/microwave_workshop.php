@@ -14,7 +14,7 @@ doc_head('การอบรมเชิงปฏิบัติการ "เ�
 
             <div class="col-md-12">
 
-                <img class="img-responsive" style="margin:0 auto;" src="../../upload02/notice/microwave_edit_140317_1200web.jpg">
+                <img class="img-responsive" style="margin:0 auto;" src="../../upload02/notice/microwave_140321_1200_web.jpg">
 
                 <p>&nbsp;</p>
                 <p>

@@ -45,13 +45,13 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 <?php
 if ($_SESSION['fancy'] == "first") {
     // echo '$.fancybox.open("../../upload02/king.jpg");';
-    echo '$.fancybox.open("../../upload02/fancybox_image/poster_satellite_meeting.jpg");';
+    echo '$.fancybox.open("../../upload02/notice/microwave_140321_1200_web.jpg");';
     unset($_SESSION['fancy']);
 }
 ?>
 
         $(".fancybox-wrap").click(function() {
-            window.open("satellite_meeting.php");
+            window.open("microwave_workshop.php");
         });
     });
 </script>
