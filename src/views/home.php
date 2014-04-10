@@ -45,13 +45,13 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 <?php
 if ($_SESSION['fancy'] == "first") {
     // echo '$.fancybox.open("../../upload02/king.jpg");';
-    echo '$.fancybox.open("../../upload02/notice/microwave_140321_1200_web.jpg");';
+    // echo '$.fancybox.open("../../upload02/notice/microwave_140321_1200_web.jpg");';
     unset($_SESSION['fancy']);
 }
 ?>
 
         $(".fancybox-wrap").click(function() {
-            window.open("microwave_workshop.php");
+            // window.open("microwave_workshop.php");
         });
     });
 </script>
@@ -212,7 +212,8 @@ if ($_SESSION['fancy'] == "first") {
 
             <div class="col-sm-6 col-md-3 ">
                 <h2 class="text-center"><a class="header-type">ประกาศ</a></h2>
-
+                
+                <!--
                 <div class="featured-image-box">                    
                     <a href="microwave_workshop.php" title="การอบรมเชิงปฏิบัติการ เครื่องอบไมโครเวฟสำหรับผลิตผลทางการเกษตร">
                         <img class="fetured-image" src="../../upload02/notice/microwave_590.jpg" alt="Featured image">
@@ -225,7 +226,8 @@ if ($_SESSION['fancy'] == "first") {
                             ... อ่านต่อ
                     </a>
                 </P>
-
+                -->
+                
                 <!--
                 <div class="featured-image-box" style="margin-top: 15px;">                    
                     <a href="spc2014.php" title="การประชุมวิชาการสมาคมฟิสิกส์ไทย ครั้งที่ 9 ประจำปี 2557">
