@@ -284,7 +284,7 @@ if ($_SESSION['fancy'] == "first") {
 
             <div class="col-xs-6 col-sm-2 col-md-2">
                 <a title="ศูนย์วิจัยทางนาโนสเกลฟิสิกส์" href="research-center.php?show_center=NSP">
-                    <img style="margin: 0 auto; border: 1px solid #666666;" class="img-responsive" src="../images/center/NSP_red_oled_592.jpg">
+                    <img style="margin: 0 auto; border: 1px solid #666666;" class="img-responsive" src="../images/center/NSP_red_oled_300.jpg">
                     <p style="font-size: 90%;">ศูนย์วิจัยทางนาโนสเกลฟิสิกส์</p>
                 </a>
             </div>
