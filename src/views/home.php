@@ -78,7 +78,10 @@ if ($_SESSION['fancy'] == "first") {
 
         <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-6">จำนวนผู้เข้าชม: <?php echo $counter; ?> ครั้ง</div>
-            <div class="col-xs-6 col-sm-6 col-md-6 text-right" style="padding-right: 20px;"><?php login('<span style="background-color: #e7e3b1;"><strong>&nbsp;สวัสดี <span style="color: #cc3000;">' . $_SESSION['login'] . '</span></strong> [ <a href="gallery.php">Gallery</a> | <a href="upload.php">Upload</a> | <a href="logout.php">Logout</a> ] </span>&nbsp;'); ?> <img title="เว็บฉบับภาษาไทย" style="width: 30px;" src="../images/thailand-flag.gif"> <a title="English version" href="home_en.php"><img style="width: 30px;" src="../images/en_ver.gif"></a></div>
+            <div class="col-xs-6 col-sm-6 col-md-6 text-right" style="padding-right: 20px;">
+            <?php
+            if (isset($_SESSION['login'])): $login_name = $_SESSION['login']; else : $login_name = ''; endif;
+            login('<span style="background-color: #e7e3b1;"><strong>&nbsp;สวัสดี <span style="color: #cc3000;">' . $login_name . '</span></strong> [ <a href="gallery.php">Gallery</a> | <a href="upload.php">Upload</a> | <a href="logout.php">Logout</a> ] </span>&nbsp;'); ?> <img title="เว็บฉบับภาษาไทย" style="width: 30px;" src="../images/thailand-flag.gif"> <a title="English version" href="home_en.php"><img style="width: 30px;" src="../images/en_ver.gif"></a></div>
         </div>
 
         <!-- /#header -->
@@ -212,24 +215,24 @@ if ($_SESSION['fancy'] == "first") {
 
             <div class="col-sm-6 col-md-3 ">
                 <h2 class="text-center"><a class="header-type">ประกาศ</a></h2>
-                
-                <!--
+
+
                 <div class="featured-image-box">                    
-                    <a href="vacuum_deposition.php" title="โครงการอบรมและถ่ายทอดเทคโนโลยี เรื่อง การปรับปรุงผิวโลหะแผ่นเรียบด้วยเทคนิคการเคลือบในสุญญากาศ">
-                        <img class="fetured-image" src="../../upload02/notice/vacuum_feature_590.jpg" alt="Featured image">
+                    <a href="intensive-college-2014.php" title="ค่ายฝึกอบรมแบบเข้ม โครงสร้างเชิงทฤษฎีในวิชาฟิสิกส์ขั้นต้น รุ่นที่ ๑">
+                        <img class="fetured-image" src="../../upload02/notice/Intensive-College_590.jpg" alt="Featured image">
                     </a>
                 </div>
-                <h3><a class="header-title" href="vacuum_deposition.php">โครงการอบรมและถ่ายทอดเทคโนโลยี เรื่อง การปรับปรุงผิวโลหะแผ่นเรียบด้วยเทคนิคการเคลือบในสุญญากาศ</a></h3>            
+                <h3><a class="header-title" href="intensive-college-2014.php">ค่ายฝึกอบรมแบบเข้ม “โครงสร้างเชิงทฤษฎีในวิชาฟิสิกส์ขั้นต้น” รุ่นที่ ๑</a></h3>            
                 <P>
-                    ห้องปฏิบัติการวิจัยเทคโนโลยีสุญญากาศและฟิล์มบาง ภาควิชาฟิสิกส์ คณะวิทยาศาสตร์ มหาวิทยาลัยบูรพา และ 
-                    ห้องปฏิบัติการวิจัยพลาสมาสำหรับวิทยาศาสตร์พื้นผิว ศูนย์ความเป็นเลิศด้านฟิสิกส์ (ThEP) สกอ. 
-                    จัดโครงการอบรมและถ่ายทอดเทคโนโลยี  
-                    <a href="vacuum_deposition.php" title="โครงการอบรมและถ่ายทอดเทคโนโลยี เรื่อง การปรับปรุงผิวโลหะแผ่นเรียบด้วยเทคนิคการเคลือบในสุญญากาศ">
-                            ... อ่านต่อ
+                    เป็นโครงการเข้าค่ายแบบเข้มข้น 6 วัน ทั้งภาคทฤษฎีและการทดลอง 
+                    รับสมัครครู อาจารย์ และผู้สอนวิชาฟิสิกส์ระดับมัธยมศึกษาและอุดมศึกษา จำนวนจำกัดเพียง 24 ท่านเท่านั้น 
+                    เพื่อเจาะลึกถึงโครงสร้างเชิงทฤษฎีสำหรับวิชาฟิสิกส์ ให้เห็นถึงแก่น ถึงรากเหง้า  
+                    <a href="intensive-college-2014.php" title="ค่ายฝึกอบรมแบบเข้ม โครงสร้างเชิงทฤษฎีในวิชาฟิสิกส์ขั้นต้น รุ่นที่ ๑">
+                        ... อ่านต่อ
                     </a>
                 </P>
-                -->
-                
+
+
                 <!--
                 <div class="featured-image-box" style="margin-top: 15px;">                    
                     <a href="spc2014.php" title="การประชุมวิชาการสมาคมฟิสิกส์ไทย ครั้งที่ 9 ประจำปี 2557">

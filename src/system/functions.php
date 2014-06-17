@@ -136,7 +136,8 @@ function login($output, $not_login = '') {
 }
 
 function user_property($property) {
-    $sql = "SELECT * FROM tb_new_user WHERE username = '{$_SESSION['login']}';";
+    if (isset($_SESSION['login'])): $login_name = $_SESSION['login']; else : $login_name = ''; endif;
+    $sql = "SELECT * FROM tb_new_user WHERE username = '{$login_name}';";
     $result = mysql_query($sql);
     if (!empty($result)) {
         $u = mysql_fetch_array($result);
