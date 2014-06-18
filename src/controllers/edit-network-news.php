@@ -118,7 +118,7 @@ $p = mysql_fetch_array($result);
         <?php
         if ($p['new'] == 'y') {
             $chk = ' checked';
-        }
+        } else { $chk = ''; }
         ?>
         <div class="checkbox">
             <label>

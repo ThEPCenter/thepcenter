@@ -1,6 +1,7 @@
 <?php
 require_once '../system/system.php';
 doc_head('ข่าวพิเศษ');
+$news_type = 'special';
 ?>
 <style>
     p span {
@@ -28,7 +29,7 @@ doc_head('ข่าวพิเศษ');
                 if ($p['type'] != 'special') {
                     echo '
                     <script>
-                        window.location = \'special-news.php\';
+                        window.location = "special-news.php";
                     </script>     
                     ';
                     exit();

@@ -56,7 +56,7 @@ doc_head('ข่าวกิจกรรม');
         <?php get_includes('header'); ?>
         <div class="row"  id="show-news">
             <?php
-            if ($_GET['news_id']) {
+            if (isset($_GET['news_id'])) {
                 $news_id = $_GET['news_id'];
                 $sql = "SELECT * FROM tb_news WHERE id = $news_id;";
                 $result = mysql_query($sql);
@@ -86,7 +86,7 @@ doc_head('ข่าวกิจกรรม');
                             ';
                     admin($admin_txt);
                     // -------------------------------------------------------------------
-                    
+
                     echo '                            
             <div id="news-' . $n['id'] . '">
                 <h2>' . htmlspecialchars_decode($n['title']) . '</h2>
@@ -179,7 +179,7 @@ doc_head('ข่าวกิจกรรม');
                        ';
                 admin($admin_txt);
                 // -----------------------------------------------------------------
-                
+
                 $sql_act = "SELECT * FROM tb_news 
                 WHERE type = 'activity' 
                 ORDER BY date DESC;
@@ -190,6 +190,8 @@ doc_head('ข่าวกิจกรรม');
                 <table class="table">
                     <?php
                     if (!empty($re_act)) {
+                        $no_p = mysql_num_rows($re_act);
+                        $i = 0;
                         while ($a = mysql_fetch_array($re_act)) {
                             echo '                            
                                 <tr>
