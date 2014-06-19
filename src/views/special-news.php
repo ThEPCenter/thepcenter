@@ -104,7 +104,7 @@ $news_type = 'special';
                         $(function(){         
                             $("#add-news").click(function(){
                                 $(document).ajaxStart(function(){
-                                    $("#show-news").html("<div class=\"span12 text-center\" ><img src="../images/demo_wait.gif"></div>");
+                                    $("#show-news").html("<div class=\"span12 text-center\" ><img src=\"../images/demo_wait.gif\"></div>");
                                 });
                                 $.get("' . controller('add-news') . '", {add_news: "' . $news_type . '"}, 
                                 function(data){ $("#show-news").html(data); }
