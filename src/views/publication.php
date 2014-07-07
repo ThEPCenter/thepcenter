@@ -130,8 +130,7 @@ doc_head('ผลงานตีพิมพ์ - ศูนย์ความเ�
                             for ($n = $thisYear; $n >= 2009; $n--) {
                                 echo '
                                     <option value="' . $n . '">' . $n . '</option>
-                                '
-                                ;
+                                ';
                             }
                             ?>
                         </select>
@@ -144,7 +143,7 @@ doc_head('ผลงานตีพิมพ์ - ศูนย์ความเ�
                 </div>
             <?php } ?>
 
-            <!-- ========= Publication Update ========== -->
+            <!-- ========= Search Result ========== -->
             <div class="col-md-12">
                 <?php
                 if (isset($result) && mysql_num_rows($result) > 0 && !isset($_GET['year'])) {
@@ -199,8 +198,8 @@ doc_head('ผลงานตีพิมพ์ - ศูนย์ความเ�
                     </table>
                     <p><a href="publication.php"><b><< ย้อนกลับ</b></a></p>
 
-                    <?php } elseif (isset($result) && mysql_num_rows($result) == 0 && !isset($_GET['year'])) {
-                        ?>
+                <?php } elseif (isset($result) && mysql_num_rows($result) == 0 && !isset($_GET['year'])) {
+                    ?>
                     <h3>ผลการค้นหา => ขออภัยไม่พบข้อมูล <?php
                         if ($field_search == "name") {
                             echo "title";
@@ -220,6 +219,14 @@ doc_head('ผลงานตีพิมพ์ - ศูนย์ความเ�
                 } elseif (!isset($_GET['year'])) {
                     ?>
 
+
+                <?php } ?>
+
+            </div>
+
+            <!-- ========= Publication Update ========== -->
+            <?php if (empty($_GET['year'])) : ?>
+                <div class="col-md-12">
                     <?php
                     $sql = "SELECT * FROM tb_article
                 ORDER BY year DESC, impact DESC
@@ -257,20 +264,17 @@ doc_head('ผลงานตีพิมพ์ - ศูนย์ความเ�
                         } // END WHILE
                         ?>
                     </table>
-<? } ?>
-
-            </div>
-
-
+                </div>
+            <?php endif; ?>            
 
         </div> <!-- /.row -->
 
-    <?php
-    get_includes('footer');
-    ?>
+        <?php
+        get_includes('footer');
+        ?>
 
     </div> <!-- /.container -->
 
-<?php get_includes('bootstrap-core'); ?>
+    <?php get_includes('bootstrap-core'); ?>
 </body>
 </html>
