@@ -216,7 +216,7 @@ if ($_SESSION['fancy'] == "first") {
             <div class="col-sm-6 col-md-3 ">
                 <h2 class="text-center"><a class="header-type">ประกาศ</a></h2>
 
-
+                 <!--
                 <div class="featured-image-box">                    
                     <a href="intensive-college-2014.php" title="ค่ายฝึกอบรมแบบเข้ม โครงสร้างเชิงทฤษฎีในวิชาฟิสิกส์ขั้นต้น รุ่นที่ 1">
                         <img class="fetured-image" src="../../upload02/notice/Intensive-College_590.jpg" alt="Featured image">
@@ -231,7 +231,7 @@ if ($_SESSION['fancy'] == "first") {
                         ... อ่านต่อ
                     </a>
                 </P>
-
+                -->
 
                 <!--
                 <div class="featured-image-box" style="margin-top: 15px;">                    

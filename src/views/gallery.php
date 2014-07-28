@@ -21,7 +21,7 @@ doc_head('Gallery');
             $g = mysql_fetch_array($result);
 
 
-            $sql_p = "SELECT * FROM tb_picture WHERE gallery_id = {$g['id']};";
+            $sql_p = "SELECT * FROM tb_picture WHERE gallery_id = {$g['id']} ORDER BY id ASC;";
             $re_p = mysql_query($sql_p);
             $pic_no = mysql_num_rows($re_p);
             ?>

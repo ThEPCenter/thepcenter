@@ -100,7 +100,7 @@ doc_head('ข่าวกิจกรรม');
                     <div>
                         <div class="image-set">
                             <?php
-                            $sql_p = "SELECT * FROM tb_picture WHERE gallery_id = {$n['gallery_id']};";
+                            $sql_p = "SELECT * FROM tb_picture WHERE gallery_id = {$n['gallery_id']} ORDER BY id ASC;";
                             $result_p = mysql_query($sql_p);
                             if (!empty($result_p)) {
                                 $no_p = mysql_num_rows($result_p);
