@@ -17,6 +17,7 @@ if ($nums == 0) {
     $_SESSION['fancy'] = "first";
 } else {
     unset($_SESSION['fancy']);
+    $_SESSION['fancy'] = 'second';
 }
 $countershow = "SELECT id FROM counter ORDER BY id DESC"; // Show All
 $result = mysql_query($countershow) or die(mysql_error());
@@ -44,7 +45,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
         // $('.fancybox').fancybox();
 <?php
 if ($_SESSION['fancy'] == "first") {
-    // echo '$.fancybox.open("../../upload02/king.jpg");';
+    echo '$.fancybox.open("../../upload02/queen_2014.jpg");';
     // echo '$.fancybox.open("../../upload02/notice/microwave_140321_1200_web.jpg");';
     unset($_SESSION['fancy']);
 }
@@ -53,7 +54,23 @@ if ($_SESSION['fancy'] == "first") {
         $(".fancybox-wrap").click(function() {
             // window.open("microwave_workshop.php");
         });
+
+        // Clip
+        $(".various").fancybox({
+            maxWidth: 800,
+            maxHeight: 600,
+            fitToView: false,
+            width: '70%',
+            height: '70%',
+            autoSize: false,
+            closeClick: false,
+            openEffect: 'none',
+            closeEffect: 'none'
+        });
+
     });
+
+
 </script>
 
 <style type="text/css">
@@ -79,9 +96,12 @@ if ($_SESSION['fancy'] == "first") {
         <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-6">จำนวนผู้เข้าชม: <?php echo $counter; ?> ครั้ง</div>
             <div class="col-xs-6 col-sm-6 col-md-6 text-right" style="padding-right: 20px;">
-            <?php
-            if (isset($_SESSION['login'])): $login_name = $_SESSION['login']; else : $login_name = ''; endif;
-            login('<span style="background-color: #e7e3b1;"><strong>&nbsp;สวัสดี <span style="color: #cc3000;">' . $login_name . '</span></strong> [ <a href="gallery.php">Gallery</a> | <a href="upload.php">Upload</a> | <a href="logout.php">Logout</a> ] </span>&nbsp;'); ?> <img title="เว็บฉบับภาษาไทย" style="width: 30px;" src="../images/thailand-flag.gif"> <a title="English version" href="home_en.php"><img style="width: 30px;" src="../images/en_ver.gif"></a></div>
+                <?php
+                if (isset($_SESSION['login'])): $login_name = $_SESSION['login'];
+                else : $login_name = '';
+                endif;
+                login('<span style="background-color: #e7e3b1;"><strong>&nbsp;สวัสดี <span style="color: #cc3000;">' . $login_name . '</span></strong> [ <a href="gallery.php">Gallery</a> | <a href="upload.php">Upload</a> | <a href="logout.php">Logout</a> ] </span>&nbsp;');
+                ?> <img title="เว็บฉบับภาษาไทย" style="width: 30px;" src="../images/thailand-flag.gif"> <a title="English version" href="home_en.php"><img style="width: 30px;" src="../images/en_ver.gif"></a></div>
         </div>
 
         <!-- /#header -->
@@ -105,7 +125,7 @@ if ($_SESSION['fancy'] == "first") {
                         <img class="fetured-image" title="<?php echo htmlspecialchars_decode($p['title']); ?>" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
                     </a>
                 </div>
-                <h3><a class="header-title" href="<?php echo $p['type'] ?>-news.php?news_id=<? echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
+                <h3><a class="header-title" href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
                 <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
 
@@ -154,24 +174,26 @@ if ($_SESSION['fancy'] == "first") {
         <div class="row">
 
             <!-- Pr news -->
-            <?php
-            $sql = "SELECT * FROM tb_news 
-                WHERE type = 'pr'
-                ORDER BY date DESC;";
-            $result = mysql_query($sql);
-            $p = mysql_fetch_array($result);
+            <?php /*
+              <?php
+              $sql = "SELECT * FROM tb_news
+              WHERE type = 'pr'
+              ORDER BY date DESC;";
+              $result = mysql_query($sql);
+              $p = mysql_fetch_array($result);
+              ?>
+              <div class="col-sm-6 col-md-3 ">
+              <h2 class="text-center"><a class="header-type" href="pr-news.php">ข่าวประชาสัมพันธ์</a></h2>
+              <div class="featured-image-box">
+              <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">
+              <img class="fetured-image" title="<?php echo htmlspecialchars_decode($p['title']); ?>" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
+              </a>
+              </div>
+              <h3><a class="header-title" href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
+              <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
+              </div>
+             */
             ?>
-            <div class="col-sm-6 col-md-3 ">
-                <h2 class="text-center"><a class="header-type" href="pr-news.php">ข่าวประชาสัมพันธ์</a></h2>
-                <div class="featured-image-box">                    
-                    <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">
-                        <img class="fetured-image" title="<?php echo htmlspecialchars_decode($p['title']); ?>" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
-                    </a>
-                </div>
-                <h3><a class="header-title" href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
-                <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
-            </div>
-
             <!-- Industrial  Physics -->
             <?php
             $sql = "SELECT * FROM tb_social 
@@ -216,21 +238,21 @@ if ($_SESSION['fancy'] == "first") {
             <div class="col-sm-6 col-md-3 ">
                 <h2 class="text-center"><a class="header-type">ประกาศ</a></h2>
 
-                 <!--
-                <div class="featured-image-box">                    
-                    <a href="intensive-college-2014.php" title="ค่ายฝึกอบรมแบบเข้ม โครงสร้างเชิงทฤษฎีในวิชาฟิสิกส์ขั้นต้น รุ่นที่ 1">
-                        <img class="fetured-image" src="../../upload02/notice/Intensive-College_590.jpg" alt="Featured image">
-                    </a>
-                </div>
-                <h3><a class="header-title" href="intensive-college-2014.php">ค่ายฝึกอบรมแบบเข้ม “โครงสร้างเชิงทฤษฎีในวิชาฟิสิกส์ขั้นต้น” รุ่นที่ 1</a></h3>            
-                <P>
-                    เป็นโครงการเข้าค่ายแบบเข้มข้น 6 วัน ทั้งภาคทฤษฎีและการทดลอง 
-                    รับสมัครครู อาจารย์ และผู้สอนวิชาฟิสิกส์ระดับมัธยมศึกษาและอุดมศึกษา จำนวนจำกัดเพียง 24 ท่านเท่านั้น 
-                    เพื่อเจาะลึกถึงโครงสร้างเชิงทฤษฎีสำหรับวิชาฟิสิกส์ ให้เห็นถึงแก่น ถึงรากเหง้า  
-                    <a href="intensive-college-2014.php" title="ค่ายฝึกอบรมแบบเข้ม โครงสร้างเชิงทฤษฎีในวิชาฟิสิกส์ขั้นต้น รุ่นที่ 1">
-                        ... อ่านต่อ
-                    </a>
-                </P>
+                <!--
+               <div class="featured-image-box">                    
+                   <a href="intensive-college-2014.php" title="ค่ายฝึกอบรมแบบเข้ม โครงสร้างเชิงทฤษฎีในวิชาฟิสิกส์ขั้นต้น รุ่นที่ 1">
+                       <img class="fetured-image" src="../../upload02/notice/Intensive-College_590.jpg" alt="Featured image">
+                   </a>
+               </div>
+               <h3><a class="header-title" href="intensive-college-2014.php">ค่ายฝึกอบรมแบบเข้ม “โครงสร้างเชิงทฤษฎีในวิชาฟิสิกส์ขั้นต้น” รุ่นที่ 1</a></h3>            
+               <P>
+                   เป็นโครงการเข้าค่ายแบบเข้มข้น 6 วัน ทั้งภาคทฤษฎีและการทดลอง 
+                   รับสมัครครู อาจารย์ และผู้สอนวิชาฟิสิกส์ระดับมัธยมศึกษาและอุดมศึกษา จำนวนจำกัดเพียง 24 ท่านเท่านั้น 
+                   เพื่อเจาะลึกถึงโครงสร้างเชิงทฤษฎีสำหรับวิชาฟิสิกส์ ให้เห็นถึงแก่น ถึงรากเหง้า  
+                   <a href="intensive-college-2014.php" title="ค่ายฝึกอบรมแบบเข้ม โครงสร้างเชิงทฤษฎีในวิชาฟิสิกส์ขั้นต้น รุ่นที่ 1">
+                       ... อ่านต่อ
+                   </a>
+               </P>
                 -->
 
                 <!--
@@ -259,6 +281,22 @@ if ($_SESSION['fancy'] == "first") {
                  ภัฏสกลนคร ร่วมกับสมาคมฟิสิกส์ไทย ขอเชิญผู้สนใจเข้าร่วมการประชุม<a href="spc2014.php">... อ่านต่อ</a></p>
          </div>
             -->
+
+
+            <!-- ***** Clip ****** -->            
+            <div class="col-sm-6 col-md-3 ">
+                <h2 class="text-center header-type">ThEP Presentation</h2>
+                <div>
+                    <a class="various fancybox.iframe" href="http://www.youtube.com/embed/1YlBlhG2xZE?autoplay=1">
+                        <img style="max-width: 100%;" src="http://thep-center.org/upload02/thep_presentation_play.jpg">
+                    </a>
+                </div>
+
+            </div>
+            <script>
+
+            </script>
+            <!-- ***** END Clip ****** -->
 
         </div>  <!-- /.row -->
 
