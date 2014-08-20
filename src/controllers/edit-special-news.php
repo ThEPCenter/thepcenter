@@ -92,6 +92,7 @@ $p = mysql_fetch_array($result);
 
     <strong>อื่นๆ</strong>
     <?php
+    $chk = '';
     if ($p['new'] == 'y') {
         $chk = ' checked';
     }
