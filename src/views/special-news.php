@@ -4,10 +4,6 @@ doc_head('ข่าวพิเศษ');
 $news_type = 'special';
 ?>
 <style>
-    p span {
-        font-weight: bold;
-        font-style: italic;
-    }
     p small {
         word-break: break-all;
     }
