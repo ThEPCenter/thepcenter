@@ -6,6 +6,7 @@ if (isset($_POST['edit_id'])) {
     $type = htmlspecialchars($_POST['type'], ENT_QUOTES);
     $title = htmlspecialchars($_POST['title'], ENT_QUOTES);
     $date = date("Y-m-d", strtotime($_POST['date']));
+    $featured_img = htmlspecialchars($_POST['featured_img'], ENT_QUOTES);
     $content_short = htmlspecialchars($_POST['content_short'], ENT_QUOTES);
     $content_long = htmlspecialchars($_POST['content_long'], ENT_QUOTES);
     if (isset($_POST['new'])) {
@@ -15,7 +16,7 @@ if (isset($_POST['edit_id'])) {
     }
     $modified = date("Y-m-d H:i:s");
     $sql = "UPDATE tb_news
-            SET type = '$type', title = '$title', date = '$date', content_short = '$content_short', content_long = '$content_long', new = '$new', modified = '$modified'
+            SET type = '$type', title = '$title', date = '$date', featured_img = '$featured_img', content_short = '$content_short', content_long = '$content_long', new = '$new', modified = '$modified'
             WHERE id = $id;";
     @mysql_query($sql) or die(mysql_error());
     header("Location: ../views/$type-news.php?news_id=$id");
