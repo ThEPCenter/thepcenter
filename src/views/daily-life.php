@@ -200,7 +200,7 @@ $type = 'daily-life';
                     }
                     ?>
                 </div>
-                <?
+                <?php
             }
             ?>
 

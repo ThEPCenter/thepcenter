@@ -201,7 +201,7 @@ $type = 'industrial';
                     }
                     ?>
                 </div>
-                <?
+                <?php
             }
             ?>
 
