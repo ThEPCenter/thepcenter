@@ -27,7 +27,11 @@ if ($_POST) {
             ";
 
     @mysql_query($sql) or die(mysql_error());
-    header("Location: ../views/$type-news.php");
+    if ($type == 'notice') {
+        header("Location: ../views/$type.php");
+    } else {
+        header("Location: ../views/$type-news.php");
+    }
     exit();
 }
 
@@ -48,25 +52,25 @@ $news_type = $_GET['add_news'];
         <label>หัวข้อข่าว</label>
         <input type="text" name="title"  class="form-control">
     </div>
-    
-    <?php if($news_type == 'network-academic'){ ?>
-    <div class="form-group">
-        <label>หัวข้อข่าวภาษาอังกฤษ</label>
-        <input type="text" name="title_en"  class="form-control">
-    </div>
+
+    <?php if ($news_type == 'network-academic') { ?>
+        <div class="form-group">
+            <label>หัวข้อข่าวภาษาอังกฤษ</label>
+            <input type="text" name="title_en"  class="form-control">
+        </div>
     <?php } ?> 
-    
+
     <div class="form-group">
         <label>วันที่</label>
         <input type="text" id="datepicker" name="date">
     </div>
     <script>
-        $(function() {                
-            $( "#datepicker" ).datepicker();   // Date Picker
+        $(function() {
+            $("#datepicker").datepicker();   // Date Picker
         }); /* END jQuery */
     </script>
     <p>&nbsp;</p>
-    
+
     <h4>Feature image</h4>
     <p id="show-img">
     </p>
@@ -75,12 +79,12 @@ $news_type = $_GET['add_news'];
         <input type="text" id="featured_img" name="featured_img"  class="form-control" />
     </div>
     <script>
-        $(function(){            
-            $("#featured_img").blur(function(){            
+        $(function() {
+            $("#featured_img").blur(function() {
                 var img_url = $("#featured_img").val();
-                $("#show-img").html("<img src=\"" + img_url + "\" style=\"max-width: 100%; height: auto; margin: auto;\">");           
+                $("#show-img").html("<img src=\"" + img_url + "\" style=\"max-width: 100%; height: auto; margin: auto;\">");
             });
-            
+
         });
     </script>
     <p>&nbsp;</p>    
@@ -90,14 +94,14 @@ $news_type = $_GET['add_news'];
         <textarea name="content_short" class="form-control" rows="4"></textarea>
     </div>
     <p>&nbsp;</p>
-    
-    <?php if($news_type == 'network-academic'){ ?>
-    <div class="form-group">
-        <label>เนื้อหาฉบับย่อภาษาอังกฤษ</label>
-        <textarea name="content_short_en" class="form-control" rows="4"></textarea>
-    </div>
+
+    <?php if ($news_type == 'network-academic') { ?>
+        <div class="form-group">
+            <label>เนื้อหาฉบับย่อภาษาอังกฤษ</label>
+            <textarea name="content_short_en" class="form-control" rows="4"></textarea>
+        </div>
     <?php } ?>
-    
+
     <div class="form-group">
         <label>เนื้อหาฉบับเต็ม</label>
         <textarea name="content_long"></textarea>
@@ -105,17 +109,17 @@ $news_type = $_GET['add_news'];
             CKEDITOR.replace('content_long');
         </script>
     </div>
-    
-    <?php if($news_type == 'network-academic'){ ?>
-    <div class="form-group">
-        <label>เนื้อหาฉบับเต็มภาษาอังกฤษ</label>
-        <textarea name="content_long_en"></textarea>
-        <script>
-            CKEDITOR.replace('content_long_en');
-        </script>
-    </div>
+
+    <?php if ($news_type == 'network-academic') { ?>
+        <div class="form-group">
+            <label>เนื้อหาฉบับเต็มภาษาอังกฤษ</label>
+            <textarea name="content_long_en"></textarea>
+            <script>
+                CKEDITOR.replace('content_long_en');
+            </script>
+        </div>
     <?php } ?>
-    
+
     <strong>อื่นๆ</strong>
     <div class="checkbox">
         <label>
@@ -123,7 +127,7 @@ $news_type = $_GET['add_news'];
         </label>
     </div>
     <p>&nbsp;</p>    
-    
+
     <?php
     if ($news_type == 'activity') {
         ?>

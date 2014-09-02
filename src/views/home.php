@@ -232,29 +232,33 @@ if ($_SESSION['fancy'] == "first") {
                 <h3><a class="header-title" href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
                 <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
+            
 
             <!-- ประกาศ -->
-
+            
+                <?php
+            $sql = "SELECT * FROM tb_news 
+                WHERE type = 'notice' AND new = 'y'
+                ORDER BY date DESC;";
+            $result = mysql_query($sql);
+            $p = mysql_fetch_array($result);
+            ?>
             <div class="col-sm-6 col-md-3 ">
-                <h2 class="text-center"><a class="header-type">ประกาศ</a></h2>
-
-                <!--              
- 
-                 <div class="featured-image-box">                    
-                     <a href="science_week_2014.php">
-                         <img class="fetured-image" title="ขอเชิญชวนเยี่​ยมชมบู้ทขอ​งศูนย์ความ​เป็นเลิศด้​านฟิสิกส์ไ​ด้ในงานสัป​ดาห์วิทยาศ​าสตร์" src="../../upload02/science_week_2014_th.jpg" alt="Featured image">
-                     </a>
-                 </div>
-                 <h3><a class="header-title" href="science_week_2014.php">ขอเชิญชวนเยี่​ยมชมบู้ทขอ​งศูนย์ความ​เป็นเลิศด้​านฟิสิกส์ไ​ด้ในงานสัป​ดาห์วิทยาศ​าสตร์</a></h3>
-                 <p>
-                     ศูนย์ความเป็นเลิศด้านฟิสิกส์จัดนิทรรศการในงานสัปดาห์วิทยาศาสตร์ระหว่างวันที่ 18 -20 สิงหาคม 2557 ณ คณะวิทยาศาสตร์ มหาวิทยาลัยเชียงใหม่ ขอเชิญชวนนักเรียน นักศึกษา นักวิจัยและบุคคลทั่วไปเข้าเยี่ยมชมบู้ทของศูนย์ ฯ<a href="science_week_2014.php">... อ่านต่อ</a>
-                 </p>
-                 
-                --> 
-
-            </div>
+                
+                <h2 class="text-center"><a class="header-type" href="notice.php">ประกาศ</a></h2>
+                <?php if($p['new'] == 'y') : ?>
+                <div class="featured-image-box">                    
+                    <a style="text-align: center;" href="<?php echo $p['type'] ?>.php?news_id=<?php echo $p['id']; ?>">
+                        <img class="fetured-image" title="<?php echo htmlspecialchars_decode($p['title']); ?>" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
+                    </a>
+                </div>
+                <h3><a class="header-title" href="<?php echo $p['type'] ?>.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
+                <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
+                <?php endif; ?>
+            </div>           
 
             <!-- END ประกาศ -->
+            
 
             <!-- ***** Clip ****** -->            
             <div class="col-sm-6 col-md-3 ">
