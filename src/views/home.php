@@ -1,13 +1,20 @@
 <?php
 require_once '../system/system.php';
 
+// First, delete old session id
+// 7200 Two hour limit
+$expiration = time() - 43200;
+$sql_del = "DELETE FROM counter WHERE created < " . $expiration;
+$re_del = mysql_query($sql_del) or die(mysql_error());
+
+
 $sessionid = session_id();
 //$counter_id	= $db->GetOne("SELECT id FROM counter WHERE  sessionid = '$sessionid'  ");
 $counter_id = "SELECT id FROM counter WHERE  sessionid = '$sessionid';"; // Show All
 $result = mysql_query($counter_id) or die(mysql_error());
 // $rs = mysql_fetch_array($result);
 // $counterid = $rs["id"];
-$now = date("Y-m-d H:i:s");
+$now = time();
 $nums = mysql_num_rows($result);
 
 if ($nums == 0) {
@@ -232,11 +239,11 @@ if ($_SESSION['fancy'] == "first") {
                 <h3><a class="header-title" href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
                 <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>.php?article_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
             </div>
-            
+
 
             <!-- ประกาศ -->
-            
-                <?php
+
+            <?php
             $sql = "SELECT * FROM tb_news 
                 WHERE type = 'notice' AND new = 'y'
                 ORDER BY date DESC;";
@@ -244,21 +251,21 @@ if ($_SESSION['fancy'] == "first") {
             $p = mysql_fetch_array($result);
             ?>
             <div class="col-sm-6 col-md-3 ">
-                
+
                 <h2 class="text-center"><a class="header-type" href="notice.php">ประกาศ</a></h2>
-                <?php if($p['new'] == 'y') : ?>
-                <div class="featured-image-box">                    
-                    <a style="text-align: center;" href="<?php echo $p['type'] ?>.php?news_id=<?php echo $p['id']; ?>">
-                        <img class="fetured-image" title="<?php echo htmlspecialchars_decode($p['title']); ?>" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
-                    </a>
-                </div>
-                <h3><a class="header-title" href="<?php echo $p['type'] ?>.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
-                <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
+                <?php if ($p['new'] == 'y') : ?>
+                    <div class="featured-image-box">                    
+                        <a style="text-align: center;" href="<?php echo $p['type'] ?>.php?news_id=<?php echo $p['id']; ?>">
+                            <img class="fetured-image" title="<?php echo htmlspecialchars_decode($p['title']); ?>" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
+                        </a>
+                    </div>
+                    <h3><a class="header-title" href="<?php echo $p['type'] ?>.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
+                    <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
                 <?php endif; ?>
             </div>           
 
             <!-- END ประกาศ -->
-            
+
 
             <!-- ***** Clip ****** -->            
             <div class="col-sm-6 col-md-3 ">
