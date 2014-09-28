@@ -14,10 +14,15 @@ if ($_POST) {
         $_SESSION['login'] = $username;
         $_SESSION['pass'] = $password;
 
-        $last_login = date("Y-m-d H:i:s");
+        $row = mysql_fetch_array($result);
+
+        $_SESSION['level'] = $row['level'];
+
+        $recent_login = date("Y-m-d H:i:s");
+        $last_login = $row['recent_login'];
 
         $sql = "UPDATE tb_new_user 
-		SET login_time = '$last_login', sessionid = '$sessionid'
+		SET recent_login = '$recent_login', sessionid = '$sessionid', last_login = '$last_login'
 		WHERE username = '$username';";
         @mysql_query($sql) or die(mysql_error());
 
@@ -26,6 +31,7 @@ if ($_POST) {
     } else {
         unset($_SESSION['login']);
         unset($_SESSION['pass']);
+        unset($_SESSION['level']);
 
         header("Location: ../views/login.php");
         exit();
