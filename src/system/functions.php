@@ -152,7 +152,7 @@ function user($property) {
 }
 
 function admin($yes, $no = '') {
-    if (user_property('level') == 1) {
+    if (user_property('level') == 10) {
         echo $yes;
     } else {
         echo $no;
