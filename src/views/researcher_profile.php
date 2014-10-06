@@ -21,7 +21,7 @@ $sql_em = "SELECT * FROM res_employment WHERE researcher_id = $id;";
 $result_em = mysql_query($sql_em);
 $r_em = mysql_fetch_object($result_em);
 
-$sql_ed = "SELECT * FROM res_education WHERE researcher_id = $id;";
+$sql_ed = "SELECT * FROM res_education WHERE researcher_id = $id ORDER BY grad_year DESC;";
 $result_ed = mysql_query($sql_ed);
 
 $sql_ex = "SELECT * FROM res_expertise WHERE researcher_id = $id;";
@@ -78,11 +78,10 @@ doc_head('ฐานข้อมูลนักวิจัย ศูนย์ค
                         </p>
                         <p>&nbsp;</p>
 
-                        <p><strong>ที่ทำงาน (English):</strong>
-                            <?php if (!empty($r_em->street_en)): ?> 
-                                <br>
+                        <p><strong>ที่ทำงาน (English):</strong><br>
+                            <?php if (!empty($r_em->street_en)): ?>
                                 <?php echo $r_em->street_en; ?>                        
-                                <br><?php echo $r_em->sub_district_en; ?>,
+                                <?php echo $r_em->sub_district_en; ?>,
                                 <?php echo $r_em->district_en; ?>,
                                 <?php echo $r_em->province_en; ?>,
                                 <?php echo $r_em->postal_code; ?>
@@ -92,7 +91,7 @@ doc_head('ฐานข้อมูลนักวิจัย ศูนย์ค
                             <?php endif; ?>
                         </p>
                         <p>&nbsp;</p>
-                        
+
                         <p>
                             <strong>โทรศัพท์:</strong> 
                             <?php
