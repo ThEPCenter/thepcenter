@@ -1,6 +1,6 @@
 <?php
 require_once '../system/system.php';
-doc_head('ฐานข้อมูลนักวิจัย ศูนย์ความเป็นเลิศด้านฟิสิกส์');
+doc_head('ฐานข้อมูลนักนักฟิสิกส์ / นักวิจัย ศูนย์ความเป็นเลิศด้านฟิสิกส์');
 
 if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
     $field_search = $_POST['field_search'];
@@ -28,19 +28,18 @@ if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
         <?php get_includes('header'); ?>
 
         <div class="row" style="margin-top: 10px;">
-            <h2 class="text-center">ฐานข้อมูลนักวิจัย</h2>
+            <h2 class="text-center">ฐานข้อมูลนักฟิสิกส์ / นักวิจัย</h2>
 
             <p>&nbsp;</p>
 
             <!-- =============================== Search Researcher ================================= -->
-            <div class="col-md-12  well" style="border: solid 1px #ddd;">
+            <div class="col-md-12 well" style="border: solid 1px #ddd;">
 
-                <h3 class="text-center"><span class="glyphicon glyphicon-search"></span> Search ค้นหานักวิจัย</h3>
+                <h3 class="text-center"><span class="glyphicon glyphicon-search"></span> Search ค้นหานักฟิสิกส์ / นักวิจัย</h3>
                 <form role="form" name="form1" method="post" action="">
-
                     <div class="row">
-                        <div class="col-md-1" style=""><strong>ค้นหาจาก</strong></div>
-                        <div class="col-md-2" style="">
+                        <div class="col-sm-1 col-md-1" style=""><strong>ค้นหาจาก</strong></div>
+                        <div class="col-sm-2 col-md-2" style="">
                             <select name="field_search" class="form-control">
                                 <option value="firstname" selected>ชื่อ</option>
                                 <option value="lastname">นามสกุล</option>
@@ -48,11 +47,10 @@ if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
                                 <option value="expertise">ความเชี่ยวชาญ</option>
                             </select>
                         </div>
-                        <div class="col-md-7"><input class="form-control" name="keyword" type="text" id="keyword" placeholder="คำค้น (keyword)" required></div>
-                        <div class="col-md-2"><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Search</button></div>
+                        <div class="col-sm-7 col-md-7"><input class="form-control" name="keyword" type="text" id="keyword" placeholder="คำค้น (keyword)" required></div>
+                        <div class="col-sm-2 col-md-2"><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Search</button></div>
                     </div>
                     <p>&nbsp;</p>
-
                 </form>
 
             </div>
@@ -69,13 +67,13 @@ if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
 
                         <?php if ($field_search == 'firstname') : ?>
                             <br>ค้นหาจาก <strong>ชื่อ (firstname)</strong> 
-                            พบนักวิจัยทั้งหมด <span style="color: green;"><?php echo mysql_num_rows($result_all); ?></span> ท่าน ดังนี้
+                            <br>พบนักฟิสิกส์ / นักวิจัย ทั้งหมด <span style="color: green;"><?php echo mysql_num_rows($result_all); ?></span> คน ดังนี้
                             <?php $i = 1; ?>
                             <table class="table table-bordered">
                                 <tbody>
                                     <tr>
                                         <th width="12">No.</th>
-                                        <th>ชื่อ นามสกุล (firstname lastname)</th>
+                                        <th>ชื่อ นามสกุล (first name & surname)</th>
                                         <th>สถาบัน (institute)</th>
                                     </tr>
                                     <?php while ($r_all = mysql_fetch_object($result_all)) : ?>
@@ -114,14 +112,14 @@ if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
                             </table>
 
                         <?php elseif ($field_search == 'lastname') : ?>
-                            <br>ค้นหาจาก <strong>นามสกุล (laststname)</strong> 
-                            พบนักวิจัยทั้งหมด <span style="color: green;"><?php echo mysql_num_rows($result_all); ?></span> ท่าน ดังนี้
+                            <br>ค้นหาจาก <strong>นามสกุล (surname)</strong> 
+                            <br>พบนักฟิสิกส์ / นักวิจัย ทั้งหมด <span style="color: green;"><?php echo mysql_num_rows($result_all); ?></span> คน ดังนี้
                             <?php $i = 1; ?>
                             <table class="table table-bordered">
                                 <tbody>
                                     <tr>
                                         <th width="12">No.</th>
-                                        <th>ชื่อ นามสกุล (firstname lastname)</th>
+                                        <th>ชื่อ นามสกุล (first name & surname)</th>
                                         <th>สถาบัน (institute)</th>
                                     </tr>
                                     <?php while ($r_all = mysql_fetch_object($result_all)) : ?>
@@ -161,14 +159,14 @@ if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
 
                         <?php elseif ($field_search == 'institute') : ?>
                             <br>ค้นหาจาก <strong>สถาบัน (institute)</strong> 
-                            พบนักวิจัยทั้งหมด <span style="color: green;"><?php echo mysql_num_rows($result_all); ?></span> ท่าน ดังนี้
+                            <br>พบนักฟิสิกส์ / นักวิจัย ทั้งหมด <span style="color: green;"><?php echo mysql_num_rows($result_all); ?></span> คน ดังนี้
 
                             <?php $i = 1; ?>
                             <table class="table table-bordered">
                                 <tbody>
                                     <tr>
                                         <th width="12">No.</th>
-                                        <th>ชื่อ นามสกุล (firstname lastname)</th>
+                                        <th>ชื่อ นามสกุล (first name & surname)</th>
                                         <th>สถาบัน (institute)</th>
                                     </tr>
                                     <?php while ($r_all = mysql_fetch_object($result_all)) : ?>
@@ -197,16 +195,16 @@ if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
 
                         <?php elseif ($field_search == 'expertise') : ?>
                             <br>ค้นหาจาก <strong>ความเชี่ยวชาญ (expertise)</strong>
-                            <br>พบนักวิจัยทั้งหมด <span style="color: green;"><?php echo mysql_num_rows($result_all); ?></span> ท่าน ดังนี้
+                            <br>พบนักฟิสิกส์ / นักวิจัย ทั้งหมด <span style="color: green;"><?php echo mysql_num_rows($result_all); ?></span> คน ดังนี้
                             <?php $i = 1; ?>
 
                             <table class="table table-bordered">
                                 <tbody>
                                     <tr>
                                         <th width="12">No.</th>
-                                        <th>ชื่อ นามสกุล (firstname lastname)</th>
+                                        <th>ชื่อ นามสกุล (first name & surname)</th>
                                         <th>ความเชี่ยวชาญ (expertise)</th>
-                                        <th>ความเชี่ยวชาญเฉพาะ (specific)</th>
+
                                     </tr>
                                     <?php while ($r_all = mysql_fetch_object($result_all)) : ?>
 
@@ -221,8 +219,14 @@ if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
                                                         <?php echo $r_pro->title_en . $r_pro->firstname_en . ' ' . $r_pro->lastname_en . '<br>' . $r_pro->title_th . $r_pro->firstname_th . ' ' . $r_pro->lastname_th; ?>
                                                     </a>
                                                 </td>
-                                                <td><?php echo $r_all->topic; ?></td>
-                                                <td><?php echo $r_all->specific_topic; ?></td>
+                                                <td>                                                    
+                                                    <?php if (!empty($r_all->topic)): ?>
+                                                        <?php echo $r_all->topic; ?><br>
+                                                    <?php endif; ?>
+                                                    <?php if (!empty($r_all->specific_topic)): ?>
+                                                        - <?php echo $r_all->specific_topic; ?>
+                                                    <?php endif; ?>
+                                                </td>
                                             </tr>
 
                                         <?php endwhile; ?>

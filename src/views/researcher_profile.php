@@ -30,7 +30,7 @@ $result_ex = mysql_query($sql_ex);
 $sql_pub = "SELECT * FROM res_publication WHERE researcher_id = $id;";
 $result_pub = mysql_query($sql_pub);
 
-doc_head('ฐานข้อมูลนักวิจัย ศูนย์ความเป็นเลิศด้านฟิสิกส์');
+doc_head('ฐานข้อมูลนักนักฟิสิกส์ / นักวิจัย ศูนย์ความเป็นเลิศด้านฟิสิกส์');
 ?>
 
 </head>
@@ -44,53 +44,54 @@ doc_head('ฐานข้อมูลนักวิจัย ศูนย์ค
 
             <div class="col-md-12">
 
-                <h2 class="text-center">ฐานข้อมูลนักวิจัย</h2>
+                <h2 class="text-center">ฐานข้อมูลนักฟิสิกส์ / นักวิจัย</h2>
                 <p>&nbsp;</p>
 
                 <div class="row">
 
-                    <div class="col-md-2">
-                        <img style="max-width: 100%;" src="<?php echo $r_pro->pic_url; ?>">
+                    <div class="col-sm-2 col-md-2">
+                        <img alt="profile's picture" style="max-width: 100%;" src="<?php echo $r_pro->pic_url; ?>">
                     </div>
 
-                    <div class="col-md-10">
+                    <div class="col-sm-10 col-md-10">
                         <p><strong>ชื่อ:</strong> <?php echo $r_pro->title_th . $r_pro->firstname_th . ' ' . $r_pro->lastname_th; ?></p>
                         <p><strong>Name:</strong> <?php echo $r_pro->title_en . $r_pro->firstname_en . ' ' . $r_pro->lastname_en; ?></p>
                         <p>&nbsp;</p>
 
                         <h5>ที่ติดต่อ</h5>
-                        <p><strong>ที่ทำงาน (Thai):</strong>
-                            <?php if (!empty($r_em->street_th)): ?>
-                                <br>
+                        <p><strong>ที่ทำงาน:</strong>
+                            <?php if (!empty($r_em->street_th)): ?>                                
                                 <?php echo $r_em->street_th; ?>
+                            <?php endif; ?>
 
-                                <?php if (!empty($r_em->sub_district_th)): ?>
-                                    แขวง/ตำบล <?php echo $r_em->sub_district_th; ?>
+                            <?php if (!empty($r_em->sub_district_th)): ?>
+                                <?php if ($r_em->province_th == 'กรุงเทพมหานคร'): ?>
+                                    แขวง
+                                <?php else: ?>
+                                    ตำบล
                                 <?php endif; ?>
-
-                                เขต/อำเภอ <?php echo $r_em->district_th; ?>
-                                จังหวัด <?php echo $r_em->province_th; ?>
-                                <?php echo $r_em->postal_code; ?>
-
-                            <?php else: ?>
-                                -
+                                <?php echo $r_em->sub_district_th; ?>
                             <?php endif; ?>
-                        </p>
-                        <p>&nbsp;</p>
 
-                        <p><strong>ที่ทำงาน (English):</strong><br>
-                            <?php if (!empty($r_em->street_en)): ?>
-                                <?php echo $r_em->street_en; ?>                        
-                                <?php echo $r_em->sub_district_en; ?>,
-                                <?php echo $r_em->district_en; ?>,
-                                <?php echo $r_em->province_en; ?>,
-                                <?php echo $r_em->postal_code; ?>
-
-                            <?php else: ?>
-                                -
+                            <?php if (!empty($r_em->district_th)): ?>
+                                <?php if ($r_em->province_th == 'กรุงเทพมหานคร'): ?>
+                                    เขต
+                                <?php else: ?>
+                                    อำเภอ
+                                <?php endif; ?>
+                                <?php echo $r_em->district_th; ?>
                             <?php endif; ?>
-                        </p>
-                        <p>&nbsp;</p>
+
+                            <?php if (!empty($r_em->province_th)): ?>
+                                <?php if ($r_em->province_th != 'กรุงเทพมหานคร'): ?>
+                                    จังหวัด 
+                                <?php endif; ?>
+                                <?php echo $r_em->province_th; ?>
+                            <?php endif; ?>
+
+                            <?php echo $r_em->postal_code; ?>
+
+                        </p>                        
 
                         <p>
                             <strong>โทรศัพท์:</strong> 
@@ -144,15 +145,17 @@ doc_head('ฐานข้อมูลนักวิจัย ศูนย์ค
                         </table>
                         <p>&nbsp;</p>
 
-                        <h5>ความเชี่ยวชาญ (Field of Expertise/Competency)</h5>
+                        <h5>ความเชี่ยวชาญ (Field of Expertise / Competency)</h5>
                         <?php if (mysql_num_rows($result_ex) > 0): ?>
                             <?php $r_ex = mysql_fetch_object($result_ex); ?>
                             <p>
                                 <?php if (!empty($r_ex->topic)): ?>
-                                    <?php echo $r_ex->topic; ?>
-                                    <br>
+                                    <?php echo $r_ex->topic; ?><br>
                                 <?php endif; ?>
-                                - <?php echo $r_ex->specific_topic; ?>
+
+                                <?php if (!empty($r_ex->specific_topic)): ?>
+                                    - <?php echo $r_ex->specific_topic; ?>
+                                <?php endif; ?>
                             </p>
                         <?php else: ?>
                             <p>- ขออภัย ไม่พบข้อมูล -</p>
@@ -169,12 +172,8 @@ doc_head('ฐานข้อมูลนักวิจัย ศูนย์ค
                         <?php endif; ?>
                         <p>&nbsp;</p>
 
-
                     </div>
                 </div> <!-- /.row -->
-
-
-
 
             </div>
 
@@ -182,7 +181,7 @@ doc_head('ฐานข้อมูลนักวิจัย ศูนย์ค
 
         <div class="row">
             <div class="col-md-12">
-                <a href="researcher.php" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span> กลับไปหน้าค้นหานักวิจัย</a>
+                <a href="researcher.php" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span> กลับไปหน้าค้นหา</a>
             </div>
         </div>
 
