@@ -21,7 +21,7 @@ $sql_em = "SELECT * FROM res_employment WHERE researcher_id = $id;";
 $result_em = mysql_query($sql_em);
 $r_em = mysql_fetch_object($result_em);
 
-$sql_ed = "SELECT * FROM res_education WHERE researcher_id = $id ORDER BY grad_year DESC;";
+$sql_ed = "SELECT * FROM res_education WHERE researcher_id = $id ORDER BY grad_year DESC, education_id DESC;";
 $result_ed = mysql_query($sql_ed);
 
 $sql_ex = "SELECT * FROM res_expertise WHERE researcher_id = $id;";
