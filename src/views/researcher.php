@@ -2,9 +2,9 @@
 require_once '../system/system.php';
 doc_head('ฐานข้อมูลนักนักฟิสิกส์ / นักวิจัย ศูนย์ความเป็นเลิศด้านฟิสิกส์');
 
-if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
-    $field_search = $_POST['field_search'];
-    $kw = htmlspecialchars($_POST['keyword'], ENT_QUOTES);
+if (isset($_GET['keyword']) && !empty($_GET['keyword'])) {
+    $field_search = $_GET['field_search'];
+    $kw = htmlspecialchars($_GET['keyword'], ENT_QUOTES);
     $kw_ori = $kw;
     $kw = "%$kw%";
     if ($field_search == 'firstname') {
@@ -36,7 +36,7 @@ if (isset($_POST['keyword']) && !empty($_POST['keyword'])) {
             <div class="col-md-12 well" style="border: solid 1px #ddd;">
 
                 <h3 class="text-center"><span class="glyphicon glyphicon-search"></span> Search ค้นหานักฟิสิกส์ / นักวิจัย</h3>
-                <form role="form" name="form1" method="post" action="">
+                <form role="form" name="form1" method="get" action="">
                     <div class="row">
                         <div class="col-sm-1 col-md-1" style=""><strong>ค้นหาจาก</strong></div>
                         <div class="col-sm-2 col-md-2" style="">
