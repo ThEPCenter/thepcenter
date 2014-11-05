@@ -35,6 +35,11 @@ $counter = number_format($counter, 0, '', ',');
 doc_head('ศูนย์ความเป็นเลิศด้านฟิสิกส์');
 ?>
 
+<meta property="og:title" content="ศูนย์ความเป็นเลิศด้านฟิสิกส์ Thailand Center of Excellence in Physics." />
+<meta property="og:description" content="Physics, Thailand Center of Excellence in Physics, ฟิสิกส์, ศูนย์ความเป็นเลิศด้านฟิสิกส์, ฟิสิกส์ไทย, ThEP" />
+<meta property="og:image" content="http://thep-center.org/src2/images/thep_head_10_970_web.jpg" />
+
+
 <!-- Start edit Dec 2, 2013 "fancybox" -->
 
 <!-- Add jQuery library -->

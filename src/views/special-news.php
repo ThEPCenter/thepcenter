@@ -1,8 +1,26 @@
 <?php
 require_once '../system/system.php';
-doc_head('ข่าวพิเศษ');
+
+if (isset($_GET['news_id'])):
+    $news_id = $_GET['news_id'];
+    $sql_news = "SELECT * FROM tb_news WHERE id = '$news_id';";
+    $result_news = mysql_query($sql_news);
+    $news = mysql_fetch_object($result_news);
+    $title = $news->title;
+else :
+    $title = 'ข่าวพิเศษ';
+endif;
+doc_head($title . " - ศูนย์ความเป็นเลิศด้านฟิสิกส์");
+
 $news_type = 'special';
 ?>
+
+<meta property="og:title" content="<?php echo $title; ?>" />
+<?php if (isset($_GET['news_id'])): ?>
+<meta property="og:description" content="<?php echo $news->content_short; ?>" />
+<meta property="og:image" content="<?php echo $news->featured_img; ?>" />
+<?php endif; ?>
+
 <style>
     p small {
         word-break: break-all;
@@ -50,13 +68,13 @@ $news_type = 'special';
                       ';
                     ?>
                     <script>
-                        $(function() {
-                            $('#edit-news').click(function() {
-                                $(document).ajaxStart(function() {
+                        $(function () {
+                            $('#edit-news').click(function () {
+                                $(document).ajaxStart(function () {
                                     $('#show-news').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
                                 });
                                 $.get("<?php controll('edit-special-news'); ?>", {edit_news: "<?php echo $p['id']; ?>"},
-                                function(data) {
+                                function (data) {
                                     $('#show-news').html(data);
                                 }
                                 );
@@ -156,7 +174,7 @@ $news_type = 'special';
     <?php get_includes('bootstrap-core'); ?>
     <script type='text/javascript'>
 
-        $(function() {
+        $(function () {
 
         });
 

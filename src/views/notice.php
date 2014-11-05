@@ -1,8 +1,26 @@
 <?php
 require_once '../system/system.php';
-doc_head('ประกาศ');
+
+if (isset($_GET['news_id'])):
+    $news_id = $_GET['news_id'];
+    $sql_news = "SELECT * FROM tb_news WHERE id = '$news_id';";
+    $result_news = mysql_query($sql_news);
+    $news = mysql_fetch_object($result_news);
+    $title = $news->title;
+else :
+    $title = 'ประกาศ';
+endif;
+doc_head($title . " - ศูนย์ความเป็นเลิศด้านฟิสิกส์");
+
 $news_type = 'notice';
 ?>
+
+<meta property="og:title" content="<?php echo $title; ?>" />
+<?php if (isset($_GET['news_id'])): ?>
+<meta property="og:description" content="<?php echo $news->content_short; ?>" />
+<meta property="og:image" content="<?php echo $news->featured_img; ?>" />
+<?php endif; ?>
+
 <style>
     p small {
         word-break: break-all;

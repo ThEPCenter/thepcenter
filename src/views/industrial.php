@@ -1,9 +1,26 @@
 <?php
 require_once '../system/system.php';
 
-doc_head('ฟิสิกส์อุตสากรรม');
+if (isset($_GET['article_id'])):
+    $article_id = $_GET['article_id'];
+    $sql_article = "SELECT * FROM tb_social WHERE id = '$article_id';";
+    $result_article = mysql_query($sql_article);
+    $article = mysql_fetch_object($result_article);
+    $title = $article->title;
+else :
+    $title = 'ฟิสิกส์อุตสากรรม';
+endif;
+doc_head($title . " - ศูนย์ความเป็นเลิศด้านฟิสิกส์");
+
 $type = 'industrial';
 ?>
+
+<meta property="og:title" content="<?php echo $title; ?>" />
+<?php if (isset($_GET['article_id'])): ?>
+<meta property="og:description" content="<?php echo $article->content_short; ?>" />
+<meta property="og:image" content="<?php echo $article->featured_img; ?>" />
+<?php endif; ?>
+
 </head>
 
 <body>
@@ -95,7 +112,7 @@ $type = 'industrial';
                     ?>
                 </div>
                 <?php
-            } elseif (isset($_GET['show'])) {
+            } else {
                 echo '<h2 class="text-center header-type">ฟิสิกส์อุตสาหกรรม</h2>';
 
                 // ========= AJAX for Add social ====================================
@@ -147,61 +164,6 @@ $type = 'industrial';
                             ';
                     } // END while
                 }
-            } else {
-                ?>
-
-                <div class = "col-sm-9 col-md-9">
-
-                    <?php
-                    $sql = "SELECT * FROM tb_social WHERE type = '$type' ORDER BY date DESC;";
-                    $result = mysql_query($sql);
-                    if (mysql_num_rows($result) > 0) {
-                        $p = mysql_fetch_array($result);
-
-                        echo '                
-                    <div>
-                        <h2>' . htmlspecialchars_decode($p['title']) . '</h2>
-                        <p><small><em>' . thai_date($p['date']) . '</small></em></p>
-                        <p>&nbsp;</p>
-                        ' . htmlspecialchars_decode($p['content_long']) . '
-                    </div>
-                
-                            ';
-                    } else {
-                        echo '
-                        <div class="bs-example">
-                            <p>ขออภัย ไม่พบข้อมูล</p>
-                        </div>
-                        ';
-                    }
-                    ?>                
-                </div>
-
-                <div class="col-sm-3 col-md-3">                    
-                    <h3 class="text-center">บทความย้อนหลัง</h3>
-                    <?php
-                    $sql = "SELECT * FROM tb_social WHERE type = '$type' ORDER BY date DESC;";
-                    $result = mysql_query($sql);
-                    if (mysql_num_rows($result) > 0) {
-                        while ($p = mysql_fetch_array($result)) {
-                            echo '
-                        <p><a href="' . $type . '.php?article_id=' . $p['id'] . '">' . htmlspecialchars_decode($p['title']) . '</a></p>
-                        <hr>
-                            ';
-                        } // END while
-                        ?>
-                        <a class="all-title" href="<?php echo $type; ?>.php?show=all"><em>บทความทั้งหมด</em></a>
-                        <?php
-                    } else {
-                        echo '
-                        <div class="bs-example">
-                            <p>ขออภัย ไม่พบข้อมูล</p>
-                        </div>
-                        ';
-                    }
-                    ?>
-                </div>
-                <?php
             }
             ?>
 
