@@ -59,7 +59,7 @@ doc_head('Edit Gallery');
 
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <input type="submit" value="Edit" class="btn btn-default"> <a href="gallery.php" style="font-weight: bold;">Cancel</a>
+                            <input type="submit" value="Edit" class="btn btn-default"> <a href="gallery.php?gal_id=<?php echo $g['id']; ?>" style="font-weight: bold;">Cancel</a>
                         </div>
                     </div>
 

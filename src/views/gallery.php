@@ -45,7 +45,7 @@ doc_head('Gallery');
                             </a>    
                         </div>
                         <p>' . $p['name'] . '<br>
-                            <a href="edit-picture.php?edit_id=' . $p['id'] . '">Edit Picture</a>
+                            <a href="edit-picture.php?edit_id=' . $p['id'] . '"><span class="glyphicon glyphicon-pencil"></span> Edit Picture</a>
                         </p>
                     </div>
                 </div>
@@ -57,10 +57,11 @@ doc_head('Gallery');
             <p>&nbsp;</p>
             <div class="row">
                 <div class="col-md-12">
-                    จำนวนทั้งหมด <?php echo $pic_no; ?> ภาพ | 
-                    <a href="gallery.php">กลับหน้าแกลอรี</a> | 
-                    <a href="edit-gallery.php?edit_id=<?php echo $gal_id; ?>">Edit</a> | 
-                    <a href="add-picture.php?gallery_id=<?php echo $gal_id; ?>">Add picture</a>
+                    <strong>จำนวนทั้งหมด <?php echo $pic_no; ?> ภาพ</strong> &nbsp;  
+                    <a title="Edit Gallery" href="edit-gallery.php?edit_id=<?php echo $gal_id; ?>"><span class="glyphicon glyphicon-pencil"></span> Edit Gallery</a> | 
+                    <a title="Add picture" href="add-picture.php?gallery_id=<?php echo $gal_id; ?>"><span class="glyphicon glyphicon-plus"></span> Add picture</a>
+                    <p>&nbsp;</p>
+                    <a title="Back to gallery page." href="gallery.php"><span class="glyphicon glyphicon-arrow-left"></span> กลับหน้าแกลอรี</a>
                 </div>
             </div>
 
@@ -69,7 +70,7 @@ doc_head('Gallery');
             <?php
         } else {
             ?>
-
+            
             <?php
             $sql = "SELECT * FROM tb_gallery ORDER BY id DESC;";
             $result = mysql_query($sql);
@@ -77,6 +78,8 @@ doc_head('Gallery');
             ?>
             <div class="row">
                 <h2 class="text-center">Gallery</h2>
+                <p><a href="add-gallery.php"><span class="glyphicon glyphicon-plus"></span> Add New Gallery</a></p>
+                <hr>
                 <?php
                 while ($gal = mysql_fetch_array($result)) {
 
@@ -98,12 +101,9 @@ doc_head('Gallery');
                             </a>                            
                         </div>
                         <div style="max-width: 195px;">
-                            <p>
-                                <a href="gallery.php?gal_id=' . $gal['id'] . '"><small>' . $gal['title'] . '...</small></a><br>
-                                <small>' . $pic_no . ' ภาพ</small> | 
-                                <a href="edit-gallery.php?edit_id=' . $gal['id'] . '">Edit</a> | 
-                                <a href="add-picture.php?gallery_id=' . $gal['id'] . '">Add picture</a>
-                            </p>
+                            <a title="' . $gal['title'] . '" href="gallery.php?gal_id=' . $gal['id'] . '"><small>' . $gal['title'] . '...</small></a><br>
+                            <small>' . $pic_no . ' ภาพ</small> &nbsp; 
+                           <a title="Edit Gallery" href="edit-gallery.php?edit_id=' . $gal['id'] . '"><span class="glyphicon glyphicon-pencil"></span> Edit Gallery</a>
                         </div>
                     </div>
                 </div>
@@ -114,12 +114,13 @@ doc_head('Gallery');
 
             </div>
             <p>&nbsp;</p>
-            <?php
-            echo '
+
             <div class="row">
-                จำนวนทั้งหมด ' . $gal_no . ' แกลอรี
+                จำนวนทั้งหมด <?php echo $gal_no; ?> แกลอรี &nbsp; 
+                <a href="add-gallery.php"><span class="glyphicon glyphicon-plus"></span> Add New Gallery</a>
             </div>
-                ';
+
+            <?php
         } // END if GET
         ?>
 
