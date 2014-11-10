@@ -1,9 +1,8 @@
 <?php
 require_once '../system/system.php';
-doc_head('ฐานข้อมูลนักนักฟิสิกส์ / นักวิจัย ศูนย์ความเป็นเลิศด้านฟิสิกส์');
 
 if (isset($_GET['keyword']) && !empty($_GET['keyword'])) {
-    $field_search = $_GET['field_search'];
+    $field_search = htmlspecialchars($_GET['field_search'], ENT_QUOTES);
     $kw = htmlspecialchars($_GET['keyword'], ENT_QUOTES);
     $kw_ori = $kw;
     $kw = "%$kw%";
@@ -15,9 +14,14 @@ if (isset($_GET['keyword']) && !empty($_GET['keyword'])) {
         $sql_all = "SELECT * FROM res_employment WHERE institute LIKE '$kw' ORDER BY institute;";
     } elseif ($field_search == 'expertise') {
         $sql_all = "SELECT * FROM res_expertise WHERE (topic LIKE '$kw') OR (specific_topic LIKE '$kw');";
+    } else {
+        header("Location: index.php"); // Don't play around, sir!!!!
     }
     $result_all = mysql_query($sql_all);
-} // END if
+}
+// END if
+
+doc_head('ฐานข้อมูลนักนักฟิสิกส์ / นักวิจัย ศูนย์ความเป็นเลิศด้านฟิสิกส์');
 ?>
 
 </head>
