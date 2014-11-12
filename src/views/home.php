@@ -53,7 +53,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 <link rel="stylesheet" type="text/css" href="../plugins/fancyBox-2.1.5/source/jquery.fancybox.css?v=2.1.5" media="screen" />
 
 <script type="text/javascript">
-    $(document).ready(function() {
+    $(document).ready(function () {
         // $('.fancybox').fancybox();
 <?php
 if ($_SESSION['fancy'] == "first") {
@@ -63,7 +63,7 @@ if ($_SESSION['fancy'] == "first") {
 }
 ?>
 
-        $(".fancybox-wrap").click(function() {
+        $(".fancybox-wrap").click(function () {
             // window.open("microwave_workshop.php");
         });
 
@@ -272,20 +272,35 @@ if ($_SESSION['fancy'] == "first") {
             <!-- END ประกาศ -->
 
 
-            <!-- ***** Clip ****** -->            
+
             <div class="col-sm-6 col-md-3 ">
+
+                <!-- ***** Clip ****** --> 
                 <h2 class="text-center header-type">วีดิทัศน์แนะนำศูนย์ฯ</h2>
-                <div>
+                <div class="featured-image-box">
                     <a class="various fancybox.iframe" href="http://www.youtube.com/embed/1YlBlhG2xZE?autoplay=1">
                         <img style="max-width: 100%;" src="http://thep-center.org/upload02/thep_presentation_play.jpg">
                     </a>
                 </div>
+                <!-- ***** END Clip ****** -->
+
+                <!-- Form Researcher -->
+                
+                <section style="margin-top: 20px;">
+                    <h2 class="text-center"><a class="header-type">แบบฟอร์มข้อมูลนักวิจัย</a></h2>
+                    <div class="featured-image-box">                    
+                        <a style="text-align: center;" href="../files/form_research/ThEP-CV-01_Nov_4_2014.docx">
+                            <img class="fetured-image" title="Click to download" src="../../upload02/img/cv_img.jpg" alt="Featured image">
+                        </a>
+                    </div>
+                    <!--                    
+                    <a href="#"><div style="min-width: 223px; min-height: 159px; background-color: white;"></div></a>
+                    -->
+                </section>
+                
 
             </div>
-            <script>
 
-            </script>
-            <!-- ***** END Clip ****** -->
 
         </div>  <!-- /.row -->
 

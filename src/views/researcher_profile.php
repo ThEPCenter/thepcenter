@@ -181,7 +181,7 @@ doc_head('ฐานข้อมูลนักนักฟิสิกส์ / �
 
         <div class="row">
             <div class="col-md-12">
-                <a href="researcher.php" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span> กลับไปหน้าค้นหา</a>
+                <a href="javascript:history.back();" class="btn btn-default"><span class="glyphicon glyphicon-arrow-left"></span> กลับไปหน้าค้นหา</a>
             </div>
         </div>
 

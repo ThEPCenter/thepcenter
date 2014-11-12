@@ -176,6 +176,16 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                         <a target="_blank" href="http://www.oaep.go.th">http://www.oaep.go.th</a>
                     </div>
                 </div>
+                
+                <div class="row">
+                    <div class="col-sm-2 col-md-2"></div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.nano.kmitl.ac.th">วิทยาลัยนาโนเทคโนโลยีพระจอมเกล้าลาดกระบัง</a>
+                    </div>
+                    <div class="col-sm-5 col-md-5">
+                        <a target="_blank" href="http://www.nano.kmitl.ac.th">http://www.nano.kmitl.ac.th</a>
+                    </div>
+                </div>
                                 
                 <div class="row">
                     <div class="col-sm-2 col-md-2"></div>
@@ -248,10 +258,10 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                 <div class="row">
                     <div class="col-sm-2 col-md-2"></div>
                     <div class="col-sm-5 col-md-5">
-                        <a target="_blank" href="http://www.science.kmitl.ac.th/links/department/physics">สาขาวิชาฟิสิกส์ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</a>
+                        <a target="_blank" href="http://physics.kmitl.ac.th">สาขาวิชาฟิสิกส์ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</a>
                     </div>
                     <div class="col-sm-5 col-md-5">
-                        <a target="_blank" href="http://www.science.kmitl.ac.th/links/department/physics">http://www.science.kmitl.ac.th/links/department/physics</a>
+                        <a target="_blank" href="http://physics.kmitl.ac.th">http://physics.kmitl.ac.th</a>
                     </div>
                 </div>
                 
