@@ -2,6 +2,12 @@
 require_once '../system/system.php';
 
 if (isset($_GET['keyword']) && !empty($_GET['keyword'])) {
+
+    if (strlen(trim($_GET['keyword'])) == 0):
+        header("Location: researcher.php");
+        exit();
+    endif;
+
     $field_search = htmlspecialchars($_GET['field_search'], ENT_QUOTES);
     $kw = htmlspecialchars($_GET['keyword'], ENT_QUOTES);
     $kw_ori = $kw;
@@ -18,8 +24,17 @@ if (isset($_GET['keyword']) && !empty($_GET['keyword'])) {
         header("Location: index.php"); // Don't play around, sir!!!!
     }
     $result_all = mysql_query($sql_all);
+} else {
+    $field_search = 'firstname';
 }
+
 // END if
+
+function check_field($field, $value) {
+    if ($field == $value):
+        echo ' selected';
+    endif;
+}
 
 doc_head('ฐานข้อมูลนักนักฟิสิกส์ / นักวิจัย ศูนย์ความเป็นเลิศด้านฟิสิกส์');
 ?>
@@ -45,13 +60,20 @@ doc_head('ฐานข้อมูลนักนักฟิสิกส์ / �
                         <div class="col-sm-1 col-md-1" style=""><strong>ค้นหาจาก</strong></div>
                         <div class="col-sm-2 col-md-2" style="">
                             <select name="field_search" class="form-control">
-                                <option value="firstname" selected>ชื่อ</option>
-                                <option value="lastname">นามสกุล</option>
-                                <option value="institute">สถาบัน</option>
-                                <option value="expertise">ความเชี่ยวชาญ</option>
+                                <option value="firstname"<?php check_field($field_search, 'firstname'); ?>>ชื่อ</option>
+                                <option value="lastname"<?php check_field($field_search, 'lastname'); ?>>นามสกุล</option>
+                                <option value="institute"<?php check_field($field_search, 'institute'); ?>>สถาบัน</option>
+                                <option value="expertise"<?php check_field($field_search, 'expertise'); ?>>ความเชี่ยวชาญ</option>
                             </select>
                         </div>
-                        <div class="col-sm-7 col-md-7"><input class="form-control" name="keyword" type="text" id="keyword" placeholder="คำค้น (keyword)" required></div>
+                        <div class="col-sm-7 col-md-7">
+                            <input class="form-control" name="keyword" type="text" id="keyword" placeholder="คำค้น (keyword)" required 
+                                   value="<?php
+                                   if (isset($kw_ori)) {
+                                       echo $kw_ori;
+                                   }
+                                   ?>">
+                        </div>
                         <div class="col-sm-2 col-md-2"><button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search"></span> Search</button></div>
                     </div>
                     <p>&nbsp;</p>
@@ -244,6 +266,15 @@ doc_head('ฐานข้อมูลนักนักฟิสิกส์ / �
 
                     <?php else : ?>
 
+                        <?php if ($field_search == 'firstname'): ?>
+                            <br>ค้นหาจาก <strong>ชื่อ (firstname)</strong>
+                        <?php elseif ($field_search == 'lastname'): ?>
+                            <br>ค้นหาจาก <strong>นามสกุล (surname)</strong>
+                        <?php elseif ($field_search == 'institute'): ?>
+                            <br>ค้นหาจาก <strong>สถาบัน (institute)</strong>
+                        <?php elseif ($field_search == 'expertise'): ?>
+                            <br>ค้นหาจาก <strong>ความเชี่ยวชาญ (expertise)</strong>
+                        <?php endif; ?>
                         <p><strong style="color: red;">ขออภัย ไม่พบข้อมูล</strong></p>
 
                     <?php endif; ?>
