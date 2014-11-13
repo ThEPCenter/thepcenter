@@ -257,21 +257,35 @@ if ($_SESSION['fancy'] == "first") {
             ?>
             <div class="col-sm-6 col-md-3 ">
 
-                <h2 class="text-center"><a class="header-type" href="notice.php">ประกาศ</a></h2>
+                <h2 class="text-center"><a class="header-type" title="ดูประกาศย้อนทั้งหมด" href="notice.php">ประกาศ</a></h2>
                 <?php if ($p['new'] == 'y') : ?>
                     <div class="featured-image-box">                    
                         <a style="text-align: center;" href="<?php echo $p['type'] ?>.php?news_id=<?php echo $p['id']; ?>">
                             <img class="fetured-image" title="<?php echo htmlspecialchars_decode($p['title']); ?>" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
                         </a>
                     </div>
+                    <!--
                     <h3><a class="header-title" href="<?php echo $p['type'] ?>.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
                     <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
+                    -->
+                <?php else: ?>
+                    <a class="header-type" title="ดูประกาศย้อนหลัง" href="notice.php">
+                        <div class="featured-image-box"></div>
+                    </a>
                 <?php endif; ?>
-            </div>           
 
+                <!-- Form Researcher -->
+                <section style="margin-top: 20px;">
+                    <h2 class="text-center"><a class="header-type">แบบฟอร์มข้อมูลนักวิจัย</a></h2>
+                    <div class="featured-image-box">                    
+                        <a style="text-align: center;" href="../files/form_research/ThEP-CV-01_Nov_4_2014.docx">
+                            <img class="fetured-image" title="Click to download" src="../../upload02/img/cv_img.jpg" alt="Featured image">
+                        </a>
+                    </div>
+                </section>
+
+            </div>
             <!-- END ประกาศ -->
-
-
 
             <div class="col-sm-6 col-md-3 ">
 
@@ -285,19 +299,14 @@ if ($_SESSION['fancy'] == "first") {
                 <!-- ***** END Clip ****** -->
 
                 <!-- Form Researcher -->
-                
-                <section style="margin-top: 20px;">
-                    <h2 class="text-center"><a class="header-type">แบบฟอร์มข้อมูลนักวิจัย</a></h2>
-                    <div class="featured-image-box">                    
-                        <a style="text-align: center;" href="../files/form_research/ThEP-CV-01_Nov_4_2014.docx">
-                            <img class="fetured-image" title="Click to download" src="../../upload02/img/cv_img.jpg" alt="Featured image">
-                        </a>
-                    </div>
-                    <!--                    
-                    <a href="#"><div style="min-width: 223px; min-height: 159px; background-color: white;"></div></a>
-                    -->
+                <section style="margin-top: 23px;">
+                    <h2 class="text-center" style="font-size: 18px;"><a class="header-type" href="researcher.php">ฐานข้อมูลนักฟิสิกส์/นักวิจัย</a></h2>
+                    <a style="text-align: center;" title="ฐานข้อมูลนักฟิสิกส์ / นักวิจัย" href="researcher.php">
+                        <div class="featured-image-box">
+                            <img class="fetured-image" src="">
+                        </div>
+                    </a>
                 </section>
-                
 
             </div>
 
