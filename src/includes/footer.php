@@ -28,7 +28,7 @@
         <div class="col-xs-6 col-sm-3 col-md-3" >
             <ul>
                 <li class="li-head">ข้อมูลทั่วไป</li>
-                <li>▪ <a href="researcher.php">ฐานข้อมูลนักฟิสิกส์ / นักวิจัย <img src="http://thep-center.org/images/template/new2.gif"></a></li>
+                <!-- <li>▪ <a href="researcher.php">ฐานข้อมูลนักฟิสิกส์ / นักวิจัย <img src="http://thep-center.org/images/template/new2.gif"></a></li> -->
                 
                 <li>▪ <a href="annual-report.php">รายงานประจำปี</a></li>
                 

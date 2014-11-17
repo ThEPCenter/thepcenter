@@ -303,7 +303,7 @@ if ($_SESSION['fancy'] == "first") {
                     <h2 class="text-center" style="font-size: 18px;"><a class="header-type" href="researcher.php">ฐานข้อมูลนักฟิสิกส์/นักวิจัย</a></h2>
                     <a style="text-align: center;" title="ฐานข้อมูลนักฟิสิกส์ / นักวิจัย" href="researcher.php">
                         <div class="featured-image-box">
-                            <img class="fetured-image" src="">
+                            <img class="fetured-image" src="../../upload02/img/Thai_Physicist_db_1.jpg">
                         </div>
                     </a>
                 </section>
