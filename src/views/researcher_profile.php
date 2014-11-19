@@ -64,34 +64,40 @@ doc_head('ฐานข้อมูลนักนักฟิสิกส์ / �
                                 <?php echo $r_em->street_th; ?>
                             <?php endif; ?>
 
-                            <?php if (!empty($r_em->sub_district_th)): ?>
-                                <?php if ($r_em->province_th == 'กรุงเทพมหานคร'): ?>
-                                    แขวง
-                                <?php else: ?>
-                                    ตำบล
-                                <?php endif; ?>
-                                <?php echo $r_em->sub_district_th; ?>
-                            <?php endif; ?>
+                            <?php
+                            if (!empty($r_em->sub_district_th)):
+                                if ($r_em->province_th == 'กรุงเทพมหานคร'):
+                                    echo 'แขวง';
+                                else:
+                                    echo 'ตำบล';
+                                endif;
+                                echo $r_em->sub_district_th;
+                            endif;
+                            ?>
 
-                            <?php if (!empty($r_em->district_th)): ?>
-                                <?php if ($r_em->province_th == 'กรุงเทพมหานคร'): ?>
-                                    เขต
-                                <?php else: ?>
-                                    อำเภอ
-                                <?php endif; ?>
-                                <?php echo $r_em->district_th; ?>
-                            <?php endif; ?>
+                            <?php
+                            if (!empty($r_em->district_th)):
+                                if ($r_em->province_th == 'กรุงเทพมหานคร'):
+                                    echo 'เขต';
+                                else:
+                                    echo 'อำเภอ';
+                                endif;
+                                echo $r_em->district_th;
+                            endif;
+                            ?>
 
-                            <?php if (!empty($r_em->province_th)): ?>
-                                <?php if ($r_em->province_th != 'กรุงเทพมหานคร'): ?>
-                                    จังหวัด 
-                                <?php endif; ?>
-                                <?php echo $r_em->province_th; ?>
-                            <?php endif; ?>
+                            <?php
+                            if (!empty($r_em->province_th)):
+                                if ($r_em->province_th != 'กรุงเทพมหานคร'):
+                                    echo 'จังหวัด';
+                                endif;
+                                echo $r_em->province_th;
+                            endif;
+                            ?>
 
                             <?php echo $r_em->postal_code; ?>
 
-                        </p>                        
+                        </p>
 
                         <p>
                             <strong>โทรศัพท์:</strong> 
@@ -101,6 +107,10 @@ doc_head('ฐานข้อมูลนักนักฟิสิกส์ / �
                             }
                             ?>
                         </p>
+
+                        <?php if (!empty($r_em->mobile_phone)): ?>
+                            <p><strong>โทรศัพท์มือถือ: </strong><?php echo $r_em->mobile_phone; ?></p>
+                        <?php endif; ?>
 
                         <p>
                             <strong>Email:</strong> 
