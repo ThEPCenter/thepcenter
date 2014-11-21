@@ -1,6 +1,8 @@
 <?php
 require_once '../system/system.php';
 
+require '../includes/paging.inc.php';
+
 if (isset($_GET['keyword']) && !empty($_GET['keyword'])) {
 
     if (strlen(trim($_GET['keyword'])) == 0):
@@ -12,18 +14,42 @@ if (isset($_GET['keyword']) && !empty($_GET['keyword'])) {
     $kw = htmlspecialchars($_GET['keyword'], ENT_QUOTES);
     $kw_ori = $kw;
     $kw = "%$kw%";
+
+// Read order of current page
+    $current_page = 1;
+    if (isset($_GET['page'])) {
+        $current_page = $_GET['page'];
+    }
+
+// Set rows per page and find the starting row
+    $rows_per_page = 20;
+    $start_row = paging_start_row($current_page, $rows_per_page);
+
     if ($field_search == 'firstname') {
-        $sql_all = "SELECT * FROM res_profile WHERE (firstname_th LIKE '$kw') OR (firstname_en LIKE '$kw') ORDER BY firstname_en;";
+        $sql_all = "SELECT SQL_CALC_FOUND_ROWS * FROM res_profile WHERE (firstname_th LIKE '$kw') OR (firstname_en LIKE '$kw') ORDER BY firstname_en LIMIT $start_row, $rows_per_page;";
+        $sql_for_nums = "SELECT * FROM res_profile WHERE (firstname_th LIKE '$kw') OR (firstname_en LIKE '$kw') ORDER BY firstname_en;";
     } elseif ($field_search == 'lastname') {
-        $sql_all = "SELECT * FROM res_profile WHERE (lastname_th LIKE '$kw') OR (lastname_en LIKE '$kw') ORDER BY lastname_en;";
+        $sql_all = "SELECT SQL_CALC_FOUND_ROWS * FROM res_profile WHERE (lastname_th LIKE '$kw') OR (lastname_en LIKE '$kw') ORDER BY lastname_en LIMIT $start_row, $rows_per_page;";
+        $sql_for_nums = "SELECT * FROM res_profile WHERE (lastname_th LIKE '$kw') OR (lastname_en LIKE '$kw') ORDER BY lastname_en;";
     } elseif ($field_search == 'institute') {
-        $sql_all = "SELECT * FROM res_employment WHERE institute LIKE '$kw' ORDER BY institute;";
+        $sql_all = "SELECT SQL_CALC_FOUND_ROWS * FROM res_employment WHERE institute LIKE '$kw' ORDER BY institute LIMIT $start_row, $rows_per_page;";
+        $sql_for_nums = "SELECT * FROM res_employment WHERE institute LIKE '$kw' ORDER BY institute;";
     } elseif ($field_search == 'expertise') {
-        $sql_all = "SELECT * FROM res_expertise WHERE (topic LIKE '$kw') OR (specific_topic LIKE '$kw');";
+        $sql_all = "SELECT SQL_CALC_FOUND_ROWS * FROM res_expertise WHERE (topic LIKE '$kw') OR (specific_topic LIKE '$kw') LIMIT $start_row, $rows_per_page;";
+        $sql_for_nums = "SELECT * FROM res_expertise WHERE (topic LIKE '$kw') OR (specific_topic LIKE '$kw');";
     } else {
         header("Location: index.php"); // Don't play around, sir!!!!
     }
     $result_all = mysql_query($sql_all);
+
+    $result_for_nums = mysql_query($sql_for_nums);
+
+// Find number of rows
+    $found_rows = mysql_query("SELECT FOUND_ROWS();");
+    $total_rows = mysql_result($found_rows, 0, 0);
+
+// total page number
+    $total_pages = paging_total_pages($total_rows, $rows_per_page);
 } else {
     $field_search = 'firstname';
 }
@@ -93,8 +119,12 @@ doc_head('ฐานข้อมูลนักนักฟิสิกส์ / �
 
                         <?php if ($field_search == 'firstname') : ?>
                             <br>ค้นหาจาก <strong>ชื่อ (firstname)</strong> 
-                            <br>พบนักฟิสิกส์ / นักวิจัย ทั้งหมด <span style="color: green;"><?php echo mysql_num_rows($result_all); ?></span> คน ดังนี้
-                            <?php $i = 1; ?>
+                            <?php $num_rows = mysql_num_rows($result_for_nums); ?>
+                            <?php $start_at = $rows_per_page * ($current_page - 1) + 1; ?> 
+                            <?php $i = $start_at; ?>
+
+                            <br>พบนักฟิสิกส์ / นักวิจัย ทั้งหมด <strong style="color: green;"><?php echo $num_rows; ?></strong> คน ดังนี้                            
+
                             <table class="table table-bordered">
                                 <tbody>
                                     <tr>
@@ -138,9 +168,12 @@ doc_head('ฐานข้อมูลนักนักฟิสิกส์ / �
                             </table>
 
                         <?php elseif ($field_search == 'lastname') : ?>
-                            <br>ค้นหาจาก <strong>นามสกุล (surname)</strong> 
-                            <br>พบนักฟิสิกส์ / นักวิจัย ทั้งหมด <span style="color: green;"><?php echo mysql_num_rows($result_all); ?></span> คน ดังนี้
-                            <?php $i = 1; ?>
+                            <br>ค้นหาจาก <strong>นามสกุล (surname)</strong>
+                            <?php $num_rows = mysql_num_rows($result_for_nums); ?>
+                            <?php $start_at = $rows_per_page * ($current_page - 1) + 1; ?> 
+                            <?php $i = $start_at; ?>
+                            <br>พบนักฟิสิกส์ / นักวิจัย ทั้งหมด <strong style="color: green;"><?php echo $num_rows; ?></strong> คน ดังนี้
+
                             <table class="table table-bordered">
                                 <tbody>
                                     <tr>
@@ -184,10 +217,13 @@ doc_head('ฐานข้อมูลนักนักฟิสิกส์ / �
                             </table>
 
                         <?php elseif ($field_search == 'institute') : ?>
-                            <br>ค้นหาจาก <strong>สถาบัน (institute)</strong> 
-                            <br>พบนักฟิสิกส์ / นักวิจัย ทั้งหมด <span style="color: green;"><?php echo mysql_num_rows($result_all); ?></span> คน ดังนี้
+                            <br>ค้นหาจาก <strong>สถาบัน (institute)</strong>
+                            <?php $num_rows = mysql_num_rows($result_for_nums); ?>
+                            <?php $start_at = $rows_per_page * ($current_page - 1) + 1; ?> 
+                            <?php $i = $start_at; ?>
+                            <br>พบนักฟิสิกส์ / นักวิจัย ทั้งหมด <strong style="color: green;"><?php echo $num_rows; ?></strong> คน ดังนี้
 
-                            <?php $i = 1; ?>
+
                             <table class="table table-bordered">
                                 <tbody>
                                     <tr>
@@ -221,8 +257,11 @@ doc_head('ฐานข้อมูลนักนักฟิสิกส์ / �
 
                         <?php elseif ($field_search == 'expertise') : ?>
                             <br>ค้นหาจาก <strong>ความเชี่ยวชาญ (expertise)</strong>
-                            <br>พบนักฟิสิกส์ / นักวิจัย ทั้งหมด <span style="color: green;"><?php echo mysql_num_rows($result_all); ?></span> คน ดังนี้
-                            <?php $i = 1; ?>
+                            <?php $num_rows = mysql_num_rows($result_for_nums); ?>
+                            <?php $start_at = $rows_per_page * ($current_page - 1) + 1; ?> 
+                            <?php $i = $start_at; ?>
+                            <br>พบนักฟิสิกส์ / นักวิจัย ทั้งหมด <strong style="color: green;"><?php echo $num_rows; ?></strong> คน ดังนี้
+
 
                             <table class="table table-bordered">
                                 <tbody>
@@ -278,15 +317,43 @@ doc_head('ฐานข้อมูลนักนักฟิสิกส์ / �
                         <p><strong style="color: red;">ขออภัย ไม่พบข้อมูล</strong></p>
 
                     <?php endif; ?>
-                    <p>&nbsp;</p>
 
                 </div>
+                <?php if (isset($start_at) && isset($i)): ?>
+                    <p>แสดงข้อมูลลำดับที่ 
+                        <strong>
+                            <?php
+                            if ($start_at == ($i - 1)):
+                                echo $start_at;
+                            else:
+                                echo $start_at . ' - ' . --$i;
+                            endif;
+                            ?>
+                        </strong>
+                        จากจำนวน <strong><?php echo $num_rows; ?></strong> คน
+                    </p>
+
+                    <?php
+                    $page_range = 5;
+                    $qry_string = "field_search=$field_search&keyword=$kw_ori";
+
+                    // Create link between pages
+                    $page_str = paging_pagenum($current_page, $total_pages, $page_range, $qry_string);
+                    ?>
+
+                    <?php if ($num_rows > $rows_per_page): ?>
+                        <nav>
+                            <ul class="pagination">
+                                <?php echo $page_str; ?>
+                            </ul>
+                        </nav>
+                    <?php endif; ?>                    
+
+                <?php endif; ?>
+
             <?php endif; ?>
 
-
-
-        </div> <!-- /.row -->       
-
+        </div> <!-- /.row -->
 
         <?php get_includes('footer'); ?>
 
