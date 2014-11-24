@@ -17,10 +17,16 @@ $type = 'daily-life';
 
 <meta property="og:title" content="<?php echo $title; ?>" />
 <?php if (isset($_GET['article_id'])): ?>
-<meta property="og:description" content="<?php echo $article->content_short; ?>" />
-<meta property="og:image" content="<?php echo $article->featured_img; ?>" />
+    <meta property="og:description" content="<?php echo $article->content_short; ?>" />
+    <meta property="og:image" content="<?php echo $article->featured_img; ?>" />
 <?php endif; ?>
 
+<style>
+    td {
+        padding-left: 0;
+        padding-right: 0;
+    }
+</style>    
 </head>
 
 <body>
