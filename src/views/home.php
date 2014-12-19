@@ -58,7 +58,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 <?php
 if ($_SESSION['fancy'] == "first") {
     // echo '$.fancybox.open("http://www.thep-center.org/upload02/king57_60_2.jpg");';
-    // echo '$.fancybox.open("../../upload02/queen_2014.jpg");';
+    echo '$.fancybox.open("http://www.thep-center.org/upload02/2015_HNY_thep.jpg");';
     // echo '$.fancybox.open("../../upload02/notice/microwave_140321_1200_web.jpg");';
     unset($_SESSION['fancy']);
 }
