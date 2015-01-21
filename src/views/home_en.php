@@ -24,7 +24,7 @@ doc_head('Thailand Center of Excellence in Physics');
                 <h2 class="text-center"><a class="header-type" title="Research News from Members" href="network-academic-news_en.php">Research News from Members</a></h2>
                 <div>
                     <div style="border: 1px solid #666666;">
-                        <a title="<?php echo $p['title_en']; ?>" href="<?php echo $p['type'] ?>-news_en.php?news_id=<? echo $p['id']; ?>">
+                        <a title="<?php echo $p['title_en']; ?>" href="<?php echo $p['type'] ?>-news_en.php?news_id=<?php echo $p['id']; ?>">
                             <img class="img-responsive" style="margin: auto;" src="<?php echo $p['featured_img']; ?>">
                         </a>
                     </div>                                                
