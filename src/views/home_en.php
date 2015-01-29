@@ -3,6 +3,39 @@ require_once '../system/system.php';
 doc_head('Thailand Center of Excellence in Physics');
 ?>
 
+<!-- "fancybox" -->
+
+<!-- Add jQuery library -->
+<script type="text/javascript" src="../plugins/fancyBox-2.1.5/lib/jquery-1.10.1.min.js"></script>
+
+<!-- Add mousewheel plugin (this is optional) -->
+<script type="text/javascript" src="../plugins/fancyBox-2.1.5/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+<!-- Add fancyBox main JS and CSS files -->
+<script type="text/javascript" src="../plugins/fancyBox-2.1.5/source/jquery.fancybox.js?v=2.1.5"></script>
+<link rel="stylesheet" type="text/css" href="../plugins/fancyBox-2.1.5/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        // $('.fancybox').fancybox();
+
+        // Clip
+        $(".various").fancybox({
+            maxWidth: 800,
+            maxHeight: 600,
+            fitToView: false,
+            width: '70%',
+            height: '70%',
+            autoSize: false,
+            closeClick: false,
+            openEffect: 'none',
+            closeEffect: 'none'
+        });
+
+    });
+
+
+</script>
 </head>
 
 <body>
@@ -31,7 +64,20 @@ doc_head('Thailand Center of Excellence in Physics');
                     <h3><a class="header-title" href="<?php echo $p['type'] ?>-news_en.php?news_id=<? echo $p['id']; ?>"><?php echo $p['title_en']; ?></a></h3>
                     <?php echo $p['content_short_en']; ?> <a href="<?php echo $p['type'] ?>-news_en.php?news_id=<?php echo $p['id']; ?>">... Read more</a>
                 </div>
+                <p>&nbsp;</p>
+                
+                <!-- ***** Clip ****** -->
+                <h2 class="text-center header-type">ThEP VDO Presentation</h2>
+                <div class="" style="text-align: center;">
+                    <a class="various fancybox.iframe" href="http://www.youtube.com/embed/1YlBlhG2xZE?autoplay=1">
+                        <img style="max-width: 69%;" src="http://thep-center.org/upload02/thep_presentation_play.jpg">
+                    </a>
+                </div>
+                <!-- ***** END Clip ****** -->
+
             </div>
+
+
 
             <!-- ThEP Center Brochure -->
             <?php
