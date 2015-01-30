@@ -279,7 +279,7 @@ if ($_SESSION['fancy'] == "first") {
                 <section style="margin-top: 20px;">
                     <h2 class="text-center"><a class="header-type">แบบฟอร์มข้อมูลนักวิจัย</a></h2>
                     <div class="featured-image-box">                    
-                        <a style="text-align: center;" href="../files/form_research/ThEP-CV-01_Nov_18_2014.docx">
+                        <a style="text-align: center;" href="../files/form_research/ThEP-CV-01_2015_01_30.docx">
                             <img class="fetured-image" title="Click to download" src="../../upload02/img/cv_img.jpg" alt="Featured image">
                         </a>
                     </div>
