@@ -23,6 +23,8 @@
 
         <script src="../plugins/jqueryui/jquery-1.10.2.js"></script>
         <script src="../plugins/jqueryui/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
+        <script src="../themes/bootstrap/js/bootstrap.js"></script>
+        
         <!-- CKEditor -->
         <script src="../plugins/ckeditor/ckeditor.js"></script>
 
