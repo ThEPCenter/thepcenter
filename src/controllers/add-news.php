@@ -65,7 +65,7 @@ $news_type = $_GET['add_news'];
         <input type="text" id="datepicker" name="date">
     </div>
     <script>
-        $(function() {
+        $(function () {
             $("#datepicker").datepicker();   // Date Picker
         }); /* END jQuery */
     </script>
@@ -79,8 +79,8 @@ $news_type = $_GET['add_news'];
         <input type="text" id="featured_img" name="featured_img"  class="form-control" />
     </div>
     <script>
-        $(function() {
-            $("#featured_img").blur(function() {
+        $(function () {
+            $("#featured_img").blur(function () {
                 var img_url = $("#featured_img").val();
                 $("#show-img").html("<img src=\"" + img_url + "\" style=\"max-width: 100%; height: auto; margin: auto;\">");
             });
@@ -147,5 +147,12 @@ $news_type = $_GET['add_news'];
         </div>
     <?php } ?>
 
-    <button type="submit" class="btn btn-default">Submit</button> | <a href="../views/<?php echo $news_type ?>-news.php" title="Cancel"><strong>Cancel</strong></a>
+    <button type="submit" class="btn btn-default">Submit</button> | 
+    <a href="../views/<?php
+    if ($new_type == 'notice'):
+        echo $news_type;
+    else:
+        echo $news_type . '-news.php';
+    endif;
+    ?>" title="Cancel"><strong>Cancel</strong></a>
 </form>
