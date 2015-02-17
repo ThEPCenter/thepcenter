@@ -64,7 +64,7 @@ if ($_SESSION['fancy'] == "first") {
 }
 ?>
 
-        $(".fancybox-wrap").click(function () {
+        $(".fancybox-outer").click(function () {
             window.location = "http://thep-center.org/src2/views/notice.php?news_id=63";
             // window.open("microwave_workshop.php");
         });
