@@ -57,19 +57,22 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
         // $('.fancybox').fancybox();
 <?php
 if ($_SESSION['fancy'] == "first") {
-    echo '$.fancybox.open("http://www.thep-center.org/upload02/solarpop2.jpg");';
+    echo '$.fancybox.open("#popup");';
+    // echo '$.fancybox.open("http://www.thep-center.org/upload02/solarpop2.jpg");';
     // echo '$.fancybox.open("http://www.thep-center.org/upload02/2015_HNY_thep.jpg");';
     // echo '$.fancybox.open("../../upload02/notice/microwave_140321_1200_web.jpg");';
     unset($_SESSION['fancy']);
 }
 ?>
+        // $("#popup1").click(function () {
+        // window.location = "http://thep-center.org/src2/views/notice.php?news_id=63";
+        // });
+        // $(".fancybox-outer").click(function () {
+        // window.location = "http://thep-center.org/src2/views/notice.php?news_id=63";
+        // window.open("microwave_workshop.php");
+        // });
 
-        $(".fancybox-outer").click(function () {
-            window.location = "http://thep-center.org/src2/views/notice.php?news_id=63";
-            // window.open("microwave_workshop.php");
-        });
-
-        // Clip
+        // ========= Clip Youtube ========= //
         $(".various").fancybox({
             maxWidth: 800,
             maxHeight: 600,
@@ -83,7 +86,6 @@ if ($_SESSION['fancy'] == "first") {
         });
 
     });
-
 
 </script>
 
@@ -101,11 +103,27 @@ if ($_SESSION['fancy'] == "first") {
 </head>
 
 <body>
+    <!-- Pop up -->
+    <div class="container" id="popup" style="display: none; background-color: #f9f9f9; max-width: 920px; padding: 0;">
+        <div class="row" style="max-width: 100%;">
+            <div class="col-xs-6 col-sm-6 col-md-6" style="padding-right: 0; padding-left: 0;">
+                <a title="การจัดสัมมนา เรื่อง การพัฒนาเทคโนโลยีเซลล์แสงอาทิตย์ วันจันทร์ที่ 2 มีนาคม 2558" id="popup1" style="color: red;" href="http://thep-center.org/src2/views/notice.php?news_id=63">           
+                    <img alt="solarmixpop02" style="max-width: 100%" src="http://www.thep-center.org/upload02/solarmixpop02.jpg">            
+                </a>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6" style="padding-right: 0; padding-left: 0;">
+                <a title="การจัดสัมมนา เรื่อง การพัฒนาเทคโนโลยีอินเตอร์เฟียร์โรเมทรีเชิงอะตอม ระหว่างวันที่ 7-9 เมษายน 2558" id="popup2" style="color: red;" href="http://thep-center.org/src2/views/notice.php?news_id=65">
+                    <img alt="atommixpop02" style="max-width: 100%" src="http://www.thep-center.org/upload02/atommixpop02.jpg">
+                </a>
+            </div>
+        </div>
+    </div> <!-- END Pop Up -->
+
     <div class="container">
 
         <div class="row">
             <a title="ศูนย์ความเป็นเลิศด้านฟิสิกส์" href="home.php"><img class="img-responsive" style="margin: 0 auto;" src="../images/thep_head_10_970_web.jpg"></a>
-        </div>
+        </div> 
 
         <div class="row">
             <div class="col-xs-6 col-sm-6 col-md-6">จำนวนผู้เข้าชม: <?php echo $counter; ?> ครั้ง</div>
@@ -186,28 +204,6 @@ if ($_SESSION['fancy'] == "first") {
         <!-- =========================================================================================== -->
 
         <div class="row">
-
-            <!-- Pr news -->
-            <?php /*
-              <?php
-              $sql = "SELECT * FROM tb_news
-              WHERE type = 'pr'
-              ORDER BY date DESC;";
-              $result = mysql_query($sql);
-              $p = mysql_fetch_array($result);
-              ?>
-              <div class="col-sm-6 col-md-3 ">
-              <h2 class="text-center"><a class="header-type" href="pr-news.php">ข่าวประชาสัมพันธ์</a></h2>
-              <div class="featured-image-box">
-              <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">
-              <img class="fetured-image" title="<?php echo htmlspecialchars_decode($p['title']); ?>" src="<?php echo $p['featured_img']; ?>" alt="Featured image">
-              </a>
-              </div>
-              <h3><a class="header-title" href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>"><?php echo $p['title']; ?></a></h3>
-              <p><?php echo $p['content_short']; ?> <a href="<?php echo $p['type'] ?>-news.php?news_id=<?php echo $p['id']; ?>">... อ่านต่อ</a></p>
-              </div>
-             */
-            ?>
             <!-- Industrial  Physics -->
             <?php
             $sql = "SELECT * FROM tb_social 
@@ -249,7 +245,6 @@ if ($_SESSION['fancy'] == "first") {
 
 
             <!-- ประกาศ -->
-
             <?php
             $sql = "SELECT * FROM tb_news 
                 WHERE type = 'notice' AND new = 'y'
@@ -387,7 +382,8 @@ if ($_SESSION['fancy'] == "first") {
                 </a>
             </div>
 
-        </div> <!-- /.row -->
+        </div> <!-- /.row -->       
+
 
         <?php get_includes('footer'); ?>
     </div>
