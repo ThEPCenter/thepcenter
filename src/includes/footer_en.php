@@ -19,7 +19,7 @@
 
                 <li>▪ <a href="structure_en.php">Organization Chart</a></li>
 
-                <li>▪ <a href="personel_en.php">Executive and Staff</a></li>
+                <li>▪ <a href="personnel_en.php">Executive and Staff</a></li>
 
                 <li>▪ <a href="location_en.php">Location & Map</a></li>
 

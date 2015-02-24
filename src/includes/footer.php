@@ -18,7 +18,7 @@
 
                 <li>▪ <a href="structure.php">โครงสร้างองค์กร</a></li>
 
-                <li>▪ <a href="personel.php">บุคลากร</a></li>
+                <li>▪ <a href="personnel.php">บุคลากร</a></li>
                 
                 <li>▪ <a href="location.php">ที่ตั้งหน่วยงาน</a></li>
 
