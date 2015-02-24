@@ -47,14 +47,14 @@ doc_head('บุคลากร - ศูนย์ความเป็นเล�
                                 ?>
                                 <tr>
                                     <td align="center">
-                                        <img src="<?php echo $p['photo'] ?>" class="img-responsive" style="width: auto; max-height: 190px;">
+                                        <img src="<?php echo $p['photo']; ?>" class="img-responsive" style="max-width:126px; max-height: 190px;">
                                     </td>
                                     <td>                                            
-                                        <p><?php echo $p['title_th'] . ' ' . $p['first_th'] . ' ' . $p['last_th']; ?></p>                                            
-                                        <p>ตำแหน่ง : <? echo $p['position_th'] ?></p>                                            
+                                        <p style="font-size: 16px; margin-bottom: 4px;"><?php echo $p['title_th'] . $p['first_th'] . ' ' . $p['last_th']; ?></p>                                            
+                                        <p>ตำแหน่ง : <?php echo $p['position_th']; ?></p>                                            
                                         <address>
-                                            โทรศัพท์ : <?php echo $p['phone_th'] ?><br />
-                                            Email: <?php echo $p['email'] ?><br />
+                                            โทรศัพท์ : <?php echo $p['phone_th']; ?><br />
+                                            Email: <?php echo $p['email']; ?><br />
                                         </address>
 
                                         <?php

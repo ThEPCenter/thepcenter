@@ -48,14 +48,14 @@ doc_head('Executive and Staff');
                                 ?>
                                 <tr>
                                     <td align="center">
-                                        <img src="<?php echo $p['photo'] ?>" class="img-responsive" style="width: auto; max-height: 190px;">
+                                        <img src="<?php echo $p['photo'] ?>" class="img-responsive" style="max-width:126px; max-height: 190px;">
                                     </td>
                                     <td>                                            
-                                        <p><?php echo $p['title_en'] . ' ' . $p['first_en'] . ' ' . $p['last_en']; ?></p>                                            
-                                        <p>Position : <? echo $p['position_en'] ?></p>                                            
+                                        <p style="font-size: 16px; margin-bottom: 4px;"><?php echo $p['title_en'] . $p['first_en'] . ' ' . $p['last_en']; ?></p>                                            
+                                        <p>Position : <?php echo $p['position_en']; ?></p>                                            
                                         <address>
-                                            Tel. : <?php echo $p['phone_en'] ?><br />
-                                            Email: <?php echo $p['email'] ?><br />
+                                            Tel. : <?php echo $p['phone_en']; ?><br />
+                                            Email: <?php echo $p['email']; ?><br />
                                         </address>
 
                                         <?php
