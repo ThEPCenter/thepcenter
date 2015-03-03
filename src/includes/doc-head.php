@@ -1,5 +1,8 @@
-<!doctype html>
-<html class="no-js" lang="en" xmlns:fb="http://ogp.me/ns/fb#">
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="lt-ie9 lt-ie8 lt-ie7" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 7]>    <html class="lt-ie9 lt-ie8" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 8]>    <html class="lt-ie9" lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"> <!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +27,7 @@
         <script src="../plugins/jqueryui/jquery-1.10.2.js"></script>
         <script src="../plugins/jqueryui/jquery-ui-1.10.3/ui/jquery-ui.js"></script>
         <script src="../themes/bootstrap/js/bootstrap.js"></script>
-        
+
         <!-- CKEditor -->
         <script src="../plugins/ckeditor/ckeditor.js"></script>
 

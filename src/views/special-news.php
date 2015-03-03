@@ -15,11 +15,16 @@ doc_head($title . " - ศูนย์ความเป็นเลิศด้�
 $news_type = 'special';
 ?>
 
-<meta property="og:title" content="<?php echo $title; ?>" />
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="<?php echo $title; ?>">
 <?php if (isset($_GET['news_id'])): ?>
-<meta property="og:description" content="<?php echo $news->content_short; ?>" />
-<meta property="og:image" content="<?php echo $news->featured_img; ?>" />
+    <meta property="og:description" content="<?php echo $news->content_short; ?>">
+    <meta property="og:image" content="<?php echo $news->featured_img; ?>">
 <?php endif; ?>
+<meta property="og:url" content="http://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . '?' . $_SERVER['QUERY_STRING']; ?>">
+<meta property="og:site_name" content="Thailand Center of Excellence in Physics (ThEP)">
+<meta property="og:updated_time" content="<?php $ttime = strtotime($news->modified); echo date("Y-m-d", $ttime) . 'T' . date("H:i:s+07:00", $ttime); ?>">
 
 <style>
     p small {

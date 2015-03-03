@@ -14,12 +14,16 @@ doc_head($title . " - ศูนย์ความเป็นเลิศด้�
 
 $news_type = 'notice';
 ?>
-
-<meta property="og:title" content="<?php echo $title; ?>" />
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="<?php echo $title; ?>">
 <?php if (isset($_GET['news_id'])): ?>
-<meta property="og:description" content="<?php echo $news->content_short; ?>" />
-<meta property="og:image" content="<?php echo $news->featured_img; ?>" />
+    <meta property="og:description" content="<?php echo $news->content_short; ?>">
+    <meta property="og:image" content="<?php echo $news->featured_img; ?>">
 <?php endif; ?>
+<meta property="og:url" content="http://<?php echo $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'] . '?' . $_SERVER['QUERY_STRING']; ?>">
+<meta property="og:site_name" content="Thailand Center of Excellence in Physics (ThEP)">
+<meta property="og:updated_time" content="<?php $ttime = strtotime($news->modified); echo date("Y-m-d", $ttime) . 'T' . date("H:i:s+07:00", $ttime); ?>">
 
 <style>
     p small {
@@ -68,13 +72,13 @@ $news_type = 'notice';
                       ';
                     ?>
                     <script>
-                        $(function() {
-                            $('#edit-news').click(function() {
-                                $(document).ajaxStart(function() {
+                        $(function () {
+                            $('#edit-news').click(function () {
+                                $(document).ajaxStart(function () {
                                     $('#show-news').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
                                 });
                                 $.get("<?php controll('edit-notice'); ?>", {edit_news: "<?php echo $p['id']; ?>"},
-                                function(data) {
+                                function (data) {
                                     $('#show-news').html(data);
                                 }
                                 );
@@ -174,7 +178,7 @@ $news_type = 'notice';
     <?php get_includes('bootstrap-core'); ?>
     <script type='text/javascript'>
 
-        $(function() {
+        $(function () {
 
         });
 
