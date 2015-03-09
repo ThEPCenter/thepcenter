@@ -111,7 +111,7 @@ if ($_SESSION['fancy'] == "first") {
                    href="http://thep-center.org/src2/views/notice.php?news_id=69">
                     <img alt="education_popup" style="max-width: 100%;" src="http://www.thep-center.org/upload02/education_popup2.jpg">
                 </a><br>
-                <a title="การจัดสัมมนา เรื่อง โปรแกรมวิจัย Magnetic Materials วันอังคารที่ 31 มีนาคม 2558" 
+                <a title="การจัดสัมมนา Consultant Meeting เรื่อง โปรแกรมวิจัย Magnetic Materials วันอังคารที่ 31 มีนาคม 2558" 
                    href="http://thep-center.org/src2/views/notice.php?news_id=70">
                     <img alt="magnetic_popup" style="max-width: 100%;" src="http://www.thep-center.org/upload02/magnetic_popup2.jpg">
                 </a>
