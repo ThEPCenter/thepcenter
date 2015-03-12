@@ -109,17 +109,22 @@ if ($_SESSION['fancy'] == "first") {
             <div class="col-xs-6 col-sm-6 col-md-6" style="padding-right: 0; padding-left: 0;">
                 <a title="การจัดสัมมนา เรื่อง การปฏิรูปฟิสิกส์ศึกษาอย่างยั่งยืน วันที่ 21-22 มีนาคม 2558" 
                    href="http://thep-center.org/src2/views/notice.php?news_id=69">
-                    <img alt="education_popup" style="max-width: 100%;" src="http://www.thep-center.org/upload02/education_popup2.jpg">
+                    <img alt="education_popup" style="max-width: 100%;" src="http://thep-center.org/upload02/education_popup2.jpg">
                 </a><br>
                 <a title="การจัดสัมมนา Consultant Meeting เรื่อง โปรแกรมวิจัย Magnetic Materials วันอังคารที่ 31 มีนาคม 2558" 
                    href="http://thep-center.org/src2/views/notice.php?news_id=70">
-                    <img alt="magnetic_popup" style="max-width: 100%;" src="http://www.thep-center.org/upload02/magnetic_popup2.jpg">
+                    <img alt="magnetic_popup" style="max-width: 100%;" src="http://thep-center.org/upload02/magnetic_popup2.jpg">
                 </a>
             </div>
 
             <div class="col-xs-6 col-sm-6 col-md-6" style="padding-right: 0; padding-left: 0;">
-                <a title="การจัดสัมมนา เรื่อง การพัฒนาเทคโนโลยีอินเตอร์เฟียร์โรเมทรีเชิงอะตอม วันที่ 7-9 เมษายน 2558" id="popup2" style="color: red;" href="http://thep-center.org/src2/views/notice.php?news_id=65">
-                    <img alt="atommixpop02" style="max-width: 100%" src="http://www.thep-center.org/upload02/atommixpop02.jpg">
+                <a title="การจัดสัมมนา เรื่อง วัสดุเทอร์โมอิเล็กทริกโครงสร้างนาโนฟิล์มบาง วันจันทร์ที่ 30 มีนาคม 2558" 
+                   href="http://thep-center.org/src2/views/notice.php?news_id=72">
+                    <img alt="Thermoelectric" style="max-width: 100%" src="http://thep-center.org/upload02/Thermoelectric_150311_02.jpg">
+                </a>
+                <a title="การจัดสัมมนา เรื่อง การพัฒนาเทคโนโลยีอินเตอร์เฟียร์โรเมทรีเชิงอะตอม วันที่ 7-9 เมษายน 2558" 
+                   href="http://thep-center.org/src2/views/notice.php?news_id=65">
+                    <img alt="atommixpop02" style="max-width: 100%" src="http://thep-center.org/upload02/atommixpop_150311_03.jpg">
                 </a>
             </div>
         </div> <!-- /.row -->
