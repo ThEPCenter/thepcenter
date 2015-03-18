@@ -307,3 +307,9 @@ a.all-title{
         overflow: hidden;
     }
 } /*  END @media (max-width: 767px) */
+
+
+/* Button */
+.btn {
+    border-radius: 0;
+}
