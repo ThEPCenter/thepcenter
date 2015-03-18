@@ -284,10 +284,10 @@ if ($_SESSION['fancy'] == "first") {
 
                 <!-- Form Researcher -->
                 <section style="margin-top: 20px;">
-                    <h2 class="text-center"><a class="header-type" style="font-size: 14px;">แบบฟอร์มข้อมูลนักฟิสิกส์/นักวิจัย</a></h2>
+                    <h2 class="text-center"><a class="header-type" style="font-size: 16px;">กรอกข้อมูลนักฟิสิกส์ / นักวิจัย</a></h2>
                     <div class="featured-image-box">                    
-                        <a style="text-align: center;" href="../files/form_research/ThEP-CV-01_2015_01_30.docx">
-                            <img class="fetured-image" title="Click to download" src="../../upload02/img/cv_img.jpg" alt="Featured image">
+                        <a style="text-align: center;" title="กรอกข้อมูลนักฟิสิกส์ / นักวิจัย" href="biodata.php">
+                            <img class="fetured-image" src="../../upload02/img/cv_img.jpg" alt="กรอกข้อมูลนักฟิสิกส์ / นักวิจัย">
                         </a>
                     </div>
                 </section>
@@ -308,7 +308,7 @@ if ($_SESSION['fancy'] == "first") {
 
                 <!-- Physicist and Researcher Database -->
                 <section style="margin-top: 20px;">
-                    <h2 class="text-center"><a class="header-type" style="font-size: 14px;" href="researcher.php">ฐานข้อมูลนักฟิสิกส์/นักวิจัย</a></h2>
+                    <h2 class="text-center"><a class="header-type" style="font-size: 16px;" href="researcher.php">ฐานข้อมูลนักฟิสิกส์ / นักวิจัย</a></h2>
                     <a style="text-align: center;" title="ฐานข้อมูลนักฟิสิกส์ / นักวิจัย" href="researcher.php">
                         <div class="featured-image-box">
                             <img class="fetured-image" src="../../upload02/img/Thai_Physicist_db_1.jpg">
