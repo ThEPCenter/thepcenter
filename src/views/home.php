@@ -107,9 +107,9 @@ if ($_SESSION['fancy'] == "first") {
     <div class="container" id="popup" style="display: none; background-color: #f9f9f9; max-width: 920px; padding: 0;">
         <div class="row" style="max-width: 100%;">
             <div class="col-xs-6 col-sm-6 col-md-6" style="padding-right: 0; padding-left: 0;">
-                <a title="การจัดสัมมนา เรื่อง การปฏิรูปฟิสิกส์ศึกษาอย่างยั่งยืน วันที่ 21-22 มีนาคม 2558" 
-                   href="http://thep-center.org/src2/views/notice.php?news_id=69">
-                    <img alt="education_popup" style="max-width: 100%;" src="http://thep-center.org/upload02/education_popup2.jpg">
+                <a title="การจัดสัมมนา เรื่อง วัสดุเทอร์โมอิเล็กทริกโครงสร้างนาโนฟิล์มบาง วันจันทร์ที่ 30 มีนาคม 2558" 
+                   href="http://thep-center.org/src2/views/notice.php?news_id=72">
+                    <img alt="Thermoelectric" style="max-width: 100%" src="http://thep-center.org/upload02/Thermoelectric_150311.jpg">
                 </a><br>
                 <a title="การจัดสัมมนา Consultant Meeting เรื่อง โปรแกรมวิจัย Magnetic Materials วันอังคารที่ 31 มีนาคม 2558" 
                    href="http://thep-center.org/src2/views/notice.php?news_id=70">
@@ -118,13 +118,10 @@ if ($_SESSION['fancy'] == "first") {
             </div>
 
             <div class="col-xs-6 col-sm-6 col-md-6" style="padding-right: 0; padding-left: 0;">
-                <a title="การจัดสัมมนา เรื่อง วัสดุเทอร์โมอิเล็กทริกโครงสร้างนาโนฟิล์มบาง วันจันทร์ที่ 30 มีนาคม 2558" 
-                   href="http://thep-center.org/src2/views/notice.php?news_id=72">
-                    <img alt="Thermoelectric" style="max-width: 100%" src="http://thep-center.org/upload02/Thermoelectric_150311_02.jpg">
-                </a>
+
                 <a title="การจัดสัมมนา เรื่อง การพัฒนาเทคโนโลยีอินเตอร์เฟียร์โรเมทรีเชิงอะตอม วันที่ 7-9 เมษายน 2558" 
                    href="http://thep-center.org/src2/views/notice.php?news_id=65">
-                    <img alt="atommixpop02" style="max-width: 100%" src="http://thep-center.org/upload02/atommixpop_150311_03.jpg">
+                    <img alt="atommixpop02" style="max-width: 100%" src="http://thep-center.org/upload02/atommixpop02.jpg">
                 </a>
             </div>
         </div> <!-- /.row -->
