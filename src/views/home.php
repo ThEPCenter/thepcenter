@@ -104,6 +104,9 @@ if ($_SESSION['fancy'] == "first") {
 
 <body>
     <!-- Pop up -->
+
+    <!-- 2 columns pop up -->
+    <!--
     <div class="container" id="popup" style="display: none; background-color: #f9f9f9; max-width: 920px; padding: 0;">
         <div class="row" style="max-width: 100%;">
             <div class="col-xs-6 col-sm-6 col-md-6" style="padding-right: 0; padding-left: 0;">
@@ -124,8 +127,19 @@ if ($_SESSION['fancy'] == "first") {
                     <img alt="atommixpop02" style="max-width: 100%" src="http://thep-center.org/upload02/atommixpop02.jpg">
                 </a>
             </div>
-        </div> <!-- /.row -->
-    </div> <!-- END Pop up -->
+        </div>         
+    </div> 
+    -->
+    <!-- END 2 columns pop up -->
+
+    <div class="container" id="popup" style="display: none; background-color: #f9f9f9; max-width: 440px; padding: 0;">
+        <a title="การจัดสัมมนา เรื่อง การพัฒนาเทคโนโลยีอินเตอร์เฟียร์โรเมทรีเชิงอะตอม วันที่ 7-9 เมษายน 2558" 
+           href="http://thep-center.org/src2/views/notice.php?news_id=65">
+            <img alt="atommixpop02" style="max-width: 100%" src="http://thep-center.org/upload02/atommixpop02.jpg">
+        </a>
+    </div>
+
+    <!-- END Pop up -->
 
     <div class="container">
 
