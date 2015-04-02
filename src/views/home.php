@@ -63,6 +63,7 @@ if ($_SESSION['fancy'] == "first") {
     // echo '$.fancybox.open("../../upload02/notice/microwave_140321_1200_web.jpg");';
     unset($_SESSION['fancy']);
 }
+// echo '$.fancybox.open("#popup");';
 ?>
         // $("#popup1").click(function () {
         // window.location = "http://thep-center.org/src2/views/notice.php?news_id=63";
@@ -103,43 +104,53 @@ if ($_SESSION['fancy'] == "first") {
 </head>
 
 <body>
-    <!-- Pop up -->
+    <?php /* ============ Pop up ============ */ ?>
 
-    <!-- 2 columns pop up -->
-    <!--
+    <?php /* -------- 2 column pop up -------- */ ?>
+
     <div class="container" id="popup" style="display: none; background-color: #f9f9f9; max-width: 920px; padding: 0;">
         <div class="row" style="max-width: 100%;">
-            <div class="col-xs-6 col-sm-6 col-md-6" style="padding-right: 0; padding-left: 0;">
-                <a title="การจัดสัมมนา เรื่อง วัสดุเทอร์โมอิเล็กทริกโครงสร้างนาโนฟิล์มบาง วันจันทร์ที่ 30 มีนาคม 2558" 
-                   href="http://thep-center.org/src2/views/notice.php?news_id=72">
-                    <img alt="Thermoelectric" style="max-width: 100%" src="http://thep-center.org/upload02/Thermoelectric_150311_02.jpg">
-                </a><br>
-                <a title="การจัดสัมมนา Consultant Meeting เรื่อง โปรแกรมวิจัย Magnetic Materials วันอังคารที่ 31 มีนาคม 2558" 
-                   href="http://thep-center.org/src2/views/notice.php?news_id=70">
-                    <img alt="magnetic_popup" style="max-width: 100%;" src="http://thep-center.org/upload02/magnetic_popup2.jpg">
-                </a>
-            </div>
 
+            <!-- Left column -->
             <div class="col-xs-6 col-sm-6 col-md-6" style="padding-right: 0; padding-left: 0;">
-
                 <a title="การจัดสัมมนา เรื่อง การพัฒนาเทคโนโลยีอินเตอร์เฟียร์โรเมทรีเชิงอะตอม วันที่ 7-9 เมษายน 2558" 
                    href="http://thep-center.org/src2/views/notice.php?news_id=65">
                     <img alt="atommixpop02" style="max-width: 100%" src="http://thep-center.org/upload02/atommixpop02.jpg">
                 </a>
+                <?php /*
+                  <br>
+                  <a title="การจัดสัมมนา Consultant Meeting เรื่อง โปรแกรมวิจัย Magnetic Materials วันอังคารที่ 31 มีนาคม 2558"
+                    href="http://thep-center.org/src2/views/notice.php?news_id=70">
+                    <img alt="magnetic_popup" style="max-width: 100%;" src="http://thep-center.org/upload02/magnetic_popup2.jpg">
+                  </a>
+                 */ ?>
             </div>
-        </div>         
-    </div> 
-    -->
-    <!-- END 2 columns pop up -->
 
-    <div class="container" id="popup" style="display: none; background-color: #f9f9f9; max-width: 440px; padding: 0;">
-        <a title="การจัดสัมมนา เรื่อง การพัฒนาเทคโนโลยีอินเตอร์เฟียร์โรเมทรีเชิงอะตอม วันที่ 7-9 เมษายน 2558" 
-           href="http://thep-center.org/src2/views/notice.php?news_id=65">
-            <img alt="atommixpop02" style="max-width: 100%" src="http://thep-center.org/upload02/atommixpop02.jpg">
+            <!-- Right column -->
+            <div class="col-xs-6 col-sm-6 col-md-6" style="padding-right: 0; padding-left: 0;">                
+                <a title="การจัดสัมมนา เรื่อง การวิจัยและพัฒนาเทคโนโลยีการเคลือบแข็งยิ่งยวดสำหรับอุตสาหกรรมไทย วันจันทร์ที่ 27 เมษายน 2558" 
+                   href="http://thep-center.org/src2/views/notice.php?news_id=77">
+                    <img alt="Thermoelectric" style="max-width: 100%" src="http://thep-center.org/upload02/superhard_pop.jpg">
+                </a>
+            </div>
+
+        </div> <!-- END .row -->
+    </div> <!-- END .container -->
+
+    <?php /* -------- END 2 column pop up -------- */ ?>
+
+    <?php /* -------- One column popup -------- */ ?>
+    <?php /*
+      <div class="container" id="popup" style="display: none; background-color: #f9f9f9; max-width: 440px; padding: 0;">
+        <a title="การจัดสัมมนา เรื่อง การพัฒนาเทคโนโลยีอินเตอร์เฟียร์โรเมทรีเชิงอะตอม วันที่ 7-9 เมษายน 2558"
+            href="http://thep-center.org/src2/views/notice.php?news_id=65">
+        <img alt="atommixpop02" style="max-width: 100%" src="http://thep-center.org/upload02/atommixpop02.jpg">
         </a>
-    </div>
+      </div>
+     */ ?>
+    <?php /* -------- END One column popup -------- */ ?>
 
-    <!-- END Pop up -->
+    <?php /* ============ END Pop up ============ */ ?>
 
     <div class="container">
 
