@@ -76,7 +76,7 @@ $news_type = 'activity';
 <body>
     <div class="container">
         <?php get_includes('header'); ?>
-        <div class="row"  id="show-news">
+        <div class="row" id="show-news">
             <?php
             if (isset($_GET['news_id'])) {
                 $news_id = $_GET['news_id'];
@@ -174,6 +174,7 @@ $news_type = 'activity';
                 <?php
             } else {
                 ?>
+            <div class="col-md-12">
                 <h2 class="text-center header-type">ข่าวกิจกรรม</h2>
                 <?php
                 // ========= Add news ====================================
@@ -208,35 +209,37 @@ $news_type = 'activity';
             ";
                 $re_act = mysql_query($sql_act);
                 ?>
-
-                <table class="table">
+                
+                <?php if (!empty($re_act)): ?>
                     <?php
-                    if (!empty($re_act)) {
-                        $no_p = mysql_num_rows($re_act);
-                        $i = 0;
-                        while ($a = mysql_fetch_array($re_act)) {
-                            echo '                            
-                                <tr>
-                                    <td><a title="' . htmlspecialchars_decode($a['title']) . '" href="activity-news.php?news_id=' . $a['id'] . '">                                           
-                                            <img class="example-image" src="../images/pixel-vfl3z5WfW.gif" alt="image ' . $i . ' 0f ' . $no_p . ' thumb" 
-                                                style="vertical-align: middle; 
-                                                background:no-repeat #ccc url(' . $a['featured_img'] . ') -40px 0; 
-                                                background-size: 132px auto; 
-                                                width: 86px;
-                                                height: 86px;">                            
-                                        </a>
-                                    </td>
-                                    <td><a href="activity-news.php?news_id=' . $a['id'] . '">' . $a['title'] . '</a><br> 
-                                        <small><em>' . thai_date($a['date']) . '</em></small></td>
-                                </tr>                            
-                                    ';
-                        } // END while
-                    } else {
-                        echo '<tr><td>ขออภัยไม่พบข้อมูล</td></tr>';
-                    }
+                    $sql_act = "SELECT * FROM tb_news 
+                WHERE type = 'activity' 
+                ORDER BY date DESC;
+            ";
+                $re_act = mysql_query($sql_act);
+                    $no_p = mysql_num_rows($re_act);
+                    $i = 0; 
                     ?>
-                </table>
-
+                    <?php while ($a = mysql_fetch_array($re_act)): ?>
+                    <div class="row">
+                        <div class="col-sm-3 col-md-2 text-center">
+                            <a title="<?php echo htmlspecialchars_decode($a['title']); ?>" 
+                               href="activity-news.php?news_id=<?php echo $a['id']; ?>">                                
+                                <img style="max-width: 100%; height: auto;" src="<?php echo $a['featured_img']; ?>">
+                                
+                            </a>
+                        </div>
+                        <div class="col-sm-9 col-md-10">
+                            <a href="activity-news.php?news_id=<?php echo $a['id']; ?>"><?php echo $a['title']; ?></a><br> 
+                                <small><em><?php echo thai_date($a['date']); ?></em></small></td>
+                        </div>                    
+                    </div>
+                    <hr>
+                    <?php endwhile; ?>
+                <?php else: ?>
+                    <p class="text-center">ขออภัยไม่พบข้อมูล</p>
+                <?php endif; ?>                
+            </div>
                 <?php
             } // END if GET else 
             ?>
