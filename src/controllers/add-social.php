@@ -41,7 +41,7 @@ $type = $_GET['add_social'];
 
     <div class="form-group">
         <label>วันที่</label>
-        <input type="text" id="datepicker" name="date">
+        <input type="text" id="datepicker" name="date" value="<?php echo date("m/d/Y"); ?>">
     </div>
     <script>
         $(function() {

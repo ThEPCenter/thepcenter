@@ -62,7 +62,7 @@ $news_type = $_GET['add_news'];
 
     <div class="form-group">
         <label>วันที่</label>
-        <input type="text" id="datepicker" name="date">
+        <input type="text" id="datepicker" name="date" value="<?php echo date("m/d/Y"); ?>">
     </div>
     <script>
         $(function () {
@@ -134,8 +134,9 @@ $news_type = $_GET['add_news'];
         <div class="form-group">
             <label>แกลอรี</label>
             <span>เลือกแกลอรี หรือ </span><a href="add-gallery.php">เพื่มแกลอรีใหม่</a>
+            <!-- Set default gallery for No Picture. -->
             <select name="gallery_id" class="form-control" id="gallery_id">
-                <option id="gal-0" value="0">...</option>
+                <option id="gal-0" value="7">...</option>
                 <?php
                 $sql_g = "SELECT * FROM tb_gallery;";
                 $result_g = mysql_query($sql_g);
@@ -149,8 +150,8 @@ $news_type = $_GET['add_news'];
 
     <button type="submit" class="btn btn-default">Submit</button> | 
     <a href="../views/<?php
-    if ($new_type == 'notice'):
-        echo $news_type;
+    if ($news_type == 'notice'):
+        echo $news_type . '.php';
     else:
         echo $news_type . '-news.php';
     endif;
