@@ -35,38 +35,32 @@ doc_head('Edit Gallery');
 
         <?php get_includes('header'); ?>
 
-        <div class="row">
-
+        <div class="row" style="background-color: #e7e3b1;">
             <div class="col-md-12">
-
-                <h2 class="text-center">Add Gallery</h2>
-
+                <h2 class="text-center">Edit Gallery</h2>
                 <form class="form-horizontal" role="form" name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                     <input type="hidden" name="gallery_id" value="<?php echo $g['id']; ?>">
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">ชื่อแกลอรี</label>
+                        <label class="col-sm-2 control-label">ชื่อแกลอรี <span style="color: red;">**</span></label>
                         <div class="col-sm-10">
-                            <input class="form-control" type="text" name="title" value="<?php echo $g['title'] ?>">
+                            <input class="form-control" type="text" name="title" value="<?php echo $g['title'] ?>" required>
                         </div>
                     </div>
-
                     <div class="form-group">
-                        <label class="col-sm-2 control-label">คำอธิบาย /รายละเอียด</label>
+                        <label class="col-sm-2 control-label">คำอธิบาย / รายละเอียด</label>
                         <div class="col-sm-10">
                             <textarea class="form-control" rows="2" name="detail"><?php echo $g['detail']; ?></textarea>
                         </div>
                     </div>
-
                     <div class="form-group">
                         <div class="col-sm-offset-2 col-sm-10">
-                            <input type="submit" value="Edit" class="btn btn-default"> <a href="gallery.php?gal_id=<?php echo $g['id']; ?>" style="font-weight: bold;">Cancel</a>
+                            <button type="button" class="btn btn-default" onclick="window.location = 'gallery.php?gal_id=<?php echo $g['id']; ?>'">Cancel</button> &nbsp;
+                            <input type="submit" value="Confirm Edit" class="btn btn-primary">
                         </div>
                     </div>
-
                 </form>
-
             </div>
-
+            <p>&nbsp;</p>
         </div>
 
         <?php get_includes('footer'); ?>

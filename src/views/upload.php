@@ -78,7 +78,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
                 <h2 class="text-center header-type">Upload File</h2>
                 <form role="form" name="form1" method="post" action="../controllers/upload-file.php" enctype="multipart/form-data">
                     <div class="form-group">
-                        <label>เลือกไฟล์</label>
+                        <label>เลือกไฟล์ <span style="color: red;">**</span></label>
                         <input type="file" name="upload" required>
                         <p class="help-block"><strong>หมายเหตุ </strong>ชื่อไฟล์ต้องเป็น อักษรโรมัน (A-Z, a-z) หรือ ตัวเลข (0-9) หริอ  ขีดล่าง ( _ ) หรือ ขีดกลาง (-) หรือ จุด (.) หรือ วงเล็บ ( ( หรือ ) )  เท่านั้น</p>
                     </div>
@@ -102,34 +102,31 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
                     <div id="check-result" style="text-align: center;"></div>
                     <p>&nbsp;</p>
-
-                    <input type="submit" class="btn btn-default" name="Submit" value="Upload">
-
-                    <a href="index.php" title="Cancel"><strong>Cancel</strong></a>
+                    <button type="button" class="btn btn-default" onclick="window.location = 'index.php'" title="ยกเลิก">Cancel</button> &nbsp;
+                    <input type="submit" class="btn btn-primary" name="Submit" value="Upload">                    
                 </form>
-
                 <script>
-                    $(function() {
-                        $("#change").click(function() {
+                    $(function () {
+                        $("#change").click(function () {
                             $("#newname").val('');  // Clear value in input#newname
                             $("#change-form").toggle();
                             $("#or-txt, #check-wrap").toggle();
                             $("#check-result").html('');
                         });
 
-                        $("#checkbox").click(function() {
+                        $("#checkbox").click(function () {
                             $("#change, #or-txt").toggle();
                             $("#newname").val(null);
                         });
 
-                        $(document).ajaxStart(function() {
+                        $(document).ajaxStart(function () {
                             $('#check-result').html("<div class=\"span12 text-center\" ><img src='../images/demo_wait.gif' /></div>");
                         });
 
-                        $("#check-name").click(function() {
+                        $("#check-name").click(function () {
                             var name_check = $("#newname").val();
                             $.get("<?php controll('check-result'); ?>", {name_check: name_check},
-                            function(data) {
+                            function (data) {
                                 $("#check-result").html("<strong>ผลการตรวจสอบ :</strong> " + data);
                             }
                             );
@@ -138,12 +135,10 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
                     });
                 </script>
-
-
-
-            </div>
-            <p>&nbsp;</p>
-        </div> <!-- /.row -->
+                <p>&nbsp;</p>
+            </div>            
+        </div> <!-- /.row -->        
+        <p>&nbsp;</p>
 
         <div class="row" style="background-color: #e7e3b1;">
             <div class="col-md-12">

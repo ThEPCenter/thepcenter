@@ -36,33 +36,32 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
 
         <?php get_includes('header'); ?>
 
-        <div class="row">
+        <div class="row" style="background-color: #e7e3b1;">
             <h2 class="text-center header-type">แก้ไขข้อมูลภาพ <span style="color: #333;"><?php echo $p['name']; ?></span></h2>
-            <form role="form" name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
-                <input type="hidden" name="id" value="<?php echo $p['id'] ?>">
-                <input type="hidden" name="gallery_id" value="<?php echo $p['gallery_id'] ?>">
+            <div class="col-md-12">
+                <form role="form" name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
+                    <input type="hidden" name="id" value="<?php echo $p['id'] ?>">
+                    <input type="hidden" name="gallery_id" value="<?php echo $p['gallery_id'] ?>">
+                    <p class="text-center"><img style="max-width: 100%; height: auto;" src="../../upload02/img/picture/<?php echo $p['name']; ?>"></p>
+                    <p>&nbsp;</p>
+                    <div class="form-group">
+                        <p><strong>ชื่อไฟล์ภาพ (file name)</p></strong>
+                        <p style="background-color: #eee;" class="p-input"><?php echo $p['name']; ?></p>
+                    </div>
+                    <div class="form-group">
+                        <p><strong>URL ของไฟล์ภาพ</strong></p>
+                        <p style="background-color: #eee;" class="p-input"><?php echo DOMAIN . '/upload02/img/picture/' . $p['name']; ?></p>
+                    </div>
+                    <div class="form-group">
+                        <label>Caption / คำอธิบาย</label>
+                        <textarea class="form-control" name="caption" rows="2"><?php echo $p['caption'] ?></textarea>
+                    </div>
+                    <button type="button" class="btn btn-default" onclick="window.location = 'gallery.php?gal_id=<?php echo $p['gallery_id']; ?>'">Cancel</button> &nbsp;
+                    <input type="submit" value="Submit" class="btn btn-primary">
 
-                <p class="text-center"><img style="max-width: 100%; height: auto;" src="../../upload02/img/picture/<?php echo $p['name']; ?>"></p>
-                <p>&nbsp;</p>
-                
-                <div class="form-group">
-                    <label>ชื่อไฟล์ภาพ</label>
-                    <input class="form-control" type="text" name="file_name" value="<?php echo $p['name'] ?>">
-                </div>
-
-                <div class="form-group">
-                    <p><strong>URL ของไฟล์ภาพ</strong></p>
-                    <p style="background-color: #eee;" class="p-input"><?php echo DOMAIN . '/upload02/img/picture/' . $p['name'] ?></p>
-                </div>
-
-                <div class="form-group">
-                    <label>Caption / คำอธิบาย</label>
-                    <textarea class="form-control" name="caption" rows="2"><?php echo $p['caption'] ?></textarea>
-                </div>
-
-                <input type="submit" value="Submit" class="btn btn-default"> <a href="gallery.php?gal_id=<?php echo $p['gallery_id']; ?>" style="font-weight: bold;">Cancel</a>
-
-            </form>
+                </form>
+            </div>
+            <p>&nbsp;</p>
         </div>
 
         <?php get_includes('footer'); ?>

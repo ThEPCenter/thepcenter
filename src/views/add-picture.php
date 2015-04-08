@@ -64,37 +64,40 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
             <h2 class="text-center header-type">เพิ่มภาพในแกลอรี <span style="color: #333;"><?php echo $g['title']; ?></span></h2>
 
             <div class="col-xs-12 col-sm-12 col-md-12">
-
                 <form role="form" name="form1" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="multipart/form-data">
-
                     <input name="gallery_id" type="hidden" value="<?php echo $g['id']; ?>">
+                    <div class="form-group">
+                        <h3>ไฟล์ภาพที่ 1<span style="color: red;">**</span></h3>                                
+                        <input type="file" name="upload1" required>                                            
+                    </div>
 
+                    <div class="form-group">                           
+                        <label>Caption / คำอธิบายภาพ</label>
+                        <input class="form-control" type="text" name="caption' . $i . '" placeholder="Caption / คำอธิบายภาพ">
+                    </div>
+                    <div style="border-top: 1px solid #777;">&nbsp;</div>
+                    
                     <?php
-                    for ($i = 1; $i <= 6; $i++) {
+                    for ($i = 2; $i <= 6; $i++) {
                         echo '                         
                                 <div class="form-group">
-                                    <label>ไฟล์ภาพที่ ' . $i . '</label>                                
+                                    <h3>ไฟล์ภาพที่ ' . $i . '</h3>                                
                                     <input type="file" name="upload' . $i . '">                                            
                                 </div>
                             
                                 <div class="form-group">                           
-                                    <label>Caption/ คำอธิบายภาพ</label>
-                                    <input class="form-control" type="text" name="caption' . $i . '" >
+                                    <label>Caption / คำอธิบายภาพ</label>
+                                    <input class="form-control" type="text" name="caption' . $i . '" placeholder="Caption / คำอธิบายภาพ">
                                 </div>
                                 <div style="border-top: 1px solid #777;">&nbsp;</div>
                                 ';
                     }
                     ?>
-
-                    <input type="submit" value="Submit" class="btn btn-default"> <a href="gallery.php" style="font-weight: bold;">Cancel</a>
-
-
+                    <button type="button" class="btn btn-default" onclick="window.location = 'gallery.php?gal_id=<?php echo $gallery_id; ?>';">Cancel</button> &nbsp;
+                    <input type="submit" value="Submit" class="btn btn-primary">
                 </form>
-
             </div>
-
             <p>&nbsp;</p>
-
         </div>
 
         <?php get_includes('footer'); ?>

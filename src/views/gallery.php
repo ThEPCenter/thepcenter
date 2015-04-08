@@ -25,7 +25,7 @@ doc_head('Gallery');
             $re_p = mysql_query($sql_p);
             $pic_no = mysql_num_rows($re_p);
             ?>
-            <div class="row">
+            <div class="row" style="background-color: #e7e3b1;">
                 <h2 class="text-center"><?php echo $g['title'] ?></h2>
                 <?php
                 $i = 0;
@@ -52,42 +52,44 @@ doc_head('Gallery');
                         ';
                 } // END while p
                 ?>
-
+                <p>&nbsp;</p>
             </div>
             <p>&nbsp;</p>
-            <div class="row">
+
+            <div class="row" style="background-color: #e7e3b1;">
                 <div class="col-md-12">
                     <strong>จำนวนทั้งหมด <?php echo $pic_no; ?> ภาพ</strong> &nbsp;  
-                    <a title="Edit Gallery" href="edit-gallery.php?edit_id=<?php echo $gal_id; ?>"><span class="glyphicon glyphicon-pencil"></span> Edit Gallery</a> | 
+                    <a title="Edit Gallery" href="edit-gallery.php?edit_id=<?php echo $gal_id; ?>"><span class="glyphicon glyphicon-pencil"></span> Edit Gallery</a> &nbsp;| &nbsp;
                     <a title="Add picture" href="add-picture.php?gallery_id=<?php echo $gal_id; ?>"><span class="glyphicon glyphicon-plus"></span> Add picture</a>
                     <p>&nbsp;</p>
                     <a title="Back to gallery page." href="gallery.php"><span class="glyphicon glyphicon-arrow-left"></span> กลับหน้าแกลอรี</a>
                 </div>
+                <p>&nbsp;</p>
             </div>
-
-
 
             <?php
         } else {
             ?>
-            
+
             <?php
             $sql = "SELECT * FROM tb_gallery ORDER BY id DESC;";
             $result = mysql_query($sql);
             $gal_no = mysql_num_rows($result);
             ?>
-            <div class="row">
-                <h2 class="text-center">Gallery</h2>
-                <p><a href="add-gallery.php"><span class="glyphicon glyphicon-plus"></span> Add New Gallery</a></p>
-                <hr>
-                <?php
-                while ($gal = mysql_fetch_array($result)) {
+            <div class="row" style="background-color: #e7e3b1;">
+                <h2 class="text-center">Gallery</h2>                
+                <div class="col-md-12">
+                    <p><a href="add-gallery.php"><span class="glyphicon glyphicon-plus"></span> Add New Gallery</a></p>
+                    <hr>
+                    <div class="row">
+                        <?php
+                        while ($gal = mysql_fetch_array($result)) {
 
-                    $sql_p = "SELECT * FROM tb_picture WHERE gallery_id = {$gal['id']} ORDER BY id;";
-                    $re_p = mysql_query($sql_p);
-                    $pic_no = mysql_num_rows($re_p);
-                    $pic = mysql_fetch_array($re_p);
-                    echo '
+                            $sql_p = "SELECT * FROM tb_picture WHERE gallery_id = {$gal['id']} ORDER BY id;";
+                            $re_p = mysql_query($sql_p);
+                            $pic_no = mysql_num_rows($re_p);
+                            $pic = mysql_fetch_array($re_p);
+                            echo '
                 <div class="col-xs-6 col-sm-4 col-md-3">
                     <div style="width: 197px; height: 240px; border:1px solid rgba(0, 0, 0, .1);">
                         <div style="width: 195px; height: 195px; overflow: hidden; border-bottom: 1px solid rgba(0, 0, 0, .1);">
@@ -108,16 +110,21 @@ doc_head('Gallery');
                     </div>
                 </div>
                         ';
-                }
-                ?>
-                <div class="col-md-3"></div>
-
-            </div>
+                        }
+                        ?>
+                        <p>&nbsp;</p>
+                    </div>
+                </div>
+                <p>&nbsp;</p>
+            </div>            
             <p>&nbsp;</p>
 
-            <div class="row">
-                จำนวนทั้งหมด <?php echo $gal_no; ?> แกลอรี &nbsp; 
-                <a href="add-gallery.php"><span class="glyphicon glyphicon-plus"></span> Add New Gallery</a>
+            <div class="row" style="background-color: #e7e3b1;">
+                <div class="col-md-12">
+                    <strong>จำนวนทั้งหมด <?php echo $gal_no; ?> แกลอรี</strong> &nbsp;
+                    <a href="add-gallery.php"><span class="glyphicon glyphicon-plus"></span> Add New Gallery</a>
+                </div>
+                <p>&nbsp;</p>
             </div>
 
             <?php
@@ -125,7 +132,6 @@ doc_head('Gallery');
         ?>
 
         <?php get_includes('footer'); ?>
-
 
     </div>
     <!-- /.container -->
