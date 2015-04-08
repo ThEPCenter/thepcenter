@@ -62,13 +62,6 @@ $news_type = 'activity';
         margin: 2px 2px;
         border: 4px #FFFFFF solid;
     }
-    .example-image:hover {
-        border: 2px #003399 solid;
-    }
-    .table tbody>tr>td {
-        border-top : none;
-        border-bottom: solid 1px #ddd;
-    }
 </style>
 
 </head>
@@ -144,7 +137,7 @@ $news_type = 'activity';
                                 ?>
 
                             </div>
-
+                            <p>&nbsp;</p>
                             <p>จำนวนทั้งหมด <?php echo $no_p; ?> ภาพ</p>
                         <?php } // END if (!empty($result_p))   ?>
                         <p>&nbsp;</p>
@@ -231,7 +224,7 @@ $news_type = 'activity';
                         </div>
                         <div class="col-sm-9 col-md-10">
                             <a href="activity-news.php?news_id=<?php echo $a['id']; ?>"><?php echo $a['title']; ?></a><br> 
-                                <small><em><?php echo thai_date($a['date']); ?></em></small></td>
+                                <small><em><?php echo thai_date($a['date']); ?></em></small>
                         </div>                    
                     </div>
                     <hr>
