@@ -112,39 +112,33 @@ if ($_SESSION['fancy'] == "first") {
         <div class="row" style="max-width: 100%;">
 
             <!-- Left column -->
-            <div class="col-xs-6 col-sm-6 col-md-6" style="padding-right: 0; padding-left: 0;">
-                <a title="การจัดสัมมนา เรื่อง การพัฒนาเทคโนโลยีอินเตอร์เฟียร์โรเมทรีเชิงอะตอม วันที่ 7-9 เมษายน 2558" 
-                   href="http://thep-center.org/src2/views/notice.php?news_id=65">
-                    <img alt="atommixpop02" style="max-width: 100%" src="http://thep-center.org/upload02/atommixpop02.jpg">
-                </a>
-                <?php /*
-                  <br>
-                  <a title="การจัดสัมมนา Consultant Meeting เรื่อง โปรแกรมวิจัย Magnetic Materials วันอังคารที่ 31 มีนาคม 2558"
-                    href="http://thep-center.org/src2/views/notice.php?news_id=70">
-                    <img alt="magnetic_popup" style="max-width: 100%;" src="http://thep-center.org/upload02/magnetic_popup2.jpg">
-                  </a>
-                 */ ?>
+            <div class="col-xs-6 col-sm-6 col-md-6" style="padding-right: 0; padding-left: 0;">                
+                
+                <a title="การจัดสัมมนา เรื่อง การวิจัยและพัฒนาเทคโนโลยีการเคลือบแข็งยิ่งยวดสำหรับอุตสาหกรรมไทย วันจันทร์ที่ 27 เมษายน 2558" 
+                   href="http://thep-center.org/src2/views/notice.php?news_id=77">
+                    <img alt="Thermoelectric" style="max-width: 100%" src="http://thep-center.org/upload02/superhard_pop_2.jpg">
+                </a>                
             </div>
 
             <!-- Right column -->
             <div class="col-xs-6 col-sm-6 col-md-6" style="padding-right: 0; padding-left: 0;">                
-                <a title="การจัดสัมมนา เรื่อง การวิจัยและพัฒนาเทคโนโลยีการเคลือบแข็งยิ่งยวดสำหรับอุตสาหกรรมไทย วันจันทร์ที่ 27 เมษายน 2558" 
-                   href="http://thep-center.org/src2/views/notice.php?news_id=77">
-                    <img alt="Thermoelectric" style="max-width: 100%" src="http://thep-center.org/upload02/superhard_pop.jpg">
+                <a title="การจัดสัมมนา เรื่อง การใช้ลำไอออนและพลาสมาสำหรับเทคโนโลยีชีวภาพ วันศุกร์ที่ 1 พฤษภาคม 2558" 
+                   href="http://thep-center.org/src2/views/notice.php?news_id=81">
+                    <img alt="ion plasma" style="max-width: 100%" src="http://thep-center.org/upload02/150409_ion_plasma_popup.jpg">
                 </a>
             </div>
 
         </div> <!-- END .row -->
     </div> <!-- END .container -->
-
+ 
     <?php /* -------- END 2 column pop up -------- */ ?>
 
     <?php /* -------- One column popup -------- */ ?>
-    <?php /*
+    <?php /* 
       <div class="container" id="popup" style="display: none; background-color: #f9f9f9; max-width: 440px; padding: 0;">
-        <a title="การจัดสัมมนา เรื่อง การพัฒนาเทคโนโลยีอินเตอร์เฟียร์โรเมทรีเชิงอะตอม วันที่ 7-9 เมษายน 2558"
-            href="http://thep-center.org/src2/views/notice.php?news_id=65">
-        <img alt="atommixpop02" style="max-width: 100%" src="http://thep-center.org/upload02/atommixpop02.jpg">
+        <a title="การจัดสัมมนา เรื่อง การวิจัยและพัฒนาเทคโนโลยีการเคลือบแข็งยิ่งยวดสำหรับอุตสาหกรรมไทย วันจันทร์ที่ 27 เมษายน 2558" 
+                   href="http://thep-center.org/src2/views/notice.php?news_id=77">
+                    <img alt="Thermoelectric" style="max-width: 100%" src="http://thep-center.org/upload02/superhard_pop_2.jpg">
         </a>
       </div>
      */ ?>
