@@ -57,7 +57,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
         // $('.fancybox').fancybox();
 <?php
 if ($_SESSION['fancy'] == "first") {
-    echo '$.fancybox.open("#popup");';
+     echo '$.fancybox.open("#popup");';
     // echo '$.fancybox.open("http://www.thep-center.org/upload02/solarpop2.jpg");';
     // echo '$.fancybox.open("http://www.thep-center.org/upload02/2015_HNY_thep.jpg");';
     // echo '$.fancybox.open("../../upload02/notice/microwave_140321_1200_web.jpg");';
@@ -107,7 +107,7 @@ if ($_SESSION['fancy'] == "first") {
     <?php /* ============ Pop up ============ */ ?>
 
     <?php /* -------- 2 column pop up -------- */ ?>
-
+<?php /*
     <div class="container" id="popup" style="display: none; background-color: #f9f9f9; max-width: 920px; padding: 0;">
         <div class="row" style="max-width: 100%;">
 
@@ -130,18 +130,18 @@ if ($_SESSION['fancy'] == "first") {
 
         </div> <!-- END .row -->
     </div> <!-- END .container -->
- 
+ */ ?>
     <?php /* -------- END 2 column pop up -------- */ ?>
 
     <?php /* -------- One column popup -------- */ ?>
-    <?php /* 
+    
       <div class="container" id="popup" style="display: none; background-color: #f9f9f9; max-width: 440px; padding: 0;">
-        <a title="การจัดสัมมนา เรื่อง การวิจัยและพัฒนาเทคโนโลยีการเคลือบแข็งยิ่งยวดสำหรับอุตสาหกรรมไทย วันจันทร์ที่ 27 เมษายน 2558" 
-                   href="http://thep-center.org/src2/views/notice.php?news_id=77">
-                    <img alt="Thermoelectric" style="max-width: 100%" src="http://thep-center.org/upload02/superhard_pop_2.jpg">
-        </a>
+        <a title="การจัดสัมมนา เรื่อง การใช้ลำไอออนและพลาสมาสำหรับเทคโนโลยีชีวภาพ วันศุกร์ที่ 1 พฤษภาคม 2558" 
+                   href="http://thep-center.org/src2/views/notice.php?news_id=81">
+                    <img alt="ion plasma" style="max-width: 100%" src="http://thep-center.org/upload02/150409_ion_plasma_popup.jpg">
+                </a>
       </div>
-     */ ?>
+     
     <?php /* -------- END One column popup -------- */ ?>
 
     <?php /* ============ END Pop up ============ */ ?>
