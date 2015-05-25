@@ -57,7 +57,7 @@ doc_head('ศูนย์ความเป็นเลิศด้านฟิ�
         // $('.fancybox').fancybox();
 <?php
 if ($_SESSION['fancy'] == "first") {
-     echo '$.fancybox.open("#popup");';
+    // echo '$.fancybox.open("#popup");';
     // echo '$.fancybox.open("http://www.thep-center.org/upload02/solarpop2.jpg");';
     // echo '$.fancybox.open("http://www.thep-center.org/upload02/2015_HNY_thep.jpg");';
     // echo '$.fancybox.open("../../upload02/notice/microwave_140321_1200_web.jpg");';
@@ -135,10 +135,10 @@ if ($_SESSION['fancy'] == "first") {
 
     <?php /* -------- One column popup -------- */ ?>
   
-      <div class="container" id="popup" style="display: none; background-color: #f9f9f9; max-width: 331px; padding: 0;">
+      <div class="container" id="popup" style="display: none; background-color: #f9f9f9; max-width: 750px; padding: 0;">
         <a title="การจัดสัมมนาประจำปีศูนย์ความเป็นเลิศด้านฟิสิกส์ วันพฤหัสบดีที่ 21 พฤษภาคม 2558" 
                    href="http://thep-center.org/src2/views/notice.php?news_id=90">
-                    <img alt="ion plasma" style="max-width: 100%" src="http://thep-center.org/upload02/posterkrabeepopup4.jpg">
+                    <img alt="consultant" style="max-width: 100%" src="http://thep-center.org/upload02/posterkrabeepopup0.jpg">
                 </a>
       </div>
 
